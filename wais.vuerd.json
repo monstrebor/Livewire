@@ -3,9 +3,9 @@
     "version": "2.2.13",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -771.6134999999999,
-    "scrollLeft": -239.8978,
-    "zoomLevel": 0.3,
+    "scrollTop": -1380,
+    "scrollLeft": -484,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -19,7 +19,7 @@
     },
     "database": "MySQL",
     "databaseName": "wais",
-    "canvasType": "@vuerd/builtin-visualization",
+    "canvasType": "ERD",
     "language": "GraphQL",
     "tableCase": "pascalCase",
     "columnCase": "camelCase",
@@ -165,9 +165,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 930.1666,
-          "top": 1191.4444,
-          "zIndex": 22,
+          "left": 793.4998,
+          "top": 1188.1111,
+          "zIndex": 121,
           "widthName": 60,
           "widthComment": 60
         },
@@ -528,7 +528,7 @@
           "active": false,
           "left": 509.3889,
           "top": 1380.7219,
-          "zIndex": 109,
+          "zIndex": 115,
           "widthName": 126.28076171875,
           "widthComment": 60
         },
@@ -811,9 +811,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 29,
-          "top": 1153.4444,
-          "zIndex": 49,
+          "left": 0,
+          "top": 1300.1113,
+          "zIndex": 119,
           "widthName": 110.1640625,
           "widthComment": 60
         },
@@ -919,9 +919,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 8.3336,
-          "top": 1513.3884,
-          "zIndex": 51,
+          "left": 5.0004,
+          "top": 1670.0554,
+          "zIndex": 117,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1073,9 +1073,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 9,
-          "top": 1311.6111,
-          "zIndex": 50,
+          "left": 0,
+          "top": 1461.6109,
+          "zIndex": 118,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1182,8 +1182,8 @@
         "ui": {
           "active": false,
           "left": 0,
-          "top": 1672.5833,
-          "zIndex": 52,
+          "top": 1825.9164,
+          "zIndex": 116,
           "widthName": 65.60986328125,
           "widthComment": 60
         },
@@ -1312,9 +1312,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 244.582,
-          "top": 952.3125,
-          "zIndex": 20,
+          "left": 207.9156,
+          "top": 1088.979,
+          "zIndex": 123,
           "widthName": 113.99169921875,
           "widthComment": 60
         },
@@ -1420,9 +1420,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 34.3426,
-          "top": 742.9011,
-          "zIndex": 2,
+          "left": 17.676,
+          "top": 899.5675,
+          "zIndex": 124,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1551,9 +1551,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1405.3777,
-          "top": 1017.7882,
-          "zIndex": 15,
+          "left": 1351.9922,
+          "top": 1081.1215,
+          "zIndex": 122,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1636,9 +1636,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 527.7778,
-          "top": 773.2216,
-          "zIndex": 1,
+          "left": 501.1114,
+          "top": 906.5549,
+          "zIndex": 125,
           "widthName": 60,
           "widthComment": 60
         },
@@ -2059,9 +2059,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1014.7895,
-          "top": 1429.4013,
-          "zIndex": 34,
+          "left": 1038.1228,
+          "top": 1406.0678,
+          "zIndex": 120,
           "widthName": 109.66259765625,
           "widthComment": 60
         },
@@ -2347,8 +2347,8 @@
           "columnIds": [
             "af2a540b-1651-4b68-8c7b-93ee9a0d3587"
           ],
-          "x": 930.1666,
-          "y": 1320.0694,
+          "x": 793.4998,
+          "y": 1316.7361,
           "direction": "left"
         },
         "end": {
@@ -2356,7 +2356,7 @@
           "columnIds": [
             "7365c602-e705-4595-9e9b-76f8984feae5"
           ],
-          "x": 834.1780845703124,
+          "x": 725.9150230468749,
           "y": 1380.7219,
           "direction": "top"
         },
@@ -2373,8 +2373,8 @@
           "columnIds": [
             "af2a540b-1651-4b68-8c7b-93ee9a0d3587"
           ],
-          "x": 1334.32431484375,
-          "y": 1320.0694,
+          "x": 1197.65751484375,
+          "y": 1316.7361,
           "direction": "right"
         },
         "end": {
@@ -2399,17 +2399,17 @@
           "columnIds": [
             "7365c602-e705-4595-9e9b-76f8984feae5"
           ],
-          "x": 617.6519615234374,
-          "y": 1380.7219,
-          "direction": "top"
+          "x": 509.3889,
+          "y": 1427.7844,
+          "direction": "left"
         },
         "end": {
           "tableId": "646cf167-8fe6-4806-874a-539690536d5c",
           "columnIds": [
             "208275a6-8c67-4781-b209-45b75678d278"
           ],
-          "x": 419.1611328125,
-          "y": 1228.9444,
+          "x": 390.1611328125,
+          "y": 1375.6113,
           "direction": "right"
         },
         "constraintName": "fk_regular_membership_to_valid_identification",
@@ -2426,7 +2426,7 @@
             "7365c602-e705-4595-9e9b-76f8984feae5"
           ],
           "x": 509.3889,
-          "y": 1568.9719,
+          "y": 1616.0344,
           "direction": "left"
         },
         "end": {
@@ -2434,8 +2434,8 @@
           "columnIds": [
             "244d121c-89ee-4d17-8c68-c6e93e19ca72"
           ],
-          "x": 371.7408265625,
-          "y": 1588.8884,
+          "x": 368.4076265625,
+          "y": 1745.5554,
           "direction": "right"
         },
         "constraintName": "fk_regular_membership_to_income",
@@ -2452,7 +2452,7 @@
             "7365c602-e705-4595-9e9b-76f8984feae5"
           ],
           "x": 509.3889,
-          "y": 1443.4719,
+          "y": 1521.9094,
           "direction": "left"
         },
         "end": {
@@ -2460,8 +2460,8 @@
           "columnIds": [
             "4ec7fd01-2419-4bb4-a480-e6bb73c86f9d"
           ],
-          "x": 403.76318359375,
-          "y": 1407.6111,
+          "x": 394.76318359375,
+          "y": 1557.6109,
           "direction": "right"
         },
         "constraintName": "fk_regular_membership_to_spouse",
@@ -2478,7 +2478,7 @@
             "7365c602-e705-4595-9e9b-76f8984feae5"
           ],
           "x": 509.3889,
-          "y": 1694.4719,
+          "y": 1710.1594,
           "direction": "left"
         },
         "end": {
@@ -2487,7 +2487,7 @@
             "9608ae43-3131-4efb-b7bf-769b39ba7dd2"
           ],
           "x": 407.77587890625,
-          "y": 1748.0833,
+          "y": 1901.4164,
           "direction": "right"
         },
         "constraintName": "fk_regular_membership_to_dependent",
@@ -2503,8 +2503,8 @@
           "columnIds": [
             "af2a540b-1651-4b68-8c7b-93ee9a0d3587"
           ],
-          "x": 930.1666,
-          "y": 1234.3194,
+          "x": 793.4998,
+          "y": 1230.9861,
           "direction": "left"
         },
         "end": {
@@ -2512,8 +2512,8 @@
           "columnIds": [
             "8f4be95d-4f3f-458a-9beb-9ca98a6e22ae"
           ],
-          "x": 636.45065234375,
-          "y": 1038.0625,
+          "x": 599.78425234375,
+          "y": 1174.729,
           "direction": "right"
         },
         "constraintName": "fk_members_to_membership status",
@@ -2529,8 +2529,8 @@
           "columnIds": [
             "6ef7963b-b275-4e67-8e5f-c7c61178e7f4"
           ],
-          "x": 440.516326171875,
-          "y": 952.3125,
+          "x": 403.84992617187504,
+          "y": 1088.979,
           "direction": "top"
         },
         "end": {
@@ -2538,8 +2538,8 @@
           "columnIds": [
             "658b2563-1263-4511-844c-3528a126f246"
           ],
-          "x": 394.16340078125,
-          "y": 856.1511,
+          "x": 377.49680078125,
+          "y": 1012.8175,
           "direction": "right"
         },
         "constraintName": "fk_membership status_to_account",
@@ -2555,8 +2555,8 @@
           "columnIds": [
             "af2a540b-1651-4b68-8c7b-93ee9a0d3587"
           ],
-          "x": 1334.32431484375,
-          "y": 1234.3194,
+          "x": 1197.65751484375,
+          "y": 1230.9861,
           "direction": "right"
         },
         "end": {
@@ -2564,8 +2564,8 @@
           "columnIds": [
             "39ae631b-208c-4136-8279-b58f536bb80b"
           ],
-          "x": 1405.3777,
-          "y": 1103.5382,
+          "x": 1351.9922,
+          "y": 1166.8715,
           "direction": "left"
         },
         "constraintName": "fk_members_to_address",
@@ -2581,8 +2581,8 @@
           "columnIds": [
             "331e765e-b984-4cc9-9ad1-5a353686a336"
           ],
-          "x": 394.16340078125,
-          "y": 780.6511,
+          "x": 377.49680078125,
+          "y": 937.3175,
           "direction": "right"
         },
         "end": {
@@ -2590,8 +2590,8 @@
           "columnIds": [
             "2560ab70-dc07-4adb-8a54-c82fdb6861d3"
           ],
-          "x": 527.7778,
-          "y": 838.4716,
+          "x": 501.1114,
+          "y": 971.8049,
           "direction": "left"
         },
         "constraintName": "fk_account_to_product",
@@ -2607,8 +2607,8 @@
           "columnIds": [
             "af2a540b-1651-4b68-8c7b-93ee9a0d3587"
           ],
-          "x": 1132.245457421875,
-          "y": 1191.4444,
+          "x": 995.578657421875,
+          "y": 1188.1111,
           "direction": "top"
         },
         "end": {
@@ -2642,8 +2642,8 @@
           "columnIds": [
             "954bd890-afe0-40a6-82a4-3936e6571658"
           ],
-          "x": 1407.3944804687499,
-          "y": 1513.2763,
+          "x": 1430.72778046875,
+          "y": 1489.9428,
           "direction": "right"
         },
         "constraintName": "fk_associate_membership_to_personal_information",
@@ -2659,8 +2659,8 @@
           "columnIds": [
             "dd0113dc-6c97-4f5e-a2c5-d5885027dea7"
           ],
-          "x": 1407.3944804687499,
-          "y": 1681.0263,
+          "x": 1430.72778046875,
+          "y": 1657.6928,
           "direction": "right"
         },
         "end": {
