@@ -3,7 +3,7 @@
     "version": "2.2.13",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -596,
+    "scrollTop": -887,
     "scrollLeft": 0,
     "zoomLevel": 1,
     "show": {
@@ -2384,10 +2384,10 @@
         "id": "d8a91259-6e84-496c-ba10-e4e6f6a94a3a",
         "value": "separate the member_img \n\nseparate the address\n\nunique identifier is the account type",
         "ui": {
-          "active": false,
+          "active": true,
           "left": 1368,
           "top": 821,
-          "zIndex": 19,
+          "zIndex": 20,
           "width": 127,
           "height": 100
         }
