@@ -3,8 +3,8 @@
     "version": "2.2.13",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -1386,
-    "scrollLeft": -193.34589999999997,
+    "scrollTop": -1308.8125,
+    "scrollLeft": -79.20000302124033,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -167,7 +167,7 @@
           "active": false,
           "left": 793.4998,
           "top": 1188.1111,
-          "zIndex": 121,
+          "zIndex": 10,
           "widthName": 60,
           "widthComment": 60
         },
@@ -528,7 +528,7 @@
           "active": false,
           "left": 509.3889,
           "top": 1380.7219,
-          "zIndex": 115,
+          "zIndex": 4,
           "widthName": 126.28076171875,
           "widthComment": 60
         },
@@ -705,7 +705,7 @@
           "active": false,
           "left": 1552.954,
           "top": 1301.25,
-          "zIndex": 6,
+          "zIndex": 1,
           "widthName": 137.1162109375,
           "widthComment": 60
         },
@@ -813,7 +813,7 @@
           "active": false,
           "left": 0,
           "top": 1300.1113,
-          "zIndex": 119,
+          "zIndex": 8,
           "widthName": 110.1640625,
           "widthComment": 60
         },
@@ -921,7 +921,7 @@
           "active": false,
           "left": 5.0004,
           "top": 1670.0554,
-          "zIndex": 117,
+          "zIndex": 6,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1075,7 +1075,7 @@
           "active": false,
           "left": 0,
           "top": 1461.6109,
-          "zIndex": 118,
+          "zIndex": 7,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1183,7 +1183,7 @@
           "active": false,
           "left": 0,
           "top": 1825.9164,
-          "zIndex": 116,
+          "zIndex": 5,
           "widthName": 65.60986328125,
           "widthComment": 60
         },
@@ -1314,7 +1314,7 @@
           "active": false,
           "left": 207.9156,
           "top": 1088.979,
-          "zIndex": 123,
+          "zIndex": 12,
           "widthName": 113.99169921875,
           "widthComment": 60
         },
@@ -1422,7 +1422,7 @@
           "active": false,
           "left": 17.676,
           "top": 899.5675,
-          "zIndex": 124,
+          "zIndex": 13,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1553,7 +1553,7 @@
           "active": false,
           "left": 1351.9922,
           "top": 1081.1215,
-          "zIndex": 122,
+          "zIndex": 11,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1638,7 +1638,7 @@
           "active": false,
           "left": 501.1114,
           "top": 906.5549,
-          "zIndex": 125,
+          "zIndex": 14,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1766,10 +1766,10 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 950.7779,
           "top": 933.8661,
-          "zIndex": 128,
+          "zIndex": 15,
           "widthName": 60,
           "widthComment": 60
         },
@@ -2084,7 +2084,7 @@
           "active": false,
           "left": 1038.1228,
           "top": 1406.0678,
-          "zIndex": 120,
+          "zIndex": 9,
           "widthName": 109.66259765625,
           "widthComment": 60
         },
@@ -2215,7 +2215,7 @@
           "active": false,
           "left": 1517.7095,
           "top": 1673.2986,
-          "zIndex": 31,
+          "zIndex": 2,
           "widthName": 92.32080078125,
           "widthComment": 60
         },
@@ -2343,10 +2343,10 @@
           }
         ],
         "ui": {
-          "active": false,
-          "left": 415,
-          "top": 1814,
-          "zIndex": 108,
+          "active": true,
+          "left": 477,
+          "top": 1787,
+          "zIndex": 16,
           "widthName": 76.42626953125,
           "widthComment": 60
         },
@@ -2717,8 +2717,8 @@
           "columnIds": [
             "a6b0669f-2126-4b8c-bbc8-ec168a053d1c"
           ],
-          "x": 625.74658203125,
-          "y": 1814,
+          "x": 687.74658203125,
+          "y": 1787,
           "direction": "top"
         },
         "constraintName": "fk_regular_membership_to_beneficiaries",
