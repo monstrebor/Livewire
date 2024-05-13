@@ -20,6 +20,13 @@ Route::get('/', function () {
 })->name('user.home');
 
 
+Route::fallback(function(){
+
+return view('Error.404');
+
+});
+
+
 
 
 
