@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    return view('landing_page.index');
+    return view('User.index');
 
-})->name('landing.home');
+})->name('user.home');
 
 
 
