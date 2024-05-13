@@ -1,0 +1,274 @@
+.slideshow-containe {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ffff02;
+}
+
+.mySLides {
+    display: none;
+}
+
+/* img {
+    vertical-align: middle;
+    width: 100%;
+    height: 300px;
+} */
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.06s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0);
+} */
+
+.text {
+    color: aliceblue;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 8px;
+}
+
+.numbertext {
+    color: aliceblue;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: backgroung-color 0.6s ease;
+
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to{opacity: 1}    
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to{opacity: 1} 
+}
+
+@media only screen and (max-width:300px) {
+    .prev, .next, .text{
+        font-size: 11px;
+    }
+    .dot {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@media only screen and (max-width:300px) {
+    .prev, .next, .text{
+        font-size: 14px;
+    }
+}
+
+nav {
+    position: relative;
+    z-index: 2;
+}
+
+/* search button */
+
+/* image with text */
+
+.text-image {
+    border-radius: 54px 54px 54px 54px;
+-webkit-border-radius: 54px 54px 54px 54px;
+-moz-border-radius: 54px 54px 54px 54px;
+}
+
+/* end image with text */
+
+/* card-hover */
+
+.card-with-hover {
+    background-color: #ffff02;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    padding: 10px 10%;
+}
+
+#card-area {
+    padding: 0 0 50px 0;
+}
+
+.box-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.box {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.overlay {
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #1c1c1c 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.overlay h3{
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.overlay a{
+    margin-top: 10px;
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+.boxLhover img{
+    transform: scale(1.2);
+}
+
+.box:hover .overlay{
+    height: 100%;
+}
+/* end of card-hover */
+
+/* break, picture */
+.imagebg {
+    background-image: url(../img/bg1.png);
+}
+
+.imgbreak {
+    background-image: url(../img/loans.png);
+}
+/* end of break and picture */
+
+.cbutton {
+    --color: #009A00;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+
+.cbutton:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+.cbutton:hover {
+    color: #fff;
+}
+.cbutton:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+.cbutton:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.cbutton:active:before {
+    background: #009A00;
+    transition: background 0s;
+}
