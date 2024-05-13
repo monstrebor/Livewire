@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ErrorController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,20 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
 
-    return view('User.index');
-
-})->name('user.home');
+Route::get('/',[HomeController::class,'Homepage'])->name('Home.index');
 
 
-Route::fallback(function(){
-
-return view('Error.404');
-
-});
-
-
+Route::fallback([ErrorController::class,'custom_404']);
 
 
 

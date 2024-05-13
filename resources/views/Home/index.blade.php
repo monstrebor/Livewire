@@ -1,4 +1,4 @@
-@extends('user.layout')
+@extends('Home.layout')
 
 @section('content')
         <div>
@@ -30,7 +30,7 @@
                     </div>
 
                     <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-lime-500 w-full left-0 md:w-auto md:py-0 py-4 md:pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 font-semibold text-white">
-                        <li class="mx-5 my-6 md:my-0"><a href="{{ route('user.home') }}" class="text-lg hover:text-lime-800 transition duration-500">Home</a></li>
+                        <li class="mx-5 my-6 md:my-0"><a href="{{ route('Home.index') }}" class="text-lg hover:text-lime-800 transition duration-500">Home</a></li>
                         <li class="mx-5 my-6 md:my-0"><a href="" class="text-lg hover:text-lime-800 transition duration-500">Products/Services</a></li>
                         <li class="mx-5 my-6 md:my-0"><a href="#" class="text-lg hover:text-lime-800 transition duration-500">Membership</a></li>
                         <li class="mx-5 my-6 md:my-0"><a href="#" class="text-lg hover:text-lime-800 transition duration-500">Contact</a></li>
