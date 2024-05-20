@@ -220,11 +220,47 @@ nav {
 
 /* break, picture */
 .imagebg {
-    background-image: url(../img/bg1.png);
+    background-image: url(img/bg1.png);
 }
 
 .imgbreak {
-    background-image: url(../img/loans.png);
+    background-image: url(img/loans.png);
+}
+
+.discover {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+.discover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #009A00;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+}
+.discover:hover {
+    color: #e8e8e8;
+}
+.discover:hover::before {
+    width: 100%;
 }
 /* end of break and picture */
 
@@ -251,8 +287,8 @@ nav {
     position: absolute;
     z-index: -1;
     background: var(--color);
-    height: 150px;
-    width: 200px;
+    height: 125px;
+    width: 400px;
     border-radius: 50%;
 }
 .cbutton:hover {
@@ -272,3 +308,5 @@ nav {
     background: #009A00;
     transition: background 0s;
 }
+
+/* footer */
