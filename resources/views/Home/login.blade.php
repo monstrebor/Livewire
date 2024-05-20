@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width= , initial-scale=1.0">
     <title>WAIS Login</title>
-    <link rel="stylesheet" href="login2.css">
+    <link rel="stylesheet" href="css/login2.css">
     <link rel="icon" href="img/final_logo-removebg-preview-removebg-preview.png">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>

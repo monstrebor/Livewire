@@ -1,0 +1,60 @@
+.container {
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #99cc00, transparent 20%, #009a00);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #fff02f;
+}
+
+.top-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.cbutton {
+    --color: #009A00;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+
+.cbutton:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 125px;
+    width: 400px;
+    border-radius: 50%;
+}
+.cbutton:hover {
+    color: #fff;
+}
+.cbutton:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+.cbutton:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.cbutton:active:before {
+    background: #009A00;
+    transition: background 0s;
+}

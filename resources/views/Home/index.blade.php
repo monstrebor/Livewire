@@ -36,7 +36,7 @@
                             <li class="mx-5 my-6 md:my-0"><a href="#" class="text-lg hover:text-lime-800 transition duration-500">Membership</a></li>
                             <li class="mx-5 my-6 md:my-0"><a href="#" class="text-lg hover:text-lime-800 transition duration-500">Contact</a></li>
                             <li class="mx-5 my-6 md:my-0"><a href="#" class="text-lg hover:text-lime-800 transition duration-500">Home</a></li>
-                            <button class="mr-3 ml-3 button-27 bg-white border-1 border-lime-700 rounded-lg text-lime-600 font-bold text-md py-4 px-6 transition duration-300 ease-in-out transform hover:shadow-md hover:-translate-y-1 hover:bg-yellow-500 disabled:pointer-events-none disabled:opacity-50 shadow-inner"><a href="login.html">Be a Member</a></button>
+                            <button class="mr-3 ml-3 button-27 bg-white border-1 border-lime-700 rounded-lg text-lime-600 font-bold text-md py-4 px-6 transition duration-300 ease-in-out transform hover:shadow-md hover:-translate-y-1 hover:bg-yellow-500 disabled:pointer-events-none disabled:opacity-50 shadow-inner"><a href="{{route('Login.index')}}">Be a Member</a></button>
                         </ul>
                     </nav>
                 </div>
