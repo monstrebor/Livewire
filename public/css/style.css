@@ -220,11 +220,11 @@ nav {
 
 /* break, picture */
 .imagebg {
-    background-image: url(img/bg1.png);
+    background-image: url(../img/bg1.png);
 }
 
 .imgbreak {
-    background-image: url(img/loans.png);
+    background-image: url(../img/loans.png);
 }
 
 .discover {
