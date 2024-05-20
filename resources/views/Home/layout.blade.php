@@ -14,6 +14,8 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>  
+    
     @yield('content')
+
 </body>
 </html>
