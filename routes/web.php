@@ -20,6 +20,10 @@ Route::get('/',[HomeController::class,'Homepage'])->name('Home.index');
 Route::get('/login',[HomeController::class,'Login'])->name('Login.index');
 
 
+
+
+//error
+
 Route::fallback([ErrorController::class,'custom_404']);
 
 
