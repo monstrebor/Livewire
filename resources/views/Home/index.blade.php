@@ -19,8 +19,8 @@
                 <!-- nav bar -->
 
                 @include('Partials.navbar')
-
-             <!-- end of navbar -->
+                
+                <!-- end of navbar -->
 
             <!-- img slider -->
             <div class="slideshow-container md:w-auto shadow-lg rounded-b-xl">
