@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\HomeController;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +27,24 @@ Route::get('/login',[HomeController::class,'Login'])->name('Login.index');
 Route::fallback([ErrorController::class,'custom_404']);
 
 
+Route::get('/test', function (Request $request) {
 
 
+        $data = [
 
+            'name'=> $request->name,
+            'password'=> $request->password,
+            'email'=> $request->email,
+
+        ];
+
+
+        return view('test',compact('data'));
+
+
+})->name('store');
+
+
+Route::get('/register', function () {
+    return view('Home.registration');
+    });
