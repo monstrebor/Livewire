@@ -40,7 +40,7 @@ Route::fallback([ErrorController::class,'custom_404']);
 
 // email pre-membership controller
 
-Route::post('/pdf',[UserEmailController::class,'PreMemberEmail'])->name('pre-membership.email');
+Route::post('/success',[UserEmailController::class,'PreMemberEmail'])->name('pre-membership.email');
 
 
 

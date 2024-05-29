@@ -8,11 +8,11 @@ use Illuminate\Support\Facades\Mail;
 
 class UserEmailController extends Controller
 {
-    
+
 
     public function PreMemberEmail(Request $request){
 
-         
+
         $data = [
             'title' => 'MNSMPC',
             'name' => $request->input('firstname'),
@@ -46,7 +46,7 @@ class UserEmailController extends Controller
         Mail::send('Mail.membership', $content, function($message) use ($data, $pdfContent, $content,) {
             $message->to($data['email'])
                 ->subject($content['title'])
-                ->attachData($pdfContent, 'PRE-MEMBERSHIP.pdf', 
+                ->attachData($pdfContent, 'PRE-MEMBERSHIP.pdf',
                 ['mime' => 'application/pdf']);
 
                 $filePath = public_path('upload/MNSMPC-PRIMER.pdf');
@@ -58,10 +58,12 @@ class UserEmailController extends Controller
 
         });
 
-        return redirect()->route('Login.index');
+        // return redirect()->route('Login.index');
+
+        return "success";
 
     }
 
-    
+
 
 }
