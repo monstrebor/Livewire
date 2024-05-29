@@ -8,25 +8,9 @@
 </head>
 <body>
 
-    <h1>{{$title}}</h1>
+    <h1>testing</h1>
 
-
-    <p>{{$name}}</p>
-
-    <p>{{$middlename}}</p>
-
-    <p>{{$email}}</p>
-
-    <p>{{$address}}</p>
-
-    <p>{{$dob}}</p>
-
-    <p>{{$gender}}</p>
-
-    <p>{{$contactnumber}}</p>
-
-    <p>{{$civilstatus}}</p>
-
-
+    @dd($data);
+    
 </body>
 </html>

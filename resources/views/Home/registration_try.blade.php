@@ -15,7 +15,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-        @include{"Partials.navbar"}
+        @include('Partials.navbar')
 
         <!-- picture-membership -->
         <div class="flex bg-yellow-300 mb-10">
@@ -39,46 +39,48 @@
         <div class="flex items-center justify-center mb-3">
             <div class="w-11/12 bg-white p-4 shadow-md rounded">
                 <h1 class="text-xl font-bold mb-4">Regular Membership</h1>
-                
-                <form action="#">
+
+                <form  method="post" action=" {{route('generate')}} ">
+                    @csrf
+                 
                     <div class="user-details">
                         <!-- name -->
                         <div class="input-box">
                             <span class="details" for="firstname">First Name*</span>
-                            <input type="text" placeholder="Enter your first name" id="first-name" name="first-name" required>
+                            <input type="text" placeholder="Enter your first name" id="first-name" name="firstname" required>
                         </div>
                         <div class="input-box">
                             <span class="details" for="middle name">Middle Name (optional)</span>
-                            <input type="text" placeholder="Enter your middle name" id="middle-name" name="middle-name">
+                            <input type="text" placeholder="Enter your middle name" id="middle-name" name="middlename">
                         </div>
                         <div class="input-box">
                             <span class="details" for="last-name">Last Name*</span>
-                            <input type="text" placeholder="Enter your last name" id="last-name" name="last" required>
+                            <input type="text" placeholder="Enter your last name" id="last-name" name="lastname" required>
                         </div>
                         <!-- end of name -->
-        
+
                         <!-- email,address,dob -->
                         <div class="input-box">
                             <span class="details" for="email">Email Address*</span>
                             <input type="email" placeholder="Enter your email" id="email" name="email" required>
                         </div>
-        
+
                         <div class="input-box">
                             <span class="details" for="address">Current Address*</span>
                             <input type="text" placeholder="Enter your address" id="address" name="address" required>
                         </div>
-                        
+
                         <div class="input-box">
                             <span class="details" for="contact-number">Phone Number*</span>
-                            <input type="number" placeholder="Enter your phone number" id="contact-number" name="contact-number" required>
+                            <input type="number" placeholder="Enter your phone number" id="contact-number" name="contactnumber" required>
                         </div>
-        
+
                         <div class="">
                             <span class="details" for="dob">Date of Birth*</span>
                             <input type="date" placeholder="Enter your phone birth date" type="date" id="dob" name="dob" required>
                         </div>
                         <!-- end of email,address,dob -->
-        
+
                         <!-- gender -->
                         <div class="gender-details">
                             <span for="gender">Gender</span>
@@ -87,7 +89,7 @@
                                     <input type="checkbox" id="male" name="gender" value="male">
                                     <span>Male</span>
                                 </label>
-        
+
                                 <label for="female">
                                     <input type="checkbox" id="female" name="gender" value="female">
                                     <span>Female</span>
@@ -95,15 +97,15 @@
                             </div>
                         </div>
                         <!-- end of gender -->
-        
+
                         <div>
                             <label for="occupation">Occupation*:</label><br>
                             <input type="text" id="occupation" name="occupation" required>
                         </div>
-        
+
                         <div>
                             <label for="civil-status">Civil Status*:</label><br>
-                            <select id="civil-status" name="civil-status" required>
+                            <select id="civil-status" name="civilstatus" required>
                                 <option value="">Select</option>
                                 <option value="single">Single</option>
                                 <option value="married">Married</option>
@@ -112,7 +114,7 @@
                                 <option value="separated">Separated</option>
                             </select>
                         </div>
-        
+
                         <input type="submit" value="Submit">
                     </div>
                 </form>
@@ -120,7 +122,7 @@
         </div>
         <!-- end of membership form -->
 
-        @include{"Partials.footer"}
+        @include("Partials.footer")
 
     <script src="script.js">
     </script>
