@@ -40,8 +40,9 @@
             <div class="w-11/12 bg-white p-4 shadow-md rounded">
                 <h1 class="text-xl font-bold mb-4">Regular Membership</h1>
 
-                <form  method="post" action=" {{route('generate')}} ">
+                <form  method="POST" action=" {{route('pre-membership.email')}} ">
                     @csrf
+                    @method('POST')
                  
                     <div class="user-details">
                         <!-- name -->
