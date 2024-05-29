@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\HomeController;
 
+use Barryvdh\DomPDF\Facade\Pdf as PDF;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +27,34 @@ Route::get('/login',[HomeController::class,'Login'])->name('Login.index');
 //error
 
 Route::fallback([ErrorController::class,'custom_404']);
+
+
+
+// pdf test controller
+
+
+Route::get('/pdf',function(){
+
+    {
+        $data = [
+
+            'test' => 'test',
+            'content'=> 'test_content',
+
+    ];
+        $pdf = PDF::loadView('PDF.test', $data);
+        return $pdf->download('document.pdf');
+    }
+
+});
+
+
+
+
+
+
+
+
 
 
 
