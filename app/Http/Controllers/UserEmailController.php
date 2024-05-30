@@ -60,10 +60,8 @@ class UserEmailController extends Controller
 
         // return redirect()->route('Login.index');
 
-        return "success";
+        return redirect()->route('form.submit');
 
     }
-
-
 
 }
