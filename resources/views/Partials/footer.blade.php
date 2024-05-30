@@ -50,9 +50,9 @@
             <p class="mt-5 italic font-light text-sm text-lime-700">Contact Channels:</p>
 
             <div class="gap-8 flex justify-center mt-3 md:gap-5">
-                <a href=""><img src="img/facebook.png" alt="FB" class="lg:w-10 lg:h-10 md:h-7 md:w-7"></a>
-                <a href=""><img src="img/instagram.png" alt="IG" class="lg:w-10 lg:h-10 md:h-7 md:w-7"></a>
-                <a href=""> <img src="img/youtube.png" alt="YT" class="lg:w-10 lg:h-10 md:h-7 md:w-7"></a>
+                <a href=""><img src="/img/facebook.png" alt="FB" class="lg:w-10 lg:h-10 md:h-7 md:w-7"></a>
+                <a href=""><img src="/img/instagram.png" alt="IG" class="lg:w-10 lg:h-10 md:h-7 md:w-7"></a>
+                <a href=""> <img src="/img/youtube.png" alt="YT" class="lg:w-10 lg:h-10 md:h-7 md:w-7"></a>
             </div>
             <p class="font-light text-lime-700 text-xs mt-3">For comments/suggestions, please contact us in our official member support channels: saogcooperative@gmail.com, FB messenger</p>
             <div class="relative mt-4">
@@ -64,7 +64,7 @@
 
 <footer class="w-full h-14 bg-lime-700 flex justify-center">
     <div class="flex items-center text-2 xl font-sans cursor-pointer">
-        <img src="img/final_logo-removebg-preview-removebg-preview.png" alt="logo" class="h-10">
+        <img src="/img/final_logo-removebg-preview-removebg-preview.png" alt="logo" class="h-10">
         <p class="text-xs text-white">Privacy Notice  Copyright © 2024 Saog Cooperative. All rights reserved.</p>
     </div>
 </footer>

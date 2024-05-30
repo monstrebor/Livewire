@@ -31,6 +31,13 @@ Route::get('/register',function(){
 
 });
 
+Route::get('/register/submit',function(){
+
+return view('Home.FormSubmit');
+
+});
+
+
 
 //error
 
@@ -40,7 +47,12 @@ Route::fallback([ErrorController::class,'custom_404']);
 
 // email pre-membership controller
 
+
 Route::post('/success',[UserEmailController::class,'PreMemberEmail'])->name('pre-membership.email');
+
+
+
+
 
 
 
