@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/final_logo-removebg-preview-removebg-preview.png">
     <title>Mahal na Señor Multipurpose Cooperative</title>
-    <link rel="stylesheet" href="input.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <style type="text/tailwindcss">
     </style>
@@ -15,7 +14,23 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-        @include('Partials.navbar')
+        <div>
+            <!-- header -->
+            <div class="bg-lime-600 gap-1 text-white flex w-full h-7 text-xs text-righ justify-end">
+                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                </svg>  
+                <h1 class="mr-4 mt-1.5">(044)12345</h1>
+                <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                </svg>
+                <h1 class="mr-4 mt-1.5">Saogcooperative</h1>
+            </div>
+            <!-- end of header -->
+
+            <!-- nav bar -->
+           @include('Partials.navbar')
+        <!-- end of navbar -->
 
         <!-- picture-membership -->
         <div class="flex bg-yellow-300 mb-10">
@@ -38,96 +53,496 @@
         <!-- membership form -->
         <div class="flex items-center justify-center mb-3">
             <div class="w-11/12 bg-white p-4 shadow-md rounded">
-                <h1 class="text-xl font-bold mb-4">Regular Membership</h1>
-
-                <form  method="POST" action=" {{route('pre-membership.email')}} ">
-                    @csrf
-                    @method('POST')
-                 
-                    <div class="user-details">
-                        <!-- name -->
-                        <div class="input-box">
-                            <span class="details" for="firstname">First Name*</span>
-                            <input type="text" placeholder="Enter your first name" id="first-name" name="firstname" required>
+                <h1 class="text-xl font-bold mb-1 m-10">Regular Membership</h1>
+                <h6 class="ml-10 text-sm">Membership</h6>
+                
+                <form class="m-10">
+                    <!-- full name -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-3">
+                        <div class="mb-4">
+                            <label for="firstName" class="block text-gray-700 font-bold mb-2">First Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="firstName" name="firstName" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                         </div>
-                        <div class="input-box">
-                            <span class="details" for="middle name">Middle Name (optional)</span>
-                            <input type="text" placeholder="Enter your middle name" id="middle-name" name="middlename">
+                        <div class="mb-4">
+                            <label for="middleName" class="block text-gray-700 font-bold mb-2">Middle Name (Optional)</label>
+                            <input type="text" id="middleName" name="middleName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200">
                         </div>
-                        <div class="input-box">
-                            <span class="details" for="last-name">Last Name*</span>
-                            <input type="text" placeholder="Enter your last name" id="last-name" name="lastname" required>
+                        <div class="mb-4">
+                            <label for="lastName" class="block text-gray-700 font-bold mb-2">Last Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="lastName" name="lastName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200">
                         </div>
-                        <!-- end of name -->
+                    </div>
+                    <!--End of full name -->
 
-                        <!-- email,address,dob -->
-                        <div class="input-box">
-                            <span class="details" for="email">Email Address*</span>
-                            <input type="email" placeholder="Enter your email" id="email" name="email" required>
-                        </div>
-
-                        <div class="input-box">
-                            <span class="details" for="address">Current Address*</span>
-                            <input type="text" placeholder="Enter your address" id="address" name="address" required>
-                        </div>
-
-                        <div class="input-box">
-                            <span class="details" for="contact-number">Phone Number*</span>
-                            <input type="number" placeholder="Enter your phone number" id="contact-number" name="contactnumber" required>
-                        </div>
-
-                        <div class="">
-                            <span class="details" for="dob">Date of Birth*</span>
-                            <input type="date" placeholder="Enter your phone birth date" type="date" id="dob" name="dob" required>
-                        </div>
-                        <!-- end of email,address,dob -->
-
-                        <!-- gender -->
-                        <div class="gender-details">
-                            <span for="gender">Gender</span>
-                            <div class="category">
-                                <label for="male">
-                                    <input type="checkbox" id="male" name="gender" value="male">
-                                    <span>Male</span>
-                                </label>
-
-                                <label for="female">
-                                    <input type="checkbox" id="female" name="gender" value="female">
-                                    <span>Female</span>
-                                </label>
+                    <!-- gender and age -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div class="mb-4 text-sm">
+                            <label class="block text-gray-700 font-bold mb-2">Gender <span class="text-red-500">*</span></label>
+                            <div class="flex items-center mb-2">
+                                <input type="radio" id="male" name="gender" value="male" class="mr-2" required>
+                                <label for="male" class="text-gray-700">Male</label>
+                            </div>
+                            <div class="flex items-center mb-2">
+                                <input type="radio" id="female" name="gender" value="female" class="mr-2" required>
+                                <label for="female" class="text-gray-700">Female</label>
                             </div>
                         </div>
-                        <!-- end of gender -->
 
-                        <div>
-                            <label for="occupation">Occupation*:</label><br>
-                            <input type="text" id="occupation" name="occupation" required>
+                        <div class="mb-4">
+                            <label for="age" class="block text-gray-700 font-bold mb-2">Age <span class="text-red-500">*</span></label>
+                            <input type="number" id="age" name="age" min="0" max="120" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                    </div>
+                    <!-- end of gender and age-->
+
+                    <!-- address -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div class="mb-4">
+                            <label for="address" class="block text-gray-700 font-bold mb-2 text-sm">Address <span class="text-red-500">*</span></label>
+                            <input id="address" name="address" rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                         </div>
 
-                        <div>
-                            <label for="civil-status">Civil Status*:</label><br>
-                            <select id="civil-status" name="civilstatus" required>
-                                <option value="">Select</option>
-                                <option value="single">Single</option>
-                                <option value="married">Married</option>
-                                <option value="widowed">Widowed</option>
-                                <option value="divorced">Divorced</option>
-                                <option value="separated">Separated</option>
+                        <div class="mb-4">
+                            <label for="religion" class="block text-gray-700 font-bold mb-2 text-sm">Religion <span class="text-red-500">*</span></label>
+                            <input id="address" name="address" rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                    </div>
+                    <!-- end of address -->
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div class="mb-4">
+                            <label for="POB" class="block text-gray-700 font-bold mb-2">Place of Birth <span class="text-red-500">*</span></label>
+                            <input type="text" id="POB" name="POB" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="DOB" class="block text-gray-700 font-bold mb-2">Date of Birth <span class="text-red-500">*</span></label>
+                            <input type="date" id="DOB" name="DOB" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                    </div>
+
+                    <!-- ID -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
+                        <div class="mb-4">
+                            <label for="idType" class="block text-gray-700 font-bold mb-2 text-sm">Valid ID Type <span class="text-red-500">*</span></label>
+                            <select id="idType" name="idType" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                                <option value="" disabled selected>Select ID Type</option>
+                                <option value="tinID">TIN ID</option>
+                                <option value="philhealth">Philhealth</option>
+                                <option value="UMID">UMID/SSS/GSIS</option>
+                                <option value="pagibig">Pag-ibig</option>
+                                <option value="driverLicense">Dricer's Licence</option>
+                                <option value="others">Others</option>
                             </select>
                         </div>
+                            
+                        <div class="mb-4">
+                            <label for="idNumber" class="block text-gray-700 font-bold mb-2 text-sm">ID Number <span class="text-red-500">*</span></label>
+                            <input type="text" id="idNumber" name="idNumber" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
 
-                        <input type="submit" value="Submit">
+                        <div class="mb-4">
+                            <label for="idType" class="block text-gray-700 font-bold mb-2 text-sm">Valid ID Type(2) <span class="text-red-500">*</span></label>
+                            <select id="idType" name="idType" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                                <option value="" disabled selected>Select ID Type</option>
+                                <option value="tinID">TIN ID</option>
+                                <option value="philhealth">Philhealth</option>
+                                <option value="UMID">UMID/SSS/GSIS</option>
+                                <option value="pagibig">Pag-ibig</option>
+                                <option value="driverLicense">Dricer's Licence</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                            
+                        <div class="mb-4">
+                            <label for="idNumber" class="block text-gray-700 font-bold mb-2 text-sm">ID Number(2) <span class="text-red-500">*</span></label>
+                            <input type="text" id="idNumber" name="idNumber" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                    </div>
+                    <!-- end of ID -->
+
+                    <!-- occupation -->
+                    <div class="text-sm">
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-bold mb-5 text-sm">Occupation <span class="text-red-500">*</span></label>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                                <div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="self-employed" name="occupation" value="self-employed" class="mr-2" required>
+                                        <label for="self-employed" class="text-gray-700">Self-Employed</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="public-official" name="occupation" value="public-official" class="mr-2" required>
+                                        <label for="public-official" class="text-gray-700">Public-Official</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="driver/operator/conductor" name="occupation" value="driver/operator/conductor" class="mr-2" required>
+                                        <label for="housewife/househusband" class="text-gray-700">Driver/Operator/Conductor</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="housewife/househusband" name="occupation" value="housewife/househusband" class="mr-2" required>
+                                        <label for="housewife/househusband" class="text-gray-700">Housewife/Househusband</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="private-employee" name="occupation" value="private-employee" class="mr-2" required>
+                                        <label for="private-employee" class="text-gray-700">Private Employee</label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="government-employee" name="occupation" value="government-employee" class="mr-2" required>
+                                        <label for="government-employee" class="text-gray-700">Government Employee</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="religious-leader" name="occupation" value="religious-leader" class="mr-2" required>
+                                        <label for="religious-leader" class="text-gray-700">Religious Leader</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="entrepreneur-small" name="occupation" value="entrepreneur-small" class="mr-2" required>
+                                        <label for="entrepreneur-small" class="text-gray-700">Entrepreneur - Small</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="entrepreneur-large" name="occupation" value="entrepreneur-large" class="mr-2" required>
+                                        <label for="entrepreneur-large" class="text-gray-700">Entrepreneur - Large</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="senior-citizen/retiree" name="occupation" value="senior-citizen/retiree" class="mr-2" required>
+                                        <label for="senior-citizen/retiree" class="text-gray-700">Eenior Citizen/Retiree</label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="allotee" name="occupation" value="allotee" class="mr-2" required>
+                                        <label for="allotee" class="text-gray-700">Allotee</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="volunteer" name="occupation" value="volunteer" class="mr-2" required>
+                                        <label for="volunteer" class="text-gray-700">Volunteer</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="none" name="occupation" value="none" class="mr-2" required>
+                                        <label for="none" class="text-gray-700">None</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="others" name="occupation" value="others" class="mr-2" required>
+                                        <label for="others" class="text-gray-700">Others</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of occupation -->
+
+                        <!-- employment status -->
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-bold mb-5 text-sm">Employment Status <span class="text-red-500">*</span></label>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                                <div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="permanent" name="emplyment-status" value="permanent" class="mr-2" required>
+                                        <label for="permanent" class="text-gray-700">Permanent</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="project-based" name="emplyment-status" value="project-based" class="mr-2" required>
+                                        <label for="project-based" class="text-gray-700">Project-Based</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="seasonal" name="emplyment-status" value="seasonal" class="mr-2" required>
+                                        <label for="project-based" class="text-gray-700">Seasonal</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="casual" name="emplyment-status" value="casual" class="mr-2" required>
+                                        <label for="casual" class="text-gray-700">Casual</label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="probationary" name="emplyment-status" value="probationary" class="mr-2" required>
+                                        <label for="probationary" class="text-gray-700">Probationary</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="fixed-or-termed" name="emplyment-status" value="fixed-or-termed" class="mr-2" required>
+                                        <label for="fixed-or-termed" class="text-gray-700">Fixed or Termed</label>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <input type="radio" id="others" name="emplyment-status" value="others" class="mr-2" required>
+                                        <label for="others" class="text-gray-700">Others</label>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of employment status -->
+
+                    <!-- Educational Attainment -->
+                    <div class="mb-5">
+                        <label class="block text-gray-700 font-bold mb-5 text-sm">Educational Attaiment <span class="text-red-500">*</span></label>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                            <div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" id="elem" name="educational-attaiment" value="elem" class="mr-2" required>
+                                    <label for="elem" class="text-gray-700">Elementary</label>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" id="highschool" name="educational-attaiment" value="highschool" class="mr-2" required>
+                                    <label for="highschool" class="text-gray-700">Highschool</label>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" id="college" name="educational-attaiment" value="college" class="mr-2" required>
+                                    <label for="college" class="text-gray-700">College</label>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" id="vocational" name="educational-attaiment" value="vocational" class="mr-2" required>
+                                    <label for="vocational" class="text-gray-700">Vocational</label>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" id="others" name="educational-attaiment" value="others" class="mr-2" required>
+                                    <label for="others" class="text-gray-700">Others</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of Educational Attainment -->
+
+                    <!-- contact information -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
+                        <!-- contact number -->
+                        <div class="mb-2">
+                            <label for="contactNumber" class="block text-gray-700 font-bold mb-2">Contact Number <span class="text-red-500">*</span></label>
+                            <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        <!-- end of contact number -->
+
+                        <!-- facebook Account -->
+                        <div class="mb-2">
+                            <label for="facebookAccount" class="block text-gray-700 font-bold mb-2">Facebook Account <span class="text-red-500">*</span></label>
+                            <input type="text" id="facebookAccount" name="facebook-account" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        <!-- end of facebook account -->
+                        
+                        <!-- email -->
+                        <div class="mb-2">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">Email <span class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                        <!-- end of email -->
+                    </div>
+                    <!-- end of contact information -->
+                    
+                    <!-- employer -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
+                        <div class="mb-2">
+                            <label for="text" class="block text-gray-700 font-bold mb-2">Name of Employer <span class="text-red-500">*</span></label>
+                            <input type="text" id="nameOfEmployer" name="nameOfEmployer" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="mb-2">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">Address of Employer <span class="text-red-500">*</span></label>
+                            <input type="text" id="addressOfEmployer" name="addressOfEmployer" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                    </div>
+                    <!-- end of employer -->
+
+                    <!-- Income -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
+                        <div class="mb-2">
+                            <label for="text" class="block text-gray-700 font-bold mb-2">Monthly Income <span class="text-red-500">*</span></label>
+                            <input type="number" id="monthlyIncome" name="monthlyIncome" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="mb-2">
+                            <label for="text" class="block text-gray-700 font-bold mb-2">Annual Income <span class="text-red-500">*</span></label>
+                            <input type="number" id="annualIncome" name="annualIncome" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                    </div>
+                    <!-- end-of-income -->
+                    
+                    <!-- house ownership -->
+                    <div class="mb-5">
+                        <label class="block text-gray-700 font-bold mb-5 text-sm">House Ownership<span class="text-red-500">*</span></label>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                            <div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" id="owned" name="house-ownership" value="owned" class="mr-2" required>
+                                    <label for="owned" class="text-gray-700">Owned</label>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" id="rental" name="house-ownership" value="rental" class="mr-2" required>
+                                    <label for="rental" class="text-gray-700">Rental</label>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" id="livingwithparents" name="house-ownership" value="livingwithparents" class="mr-2" required>
+                                    <label for="owned" class="text-gray-700">Living with Parents</label>
+                                </div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" id="rental" name="house-ownership" value="rental" class="mr-2" required>
+                                    <label for="rental" class="text-gray-700">Rental</label>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center mb-2">
+                                    <input type="radio" id="housingLoan" name="house-ownership" value="housingLoan" class="mr-2" required>
+                                    <label for="housingLoan" class="text-gray-700">Housing Loan</label>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="text" class="block text-gray-700 mb-2">Length of Stay: (year)</label>
+                                <input type="number" id="LengthOfStay" name="house-ownership" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of house ownership -->
+
+                    <!-- citezenship, no of children, civil status -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-6">
+                        <div class="mb-2">
+                            <label for="text" class="block text-gray-700 font-bold mb-2">Citezenship <span class="text-red-500">*</span></label>
+                            <input type="text" id="citezenship" name="citezenship" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="text" class="block text-gray-700 font-bold mb-2">Number of Children <span class="text-red-500">*</span></label>
+                            <input type="number" id="citezenship" name="citezenship" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="civilStatus" class="block text-gray-700 font-bold mb-2">Civil Status <span class="text-red-500">*</span></label>
+                            <select id="civilStatus" name="civilStatus" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                                <option value="" disabled selected>Select Civil Status</option>
+                                <option value="single">Single</option>
+                                <option value="married">Married</option>
+                                <option value="divorced">Divorced</option>
+                                <option value="widowed">Widowed</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- end of citezenship, no of children, civil status -->
+
+                    <!-- date/place-of-marriage -->
+                    <p class="block text-gray-700 font-bold mb-5 text-sm">If Married (optional)</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
+                        <div class="mb-4">
+                            <label for="text" class="block text-gray-700 font-bold mb-2">Place of Marriage</label>
+                            <input type="text" id="place-of-birth" name="place-of-birth" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="date-of-marriage" class="block text-gray-700 font-bold mb-2">Date of Marriage</label>
+                            <input type="date" id="date-of-marriage" name="date-of-marriage" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                    </div>
+                    <!-- end of date/place-of-marriage -->
+                    
+                    <!-- spouse name/ -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-6">
+                        <div class="mb-4">
+                            <label for="spouse-name" class="block text-gray-700 font-bold mb-2">Spouse Name</label>
+                            <input type="text" id="spouse-name" name="spouse-name" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="place-of-birth" class="block text-gray-700 font-bold mb-2">Place of Birth (spouse)</label>
+                            <input type="text" id="place-of-birth" name="place-of-birth" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="place-of-birth" class="block text-gray-700 font-bold mb-2">Date of Birth (spouse)</label>
+                            <input type="date" id="place-of-birth" name="place-of-birth" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                    </div>
+                    <!-- end of spouse name -->
+                    
+                    <!-- educational-attaiment, occupation (spouse) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
+                        <div class="mb-4">
+                            <label for="educational-attaiment" class="block text-gray-700 font-bold mb-2">Educational Attainment (spouse)</label>
+                            <select id="educational-attaiment" name="educational-attaiment" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                                <option value="" disabled selected>Select Educational Attainment</option>
+                                <option value="elem">Elementary</option>
+                                <option value="highschool">Highschool</option>
+                                <option value="college">College</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="occupation" class="block text-gray-700 font-bold mb-2">Occupation (spouse)</label>
+                            <input type="text" id="occupation" name="occupation" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                    </div>
+                    <!-- end of educational-attaiment, occupation (spouse) -->
+
+                    <!-- Dependents Information -->
+                    <p class="block text-gray-700 font-bold mb-4 text-sm">Defendents</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
+                        <div class="block text-gray-700 font-bold mb-2">
+                            <label for="dependent1name" class="block text-gray-700 font-bold mb-2">Name of Dependent (1) <span class="text-red-500">*</span></label>
+                            <input type="text" id="dependent1name" name="dependent1name" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="dependent1date" class="block text-gray-700 font-bold mb-2">Birthdate <span class="text-red-500">*</span></label>
+                            <input type="date" id="dependent1-date" name="dependent1-date" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
+                        <div class="block text-gray-700 font-bold mb-2">
+                            <label for="dependent2name" class="block text-gray-700 font-bold mb-2">Name of Dependent (2) <span class="text-red-500">*</span></label>
+                            <input type="text" id="dependent2name" name="dependent2name" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="dependent2date" class="block text-gray-700 font-bold mb-2">Birthdate <span class="text-red-500">*</span></label>
+                            <input type="date" id="dependent2date" name="dependent2date" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
+                        <div class="block text-gray-700 font-bold mb-2">
+                            <label for="dependent3name" class="block text-gray-700 font-bold mb-2">Name of Dependent (3) <span class="text-red-500">*</span></label>
+                            <input type="text" id="dependent3name" name="dependent3name" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="dependent1-date" class="block text-gray-700 font-bold mb-2">Birthdate <span class="text-red-500">*</span></label>
+                            <input type="date" id="dependent3date" name="dependent1-date" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
+                        <div class="block text-gray-700 font-bold mb-2">
+                            <label for="dependent4name" class="block text-gray-700 font-bold mb-2">Name of Dependent (4) <span class="text-red-500">*</span></label>
+                            <input type="text" id="dependent4name" name="dependent4name" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="dependent1-date" class="block text-gray-700 font-bold mb-2">Birthdate <span class="text-red-500">*</span></label>
+                            <input type="date" id="dependent4date" name="dependent4date" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                    </div>
+                    <!-- End of  Dependents Information -->
+
+                    <div class="flex justify-center gap-4">
+                    <button type="submit"
+                        class="mt-9 bg-lime-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                        Register
+                    </button>
+
+                    <button type="submit"
+                        class="mt-9 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                        Cancel
+                    </button>
                     </div>
                 </form>
+
             </div>
         </div>
         <!-- end of membership form -->
 
-        @include("Partials.footer")
+        <!-- all about -->
+        @include('Partials.footer')
+        <!-- end of all about -->
+        <!-- footer -->
 
     <script src="script.js">
     </script>
-
 </body>
 
 </html>
