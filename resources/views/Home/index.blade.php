@@ -142,7 +142,7 @@
             <!-- end of contact us -->
 
             <!-- all about -->
-            <div class="hidden sm:block">
+            {{-- <div class="hidden sm:block">
                 <div class="w-full h-96 bg-yellow-400 md:grid md:grid-cols-4 p-7 px-28 text-justify">
                     <div class="">
                         <p class="font-extrabold text-lime-700 text-md">Savings Products</p>
@@ -202,7 +202,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- end of all about -->
 
             

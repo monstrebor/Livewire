@@ -37,12 +37,9 @@
                 </div>
                 <button type="submit" class="cbutton ml-32 mt-4 rounded-2xl">Login</button>
             </form>
-            <p class="mt-4 text-gray-700 text-center">Don't have an account? <a href="#" class="text-lime-600 hover:underline">Register here</a>.</p>
+            <p class="mt-4 text-gray-700 text-center">Don't have an account? <a href="{{route('regular.registration')}}" class="text-lime-600 hover:underline">Register here</a>.</p>
         </div>
     </div>
-
-
-
 
 </body>
 </html>

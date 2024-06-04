@@ -29,8 +29,8 @@
             <!-- end of header -->
 
             <!-- nav bar -->
-           @include('Partials.navbar')
-        <!-- end of navbar -->
+            @include('Partials.navbar')
+            <!-- end of navbar -->
 
         <!-- picture-membership -->
         <div class="flex bg-yellow-300 mb-10">
@@ -51,7 +51,7 @@
         <!-- end of membership button -->
 
         <!-- membership form -->
-        <div class="flex items-center justify-center mb-3">
+        <div class="flex items-center justify-center mb-10">
             <div class="w-11/12 bg-white p-4 shadow-md rounded">
                 <h1 class="text-xl font-bold mb-1 m-10">Regular Membership</h1>
                 <h6 class="ml-10 text-sm">Membership</h6>
@@ -421,7 +421,7 @@
                         </div>
                     </div>
                     <!-- end of citezenship, no of children, civil status -->
-
+                    <hr class="m-7">
                     <!-- date/place-of-marriage -->
                     <p class="block text-gray-700 font-bold mb-5 text-sm">If Married (optional)</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
@@ -471,7 +471,7 @@
                         </div>
                     </div>
                     <!-- end of educational-attaiment, occupation (spouse) -->
-
+                    <hr class="m-7">
                     <!-- Dependents Information -->
                     <p class="block text-gray-700 font-bold mb-4 text-sm">Defendents</p>
                     
