@@ -170,7 +170,7 @@
                         <div class="mb-4">
                             <label for="idNumber" class="block text-gray-700 font-bold mb-2 text-sm">ID Number <span
                                     class="text-red-500">*</span></label>
-                            <input type="text" id="idNumber" name="idNumber"
+                            <input type="number" id="idNumber" name="idNumber"
                                 class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
 
@@ -193,7 +193,7 @@
                         <div class="mb-4">
                             <label for="idNumber" class="block text-gray-700 font-bold mb-2 text-sm">ID Number(2)
                                 <span class="text-red-500">*</span></label>
-                            <input type="text" id="idNumber" name="idNumber"
+                            <input type="number" id="idNumber" name="idNumber"
                                 class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
@@ -591,7 +591,7 @@
                     <!-- end of educational-attaiment, occupation (spouse) -->
 
                     <!-- Dependents Information -->
-                    <p class="block text-gray-700 font-bold mb-4 text-sm">Defendents</p>
+                    <p class="block text-gray-700 font-bold mb-4 text-sm">Dependents</p>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
                         <div class="block text-gray-700 font-bold mb-2">
