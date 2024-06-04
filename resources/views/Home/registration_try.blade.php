@@ -19,7 +19,7 @@
             <div class="bg-lime-600 gap-1 text-white flex w-full h-7 text-xs text-righ justify-end">
                 <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-                </svg>  
+                </svg>
                 <h1 class="mr-4 mt-1.5">(044)12345</h1>
                 <svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
@@ -55,8 +55,12 @@
             <div class="w-11/12 bg-white p-4 shadow-md rounded">
                 <h1 class="text-xl font-bold mb-1 m-10">Regular Membership</h1>
                 <h6 class="ml-10 text-sm">Membership</h6>
-                
-                <form class="m-10">
+
+                <form class="m-10" method="post" action="{{route('fetch')}}">
+
+                    @csrf
+
+
                     <!-- full name -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-3">
                         <div class="mb-4">
@@ -134,7 +138,7 @@
                                 <option value="others">Others</option>
                             </select>
                         </div>
-                            
+
                         <div class="mb-4">
                             <label for="idNumber" class="block text-gray-700 font-bold mb-2 text-sm">ID Number <span class="text-red-500">*</span></label>
                             <input type="text" id="idNumber" name="idNumber" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
@@ -152,7 +156,7 @@
                                 <option value="others">Others</option>
                             </select>
                         </div>
-                            
+
                         <div class="mb-4">
                             <label for="idNumber" class="block text-gray-700 font-bold mb-2 text-sm">ID Number(2) <span class="text-red-500">*</span></label>
                             <input type="text" id="idNumber" name="idNumber" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
@@ -270,7 +274,7 @@
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -325,7 +329,7 @@
                             <input type="text" id="facebookAccount" name="facebook-account" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                         </div>
                         <!-- end of facebook account -->
-                        
+
                         <!-- email -->
                         <div class="mb-2">
                             <label for="email" class="block text-gray-700 font-bold mb-2">Email <span class="text-red-500">*</span></label>
@@ -334,7 +338,7 @@
                         <!-- end of email -->
                     </div>
                     <!-- end of contact information -->
-                    
+
                     <!-- employer -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
                         <div class="mb-2">
@@ -360,7 +364,7 @@
                         </div>
                     </div>
                     <!-- end-of-income -->
-                    
+
                     <!-- house ownership -->
                     <div class="mb-5">
                         <label class="block text-gray-700 font-bold mb-5 text-sm">House Ownership<span class="text-red-500">*</span></label>
@@ -435,7 +439,7 @@
                         </div>
                     </div>
                     <!-- end of date/place-of-marriage -->
-                    
+
                     <!-- spouse name/ -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-6">
                         <div class="mb-4">
@@ -452,7 +456,7 @@
                         </div>
                     </div>
                     <!-- end of spouse name -->
-                    
+
                     <!-- educational-attaiment, occupation (spouse) -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
                         <div class="mb-4">
@@ -474,7 +478,7 @@
 
                     <!-- Dependents Information -->
                     <p class="block text-gray-700 font-bold mb-4 text-sm">Defendents</p>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
                         <div class="block text-gray-700 font-bold mb-2">
                             <label for="dependent1name" class="block text-gray-700 font-bold mb-2">Name of Dependent (1) <span class="text-red-500">*</span></label>

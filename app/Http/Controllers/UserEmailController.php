@@ -4,50 +4,66 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf as PDF;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Carbon;
 
 
 class UserEmailController extends Controller
 {
 
+    protected $UserRegistration;
+
+
+  
+
+
+    public function time()
+    {
+
+        $now = Carbon::now();
+
+        $nextSaturday = $now->copy()->next(Carbon::SUNDAY);
+
+        if ($now->gt($nextSaturday->subHours(12)))
+        {
+
+            $nextSaturday = $now->copy()->next(Carbon::SUNDAY)->addWeek();
+
+        }
+
+        return $nextSaturday;
+
+    }
 
     public function PreMemberEmail(Request $request){
 
 
         $data = [
+
             'title' => 'MNSMPC',
-            'name' => $request->input('firstname'),
-            'middlename' => $request->input('middlename'),
-            'lastname' => $request->input('lastname'),
-            'email'=>$request->input('email'),
-            'address' => $request->input('address'),
-            'contactnumber'=>$request->input('contactnumber'),
-            'dob'=>$request->input('dob'),
-            'gender'=> $request->input('gender'),
-            'occupation'=> $request->input('occupation'),
-            'civilstatus' => $request->input('civilstatus'),
+            'name' => $request->input('firstName'),
+            'email'=> $request->input('email'),
         ];
 
-        $pdf = PDF::loadView('PDF.try', $data);
+        $date = $this->time()->format('F j Y');
 
-        // return $pdf->download('document.pdf');
-
-        $pdfContent = $pdf->output();
 
         $content= [
+
             'body'=>'PRE-MEMBER REGISTRATION',
-            'content'=> "Good Day! " . $data['name'] . ". You are now a member of MNSMPC. Please don't reply on this mail.",
-            'title'=>'Pre-Membership Registration'
+            'title'=>'Pre-Membership Registration',
+            'name'=>$data['name'],
+            'date' => $date,
+
         ];
 
 
-        // Mail::to($data['email'])->send(new SampleEmail($content,$subject)); // key of sending info.
-        // return "Email sent successfully!";
 
-        Mail::send('Mail.membership', $content, function($message) use ($data, $pdfContent, $content,) {
+        // sending mail, view, content, use variable to be use in content.
+
+        Mail::send('Mail.membership', $content, function($message) use ($data, $content,) {
             $message->to($data['email'])
-                ->subject($content['title'])
-                ->attachData($pdfContent, 'PRE-MEMBERSHIP.pdf',
-                ['mime' => 'application/pdf']);
+                ->subject($content['title']);
+
 
                 $filePath = public_path('upload/MNSMPC-PRIMER.pdf');
 
@@ -57,10 +73,6 @@ class UserEmailController extends Controller
                 ]);
 
         });
-
-        // return redirect()->route('Login.index');
-
-        return redirect()->route('form.submit');
 
     }
 

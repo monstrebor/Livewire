@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserEmailController;
+use Illuminate\Http\Request;
 
 
 
@@ -59,24 +60,31 @@ Route::post('/success',[UserEmailController::class,'PreMemberEmail'])->name('pre
 
 
 
-// Route::post('/test',function(Request $request){
+Route::post('/test',function( Request $request, UserEmailController $control ){
 
-//     $data = [
 
-//         'name' => $request->input('firstname'),
-//         'middlename' => $request->input('middlename'),
-//         'lastname' => $request->input('lastname'),
-//         'email'=>$request->input('email'),
-//         'address' => $request->input('address'),
-//         'contactnumber'=>$request->input('contactnumber'),
-//         'dob'=>$request->input('dob'),
-//         'occupation'=> $request->input('occupation'),
-//         'civilstatus' => $request->input('civilstatus'),
-//     ];
+    $control->PreMemberEmail($request);   // table: reg_member_dependent
 
-//     return view('try',compact('data'));
 
-// })->name('fetch');
+    // $data = [
+
+    //     'name' => $request->input('firstname'),
+    //     'middlename' => $request->input('middlename'),
+    //     'lastname' => $request->input('lastname'),
+    //     'email'=>$request->input('email'),
+    //     'address' => $request->input('address'),
+    //     'contactnumber'=>$request->input('contactnumber'),
+    //     'dob'=>$request->input('dob'),
+    //     'occupation'=> $request->input('occupation'),
+    //     'civilstatus' => $request->input('civilstatus'),
+    // ];
+
+
+   
+
+    return redirect()->route('form.submit');
+
+})->name('fetch');
 
 
 
