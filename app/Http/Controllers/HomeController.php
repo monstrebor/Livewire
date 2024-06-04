@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
 
+    
     public function Homepage(){
 
         return view('Home.index');
@@ -19,6 +20,7 @@ class HomeController extends Controller
         return view('Home.login');
 
     }
+
 
 
 }
