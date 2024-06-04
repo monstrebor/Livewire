@@ -65,19 +65,39 @@ Route::post('/test',function(Request $request){
 
     $data = [
 
-        'name' => $request->input('firstname'),
-        'middlename' => $request->input('middlename'),
-        'lastname' => $request->input('lastname'),
-        'email'=>$request->input('email'),
+        'firstName' => $request->input('firstName'),
+        'middleName' => $request->input('middleName'),
+        'lastName' => $request->input('lastName'),
+        'gender' => $request->input('gender'),
+        'age' => $request->input('age'),
         'address' => $request->input('address'),
-        'contactnumber'=>$request->input('contactnumber'),
-        'dob'=>$request->input('dob'),
-        'occupation'=> $request->input('occupation'),
-        'civilstatus' => $request->input('civilstatus'),
+        'religion' => $request->input('religion'),
+        'POB' => $request->input('POB'),
+        'DOB' => $request->input('DOB'),
+        'idType' => $request->input('idType'),
+        'idNumber' => $request->input('idNumber'),
+        'occupation' => $request->input('occupation'),
+        'employment-status' => $request->input('employment-status'),
+        'educational-attainment' => $request->input('educational-attainment'),
+        'contactNumber' => $request->input('contactNumber'),
+        'facebook-account' => $request->input('facebook-account'),
+        'email' => $request->input('email'),
+        'nameOfEmployer' => $request->input('nameOfEmployer'),
+        'addressOfEmployer' => $request->input('addressOfEmployer'),
+        'monthlyIncome' => $request->input('monthlyIncome'),
+        'annualIncome' => $request->input('annualIncome'),
+        'house-ownership' => $request->input('house-ownership'),
+        'citizenship' => $request->input('citizenship'),
+        'civilStatus' => $request->input('civilStatus'),
+        'place-of-marriage' => $request->input('place-of-marriage'),
+        'date-of-marriage' => $request->input('date-of-marriage'),
+        'spouse-name' => $request->input('spouse-name'),
+        'place-of-birth' => $request->input('place-of-birth'),
+        'educational-attainmentSpouse' => $request->input('educational-attainmentSpouse'),
+        'occupationSpouse' => $request->input('occupationSpouse'),
     ];
 
-    return view('try',compact('data'));
-
+    return view('showRegistration',compact('data'));
 })->name('fetch');
 
 

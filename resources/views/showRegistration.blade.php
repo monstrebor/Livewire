@@ -1,0 +1,68 @@
+<div>
+    <div>
+        <p>{{$data['firstName']}}</p>
+        <p>{{$data['middleName']}}</p>
+        <p>{{$data['lastName']}}</p>
+        <p>{{$data['gender']}}</p>
+        <p>{{$data['age']}}</p>
+        <p>{{$data['address']}}</p>
+        <p>{{$data['religion']}}</p>
+        <p>{{$data['POB']}}</p>
+        <p>{{$data['DOB']}}</p>
+        <p>{{$data['idType']}}</p>
+        <p>{{$data['idNumber']}}</p>
+        <p>{{$data['idType']}}</p>
+        <p>{{$data['idNumber']}}</p>
+        <p>{{$data['occupation']}}</p>
+        <p>{{$data['employment-status']}}</p>
+        <p>{{$data['educational-attainment']}}</p>
+        <p>{{$data['contactNumber']}}</p>
+        <p>{{$data['facebook-account']}}</p>
+        <p>{{$data['email']}}</p>
+        <p>{{$data['nameOfEmployer']}}</p>
+        <p>{{$data['addressOfEmployer']}}</p>
+        <p>{{$data['monthlyIncome']}}</p>
+        <p>{{$data['annualIncome']}}</p>
+        <p>{{$data['house-ownership']}}</p>
+        <p>{{$data['citizenship']}}</p>
+        <p>{{$data['civilStatus']}}</p>
+        <p>{{$data['place-of-marriage']}}</p>
+        <p>{{$data['date-of-marriage']}}</p>
+        <p>{{$data['spouse-name']}}</p>
+        <p>{{$data['place-of-birth']}}</p>
+        <p>{{$data['educational-attainmentSpouse']}}</p>
+        <p>{{$data['occupationSpouse']}}</p>
+    </div>
+</div>
+{{-- firstName
+middleName
+lastName
+gender
+age
+address
+religion
+POB
+DOB
+idType
+idNumber
+idType
+idNumber
+occupation
+employment-status
+educational-attainment
+contactNumber
+facebook-account
+email
+nameOfEmployer
+addressOfEmployer
+monthlyIncome
+annualIncome
+house-ownership
+citizenship
+civilStatus
+place-of-marriage
+date-of-marriage
+spouse-name
+place-of-birth
+educational-attainmentSpouse
+occupationSpouse --}}
