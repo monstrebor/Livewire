@@ -5,6 +5,7 @@ use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserEmailController;
 
+use Illuminate\Support\Carbon;
 
 
 
@@ -29,7 +30,9 @@ Route::get('/register',function(){
 
     return view('home.registration_try');
 
-});
+})->name('regular.registration');
+
+
 
 
 Route::get('/register/submit',function(){
@@ -107,7 +110,19 @@ Route::post('/success',[UserEmailController::class,'PreMemberEmail'])->name('pre
 
 
 
+Route::get('/carbon',function(){
 
+
+
+
+    // Get the first Saturday of the current week
+    $formattedDate = Carbon::now()->startOfWeek()->next(Carbon::SATURDAY)->format('Y-m-d');
+    
+    
+
+
+
+});
 
 
 
