@@ -3,15 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\HomeController;
-<<<<<<< HEAD
 use Illuminate\Http\Request;
-=======
 use App\Http\Controllers\UserEmailController;
 
 
 
 
->>>>>>> 96ff9ba71885a9551cbfdcd8db443b6de9d1e3f5
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,12 +48,9 @@ Route::get('/register/submit',function(){
 Route::fallback([ErrorController::class,'custom_404']);
 
 
-Route::get('/test', function (Request $request) {
 
 
-<<<<<<< HEAD
-        $data = [
-=======
+
 // email pre-membership controller
 
 Route::post('/success',[UserEmailController::class,'PreMemberEmail'])->name('pre-membership.email');
@@ -67,24 +61,24 @@ Route::post('/success',[UserEmailController::class,'PreMemberEmail'])->name('pre
 
 
 
-// Route::post('/test',function(Request $request){
+Route::post('/test',function(Request $request){
 
-//     $data = [
+    $data = [
 
-//         'name' => $request->input('firstname'),
-//         'middlename' => $request->input('middlename'),
-//         'lastname' => $request->input('lastname'),
-//         'email'=>$request->input('email'),
-//         'address' => $request->input('address'),
-//         'contactnumber'=>$request->input('contactnumber'),
-//         'dob'=>$request->input('dob'),
-//         'occupation'=> $request->input('occupation'),
-//         'civilstatus' => $request->input('civilstatus'),
-//     ];
+        'name' => $request->input('firstname'),
+        'middlename' => $request->input('middlename'),
+        'lastname' => $request->input('lastname'),
+        'email'=>$request->input('email'),
+        'address' => $request->input('address'),
+        'contactnumber'=>$request->input('contactnumber'),
+        'dob'=>$request->input('dob'),
+        'occupation'=> $request->input('occupation'),
+        'civilstatus' => $request->input('civilstatus'),
+    ];
 
-//     return view('try',compact('data'));
+    return view('try',compact('data'));
 
-// })->name('fetch');
+})->name('fetch');
 
 
 
@@ -126,21 +120,20 @@ Route::post('/success',[UserEmailController::class,'PreMemberEmail'])->name('pre
 
 
 
->>>>>>> 96ff9ba71885a9551cbfdcd8db443b6de9d1e3f5
 
-            'name'=> $request->name,
-            'password'=> $request->password,
-            'email'=> $request->email,
+//             'name'=> $request->name,
+//             'password'=> $request->password,
+//             'email'=> $request->email,
 
-        ];
-
-
-        return view('test',compact('data'));
+//         ];
 
 
-})->name('store');
+//         return view('test',compact('data'));
 
 
-Route::get('/register', function () {
-    return view('Home.registration');
-    });
+// })->name('store');
+
+
+// Route::get('/register', function () {
+//     return view('Home.registration');
+//     });
