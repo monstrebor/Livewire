@@ -11,8 +11,6 @@
         <p>{{$data['DOB']}}</p>
         <p>{{$data['idType']}}</p>
         <p>{{$data['idNumber']}}</p>
-        <p>{{$data['idType']}}</p>
-        <p>{{$data['idNumber']}}</p>
         <p>{{$data['occupation']}}</p>
         <p>{{$data['employment-status']}}</p>
         <p>{{$data['educational-attainment']}}</p>

@@ -54,74 +54,58 @@
             <div class="bc br1" style="width: 138px;">
             <p class="p4 left w7 th">NAME:</p>
             </div> <div class="col br1 w8"> <div class="w9">
-            <div class="mt mb"> <p>data</p>{{-- insert data here --}}</div>
+            <div class="mt mb"> <p>{{$data['lastName']}}</p></div>
             <p class="td"> <em>Family Name</em> </p> </div> <div class="w9">
-            <div class="mt mb"> <p>data</p>{{-- insert data here --}}</div>
+            <div class="mt mb"> <p>{{$data['firstName']}}</p></div>
             <p class="td"> <em>First Name</em> </p> </div> <div class="w9">
-            <div class="mt mb"> <p>data</p>{{-- insert data here --}}</div>
-            <p class="td"> <em>Middle Name</em> </p> </div> <div class="w9">
-            <div class="mt mb"> <p>data</p>{{-- insert data here --}}
-            </div> <p class="td"> <em>Nick Name</em> </p> </div> </div>
+            <div class="mt mb"> <p>{{$data['middleName']}}</p></div>
+            <p class="td"> <em>Middle Name</em> </p> </div></div>
             <div> <div class="left w"> <div class="bb1 p7"> <em>*2</em>
             </div> <div> <em>*3</em> </div> </div> </div>
         </div>
 
-        <div class="flex bb1"> <div class="bc br1" style="width: 138px; height: 40px;">
+        <div class="flex bb1"> <div class="bc br1" style="width: 138px; height: 50px;">
             <p class="p4 left w7 th">Present Address:</p> </div>
-            <div class="col br1 w8"> <div> <div class="w"> <div>
-                <p>data</p>{{-- insert data here --}} </div> </div> </div> </div>
+            <div class="col br1 w8"> <div> <div class="w1"> <div>
+                <p>{{$data['address']}}</p> </div> </div> </div> </div>
             <div class="br1"> <div class="w left"> <div class="bb1 p7 bc c">
                 <em>Age:</em> </div> <div>
-            <p class="c p">data</p>{{-- insert data here --}} </div> </div> </div>
+            <p class="c p">{{$data['age']}}</p> </div> </div> </div>
             <div> <div class="w left"> <div class="bb1 p7 bc c"> <em>Sex:</em>
-            </div> <div> <p class="c p">data</p>{{-- insert data here --}}
+            </div> <div> <p class="c p">{{$data['gender']}}</p>
             </div> </div> </div>
         </div>
 
         <div> <div class="col">
-            <div class="left w1"><div class="br1 bb1 bc c">TIN No:</div></div>
-            <div class="left w1"><div class="br1 bb1 bc c">Philhealth No:</div></div>
-            <div class="left w1"><div class="br1 bb1 bc c">UMID/SSS/GSIS:</div></div>
-            <div class="left w1"><div class="br1 bb1 bc c">Pag-Ibig No:</div></div>
-            <div class="left w1"><div class="br1 bb1 bc c">Driver's License:</div></div>
-            <div class="left w1"><div class="bb1 bc c">Others:</div> </div>
-            </div> <div class="col">
-            <div class="left w1"><div class="br1 bb1 c">
-                <p class="p">data{{-- insert data here --}}</p></div></div>
-            <div class="left w1"><div class="br1 bb1 c">
-                <p class="p">data{{-- insert data here --}}</p></div></div>
-            <div class="left w1"><div class="br1 bb1 c">
-                <p class="p">data{{-- insert data here --}}</p></div></div>
-            <div class="left w1"><div class="br1 bb1 c">
-                <p class="p">data{{-- insert data here --}}</p></div></div>
-            <div class="left w1"><div class="br1 bb1 c">
-                <p class="p">data{{-- insert data here --}}</p></div></div>
-            <div class="left w1"><div class="bb1 c">
-                <p class="p">data{{-- insert data here --}}</p></div></div>
-            </div>
-        </div>
-
-        <div> <div class="col">
-                <div class="left w1"><div class="br1 bb1 bc c">Date/Place of Birth</div></div>
+                <div class="left w1"><div class="br1 bb1 bc c">ID Type</div></div>
+                <div class="left w1"><div class="br1 bb1 bc c">ID Number</div></div>
+                <div class="left w1"><div class="br1 bb1 bc c">Date of Birth</div></div>
+                <div class="left w1"><div class="br1 bb1 bc c">Place of Birth</div></div>
                 <div class="left w1"><div class="br1 bb1 bc c">Religion/Social Affiliation</div></div>
                 <div class="left w1"><div class="bb1 bc c">Contact Details</div></div>
             </div> <div class="col">
                 <div class="left w1"><div class="br1 bb1 c">
-                    <p class="p">data{{-- insert data here --}}</p></div></div>
+                    <p class="p">{{$data['idType']}}</p></div></div>
                 <div class="left w1"><div class="br1 bb1 c">
-                    <p class="p">data{{-- insert data here --}}</p></div></div>
+                    <p class="p">{{$data['idNumber']}}</p></div></div>
+                <div class="left w1"><div class="b1 bb1 c">
+                    <p class="p">{{$data['DOB']}}</p></div></div>
+                <div class="left w1"><div class="br1 bb1 c">
+                    <p class="p">{{$data['POB']}}</p></div></div>
+                <div class="left w1"><div class="br1 bb1 c">
+                    <p class="p">{{$data['religion']}}</p></div></div>
                 <div class="left w1"><div class="bb1 c">
-                    <p class="p">data{{-- insert data here --}}</p></div></div>
+                    <p class="p">{{$data['contactNumber']}}</p></div></div>
             </div>
         </div>
 
-        <div class="flex bb1"> <div class="bc br1" style="width: 138px;">
-            <p class="p4 left w7 th">Educational Attainment:</p> </div>
-            <div class="col br1 w8"> <div> <div class="w"> <div>
-                <p>data</p>{{-- insert data here --}} </div> </div> </div> </div>
-            <div><div class="w left">
-                <div><p class="c bb1 p">data</p>{{-- insert data here --}}</div>
-                <div><p class="c p">data</p>{{-- insert data here --}}</div>
+        <div class="flex bb1"> <div class="bc br1" style="width: 110px;">
+            <p class="p4 left w6 th">Educational Attainment:</p> </div>
+            <div class="col br1 w7"> <div> <div class="w"> <div>
+                <p>{{$data['educational_attainment']}}</p> </div> </div> </div> </div>
+            <div><div class="w1 left">
+                <div><p class="p left blr">Email:</p><p class="c bb1 p">{{$data['email']}}</p></div>
+                <div><p class="p left blr">FB Acct:</p><p class="c p">{{$data['facebook_account']}}</p></div>
             </div></div>
         </div>
 
@@ -136,25 +120,25 @@
         <div class="flex bb1"> <div class="bc br1" style="width: 200px;">
             <p class="p4 left th">Name/Address of Employer:</p> </div>
             <div class="col br1 w7"> <div> <div class="w"> <div>
-                <p>data</p>{{-- insert data here --}} </div> </div> </div> </div>
+                <p>data</p> </div> </div> </div> </div>
             <div class="cel wa bc br1"> <div class="w left">
                 <div class="bb1 c mt p"> <em>Monthly Income:</em> </div>
                 <div class="mt c"> <em>Annual Income:</em> </div> </div> </div>
             <div class="w">
-                <p class="bb1 c mt p">data</p>{{-- insert data here --}}
-                <p class="mt c">data</p>{{-- insert data here --}} </div>
+                <p class="bb1 c mt p">data</p>
+                <p class="mt c">data</p> </div>
         </div>
 
         <div class="flex bb1"> <div class="bc br1" style="width: 200px; ">
             <p class="p4 left th">House Ownership</p> </div>
             <div class="col br1 w7"> <div> <div class="w"> <div>
-                <p>data</p>{{-- insert data here --}} </div> </div> </div>
+                <p>data</p> </div> </div> </div>
                 </div> <div class="cel bc br1"> <div class="w left">
                 <div class="bb1 c mt p"> <em>Citizenship:</em> </div>
                 <div class="mt c fs"> <em>Number of Children:</em> </div> </div> </div>
             <div class="w">
-                <p class="bb1 c mt p">data</p>{{-- insert data here --}}
-                <p class="mt c">data</p>{{-- insert data here --}} </div>
+                <p class="bb1 c mt p">data</p>
+                <p class="mt c">data</p> </div>
         </div>
 
         <div class="col w1 bb1">

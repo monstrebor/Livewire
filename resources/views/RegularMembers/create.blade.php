@@ -71,7 +71,7 @@
                 <h1 class="text-xl font-bold mb-1 m-10">Regular Membership</h1>
                 <h6 class="ml-10 text-sm">Membership</h6>
 
-                <form class="m-10" action="{{ route('fetch')}}" method="POST">
+                <form class="m-10" action="{{ route('regularMember.store')}}" method="POST">
                     @csrf
                     @method('post')
                     <!-- full name -->
@@ -582,95 +582,6 @@
                         <input type="submit" value="Submit" class="mt-9 bg-lime-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
                     </div>
             </form>
-                    <!-- Dependents Information -->
-                    <p class="block text-gray-700 font-bold mb-4 text-sm">Dependents</p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
-                        <div class="block text-gray-700 font-bold mb-2">
-                            <label for="dependent1name" class="block text-gray-700 font-bold mb-2">Name of Dependent
-                                (1) <span class="text-red-500">*</span></label>
-                            <input type="text" id="dependent1name" name="dependent1name"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="dependent1date" class="block text-gray-700 font-bold mb-2">Birthdate <span
-                                    class="text-red-500">*</span></label>
-                            <input type="date" id="dependent1-date" name="dependent1-date"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
-                        <div class="block text-gray-700 font-bold mb-2">
-                            <label for="dependent2name" class="block text-gray-700 font-bold mb-2">Name of Dependent
-                                (2) <span class="text-red-500">*</span></label>
-                            <input type="text" id="dependent2name" name="dependent2name"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="dependent2date" class="block text-gray-700 font-bold mb-2">Birthdate <span
-                                    class="text-red-500">*</span></label>
-                            <input type="date" id="dependent2date" name="dependent2date"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
-                        <div class="block text-gray-700 font-bold mb-2">
-                            <label for="dependent3name" class="block text-gray-700 font-bold mb-2">Name of Dependent
-                                (3) <span class="text-red-500">*</span></label>
-                            <input type="text" id="dependent3name" name="dependent3name"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="dependent1-date" class="block text-gray-700 font-bold mb-2">Birthdate <span
-                                    class="text-red-500">*</span></label>
-                            <input type="date" id="dependent3date" name="dependent1-date"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
-                        <div class="block text-gray-700 font-bold mb-2">
-                            <label for="dependent4name" class="block text-gray-700 font-bold mb-2">Name of Dependent
-                                (4) <span class="text-red-500">*</span></label>
-                            <input type="text" id="dependent4name" name="dependent4name"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="dependent1-date" class="block text-gray-700 font-bold mb-2">Birthdate <span
-                                    class="text-red-500">*</span></label>
-                            <input type="date" id="dependent4date" name="dependent4date"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                    </div>
-                    <!-- End of  Dependents Information -->
-
-                    <div class="flex justify-center gap-4">
-                        {{-- <button type="submit"
-                            class="mt-9 bg-lime-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-                            Register
-                        </button>
-
-                        <button type="submit"
-                            class="mt-9 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-                            Cancel
-                        </button> --}}
-                    </div>
-
-
-            </div>
-        </div>
         <!-- end of membership form -->
 
         <!-- all about -->

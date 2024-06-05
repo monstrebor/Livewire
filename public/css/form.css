@@ -1,0 +1,200 @@
+@page {
+    size: 8.5in 13in;
+    margin: 0.5in;
+}
+body {
+    width: 8in;
+    height: 12in;
+    margin: 0;
+    padding: 0.5in;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+.header-address{
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+.MNSMPC{
+    color: brown;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+}
+.logo{
+    margin-top: 8px;
+    width: 100px;
+    height: 100px;
+}
+.col{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cel{
+    display: flex;
+    justify-content: space-evenly;
+}
+.csb{
+    display: flex;
+    justify-content: space-between;
+}
+.flex{
+    display: flex;
+}
+.flexEnd{
+    display: flex;
+    justify-content: flex-end;
+}
+.head{
+    width: 8in;
+}
+.whole{
+    width: 8in;
+    height: 11.5in;
+}
+.border{
+    border: 1px solid brown;
+}
+.box{
+    border: 1px solid brown;
+    height: 70px;
+    margin-top: 20px;
+}
+.red{
+    color: red;
+}
+.black{
+    color: black;
+}
+.wt{
+    color: white;
+}
+.bb1{
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+.br1{
+    border-right: 1px solid rgb(0, 0, 0);
+}
+.bc{
+    background-color: rgb(255, 173, 79);
+}
+.left{
+    text-align: left;
+}
+.tRight{
+    text-align: right;
+}
+.c{
+    text-align: center;
+}
+.rline{
+    background-color: brown;
+    color: white;
+    height: 20px;
+    text-align: center;
+}
+.rhead{
+    background-color: rgb(255, 173, 79);
+    color: rgb(0, 0, 0);
+    height: auto;
+    text-align: center;
+    margin-bottom: 0;
+}
+.lg{
+    font-size: 11px;
+    margin: 0px;
+    padding: 0px;
+}
+.th{
+    font-size: 11px;
+}
+.td{
+    font-size: 10px;
+    margin: auto;
+    padding: 0;
+}
+.p{
+    font-size: 10px;
+    margin: 0px;
+    padding: 3px;
+}
+.p_m{
+    margin: 0;
+    padding: 0;
+}
+.pt{
+    padding-top: 4px;
+}
+.pic{
+    padding-top: 15px;
+}
+.mt{
+    margin-top: 4px;
+}
+.mb{
+    margin-bottom: 10px;
+}
+.w{
+    width: 100px;
+}
+.w1{
+    width: 100%;
+}
+.w7{
+    width: 70%;
+}
+.w8{
+    width: 80%;
+}
+.w9{
+    width: 90px;
+}
+.w6{
+    width: 60%;
+}
+.w4{
+    width: 40%;
+}
+.wa{
+    width: auto;
+}
+.lu{
+    width: 200px;
+}
+.ru{
+    width: 300px;
+}
+.fs{
+    font-size: 9px;
+}
+.p4
+{
+    padding: 2%;
+}
+.p7{
+    padding-bottom: 7px;
+}
+.pl{
+    padding-left: 50px;
+}
+.plp{
+    padding-left: 10px;
+    font-size: 11px;
+    margin-right: 10px;
+}
+.ml{
+    margin-left: 40px;
+}
+.mr{
+    margin-right: 40px;
+}
+.img{
+    width: 100px;
+    height:100px;
+    border: 1px solid black;
+}
+.blr {
+    font-size: 9px;
+    opacity: 0.5;
+}

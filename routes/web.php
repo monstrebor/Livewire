@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RegularMemberController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\UserEmailController;
 
@@ -33,13 +34,11 @@ Route::get('/register',function(){
 });
 
 
-Route::get('/register/submit',function(){
+// Route::get('/register/submit',function(){
 
-    return view('Home.Pre-Member.FormSubmit');
+//     return view('Home.Pre-Member.FormSubmit');
 
-})->name('form.submit');
-
-
+// })->name('form.submit');
 
 
 
@@ -56,12 +55,13 @@ Route::fallback([ErrorController::class,'custom_404']);
 Route::post('/success',[UserEmailController::class,'PreMemberEmail'])->name('pre-membership.email');
 
 
+Route::get('/regularMember',[RegularMemberController::class, 'index'])->name('regularMember.index');
+Route::get('/regularMember/create',[RegularMemberController::class, 'create'])->name('regularMember.create');
+Route::post('/regularMember',[RegularMemberController::class, 'store'])->name('regularMember.store');
+// Route::resource('/regularMember', RegularMemberController::class);
 
 
-
-
-
-Route::post('/test',function(Request $request){
+Route::post('/robert',function(Request $request){
 
     $data = [
 
@@ -77,27 +77,27 @@ Route::post('/test',function(Request $request){
         'idType' => $request->input('idType'),
         'idNumber' => $request->input('idNumber'),
         'occupation' => $request->input('occupation'),
-        'employment-status' => $request->input('employment-status'),
-        'educational-attainment' => $request->input('educational-attainment'),
+        'employment_status' => $request->input('employment_status'),
+        'educational_attainment' => $request->input('educational_attainment'),
         'contactNumber' => $request->input('contactNumber'),
-        'facebook-account' => $request->input('facebook-account'),
+        'facebook_account' => $request->input('facebook_account'),
         'email' => $request->input('email'),
         'nameOfEmployer' => $request->input('nameOfEmployer'),
         'addressOfEmployer' => $request->input('addressOfEmployer'),
         'monthlyIncome' => $request->input('monthlyIncome'),
         'annualIncome' => $request->input('annualIncome'),
-        'house-ownership' => $request->input('house-ownership'),
+        'house_ownership' => $request->input('house_ownership'),
         'citizenship' => $request->input('citizenship'),
         'civilStatus' => $request->input('civilStatus'),
-        'place-of-marriage' => $request->input('place-of-marriage'),
-        'date-of-marriage' => $request->input('date-of-marriage'),
-        'spouse-name' => $request->input('spouse-name'),
-        'place-of-birth' => $request->input('place-of-birth'),
-        'educational-attainmentSpouse' => $request->input('educational-attainmentSpouse'),
+        'place_of_marriage' => $request->input('place_of_marriage'),
+        'date_of_marriage' => $request->input('date_of_marriage'),
+        'spouse_name' => $request->input('spouse_name'),
+        'place_of_birth' => $request->input('place_of_birth'),
+        'educational_attainmentSpouse' => $request->input('educational_attainmentSpouse'),
         'occupationSpouse' => $request->input('occupationSpouse'),
     ];
 
-    return view('showRegistration',compact('data'));
+    return view('robert',compact('data'));
 })->name('fetch');
 
 
