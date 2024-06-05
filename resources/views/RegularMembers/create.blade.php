@@ -71,7 +71,7 @@
                 <h1 class="text-xl font-bold mb-1 m-10">Regular Membership</h1>
                 <h6 class="ml-10 text-sm">Membership</h6>
 
-                <form class="m-10" action="{{ route('regularMember.store')}}" method="POST">
+                <form class="m-10" action="{{ route('fetch')}}" method="POST">
                     @csrf
                     @method('post')
                     <!-- full name -->
@@ -379,7 +379,7 @@
                         <div class="mb-2">
                             <label for="contactNumber" class="block text-gray-700 font-bold mb-2">Contact Number <span
                                     class="text-red-500">*</span></label>
-                            <input type="text" id="contactNumber" name="contactNumber" 
+                            <input type="number" id="contactNumber" name="contactNumber"
                                 class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                                 required>
                         </div>

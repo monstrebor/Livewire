@@ -61,7 +61,9 @@ Route::post('/regularMember',[RegularMemberController::class, 'store'])->name('r
 // Route::resource('/regularMember', RegularMemberController::class);
 
 
-Route::post('/robert',function(Request $request){
+Route::post('/robert',function(Request $request, RegularMemberController $regular){
+
+    $regular->store($request);
 
     $data = [
 

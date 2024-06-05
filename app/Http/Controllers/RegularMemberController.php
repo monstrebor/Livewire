@@ -55,7 +55,5 @@ class RegularMemberController extends Controller
         ]);
 
         $newRegularMember = RegularMember::create($data);
-
-        return redirect()->route('regularMember.index')->with('success', 'Regular member created successfully.');
     }
 }
