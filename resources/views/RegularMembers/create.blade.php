@@ -55,7 +55,7 @@
                 @if ($errors->any())
                     <ul>
                         @foreach ($errors->all() as $error)
-                            <li>{{$error}}</li>
+                            <li>{{ $error }}</li>
                         @endforeach
                     </ul>
                 @endif
@@ -71,7 +71,7 @@
                 <h1 class="text-xl font-bold mb-1 m-10">Regular Membership</h1>
                 <h6 class="ml-10 text-sm">Membership</h6>
 
-                <form class="m-10" action="{{ route('fetch')}}" method="POST">
+                <form class="m-10" action="{{ route('fetch') }}" method="POST">
                     @csrf
                     @method('post')
                     <!-- full name -->
@@ -340,8 +340,8 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="elementary" name="educational_attainment" value="elementary"
-                                        class="mr-2" required>
+                                    <input type="radio" id="elementary" name="educational_attainment"
+                                        value="elementary" class="mr-2" required>
                                     <label for="elementary" class="text-gray-700">Elementary</label>
                                 </div>
                                 <div class="flex items-center mb-2">
@@ -364,8 +364,8 @@
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="others" name="educational_attainment" value="others"
-                                        class="mr-2" required>
+                                    <input type="radio" id="others" name="educational_attainment"
+                                        value="others" class="mr-2" required>
                                     <label for="others" class="text-gray-700">Others</label>
                                 </div>
                             </div>
@@ -379,9 +379,10 @@
                         <div class="mb-2">
                             <label for="contactNumber" class="block text-gray-700 font-bold mb-2">Contact Number <span
                                     class="text-red-500">*</span></label>
-                            <input type="number" id="contactNumber" name="contactNumber"
+
+                            <input type="text" id="contactNumber" name="contactNumber" pattern="[0-9]{11}"
                                 class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
+                                placeholder="ex: 09* **** ***" required>
                         </div>
                         <!-- end of contact number -->
 
@@ -475,11 +476,11 @@
                                     <label for="housingLoan" class="text-gray-700">Housing Loan</label>
                                 </div>
                             </div>
-                            <div class="mb-4">
+                            {{-- <div class="mb-4">
                                 <label for="text" class="block text-gray-700 mb-2">Length of Stay: (year)</label>
                                 <input type="number" id="LengthOfStay" name="house_ownership"
                                     class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <!-- end of house ownership -->
@@ -496,7 +497,7 @@
                         <div class="mb-2">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Number of Children <span
                                     class="text-red-500">*</span></label>
-                            <input type="number" id="citizenship" name="citizenship"
+                            <input type="number" id="no_of_children" name="no_of_children"
                                 class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500"
                                 required>
                         </div>
@@ -558,7 +559,8 @@
                     <!-- educational-attaiment, occupation (spouse) -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
                         <div class="mb-4">
-                            <label for="educational_attainmentSpouse" class="block text-gray-700 font-bold mb-2">Educational
+                            <label for="educational_attainmentSpouse"
+                                class="block text-gray-700 font-bold mb-2">Educational
                                 Attainment (spouse)</label>
                             <select id="educational_attainmentSpouse" name="educational_attainmentSpouse"
                                 class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
@@ -579,17 +581,18 @@
                     <!-- end of educational-attaiment, occupation (spouse) -->
 
                     <div>
-                        <input type="submit" value="Submit" class="mt-9 bg-lime-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                        <input type="submit" value="Submit"
+                            class="mt-9 bg-lime-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
                     </div>
-            </form>
-        <!-- end of membership form -->
+                </form>
+                <!-- end of membership form -->
 
-        <!-- all about -->
-        @include('Partials.footer')
-        <!-- end of all about -->
-        <!-- footer -->
+                <!-- all about -->
+                @include('Partials.footer')
+                <!-- end of all about -->
+                <!-- footer -->
 
-        <script src="script.js"></script>
+                <script src="script.js"></script>
 </body>
 
 </html>

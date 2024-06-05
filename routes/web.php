@@ -60,8 +60,7 @@ Route::get('/regularMember/create',[RegularMemberController::class, 'create'])->
 Route::post('/regularMember',[RegularMemberController::class, 'store'])->name('regularMember.store');
 // Route::resource('/regularMember', RegularMemberController::class);
 
-
-Route::post('/robert',function(Request $request, RegularMemberController $regular){
+Route::post('/regularMemberForm',function(Request $request, RegularMemberController $regular){
 
     $regular->store($request);
 
@@ -90,6 +89,7 @@ Route::post('/robert',function(Request $request, RegularMemberController $regula
         'annualIncome' => $request->input('annualIncome'),
         'house_ownership' => $request->input('house_ownership'),
         'citizenship' => $request->input('citizenship'),
+        'no_of_children' => $request->input('no_of_children'),
         'civilStatus' => $request->input('civilStatus'),
         'place_of_marriage' => $request->input('place_of_marriage'),
         'date_of_marriage' => $request->input('date_of_marriage'),
@@ -99,7 +99,7 @@ Route::post('/robert',function(Request $request, RegularMemberController $regula
         'occupationSpouse' => $request->input('occupationSpouse'),
     ];
 
-    return view('robert',compact('data'));
+    return view('regularMemberForm',compact('data'));
 })->name('fetch');
 
 

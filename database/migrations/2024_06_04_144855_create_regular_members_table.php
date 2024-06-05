@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('occupation');
             $table->string('employment_status');
             $table->string('educational_attainment');
-            $table->integer('contactNumber');
+            $table->string('contactNumber');
             $table->string('facebook_account');
             $table->string('email')->unique();
             $table->string('nameOfEmployer');
@@ -36,6 +36,7 @@ return new class extends Migration
             $table->integer('annualIncome');
             $table->string('house_ownership');
             $table->string('citizenship');
+            $table->integer('no_of_children')->nullable();
             $table->string('civilStatus');
             $table->string('place_of_marriage')->nullable();
             $table->date('date_of_marriage')->nullable();
