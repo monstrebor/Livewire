@@ -100,8 +100,8 @@ Route::post('/regularMemberForm',function(Request $request, RegularMemberControl
         'occupationSpouse' => $request->input('occupationSpouse'),
     ];
 
-    return view('regularMemberForm',compact('data'));
-    
+    return view('PDF.regularMemberForm',compact('data'));
+
 })->name('fetch');
 
 

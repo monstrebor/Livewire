@@ -9,11 +9,11 @@ class RegularMemberController extends Controller
     public function index()
     {
         $regularMembers = RegularMember::all();
-        return view('RegularMembers.index', ['regularMembers' => $regularMembers]);
+        return view('Home.RegularMembers.index', ['regularMembers' => $regularMembers]);
     }
     public function create()
     {
-        return view('RegularMembers.create');
+        return view('Home.RegularMembers.create');
     }
 
     /**
