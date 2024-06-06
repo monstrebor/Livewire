@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/final_logo-removebg-preview-removebg-preview.png">
+    <link rel="icon" href="/img/final_logo-removebg-preview-removebg-preview.png">
     <title>Mahal na Señor Multipurpose Cooperative</title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>

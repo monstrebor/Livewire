@@ -105,56 +105,19 @@ Route::post('/regularMemberForm',function(Request $request, RegularMemberControl
 })->name('fetch');
 
 
-// Route::get('/form', function(){
-
-//     return view('sample');
-
-// });
 
 
 
-// Route::get('/send-email', function () {
+//test
 
 
-//     $content= [
-//         'body'=>'PRE-MEMBER REGISTRATION',
-//         'content'=> "You are now a member of MNSMPC. Please don't reply on this mail.",
-//     ];
+Route::get('/place',function(){
 
-//     $subject = ['title'=>'Pre-Membership Registration'];
+    return view('Home.place');
 
-//     Mail::to('carljameslangres@gmail.com')->send(new SampleEmail($content,$subject)); // key of sending info.
-//     return "Email sent successfully!";
-
-// });
+    
+})->name('place');
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-//             'name'=> $request->name,
-//             'password'=> $request->password,
-//             'email'=> $request->email,
-
-//         ];
-
-
-//         return view('test',compact('data'));
-
-
-// })->name('store');
-
-
-// Route::get('/register', function () {
-//     return view('Home.registration');
-//     });
