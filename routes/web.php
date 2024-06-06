@@ -33,6 +33,14 @@ Route::get('/register',function(){
 
 });
 
+Route::get('/test-register',function(){
+
+    return view('home.test');
+
+});
+
+
+
 
 // Route::get('/register/submit',function(){
 

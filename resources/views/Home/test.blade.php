@@ -406,7 +406,7 @@
                     <!-- citezenship, no of children, civil status -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-6">
                         <div class="mb-2">
-                            <label for="text" class="block text-gray-700 font-bold mb-2">Citezenship <span class="text-red-500">*</span></label>
+                            <label for="text" class="block text-gray-700 font-bold mb-2">Citizenship <span class="text-red-500">*</span></label>
                             <input type="text" id="citezenship" name="citezenship" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                         </div>
                         <div class="mb-2">
@@ -478,49 +478,9 @@
                     <hr class="m-7">
                     <!-- Dependents Information -->
                     <p class="block text-gray-700 font-bold mb-4 text-sm">Defendents</p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
-                        <div class="block text-gray-700 font-bold mb-2">
-                            <label for="dependent1name" class="block text-gray-700 font-bold mb-2">Name of Dependent (1) <span class="text-red-500">*</span></label>
-                            <input type="text" id="dependent1name" name="dependent1name" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="dependent1date" class="block text-gray-700 font-bold mb-2">Birthdate <span class="text-red-500">*</span></label>
-                            <input type="date" id="dependent1-date" name="dependent1-date" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
-                        <div class="block text-gray-700 font-bold mb-2">
-                            <label for="dependent2name" class="block text-gray-700 font-bold mb-2">Name of Dependent (2) <span class="text-red-500">*</span></label>
-                            <input type="text" id="dependent2name" name="dependent2name" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="dependent2date" class="block text-gray-700 font-bold mb-2">Birthdate <span class="text-red-500">*</span></label>
-                            <input type="date" id="dependent2date" name="dependent2date" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
-                        <div class="block text-gray-700 font-bold mb-2">
-                            <label for="dependent3name" class="block text-gray-700 font-bold mb-2">Name of Dependent (3) <span class="text-red-500">*</span></label>
-                            <input type="text" id="dependent3name" name="dependent3name" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="dependent1-date" class="block text-gray-700 font-bold mb-2">Birthdate <span class="text-red-500">*</span></label>
-                            <input type="date" id="dependent3date" name="dependent1-date" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
-                        <div class="block text-gray-700 font-bold mb-2">
-                            <label for="dependent4name" class="block text-gray-700 font-bold mb-2">Name of Dependent (4) <span class="text-red-500">*</span></label>
-                            <input type="text" id="dependent4name" name="dependent4name" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="dependent1-date" class="block text-gray-700 font-bold mb-2">Birthdate <span class="text-red-500">*</span></label>
-                            <input type="date" id="dependent4date" name="dependent4date" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                        </div>
-                    </div>
+                    
+                    <div id="dependentsSection"></div>
+                    <button id="add-dependent-button" style="margin-top: 16px;">Add Dependent</button>
                     <!-- End of  Dependents Information -->
 
                     <div class="flex justify-center gap-4">
@@ -545,7 +505,8 @@
         <!-- end of all about -->
         <!-- footer -->
 
-    <script src="script.js">
+    <script src="/js/dependents.js">
+
     </script>
 </body>
 
