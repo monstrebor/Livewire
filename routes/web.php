@@ -103,9 +103,6 @@ Route::post('/regularMemberForm',function(Request $request, RegularMemberControl
 })->name('fetch');
 
 
-
-
-
 // Route::get('/form', function(){
 
 //     return view('sample');

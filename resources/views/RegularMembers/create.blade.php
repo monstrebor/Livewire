@@ -40,7 +40,7 @@
         <!-- picture-membership -->
         <div class="flex bg-yellow-300 mb-10">
             <div class="relative w-11/12  h-80 sm:h-96 mx-auto">
-                <img src="img/coop1.jpg" alt="Description of the image" class="w-full h-full object-cover">
+                <img src="/img/coop1.jpg" alt="Description of the image" class="w-full h-full object-cover">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-white bg-lime-500 bg-opacity-70 p-2 rounded">Mahal na Señor Multipurpose
                         Cooperative <p class="indent-2">Membership Application. Sign-up today</p></span>
