@@ -27,11 +27,11 @@ class UserEmailController extends Controller
             'civilstatus' => $request->input('civilstatus'),
         ];
 
-        $pdf = PDF::loadView('PDF.try', $data);
+        // $pdf = PDF::loadView('PDF.try', $data);
 
         // return $pdf->download('document.pdf');
 
-        $pdfContent = $pdf->output();
+        // $pdfContent = $pdf->output();
 
         $content= [
             'body'=>'PRE-MEMBER REGISTRATION',
@@ -43,13 +43,13 @@ class UserEmailController extends Controller
         // Mail::to($data['email'])->send(new SampleEmail($content,$subject)); // key of sending info.
         // return "Email sent successfully!";
 
-        Mail::send('Mail.membership', $content, function($message) use ($data, $pdfContent, $content,) {
+        Mail::send('Mail.membership', $content, function($message) use ($data, $content,) {
             $message->to($data['email'])
-                ->subject($content['title'])
-                ->attachData($pdfContent, 'PRE-MEMBERSHIP.pdf',
-                ['mime' => 'application/pdf']);
+                ->subject($content['title']);
+                // ->attachData($pdfContent, 'PRE-MEMBERSHIP.pdf',
+                // ['mime' => 'application/pdf']);
 
-                $filePath = public_path('upload/MNSMPC-PRIMER.pdf');
+                $filePath = public_path('/upload/MNSMPC-PRIMER.pdf');
 
                 $message->attach($filePath, [
                     'as' => 'MNSMPC-PRIMER.pdf', // specify the name of the file
@@ -59,8 +59,6 @@ class UserEmailController extends Controller
         });
 
         // return redirect()->route('Login.index');
-
-        return redirect()->route('form.submit');
 
     }
 

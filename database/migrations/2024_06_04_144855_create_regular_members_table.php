@@ -29,7 +29,7 @@ return new class extends Migration
             $table->string('educational_attainment');
             $table->string('contactNumber');
             $table->string('facebook_account');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('nameOfEmployer');
             $table->string('addressOfEmployer');
             $table->integer('monthlyIncome');

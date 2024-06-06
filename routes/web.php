@@ -60,12 +60,13 @@ Route::get('/regularMember/create',[RegularMemberController::class, 'create'])->
 Route::post('/regularMember',[RegularMemberController::class, 'store'])->name('regularMember.store');
 // Route::resource('/regularMember', RegularMemberController::class);
 
-Route::post('/regularMemberForm',function(Request $request, RegularMemberController $regular){
+Route::post('/regularMemberForm',function(Request $request, RegularMemberController $regular, UserEmailController $email){
 
     $regular->store($request);
+    $email->PreMemberEmail($request);
 
     $data = [
-        
+
         'firstName' => $request->input('firstName'),
         'middleName' => $request->input('middleName'),
         'lastName' => $request->input('lastName'),
@@ -100,6 +101,7 @@ Route::post('/regularMemberForm',function(Request $request, RegularMemberControl
     ];
 
     return view('regularMemberForm',compact('data'));
+    
 })->name('fetch');
 
 
