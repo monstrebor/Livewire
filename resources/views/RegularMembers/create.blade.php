@@ -40,7 +40,7 @@
         <!-- picture-membership -->
         <div class="flex bg-yellow-300 mb-10">
             <div class="relative w-11/12  h-80 sm:h-96 mx-auto">
-                <img src="img/coop1.jpg" alt="Description of the image" class="w-full h-full object-cover">
+                <img src="/img/coop1.jpg" alt="Description of the image" class="w-full h-full object-cover">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-white bg-lime-500 bg-opacity-70 p-2 rounded">Mahal na Señor Multipurpose
                         Cooperative <p class="indent-2">Membership Application. Sign-up today</p></span>
@@ -55,7 +55,7 @@
                 @if ($errors->any())
                     <ul>
                         @foreach ($errors->all() as $error)
-                            <li>{{$error}}</li>
+                            <li>{{ $error }}</li>
                         @endforeach
                     </ul>
                 @endif
@@ -71,7 +71,7 @@
                 <h1 class="text-xl font-bold mb-1 m-10">Regular Membership</h1>
                 <h6 class="ml-10 text-sm">Membership</h6>
 
-                <form class="m-10" action="{{ route('fetch')}}" method="POST">
+                <form class="m-10" action="{{ route('fetch') }}" method="POST">
                     @csrf
                     @method('post')
                     <!-- full name -->
@@ -340,8 +340,8 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="elementary" name="educational_attainment" value="elementary"
-                                        class="mr-2" required>
+                                    <input type="radio" id="elementary" name="educational_attainment"
+                                        value="elementary" class="mr-2" required>
                                     <label for="elementary" class="text-gray-700">Elementary</label>
                                 </div>
                                 <div class="flex items-center mb-2">
@@ -364,8 +364,8 @@
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="others" name="educational_attainment" value="others"
-                                        class="mr-2" required>
+                                    <input type="radio" id="others" name="educational_attainment"
+                                        value="others" class="mr-2" required>
                                     <label for="others" class="text-gray-700">Others</label>
                                 </div>
                             </div>
@@ -379,9 +379,10 @@
                         <div class="mb-2">
                             <label for="contactNumber" class="block text-gray-700 font-bold mb-2">Contact Number <span
                                     class="text-red-500">*</span></label>
-                            <input type="text" id="contactNumber" name="contactNumber" 
+
+                            <input type="text" id="contactNumber" name="contactNumber" pattern="[0-9]{11}"
                                 class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
+                                placeholder="ex: 09* **** ***" required>
                         </div>
                         <!-- end of contact number -->
 
@@ -475,11 +476,11 @@
                                     <label for="housingLoan" class="text-gray-700">Housing Loan</label>
                                 </div>
                             </div>
-                            <div class="mb-4">
+                            {{-- <div class="mb-4">
                                 <label for="text" class="block text-gray-700 mb-2">Length of Stay: (year)</label>
                                 <input type="number" id="LengthOfStay" name="house_ownership"
                                     class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <!-- end of house ownership -->
@@ -496,7 +497,7 @@
                         <div class="mb-2">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Number of Children <span
                                     class="text-red-500">*</span></label>
-                            <input type="number" id="citizenship" name="citizenship"
+                            <input type="number" id="no_of_children" name="no_of_children"
                                 class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500"
                                 required>
                         </div>
@@ -558,7 +559,8 @@
                     <!-- educational-attaiment, occupation (spouse) -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
                         <div class="mb-4">
-                            <label for="educational_attainmentSpouse" class="block text-gray-700 font-bold mb-2">Educational
+                            <label for="educational_attainmentSpouse"
+                                class="block text-gray-700 font-bold mb-2">Educational
                                 Attainment (spouse)</label>
                             <select id="educational_attainmentSpouse" name="educational_attainmentSpouse"
                                 class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
@@ -579,106 +581,18 @@
                     <!-- end of educational-attaiment, occupation (spouse) -->
 
                     <div>
-                        <input type="submit" value="Submit" class="mt-9 bg-lime-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-                    </div>
-            </form>
-                    <!-- Dependents Information -->
-                    <p class="block text-gray-700 font-bold mb-4 text-sm">Dependents</p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
-                        <div class="block text-gray-700 font-bold mb-2">
-                            <label for="dependent1name" class="block text-gray-700 font-bold mb-2">Name of Dependent
-                                (1) <span class="text-red-500">*</span></label>
-                            <input type="text" id="dependent1name" name="dependent1name"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="dependent1date" class="block text-gray-700 font-bold mb-2">Birthdate <span
-                                    class="text-red-500">*</span></label>
-                            <input type="date" id="dependent1-date" name="dependent1-date"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
-                        <div class="block text-gray-700 font-bold mb-2">
-                            <label for="dependent2name" class="block text-gray-700 font-bold mb-2">Name of Dependent
-                                (2) <span class="text-red-500">*</span></label>
-                            <input type="text" id="dependent2name" name="dependent2name"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="dependent2date" class="block text-gray-700 font-bold mb-2">Birthdate <span
-                                    class="text-red-500">*</span></label>
-                            <input type="date" id="dependent2date" name="dependent2date"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
-                        <div class="block text-gray-700 font-bold mb-2">
-                            <label for="dependent3name" class="block text-gray-700 font-bold mb-2">Name of Dependent
-                                (3) <span class="text-red-500">*</span></label>
-                            <input type="text" id="dependent3name" name="dependent3name"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="dependent1-date" class="block text-gray-700 font-bold mb-2">Birthdate <span
-                                    class="text-red-500">*</span></label>
-                            <input type="date" id="dependent3date" name="dependent1-date"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-2">
-                        <div class="block text-gray-700 font-bold mb-2">
-                            <label for="dependent4name" class="block text-gray-700 font-bold mb-2">Name of Dependent
-                                (4) <span class="text-red-500">*</span></label>
-                            <input type="text" id="dependent4name" name="dependent4name"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="dependent1-date" class="block text-gray-700 font-bold mb-2">Birthdate <span
-                                    class="text-red-500">*</span></label>
-                            <input type="date" id="dependent4date" name="dependent4date"
-                                class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                                required>
-                        </div>
-                    </div>
-                    <!-- End of  Dependents Information -->
-
-                    <div class="flex justify-center gap-4">
-                        {{-- <button type="submit"
+                        <input type="submit" value="Submit"
                             class="mt-9 bg-lime-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-                            Register
-                        </button>
-
-                        <button type="submit"
-                            class="mt-9 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-                            Cancel
-                        </button> --}}
                     </div>
+                </form>
+                <!-- end of membership form -->
 
+                <!-- all about -->
+                @include('Partials.footer')
+                <!-- end of all about -->
+                <!-- footer -->
 
-            </div>
-        </div>
-        <!-- end of membership form -->
-
-        <!-- all about -->
-        @include('Partials.footer')
-        <!-- end of all about -->
-        <!-- footer -->
-
-        <script src="script.js"></script>
+                <script src="script.js"></script>
 </body>
 
 </html>

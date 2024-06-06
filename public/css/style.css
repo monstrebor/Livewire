@@ -309,4 +309,9 @@ nav {
     transition: background 0s;
 }
 
+.blr {
+    font-size: 9px;
+    opacity: 0.5;
+}
+
 /* footer */
