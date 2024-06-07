@@ -47,7 +47,7 @@ $(document).ready(function() {
             url: 'https://psgc.cloud/api/provinces/' + provinceName + '/municipalities',
             type: 'GET',
             success: function(response) {
-                
+                $('#municipality-dropdown').empty(); 
                 $.each(response, function(key, municipality) {
                     $('#municipality-dropdown').append('<option value="' + municipality.name + '" data-name="' + municipality.code + '">' + municipality.name + '</option>');
                 });
