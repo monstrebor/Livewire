@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegularMemberController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\UserEmailController;
+use Illuminate\Support\Facades\Http;
 
 
 
@@ -115,9 +116,62 @@ Route::get('/place',function(){
 
     return view('Home.place');
 
-    
+
 })->name('place');
 
 
+
+
+
+// <?php
+
+// namespace App\Http\Controllers;
+
+// use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\Http;
+
+// class AddressController extends Controller
+// {
+//     public function index()
+//     {
+//         // Make a GET request to the API endpoint to fetch address data
+//         $response = Http::get('https://api.example.com/addresses');
+        
+//         // Check if the request was successful
+//         if ($response->successful()) {
+//             // Retrieve the address data from the API response
+//             $addresses = $response->json();
+            
+//             // Pass the address data to the view
+//             return view('addresses.index', compact('addresses'));
+//         } else {
+//             // Handle the case where the API request fails
+//             return back()->withError('Failed to fetch address data from API');
+//         }
+//     }
+// }
+
+Route::get('/test',function(){
+
+
+        $response = Http::get('https://psgc.cloud/api/regions');
+        
+        // Check if the request was successful
+        if ($response->successful()) {
+            // Retrieve the address data from the API response
+            $addresses = $response->json();
+            
+            // Pass the address data to the view
+            return view('home.place', compact('addresses'));
+
+        } else {
+            // Handle the case where the API request fails
+            return back()->withError('Failed to fetch address data from API');
+
+        }
+
+
+
+});
 
 
