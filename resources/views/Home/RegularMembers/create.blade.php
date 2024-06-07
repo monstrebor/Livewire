@@ -71,7 +71,7 @@
                 <h1 class="text-xl font-bold mb-1 m-10">Regular Membership</h1>
                 <h6 class="ml-10 text-sm">Membership</h6>
 
-                <form class="m-10" action="{{ route('fetch') }}" method="POST">
+                <form class="m-10" action="{{ route('regularMember.store') }}" method="POST">
                     @csrf
                     @method('post')
                     <!-- full name -->

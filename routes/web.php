@@ -27,21 +27,11 @@ use Illuminate\Support\Facades\Http;
 Route::get('/',[HomeController::class,'Homepage'])->name('Home.index');
 Route::get('/login',[HomeController::class,'Login'])->name('Login.index');
 
-
 Route::get('/register',function(){
 
     return view('home.registration_try');
 
 });
-
-
-// Route::get('/register/submit',function(){
-
-//     return view('Home.Pre-Member.FormSubmit');
-
-// })->name('form.submit');
-
-
 
 //error
 
@@ -55,66 +45,18 @@ Route::fallback([ErrorController::class,'custom_404']);
 
 Route::post('/success',[UserEmailController::class,'PreMemberEmail'])->name('pre-membership.email');
 
+// pre-membership (Regulars)
 
 Route::get('/regularMember',[RegularMemberController::class, 'index'])->name('regularMember.index');
 Route::get('/regularMember/create',[RegularMemberController::class, 'create'])->name('regularMember.create');
-Route::post('/regularMember',[RegularMemberController::class, 'store'])->name('regularMember.store');
-// Route::resource('/regularMember', RegularMemberController::class);
-
-Route::post('/regularMemberForm',function(Request $request, RegularMemberController $regular, UserEmailController $email){
-
-    $regular->store($request);
-    $email->PreMemberEmail($request);
-
-    $data = [
-
-        'firstName' => $request->input('firstName'),
-        'middleName' => $request->input('middleName'),
-        'lastName' => $request->input('lastName'),
-        'gender' => $request->input('gender'),
-        'age' => $request->input('age'),
-        'address' => $request->input('address'),
-        'religion' => $request->input('religion'),
-        'POB' => $request->input('POB'),
-        'DOB' => $request->input('DOB'),
-        'idType' => $request->input('idType'),
-        'idNumber' => $request->input('idNumber'),
-        'occupation' => $request->input('occupation'),
-        'employment_status' => $request->input('employment_status'),
-        'educational_attainment' => $request->input('educational_attainment'),
-        'contactNumber' => $request->input('contactNumber'),
-        'facebook_account' => $request->input('facebook_account'),
-        'email' => $request->input('email'),
-        'nameOfEmployer' => $request->input('nameOfEmployer'),
-        'addressOfEmployer' => $request->input('addressOfEmployer'),
-        'monthlyIncome' => $request->input('monthlyIncome'),
-        'annualIncome' => $request->input('annualIncome'),
-        'house_ownership' => $request->input('house_ownership'),
-        'citizenship' => $request->input('citizenship'),
-        'no_of_children' => $request->input('no_of_children'),
-        'civilStatus' => $request->input('civilStatus'),
-        'place_of_marriage' => $request->input('place_of_marriage'),
-        'date_of_marriage' => $request->input('date_of_marriage'),
-        'spouse_name' => $request->input('spouse_name'),
-        'place_of_birth' => $request->input('place_of_birth'),
-        'educational_attainmentSpouse' => $request->input('educational_attainmentSpouse'),
-        'occupationSpouse' => $request->input('occupationSpouse'),
-    ];
-
-    return view('PDF.regularMemberForm',compact('data'));
-
-})->name('fetch');
+Route::post('/regularMembers',[RegularMemberController::class, 'store'])->name('regularMember.store');
 
 
-
-
-
-//test
 
 
 Route::get('/place',function(){
 
-    return view('Home.place');
+return view('Home.place');
 
 
 })->name('place');
@@ -136,12 +78,12 @@ Route::get('/place',function(){
 //     {
 //         // Make a GET request to the API endpoint to fetch address data
 //         $response = Http::get('https://api.example.com/addresses');
-        
+
 //         // Check if the request was successful
 //         if ($response->successful()) {
 //             // Retrieve the address data from the API response
 //             $addresses = $response->json();
-            
+
 //             // Pass the address data to the view
 //             return view('addresses.index', compact('addresses'));
 //         } else {
@@ -155,12 +97,12 @@ Route::get('/test',function(){
 
 
         $response = Http::get('https://psgc.cloud/api/regions');
-        
+
         // Check if the request was successful
         if ($response->successful()) {
             // Retrieve the address data from the API response
             $addresses = $response->json();
-            
+
             // Pass the address data to the view
             return view('home.place', compact('addresses'));
 
