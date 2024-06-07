@@ -1,41 +1,45 @@
 <!-- all about -->
 <div class="hidden sm:block">
-    <div class="w-full h-96 bg-yellow-400 md:grid md:grid-cols-4 p-7 px-28 text-justify">
+    <div class="w-full h-auto bg-yellow-400 md:grid md:grid-cols-4 p-7 px-28 text-justify">
         <div class="">
             <p class="font-extrabold text-lime-700 text-md">Savings Products</p>
-            <p class="font-light text-lime-700 text-sm">Wallet Savings</p>
-            <p class="font-light text-lime-700 text-sm">Purposive Savings</p>
-            <p class="font-light text-lime-700 text-sm">Long-term Savings</p>
+            <p class="font-light text-lime-700 text-sm">Share Capital</p>
+            <p class="font-light text-lime-700 text-sm">Savings Deposit</p>
+            <p class="font-light text-lime-700 text-sm">Time Deposit</p>
             <br>
+
             <p class="font-extrabold text-lime-700 text-md">Loan Products</p>
-            <p class="font-light text-lime-700 text-sm">Major Loans</p>
-            <p class="font-light text-lime-700 text-sm">Minor Savings</p>
-            <p class="font-light text-lime-700 text-sm">Special Loans</p>
+            <p class="font-light text-lime-700 text-sm">Character Loan</p>
+            <p class="font-light text-lime-700 text-sm">Back To Back Loan</p>
+            <p class="font-light text-lime-700 text-sm">Emergency Loan</p>
+            <p class="font-light text-lime-700 text-sm">Educational Loan</p>
+            <p class="font-light text-lime-700 text-sm">Capital Build Up</p>
+            <p class="font-light text-lime-700 text-sm">Filing Fees</p>
+            <p class="font-light text-lime-700 text-sm">Insurance</p>
             <br>
+            
+            <p class="font-extrabold text-lime-700 text-md">Membership</p>
+            <p class="font-light text-lime-700 text-sm">Regular</p>
+            <p class="font-light text-lime-700 text-sm">Associate</p>
+        </div>
+
+        <div class="">
             <p class="font-extrabold text-lime-700 text-md">Services</p>
             <p class="font-light text-lime-700 text-sm">Wallet Savings</p>
             <p class="font-light text-lime-700 text-sm">Purposive Savings</p>
             <p class="font-light text-lime-700 text-sm">Long-term Savings</p>
             <p class="font-light text-lime-700 text-sm">Long-term Savings</p>
-        </div>
-
-        <div class="">
-            <p class="font-extrabold text-lime-700 text-md">Membership</p>
-            <p class="font-light text-lime-700 text-sm">Wallet Savings</p>
-            <p class="font-light text-lime-700 text-sm">Purposive Savings</p>
-            <p class="font-light text-lime-700 text-sm">Long-term Savings</p>
             <br>
-            <p class="font-extrabold text-lime-700 text-md">Loan Products</p>
-            <p class="font-light text-lime-700 text-sm">Major Loans</p>
-            <p class="font-light text-lime-700 text-sm">Minor Savings</p>
-            <p class="font-light text-lime-700 text-sm">Special Loans</p>
+            <p class="font-extrabold text-lime-700 text-md">What's New</p>
+            <p class="font-light text-lime-700 text-sm">News and Events</p>
+            <p class="font-light text-lime-700 text-sm">Membership form Online</p>
+            <p class="font-light text-lime-700 text-sm">Downloads</p>
         </div>
 
         <div class="">
             <p class="font-extrabold text-lime-700 text-md">About Us</p>
             <p class="font-light text-lime-700 text-sm">FAQs</p>
             <p class="font-light text-lime-700 text-sm">Testimonials</p>
-            <p class="font-light text-lime-700 text-sm">Long-term Savings</p>
         </div>
 
         <div class="">
