@@ -42,7 +42,7 @@
                     <div class="numbertext">3/3</div>
                     <img src="img/saog2.jpg" class="w-full h-80 sm:h-96 object-cover">
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <span class="text-white bg-lime-500 bg-opacity-70 p-2 rounded text text-xl font-bold">Kooperatibang May Konsipyo
+                        <span class="text-white bg-lime-500 bg-opacity-70 p-2 rounded text text-xl font-bold">Kooperatibang May Prinsipyo
                     </div>
                 </div>
 
