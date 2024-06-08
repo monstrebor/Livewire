@@ -133,7 +133,6 @@ nav {
 /* card-hover */
 
 .card-with-hover {
-    background-color: #ffff02;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
     color: #fff;
@@ -220,11 +219,11 @@ nav {
 
 /* break, picture */
 .imagebg {
-    background-image: url(../img/bg1.png);
+    background-image: url(img/bg1.png);
 }
 
 .imgbreak {
-    background-image: url(../img/loans.png);
+    background-image: url(img/loans.png);
 }
 
 .discover {
@@ -250,7 +249,7 @@ nav {
     height: 100%;
     width: 0;
     border-radius: 15px;
-    background-color: #009A00;
+    background-color: slategray;
     z-index: -1;
     -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
@@ -265,7 +264,7 @@ nav {
 /* end of break and picture */
 
 .cbutton {
-    --color: #009A00;
+    --color: rgba(0, 0, 0, 0.507);
     font-family: inherit;
     display: inline-block;
     width: 8em;
@@ -309,9 +308,5 @@ nav {
     transition: background 0s;
 }
 
-.blr {
-    font-size: 9px;
-    opacity: 0.5;
-}
-
 /* footer */
+
