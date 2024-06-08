@@ -19,7 +19,7 @@
                 <!-- nav bar -->
 
                 @include('Partials.navbar')
-                
+
                 <!-- end of navbar -->
 
             <!-- img slider -->
@@ -130,7 +130,7 @@
                     <p class="ml-10 m-5 font-bold text-lime-700">Naninirahan sa Marilao, Bulacan.<br>
                         May gulang na 18-60 taong gulang  may kakayahang makapagkontrata nang naaayon sa batas at may pinagkakakitaan. <br>
                         May pirmihang hanapbuhay o pinagkakakitaan </p>
-                    <button class="discover m-10 px-4 mt-0">BILANG REGULAR MEMBER</button>
+                    <a href="{{route('regularMember.create')}}"><button class="discover m-10 px-4 mt-0">BILANG REGULAR MEMBER</button></a>
                 </div>
             </div>
             <!-- end picture -->
@@ -148,7 +148,7 @@
                 </div>
             </div>
             <!-- end of contact us -->
-            
+
             <!-- footer, all about -->
 
             @include('Partials.footer')
@@ -159,4 +159,3 @@
     <script src="js/script.js">
     </script>
 @endsection
-
