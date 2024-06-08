@@ -14,9 +14,11 @@
         <h1>Select Region:</h1>
 
         <select name="region" id="region-dropdown">
+
             @foreach($addresses as $address)
                 <option value="{{ $address['name'] }}" data-code="RegionCode">{{ $address['name'] }}</option>
             @endforeach
+
         </select>
 
         <h1>Select Province:</h1>
@@ -27,10 +29,9 @@
 
         <h1>Select Muncipalities:</h1>
         <select name="Municipality" id="municipality-dropdown">
-
         </select>
 
-        
+
         <h1>Select Baranggay:</h1>
         <select name="Baranggay" id="Barangay-dropdown">
 
@@ -39,6 +40,6 @@
 
     </form>
 
-   
+
 </body>
 </html>

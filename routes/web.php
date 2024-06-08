@@ -38,9 +38,6 @@ Route::get('/register',function(){
 Route::fallback([ErrorController::class,'custom_404']);
 
 
-
-
-
 // email pre-membership controller
 
 Route::post('/success',[UserEmailController::class,'PreMemberEmail'])->name('pre-membership.email');
@@ -53,19 +50,15 @@ Route::post('/regularMembers',[RegularMemberController::class, 'store'])->name('
 
 
 
-
 Route::get('/place',function(){
 
-return view('Home.place');
 
+return view('Home.place');
 
 })->name('place');
 
 
 
-
-
-// <?php
 
 // namespace App\Http\Controllers;
 
@@ -93,6 +86,12 @@ return view('Home.place');
 //     }
 // }
 
+
+
+
+
+
+// api address
 Route::get('/test',function(){
 
 
@@ -112,8 +111,34 @@ Route::get('/test',function(){
 
         }
 
-
-
 });
 
 
+
+//picture
+
+
+    Route::get('/pic',function(){
+
+
+        return view('home.picture');
+
+    });
+
+
+
+    Route::post('/pic2',function(Request $request){
+
+
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $imageName = time().'.'.$request->image->extension(); // time and extension
+        $request->image->move(storage_path('app/public/images/'), $imageName); // moving to the other path and the file name
+
+
+        return view('home.picture2',compact('imageName') );
+
+
+    })->name('image');
