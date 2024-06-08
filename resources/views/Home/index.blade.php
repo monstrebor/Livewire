@@ -20,7 +20,7 @@
         <!-- nav bar -->
 
         @include('Partials.navbar')
-                
+
         <!-- end of navbar -->
 
         <!-- img slider -->
@@ -49,51 +49,6 @@
 
             <a class="prev rounded-xl hover:bg-slate-500" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next rounded-xl hover:bg-slate-500" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-        <div class="text-center">
-            <span class="dot" onclick="currentSlides(1)"></span>
-            <span class="dot" onclick="currentSlides(2)"></span>
-            <span class="dot" onclick="currentSlides(3)"></span>
-        </div>
-        <!-- img slider end -->
-
-            <!-- search bar -->
-            {{-- <main class="flex items-center justify-center">
-                <div class="flex w-1/2 rounded-xl bg-white">
-                    <input type="search" name="search" id="search" placeholder="How can I help you?" class="w-full border-none bg-transparent px-4 py-1 text-gray-900 outline-none focus:outline-none shadow-2xl active:bg-gray-300 duration-150">
-                    <button class="m-2 rounded-lg bg-lime-500 px-4 py-2 text-white font-semibold transition duration-300 ease-in-out transform hover:shadow-md hover:-translate-y-1 hover:bg-yellow-500 disabled:pointer-events-none disabled:opacity-50 shadow-inner">Search</button>
-                </div>
-            </main> --}}
-            <!-- end of search bar -->
-
-        <!-- img slider -->
-        <div class="slideshow-container md:w-auto shadow-lg rounded-b-xl">
-            <div class="mySlides fade">
-                <div class="numbertext">1/3</div>
-                <img src="img/saog1.jpg" class="w-full h-80 sm:h-96 object-cover">
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="text-white bg-slate-500 bg-opacity-70 p-2 rounded text text-xl font-bold">"EARN AND SAVE COOPERATIVE WAY"<p class="indent-2 text-md">Tagline</p></span>
-                </div>
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">2/3</div>
-                <img src="img/coop4.jpg" class="w-full h-80 sm:h-96 object-cover">
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="text-white bg-slate-500 bg-opacity-70 p-2 rounded text text-xl font-bold">Office Hours: 9AM-5PM <br> Monday-Friday <br> Saturday-8:00 AM-12:00NN</span>
-                </div>
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">3/3</div>
-                <img src="img/saog2.jpg" class="w-full h-80 sm:h-96 object-cover">
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="text-white bg-slate-500 bg-opacity-70 p-2 rounded text text-xl font-bold">Kooperatibang May Prinsipyo
-                </div>
-            </div>
-
-            <a class="prev rounded-xl hover:bg-slate-500" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next rounded-xl hover:bg-slate-500" onclick="plusSlides(1)">&#10095;</a>
-
         </div>
         <br>
         <div class="text-center">
