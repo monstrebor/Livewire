@@ -12,15 +12,15 @@ class UserEmailController extends Controller
 
         $now = Carbon::now();
 
-        $thisSaturday = $now->isSunday();
+        $thisSaturday = $now->isSaturday();
 
 
         if ($thisSaturday)    // if it is saturday today.
         {
-            $Saturday = $now->copy()->next(Carbon::SUNDAY);  // next Saturday
+            $Saturday = $now->copy()->next(Carbon::SATURDAY);  // next Saturday
         }else{
 
-            $Saturday = $now->copy()->next(Carbon::SUNDAY);   // saturday
+            $Saturday = $now->copy()->next(Carbon::SATURDAY);   // saturday
         }
 
         return $Saturday;
