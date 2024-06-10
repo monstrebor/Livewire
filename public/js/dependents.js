@@ -69,5 +69,5 @@ document.addEventListener('DOMContentLoaded', () => {
     addDependentButton.textContent = 'Add Dependent';
     addDependentButton.style.marginTop = '16px';
     addDependentButton.addEventListener('click', () => addDependent(dependentsContainer, dependentsList));
-    document.body.appendChild(addDependentButton);
+    dependentsSection.appendChild(addDependentButton);
 });

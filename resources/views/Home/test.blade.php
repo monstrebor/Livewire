@@ -91,11 +91,7 @@
                                 <label for="female" class="text-gray-700">Female</label>
                             </div>
                         </div>
-
-                        <div class="mb-4">
-                            <label for="age" class="block text-gray-700 font-bold mb-2">Age <span class="text-red-500">*</span></label>
-                            <input type="number" id="age" name="age" min="0" max="120" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                        </div>
+                        
                     </div>
                     <!-- end of gender and age-->
 
@@ -107,7 +103,7 @@
                         </div>
 
                         <div class="mb-4">
-                            <label for="religion" class="block text-gray-700 font-bold mb-2 text-sm">Religion <span class="text-red-500">*</span></label>
+                            <label for="religion" class="block text-gray-700 font-bold mb-2 text-sm">Religion<span class="text-red-500">*</span></label>
                             <input id="address" name="address" rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                         </div>
                     </div>
@@ -143,6 +139,8 @@
                             <label for="idNumber" class="block text-gray-700 font-bold mb-2 text-sm">ID Number <span class="text-red-500">*</span></label>
                             <input type="text" id="idNumber" name="idNumber" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
+                        
+                        <input type="file" accept="image/*" name="photo" id="photo"></input>
 
                         <div class="mb-4">
                             <label for="idType" class="block text-gray-700 font-bold mb-2 text-sm">Valid ID Type(2) <span class="text-red-500">*</span></label>
@@ -161,6 +159,8 @@
                             <label for="idNumber" class="block text-gray-700 font-bold mb-2 text-sm">ID Number(2) <span class="text-red-500">*</span></label>
                             <input type="text" id="idNumber" name="idNumber" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
+
+                        <input type="file" accept="image/*" name="photo" id="photo"></input>
                     </div>
                     <!-- end of ID -->
 
@@ -480,7 +480,6 @@
                     <p class="block text-gray-700 font-bold mb-4 text-sm">Defendents</p>
                     
                     <div id="dependentsSection"></div>
-                    <button id="add-dependent-button" style="margin-top: 16px;">Add Dependent</button>
                     <!-- End of  Dependents Information -->
 
                     <div class="flex justify-center gap-4">
