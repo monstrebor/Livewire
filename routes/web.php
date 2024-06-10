@@ -50,12 +50,12 @@ Route::post('/regularMembers',[RegularMemberController::class, 'store'])->name('
 
 
 
-Route::get('/place',function(){
+// Route::get('/place',function(){
 
 
-return view('Home.place');
+// return view('Home.place');
 
-})->name('place');
+// })->name('place');
 
 
 
@@ -92,7 +92,7 @@ return view('Home.place');
 
 
 // api address
-Route::get('/test',function(){
+Route::get('/RegularForm',function(){
 
 
         $response = Http::get('https://psgc.cloud/api/regions');
@@ -103,7 +103,7 @@ Route::get('/test',function(){
             $addresses = $response->json();
 
             // Pass the address data to the view
-            return view('home.place', compact('addresses'));
+            return view('Home.test', compact('addresses'));
 
         } else {
             // Handle the case where the API request fails

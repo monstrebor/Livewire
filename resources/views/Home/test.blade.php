@@ -7,6 +7,10 @@
     <link rel="icon" href="/img/final_logo-removebg-preview-removebg-preview.png">
     <title>Mahal na Señor Multipurpose Cooperative</title>
     <link rel="stylesheet" href="/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/test.js"></script>
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <style type="text/tailwindcss">
     </style>
@@ -78,36 +82,55 @@
                         </div>
                     </div>
                     <!-- end of gender and age-->
-                    
+
                     <!-- address -->
                     <hr>
                     <p class="text-sm font-bold my-4">Address</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                         <div class="mb-4">
                             <label for="region" class="block text-gray-700 font-bold mb-2 text-sm">Region <span class="text-red-500">*</span></label>
-                            <select id="region" name="region" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                                <option value="" disabled selected>-Select Region-</option>
+
+
+
+                            <select id="region-dropdown" name="region" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+
+                                @foreach($addresses as $address)
+                                <option value="{{ $address['name'] }}" data-code="RegionCode">{{ $address['name'] }}</option>
+                                @endforeach
+
                             </select>
+
+
                         </div>
+
+
                         <div class="mb-4">
+
                             <label for="province" class="block text-gray-700 font-bold mb-2 text-sm">Province <span class="text-red-500">*</span></label>
-                            <select id="province" name="province" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                                <option value="province" disabled selected>-Select Province-</option>
+
+
+                            <select name="province" id="province-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+
                             </select>
+
+
+
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                         <div class="mb-4">
                             <label for="municipality" class="block text-gray-700 font-bold mb-2 text-sm">Municipality <span class="text-red-500">*</span></label>
-                            <select id="municipality" name="municipality" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                                <option value="municipality" disabled selected>-Select Municipality-</option>
+                            <select name="Municipality" id="municipality-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+
                             </select>
                         </div>
+
+
                         <div class="mb-4">
                             <label for="brgy" class="block text-gray-700 font-bold mb-2 text-sm">Barangay <span class="text-red-500">*</span></label>
-                            <select id="brgy" name="brgy" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                                <option value="brgy" disabled selected>-Select Barangay-</option>
+                            <select name="Baranggay" id="Barangay-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+
                             </select>
                         </div>
                     </div>

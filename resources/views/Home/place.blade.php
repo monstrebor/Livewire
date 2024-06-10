@@ -22,10 +22,7 @@
         </select>
 
         <h1>Select Province:</h1>
-        <select name="province" id="province-dropdown">
-
-        </select>
-
+        <select name="province" id="province-dropdown"></select>
 
         <h1>Select Muncipalities:</h1>
         <select name="Municipality" id="municipality-dropdown">

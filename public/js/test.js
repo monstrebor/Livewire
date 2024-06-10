@@ -1,5 +1,5 @@
 
-//province dropdown 
+//province dropdown
 
 $(document).ready(function() {
     $('#region-dropdown').on('change', function() {
@@ -11,7 +11,7 @@ $(document).ready(function() {
             success: function(response) {
                 $('#province-dropdown').empty();
                 $.each(response, function(key, province) {
-                    $('#province-dropdown').append('<option value="' + province.name + '" data-name="' + province.code + '">' + province.name + '</option>');
+                    $('#province-dropdown').append('<option value="' + province.name + '"  data-name="' + province.code + '">' + province.name + '</option>');
                 });
             }
         });
@@ -47,7 +47,7 @@ $(document).ready(function() {
             url: 'https://psgc.cloud/api/provinces/' + provinceName + '/municipalities',
             type: 'GET',
             success: function(response) {
-                $('#municipality-dropdown').empty(); 
+                $('#municipality-dropdown').empty();
                 $.each(response, function(key, municipality) {
                     $('#municipality-dropdown').append('<option value="' + municipality.name + '" data-name="' + municipality.code + '">' + municipality.name + '</option>');
                 });
@@ -68,7 +68,7 @@ $(document).ready(function() {
             url: 'https://psgc.cloud/api/municipalities/' + municipalityName + '/barangays',
             type: 'GET',
             success: function(response) {
-                $('#Barangay-dropdown').empty(); 
+                $('#Barangay-dropdown').empty();
                 $.each(response, function(key, barangay) {
                     $('#Barangay-dropdown').append('<option value="' + barangay.name + '">' + barangay.name + '</option>');
                 });
