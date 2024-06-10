@@ -366,7 +366,7 @@
                         <!-- contact number -->
                         <div class="mb-2">
                             <label for="contactNumber" class="block text-gray-700 font-bold mb-2">Contact Number <span class="text-red-500">*</span></label>
-                            <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{9}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                         </div>
                         <!-- end of contact number -->
 
@@ -526,7 +526,8 @@
                     <!-- Dependents Information -->
                     <p class="block text-gray-700 font-bold mb-4 text-sm">Dependents</p>
 
-                    <div id="dependentsSection"></div>
+                    <div id="dependentsSection">
+                    </div>
                     <!-- End of  Dependents Information -->
 
                     <div class="flex justify-center gap-4">
