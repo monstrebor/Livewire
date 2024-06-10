@@ -142,3 +142,13 @@ Route::get('/test',function(){
 
 
     })->name('image');
+
+
+
+    // view form test
+
+    Route::get('/regForm',function(){
+
+        return view('Home.test');
+
+    });

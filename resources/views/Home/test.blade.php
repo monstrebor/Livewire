@@ -44,9 +44,8 @@
                 <h1 class="text-xl font-bold mb-1 m-10">Regular Membership</h1>
                 <h6 class="ml-10 text-sm">Membership</h6>
 
-                <form class="m-10" method="post" action="{{route('fetch')}}">
+                <form class="m-10" method="post" action="">
 
-                    @csrf
 
 
                     <!-- full name -->
@@ -79,7 +78,7 @@
                                 <label for="female" class="text-gray-700">Female</label>
                             </div>
                         </div>
-                        
+
                     </div>
                     <!-- end of gender and age-->
 
@@ -127,7 +126,7 @@
                             <label for="idNumber" class="block text-gray-700 font-bold mb-2 text-sm">ID Number <span class="text-red-500">*</span></label>
                             <input type="text" id="idNumber" name="idNumber" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
-                        
+
                         <input type="file" accept="image/*" name="photo" id="photo"></input>
 
                         <div class="mb-4">
@@ -466,7 +465,7 @@
                     <hr class="m-7">
                     <!-- Dependents Information -->
                     <p class="block text-gray-700 font-bold mb-4 text-sm">Defendents</p>
-                    
+
                     <div id="dependentsSection"></div>
                     <!-- End of  Dependents Information -->
 
