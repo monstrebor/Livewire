@@ -21,7 +21,7 @@
             <!-- end of navbar -->
 
         <!-- picture-membership -->
-        <div class="flex bg-yellow-300 mb-10">
+        <div class="flex bg-white mb-10">
             <div class="relative w-11/12  h-80 sm:h-96 mx-auto">
                 <img src="img/coop1.jpg" alt="Description of the image" class="w-full h-full object-cover">
                 <div class="absolute inset-0 flex items-center justify-center">
@@ -40,13 +40,11 @@
 
         <!-- membership form -->
         <div class="flex items-center justify-center mb-10">
-            <div class="w-11/12 bg-white p-4 shadow-md rounded">
+            <div class="form-shadow w-11/12 bg-white p-4 rounded">
                 <h1 class="text-xl font-bold mb-1 m-10">Regular Membership</h1>
                 <h6 class="ml-10 text-sm">Membership</h6>
 
                 <form class="m-10" method="post" action="">
-
-
 
                     <!-- full name -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-3">
@@ -78,25 +76,57 @@
                                 <label for="female" class="text-gray-700">Female</label>
                             </div>
                         </div>
-
                     </div>
                     <!-- end of gender and age-->
-
+                    
                     <!-- address -->
+                    <hr>
+                    <p class="text-sm font-bold my-4">Address</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                         <div class="mb-4">
-                            <label for="address" class="block text-gray-700 font-bold mb-2 text-sm">Address <span class="text-red-500">*</span></label>
-                            <input id="address" name="address" rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <label for="region" class="block text-gray-700 font-bold mb-2 text-sm">Region <span class="text-red-500">*</span></label>
+                            <select id="region" name="region" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                                <option value="" disabled selected>-Select Region-</option>
+                            </select>
                         </div>
+                        <div class="mb-4">
+                            <label for="province" class="block text-gray-700 font-bold mb-2 text-sm">Province <span class="text-red-500">*</span></label>
+                            <select id="province" name="province" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                                <option value="province" disabled selected>-Select Province-</option>
+                            </select>
+                        </div>
+                    </div>
 
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div class="mb-4">
+                            <label for="municipality" class="block text-gray-700 font-bold mb-2 text-sm">Municipality <span class="text-red-500">*</span></label>
+                            <select id="municipality" name="municipality" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                                <option value="municipality" disabled selected>-Select Municipality-</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="brgy" class="block text-gray-700 font-bold mb-2 text-sm">Barangay <span class="text-red-500">*</span></label>
+                            <select id="brgy" name="brgy" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                                <option value="brgy" disabled selected>-Select Barangay-</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div class="mb-4">
+                            <label for="numSt" class="block text-gray-700 font-bold mb-2 text-sm">House Number and Street <span class="text-red-500">*</span></label>
+                            <input type="text" id="numSt" name="numSt" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                    </div>
+                    <hr class="my-5">
+                    <!-- end of address -->
+
+                    {{-- religion, POB, DOB --}}
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                         <div class="mb-4">
                             <label for="religion" class="block text-gray-700 font-bold mb-2 text-sm">Religion<span class="text-red-500">*</span></label>
                             <input id="address" name="address" rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                         </div>
-                    </div>
-                    <!-- end of address -->
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                         <div class="mb-4">
                             <label for="POB" class="block text-gray-700 font-bold mb-2">Place of Birth <span class="text-red-500">*</span></label>
                             <input type="text" id="POB" name="POB" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
@@ -106,9 +136,10 @@
                             <input type="date" id="DOB" name="DOB" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
+                    {{-- end of religion, POB, DOB --}}
 
                     <!-- ID -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-6">
                         <div class="mb-4">
                             <label for="idType" class="block text-gray-700 font-bold mb-2 text-sm">Valid ID Type <span class="text-red-500">*</span></label>
                             <select id="idType" name="idType" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
@@ -127,10 +158,13 @@
                             <input type="text" id="idNumber" name="idNumber" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
 
-                        <input type="file" accept="image/*" name="photo" id="photo"></input>
+                        <div>
+                            <label for="idPic1" class="block text-gray-700 font-bold mb-2 text-sm">ID Picture <span class="text-red-500">*</span></label>
+                            <input type="file" accept="image/*" name="photo" id="photo"></input>
+                        </div>
 
                         <div class="mb-4">
-                            <label for="idType" class="block text-gray-700 font-bold mb-2 text-sm">Valid ID Type(2) <span class="text-red-500">*</span></label>
+                            <label for="idType" class="block text-gray-700 font-bold mb-2 text-sm">Valid ID Type <span class="text-red-500">*</span></label>
                             <select id="idType" name="idType" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="" disabled selected>Select ID Type</option>
                                 <option value="tinID">TIN ID</option>
@@ -143,11 +177,14 @@
                         </div>
 
                         <div class="mb-4">
-                            <label for="idNumber" class="block text-gray-700 font-bold mb-2 text-sm">ID Number(2) <span class="text-red-500">*</span></label>
+                            <label for="idNumber" class="block text-gray-700 font-bold mb-2 text-sm">ID Number <span class="text-red-500">*</span></label>
                             <input type="text" id="idNumber" name="idNumber" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
 
-                        <input type="file" accept="image/*" name="photo" id="photo"></input>
+                        <div>
+                            <label for="idPic2" class="block text-gray-700 font-bold mb-2 text-sm">ID Picture <span class="text-red-500">*</span></label>
+                            <input type="file" accept="image/*" name="photo" id="photo"></input>
+                        </div>
                     </div>
                     <!-- end of ID -->
 
