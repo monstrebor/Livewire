@@ -464,7 +464,7 @@
                     <!-- end of educational-attaiment, occupation (spouse) -->
                     <hr class="m-7">
                     <!-- Dependents Information -->
-                    <p class="block text-gray-700 font-bold mb-4 text-sm">Defendents</p>
+                    <p class="block text-gray-700 font-bold mb-4 text-sm">Dependents</p>
 
                     <div id="dependentsSection"></div>
                     <!-- End of  Dependents Information -->
