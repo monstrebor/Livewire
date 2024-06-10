@@ -4,18 +4,18 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #ffff02;
+    background-color: white;
+}
+
+.form-shadow {
+    box-shadow: -1px 5px 46px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px 5px 46px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 5px 46px 0px rgba(0,0,0,0.75);
 }
 
 .mySLides {
     display: none;
 }
-
-/* img {
-    vertical-align: middle;
-    width: 100%;
-    height: 300px;
-} */
 
 .slideshow-container {
     max-width: 100%;
