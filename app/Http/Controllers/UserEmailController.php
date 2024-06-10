@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use Barryvdh\DomPDF\Facade\Pdf as PDF;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Carbon;
 
@@ -13,16 +12,19 @@ class UserEmailController extends Controller
 
         $now = Carbon::now();
 
-        $nextSaturday = $now->copy()->next(Carbon::SUNDAY);
+        $thisSaturday = $now->isSaturday();
 
-        if ($now->gt($nextSaturday->subHours(12)))
+
+        if ($thisSaturday)    // if it is saturday today.
         {
+            $Saturday = $now->copy()->next(Carbon::SATURDAY);  // next Saturday
+        }else{
 
-            $nextSaturday = $now->copy()->next(Carbon::SUNDAY)->addWeek();
-
+            $Saturday = $now->copy()->next(Carbon::SATURDAY);   // saturday
         }
 
-        return $nextSaturday;
+        return $Saturday;
+
 
     }
 
@@ -46,12 +48,6 @@ class UserEmailController extends Controller
 
         ];
 
-        // $pdf = PDF::loadView('PDF.try', $data);
-
-        // return $pdf->download('document.pdf');
-
-        // $pdfContent = $pdf->output();
-
         $content= [
 
             'body'=>'PRE-MEMBER REGISTRATION',
@@ -61,15 +57,9 @@ class UserEmailController extends Controller
 
         ];
 
-
-        // Mail::to($data['email'])->send(new SampleEmail($content,$subject)); // key of sending info.
-        // return "Email sent successfully!";
-
         Mail::send('Mail.membership', $content, function($message) use ($data, $content,) {
             $message->to($data['email'])
                 ->subject($content['title']);
-                // ->attachData($pdfContent, 'PRE-MEMBERSHIP.pdf',
-                // ['mime' => 'application/pdf']);
 
                 $filePath = public_path('/upload/MNSMPC-PRIMER.pdf');
 
@@ -80,7 +70,7 @@ class UserEmailController extends Controller
 
         });
 
-        // return redirect()->route('Login.index');
+
 
     }
 

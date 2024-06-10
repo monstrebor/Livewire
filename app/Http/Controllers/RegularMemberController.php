@@ -19,7 +19,8 @@ class RegularMemberController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+
+    public function store(Request $request, UserEmailController $email)
     {
         $data = $request->validate([
             'firstName' => 'required',
@@ -44,6 +45,7 @@ class RegularMemberController extends Controller
             'monthlyIncome' => 'required',
             'annualIncome' => 'required',
             'house_ownership' => 'required',
+            'no_of_children'=> 'required',
             'citizenship' => 'required',
             'civilStatus' => 'required',
             'place_of_marriage' => 'required',
@@ -54,6 +56,14 @@ class RegularMemberController extends Controller
             'occupationSpouse' => 'required',
         ]);
 
-        $newRegularMember = RegularMember::create($data);
+
+         RegularMember::create($data);
+
+        $email->PreMemberEmail($request);
+
+        return view('PDF.regularMemberForm',compact('data'));
     }
+
 }
+
+
