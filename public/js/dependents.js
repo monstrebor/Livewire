@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const barangays = [
     "Abangan Norte",
-    "Abangan Sure",
+    "Abangan Sur",
     "Ibayo",
     "Lambakin",
     "Lias",
