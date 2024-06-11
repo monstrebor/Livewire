@@ -7,10 +7,12 @@ const dependentsSection = document.getElementById('dependentsSection');
             const nameInput = document.createElement('input');
             nameInput.type = 'text';
             nameInput.placeholder = 'Dependent\'s Name';
+            nameInput.name = 'dependents[]';
             container.appendChild(nameInput);
 
             const birthdateInput = document.createElement('input');
             birthdateInput.type = 'date';
+            birthdateInput.name = 'birthdate[]';
             birthdateInput.placeholder = 'Birthdate';
             container.appendChild(birthdateInput);
 
@@ -30,7 +32,7 @@ const dependentsSection = document.getElementById('dependentsSection');
             container.appendChild(dependentComponent);
             dependentsList.push(dependentComponent);
             dependentsCount++;
-           
+
             const nameInput = dependentComponent.querySelector('input[type="text"]');
             if (nameInput) {
                 nameInput.focus();

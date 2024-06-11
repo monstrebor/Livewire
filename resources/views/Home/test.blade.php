@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/img/final_logo-removebg-preview-removebg-preview.png">
     <title>Mahal na Señor Multipurpose Cooperative</title>
-    
+
     <link rel="stylesheet" href="/css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -28,7 +28,7 @@
         <!-- picture-membership -->
         <div class="flex bg-white mb-10">
             <div class="relative w-11/12  h-80 sm:h-96 mx-auto">
-                <img src="img/coop1.jpg" alt="Description of the image" class="w-full h-full object-cover">
+                <img src="/img/coop1.jpg" alt="Description of the image" class="w-full h-full object-cover">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-white bg-lime-500 bg-opacity-70 p-2 rounded">Mahal na Señor Multipurpose Cooperative <p class="indent-2">Membership Application. Sign-up today</p></span>
                 </div>
@@ -49,7 +49,10 @@
                 <h1 class="text-xl font-bold mb-1 m-10">Regular Membership</h1>
                 <h6 class="ml-10 text-sm">Membership</h6>
 
-                <form class="m-10" method="post" action="">
+                <form class="m-10" method="post" action="{{route('regular.store')}}">
+
+                    @csrf
+                    @method('post')
 
                     <!-- full name -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-3">
@@ -538,6 +541,7 @@
                     <p class="block text-gray-700 font-bold mb-4 text-sm">Dependents</p>
 
                     <div id="dependentsSection">
+                        
                     </div>
                     <!-- End of  Dependents Information -->
 
