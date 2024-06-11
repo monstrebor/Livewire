@@ -6,7 +6,6 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegularMemberController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\UserEmailController;
-use Illuminate\Support\Facades\Http;
 
 
 
@@ -33,6 +32,8 @@ Route::get('/register',function(){
 
 });
 
+
+
 //error
 
 Route::fallback([ErrorController::class,'custom_404']);
@@ -44,9 +45,14 @@ Route::post('/success',[UserEmailController::class,'PreMemberEmail'])->name('pre
 
 // pre-membership (Regulars)
 
-Route::get('/regularMember',[RegularMemberController::class, 'index'])->name('regularMember.index');
-Route::get('/regularMember/create',[RegularMemberController::class, 'create'])->name('regularMember.create');
-Route::post('/regularMembers',[RegularMemberController::class, 'store'])->name('regularMember.store');
+
+Route::resource('/regular',RegularMemberController::class);
+
+
+
+
+
+
 
 
 
@@ -91,27 +97,9 @@ Route::post('/regularMembers',[RegularMemberController::class, 'store'])->name('
 
 
 
-// api address
-Route::get('/RegularForm',function(){
 
 
-        $response = Http::get('https://psgc.cloud/api/regions');
 
-        // Check if the request was successful
-        if ($response->successful()) {
-            // Retrieve the address data from the API response
-            $addresses = $response->json();
-
-            // Pass the address data to the view
-            return view('Home.test', compact('addresses'));
-
-        } else {
-            // Handle the case where the API request fails
-            return back()->withError('Failed to fetch address data from API');
-
-        }
-
-});
 
 
 
@@ -142,13 +130,3 @@ Route::get('/RegularForm',function(){
 
 
     })->name('image');
-
-
-
-    // view form test
-
-    Route::get('/regForm',function(){
-
-        return view('Home.test');
-
-    });

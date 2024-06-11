@@ -1,4 +1,24 @@
-@extends('Home.layout')
+@extends('Layout.layout')
+
+
+
+    @section('title','Mahal na Senior Multipurpose Cooperative ')
+
+
+
+    @section('script')
+
+    <link rel="stylesheet" href="/css/input.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style type="text/tailwindcss"></style>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    @endsection
+
+
+
 
 @section('content')
 
@@ -100,7 +120,7 @@
                 <p class="ml-10 m-5 font-bold text-slate-700">Naninirahan sa Marilao, Bulacan.<br>
                     May gulang na 18-60 taong gulang  may kakayahang makapagkontrata nang naaayon sa batas at may pinagkakakitaan. <br>
                     May pirmihang hanapbuhay o pinagkakakitaan </p>
-                <a href="{{route('regularMember.create')}}"><button class="discover m-10 px-4 mt-0">BILANG REGULAR MEMBER</button></a>
+                <a href=""><button class="discover m-10 px-4 mt-0">BILANG REGULAR MEMBER</button></a>
             </div>
         </div>
         <!-- end picture -->

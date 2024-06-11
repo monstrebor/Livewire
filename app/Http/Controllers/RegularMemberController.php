@@ -2,68 +2,71 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
-use App\Models\RegularMember;
+
 class RegularMemberController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-        $regularMembers = RegularMember::all();
-        return view('Home.RegularMembers.index', ['regularMembers' => $regularMembers]);
+        //
     }
+
+    /**
+     * Show the form for creating a new resource.
+     */
     public function create()
     {
-        return view('Home.RegularMembers.create');
+            return view('Home.test');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-
-    public function store(Request $request, UserEmailController $email)
+    public function store(Request $request)
     {
-        $data = $request->validate([
-            'firstName' => 'required',
-            'middleName' => 'required',
-            'lastName' => 'required',
-            'gender' => 'required',
-            'age' => 'required',
-            'address' => 'required',
-            'religion' => 'required',
-            'POB' => 'required',
-            'DOB' => 'required',
-            'idType' => 'required',
-            'idNumber' => 'required',
-            'occupation' => 'required',
-            'employment_status' => 'required',
-            'educational_attainment' => 'required',
-            'contactNumber' => 'required',
-            'facebook_account' => 'required',
-            'email' => 'required',
-            'nameOfEmployer' => 'required',
-            'addressOfEmployer' => 'required',
-            'monthlyIncome' => 'required',
-            'annualIncome' => 'required',
-            'house_ownership' => 'required',
-            'no_of_children'=> 'required',
-            'citizenship' => 'required',
-            'civilStatus' => 'required',
-            'place_of_marriage' => 'required',
-            'date_of_marriage' => 'required',
-            'spouse_name' => 'required',
-            'place_of_birth' => 'required',
-            'educational_attainmentSpouse' => 'required',
-            'occupationSpouse' => 'required',
-        ]);
+
+        $data = $request->all();
+
+        return $data;
 
 
-         RegularMember::create($data);
 
-        $email->PreMemberEmail($request);
 
-        return view('PDF.regularMemberForm',compact('data'));
     }
 
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
+    }
 }
-
-

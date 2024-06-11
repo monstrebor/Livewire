@@ -7,10 +7,13 @@
     <link rel="icon" href="/img/final_logo-removebg-preview-removebg-preview.png">
     <title>Mahal na Señor Multipurpose Cooperative</title>
     <link rel="stylesheet" href="/css/style.css">
+<<<<<<< HEAD
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script src="/js/test.js"></script> -->
 
+=======
+>>>>>>> ab3a17a367cf921a297494d666f63e6c441e6722
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <style type="text/tailwindcss">
     </style>
@@ -27,7 +30,7 @@
         <!-- picture-membership -->
         <div class="flex bg-white mb-10">
             <div class="relative w-11/12  h-80 sm:h-96 mx-auto">
-                <img src="img/coop1.jpg" alt="Description of the image" class="w-full h-full object-cover">
+                <img src="/img/coop1.jpg" alt="Description of the image" class="w-full h-full object-cover">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-white bg-lime-500 bg-opacity-70 p-2 rounded">Mahal na Señor Multipurpose Cooperative <p class="indent-2">Membership Application. Sign-up today</p></span>
                 </div>
@@ -48,7 +51,10 @@
                 <h1 class="text-xl font-bold mb-1 m-10">Regular Membership</h1>
                 <h6 class="ml-10 text-sm">Membership</h6>
 
-                <form class="m-10" method="post" action="">
+                <form class="m-10" method="post" action="{{route('regular.store')}}">
+
+                    @csrf
+                    @method('post')
 
                     <!-- full name -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-3">
@@ -94,27 +100,16 @@
 
                             <select id="region-dropdown" name="region" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
 
-                                @foreach($addresses as $address)
-                                <option value="{{ $address['name'] }}" data-code="RegionCode">{{ $address['name'] }}</option>
-                                @endforeach
+                                <option value=""></option>
 
                             </select>
-
-
                         </div>
 
-
                         <div class="mb-4">
-
                             <label for="province" class="block text-gray-700 font-bold mb-2 text-sm">Province <span class="text-red-500">*</span></label>
 
-
                             <select name="province" id="province-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-
-                            </select>
-
-
-
+                            </select>  
                         </div>
                     </div>
 
@@ -125,7 +120,6 @@
 
                             </select>
                         </div>
-
 
                         <div class="mb-4">
                             <label for="brgy" class="block text-gray-700 font-bold mb-2 text-sm">Barangay <span class="text-red-500">*</span></label>
@@ -471,6 +465,11 @@
                             </select>
                         </div>
                     </div>
+
+
+
+
+
                     <!-- end of citezenship, no of children, civil status -->
                     <hr class="m-7">
                     <!-- date/place-of-marriage -->
@@ -485,6 +484,7 @@
                             <input type="date" id="date-of-marriage" name="date-of-marriage" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
+
                     <!-- end of date/place-of-marriage -->
 
                     <!-- spouse name/ -->
@@ -502,6 +502,8 @@
                             <input type="date" id="place-of-birth" name="place-of-birth" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
+
+
                     <!-- end of spouse name -->
 
                     <!-- educational-attaiment, occupation (spouse) -->
@@ -521,12 +523,15 @@
                             <input type="text" id="occupation" name="occupation" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
+
+
                     <!-- end of educational-attaiment, occupation (spouse) -->
                     <hr class="m-7">
                     <!-- Dependents Information -->
                     <p class="block text-gray-700 font-bold mb-4 text-sm">Dependents</p>
 
                     <div id="dependentsSection">
+                        
                     </div>
                     <!-- End of  Dependents Information -->
 
