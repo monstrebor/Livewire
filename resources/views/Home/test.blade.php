@@ -7,13 +7,6 @@
     <link rel="icon" href="/img/final_logo-removebg-preview-removebg-preview.png">
     <title>Mahal na Señor Multipurpose Cooperative</title>
     <link rel="stylesheet" href="/css/style.css">
-<<<<<<< HEAD
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script src="/js/test.js"></script> -->
-
-=======
->>>>>>> ab3a17a367cf921a297494d666f63e6c441e6722
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <style type="text/tailwindcss">
     </style>
