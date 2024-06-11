@@ -84,7 +84,7 @@
                         </div>
                     </div>
                     {{-- end of religion, POB, DOB --}}
-                    
+
                     <!-- contact information -->
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm mb-4 mt-2">
                         <!-- contact number -->
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                     <!-- end of contact information -->
-                    
+
 
                     <!-- address -->
                     <hr class="my-6">
@@ -139,7 +139,7 @@
 
                             <select name="province" id="province-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="province" disabled selected>Province</option>
-                            </select>  
+                            </select>
                         </div>
                     </div>
 
@@ -152,8 +152,8 @@
                         </div>
 
                         <div class="mb-4">
-                            <label for="brgy" class="block text-gray-700 font-bold mb-2 text-sm">Barangay <span class="text-red-500">*</span></label>
-                            <select id="brgyDropdown" name="Baranggay" id="Barangay-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <label for="brgy" class="block text-gray-700 font-bold mb-2 text-sm">Barangay<span class="text-red-500">*</span></label>
+                            <select id="brgyDropdown"  name="Baranggay"  class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="select" disabled selected>-Select Barangay-</option>
                             </select>
                         </div>
@@ -521,7 +521,7 @@
                     <p class="block text-gray-700 font-bold mb-4 text-sm">Dependents</p>
 
                     <div id="dependentsSection">
-                        
+
                     </div>
                     <!-- End of  Dependents Information -->
 
