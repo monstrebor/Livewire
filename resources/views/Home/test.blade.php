@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/js/test.js"></script>
+    <!-- <script src="/js/test.js"></script> -->
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <style type="text/tailwindcss">
@@ -54,15 +54,15 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-3">
                         <div class="mb-4">
                             <label for="firstName" class="block text-gray-700 font-bold mb-2">First Name <span class="text-red-500">*</span></label>
-                            <input type="text" id="firstName" name="firstName" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <input type="text" id="firstName" name="firstName" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30" required>
                         </div>
                         <div class="mb-4">
                             <label for="middleName" class="block text-gray-700 font-bold mb-2">Middle Name (Optional)</label>
-                            <input type="text" id="middleName" name="middleName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200">
+                            <input type="text" id="middleName" name="middleName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30">
                         </div>
                         <div class="mb-4">
                             <label for="lastName" class="block text-gray-700 font-bold mb-2">Last Name <span class="text-red-500">*</span></label>
-                            <input type="text" id="lastName" name="lastName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200">
+                            <input type="text" id="lastName" name="lastName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30">
                         </div>
                     </div>
                     <!--End of full name -->
@@ -129,7 +129,7 @@
 
                         <div class="mb-4">
                             <label for="brgy" class="block text-gray-700 font-bold mb-2 text-sm">Barangay <span class="text-red-500">*</span></label>
-                            <select name="Baranggay" id="Barangay-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <select id="brgyDropdown" name="Baranggay" id="Barangay-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
 
                             </select>
                         </div>
@@ -366,7 +366,7 @@
                         <!-- contact number -->
                         <div class="mb-2">
                             <label for="contactNumber" class="block text-gray-700 font-bold mb-2">Contact Number <span class="text-red-500">*</span></label>
-                            <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{9}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                         </div>
                         <!-- end of contact number -->
 

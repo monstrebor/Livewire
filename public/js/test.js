@@ -59,20 +59,20 @@ $(document).ready(function() {
 // baranggay
 // https://psgc.cloud/api/municipalities/0102802000/barangays
 
-$(document).ready(function() {
-    $('#municipality-dropdown').on('change', function() {
-        var municipalityCode = $('#municipality-dropdown option:selected').data('code');
-        var municipalityName = $('#municipality-dropdown option:selected').text();
+// $(document).ready(function() {
+//     $('#municipality-dropdown').on('change', function() {
+//         var municipalityCode = $('#municipality-dropdown option:selected').data('code');
+//         var municipalityName = $('#municipality-dropdown option:selected').text();
 
-        $.ajax({
-            url: 'https://psgc.cloud/api/municipalities/' + municipalityName + '/barangays',
-            type: 'GET',
-            success: function(response) {
-                $('#Barangay-dropdown').empty();
-                $.each(response, function(key, barangay) {
-                    $('#Barangay-dropdown').append('<option value="' + barangay.name + '">' + barangay.name + '</option>');
-                });
-            }
-        });
-    });
-});
+//         $.ajax({
+//             url: 'https://psgc.cloud/api/municipalities/' + municipalityName + '/barangays',
+//             type: 'GET',
+//             success: function(response) {
+//                 $('#Barangay-dropdown').empty();
+//                 $.each(response, function(key, barangay) {
+//                     $('#Barangay-dropdown').append('<option value="' + barangay.name + '">' + barangay.name + '</option>');
+//                 });
+//             }
+//         });
+//     });
+// });
