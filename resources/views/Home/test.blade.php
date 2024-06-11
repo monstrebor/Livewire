@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/img/final_logo-removebg-preview-removebg-preview.png">
     <title>Mahal na Señor Multipurpose Cooperative</title>
+    
     <link rel="stylesheet" href="/css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -471,6 +472,11 @@
                             </select>
                         </div>
                     </div>
+
+
+
+
+
                     <!-- end of citezenship, no of children, civil status -->
                     <hr class="m-7">
                     <!-- date/place-of-marriage -->
@@ -485,6 +491,7 @@
                             <input type="date" id="date-of-marriage" name="date-of-marriage" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
+
                     <!-- end of date/place-of-marriage -->
 
                     <!-- spouse name/ -->
@@ -502,6 +509,8 @@
                             <input type="date" id="place-of-birth" name="place-of-birth" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
+
+
                     <!-- end of spouse name -->
 
                     <!-- educational-attaiment, occupation (spouse) -->
@@ -521,6 +530,8 @@
                             <input type="text" id="occupation" name="occupation" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
+
+
                     <!-- end of educational-attaiment, occupation (spouse) -->
                     <hr class="m-7">
                     <!-- Dependents Information -->

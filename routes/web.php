@@ -33,6 +33,8 @@ Route::get('/register',function(){
 
 });
 
+
+
 //error
 
 Route::fallback([ErrorController::class,'custom_404']);
@@ -47,6 +49,8 @@ Route::post('/success',[UserEmailController::class,'PreMemberEmail'])->name('pre
 Route::get('/regularMember',[RegularMemberController::class, 'index'])->name('regularMember.index');
 Route::get('/regularMember/create',[RegularMemberController::class, 'create'])->name('regularMember.create');
 Route::post('/regularMembers',[RegularMemberController::class, 'store'])->name('regularMember.store');
+
+
 
 
 
@@ -115,6 +119,9 @@ Route::get('/RegularForm',function(){
 
 
 
+
+
+
 //picture
 
 
@@ -142,13 +149,3 @@ Route::get('/RegularForm',function(){
 
 
     })->name('image');
-
-
-
-    // view form test
-
-    Route::get('/regForm',function(){
-
-        return view('Home.test');
-
-    });

@@ -1,14 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width= , initial-scale=1.0">
-    <title>Login</title>
+
+@extends('Layout.layout')
+
+
+    @section('title','Login')
+
+    @section('script')
     <link rel="stylesheet" href="css/login2.css">
     <link rel="icon" href="img/final_logo-removebg-preview-removebg-preview.png">
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
+
+    @endsection
+
+
+
+    @section('content')
+
     <div class="grid grid-cols-2">
         <div class="container h-screen content-center">
             <p class="top-text ml-5 mt-2 font-bold text-white text-lg tracking-widest">WAIS</p>
@@ -41,8 +47,6 @@
         </div>
     </div>
 
+    @endsection
 
 
-
-</body>
-</html>

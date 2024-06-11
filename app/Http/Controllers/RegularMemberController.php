@@ -11,6 +11,7 @@ class RegularMemberController extends Controller
         $regularMembers = RegularMember::all();
         return view('Home.RegularMembers.index', ['regularMembers' => $regularMembers]);
     }
+    
     public function create()
     {
         return view('Home.RegularMembers.create');

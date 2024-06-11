@@ -1,4 +1,24 @@
-@extends('Home.layout')
+@extends('Layout.layout')
+
+
+
+    @section('title','Mahal na Senior Multipurpose Cooperative ')
+
+
+
+    @section('script')
+
+    <link rel="stylesheet" href="/css/input.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style type="text/tailwindcss"></style>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    @endsection
+
+
+
 
 @section('content')
 
