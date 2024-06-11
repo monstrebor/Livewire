@@ -6,12 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/img/final_logo-removebg-preview-removebg-preview.png">
     <title>Mahal na Señor Multipurpose Cooperative</title>
-
     <link rel="stylesheet" href="/css/style.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/js/test.js"></script>
-
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <style type="text/tailwindcss">
     </style>
@@ -98,27 +93,16 @@
 
                             <select id="region-dropdown" name="region" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
 
-                                @foreach($addresses as $address)
-                                <option value="{{ $address['name'] }}" data-code="RegionCode">{{ $address['name'] }}</option>
-                                @endforeach
+                                <option value=""></option>
 
                             </select>
-
-
                         </div>
 
-
                         <div class="mb-4">
-
                             <label for="province" class="block text-gray-700 font-bold mb-2 text-sm">Province <span class="text-red-500">*</span></label>
 
-
                             <select name="province" id="province-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-
-                            </select>
-
-
-
+                            </select>  
                         </div>
                     </div>
 
@@ -129,7 +113,6 @@
 
                             </select>
                         </div>
-
 
                         <div class="mb-4">
                             <label for="brgy" class="block text-gray-700 font-bold mb-2 text-sm">Barangay <span class="text-red-500">*</span></label>

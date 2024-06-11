@@ -20,24 +20,7 @@ class RegularMemberController extends Controller
      */
     public function create()
     {
-
-        $response = Http::get('https://psgc.cloud/api/regions');
-
-        // Check if the request was successful
-        if ($response->successful()) {
-            // Retrieve the address data from the API response
-            $addresses = $response->json();
-
-            // Pass the address data to the view
-            return view('Home.test', compact('addresses'));
-
-        } else {
-            // Handle the case where the API request fails
-            return back()->withError('Failed to fetch address data from API');
-
-        }
-
-
+            return view('Home.test');
     }
 
     /**
