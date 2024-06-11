@@ -7,13 +7,6 @@
     <link rel="icon" href="/img/final_logo-removebg-preview-removebg-preview.png">
     <title>Mahal na Señor Multipurpose Cooperative</title>
     <link rel="stylesheet" href="/css/style.css">
-<<<<<<< HEAD
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script src="/js/test.js"></script> -->
-
-=======
->>>>>>> ab3a17a367cf921a297494d666f63e6c441e6722
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <style type="text/tailwindcss">
     </style>
@@ -57,6 +50,8 @@
                     @method('post')
 
                     <!-- full name -->
+                    <hr class="my-4">
+                    <p class="text-l font-bold my-5 mb-7">Personal Information</p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-3">
                         <div class="mb-4">
                             <label for="firstName" class="block text-gray-700 font-bold mb-2">First Name <span class="text-red-500">*</span></label>
@@ -72,71 +67,6 @@
                         </div>
                     </div>
                     <!--End of full name -->
-
-                    <!-- gender and age -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                        <div class="mb-4 text-sm">
-                            <label class="block text-gray-700 font-bold mb-2">Gender <span class="text-red-500">*</span></label>
-                            <div class="flex items-center mb-2">
-                                <input type="radio" id="male" name="gender" value="male" class="mr-2" required>
-                                <label for="male" class="text-gray-700">Male</label>
-                            </div>
-                            <div class="flex items-center mb-2">
-                                <input type="radio" id="female" name="gender" value="female" class="mr-2" required>
-                                <label for="female" class="text-gray-700">Female</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end of gender and age-->
-
-                    <!-- address -->
-                    <hr>
-                    <p class="text-sm font-bold my-4">Address</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                        <div class="mb-4">
-                            <label for="region" class="block text-gray-700 font-bold mb-2 text-sm">Region <span class="text-red-500">*</span></label>
-
-
-
-                            <select id="region-dropdown" name="region" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-
-                                <option value=""></option>
-
-                            </select>
-                        </div>
-
-                        <div class="mb-4">
-                            <label for="province" class="block text-gray-700 font-bold mb-2 text-sm">Province <span class="text-red-500">*</span></label>
-
-                            <select name="province" id="province-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                            </select>  
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                        <div class="mb-4">
-                            <label for="municipality" class="block text-gray-700 font-bold mb-2 text-sm">Municipality <span class="text-red-500">*</span></label>
-                            <select name="Municipality" id="municipality-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-
-                            </select>
-                        </div>
-
-                        <div class="mb-4">
-                            <label for="brgy" class="block text-gray-700 font-bold mb-2 text-sm">Barangay <span class="text-red-500">*</span></label>
-                            <select id="brgyDropdown" name="Baranggay" id="Barangay-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                        <div class="mb-4">
-                            <label for="numSt" class="block text-gray-700 font-bold mb-2 text-sm">House Number and Street <span class="text-red-500">*</span></label>
-                            <input type="text" id="numSt" name="numSt" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
-                        </div>
-                    </div>
-                    <hr class="my-5">
-                    <!-- end of address -->
 
                     {{-- religion, POB, DOB --}}
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -154,11 +84,95 @@
                         </div>
                     </div>
                     {{-- end of religion, POB, DOB --}}
+                    
+                    <!-- contact information -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm mb-4 mt-2">
+                        <!-- contact number -->
+                        <div class="mb-2">
+                            <label for="contactNumber" class="block text-gray-700 font-bold mb-2">Contact Number <span class="text-red-500">*</span></label>
+                            <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        <!-- end of contact number -->
+
+                        <!-- facebook Account -->
+                        <div class="mb-2">
+                            <label for="facebookAccount" class="block text-gray-700 font-bold mb-2">Facebook Account <span class="text-red-500">*</span></label>
+                            <input type="text" id="facebookAccount" name="facebook-account" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        <!-- end of facebook account -->
+
+                        <!-- email -->
+                        <div class="mb-2">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">Email <span class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                        <!-- end of email -->
+
+                        <div class="mb-4 text-sm">
+                            <label class="block text-gray-700 font-bold mb-2">Gender <span class="text-red-500">*</span></label>
+                            <div class="flex items-center mb-2 gap-2">
+                                <input type="radio" id="male" name="gender" value="male" class="mr-2" required>
+                                <label for="male" class="text-gray-700">Male</label>
+
+                                <input type="radio" id="female" name="gender" value="female" class="mr-2" required>
+                                <label for="female" class="text-gray-700">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of contact information -->
+                    
+
+                    <!-- address -->
+                    <hr class="my-6">
+                    <p class="text-l font-bold my-4">Address Details</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div class="mb-4">
+                            <label for="region" class="block text-gray-700 font-bold mb-2 text-sm">Region <span class="text-red-500">*</span></label>
+
+                            <select id="region" name="region" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                                <option value="region" disabled selected>Region III</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="province" class="block text-gray-700 font-bold mb-2 text-sm">Province <span class="text-red-500">*</span></label>
+
+                            <select name="province" id="province-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                                <option value="province" disabled selected>Province</option>
+                            </select>  
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div class="mb-4">
+                            <label for="municipality" class="block text-gray-700 font-bold mb-2 text-sm">Municipality <span class="text-red-500">*</span></label>
+                            <select name="Municipality" id="municipality-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                                <option value="Municipality" disabled selected>Marilao</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="brgy" class="block text-gray-700 font-bold mb-2 text-sm">Barangay <span class="text-red-500">*</span></label>
+                            <select id="brgyDropdown" name="Baranggay" id="Barangay-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                                <option value="select" disabled selected>-Select Barangay-</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div class="mb-4">
+                            <label for="numSt" class="block text-gray-700 font-bold mb-2 text-sm">House Number and Street <span class="text-red-500">*</span></label>
+                            <input type="text" id="numSt" name="numSt" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                    </div>
+                    <hr class="my-5">
+                    <!-- end of address -->
 
                     <!-- ID -->
+                    <p class="text-l font-bold my-4 mb-6">Valid Identification</p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-6">
                         <div class="mb-4">
-                            <label for="idType" class="block text-gray-700 font-bold mb-2 text-sm">Valid ID Type <span class="text-red-500">*</span></label>
+                            <label for="idType" class="block text-gray-700 font-bold mb-2 text-sm">ID Type <span class="text-red-500">*</span></label>
                             <select id="idType" name="idType" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="" disabled selected>Select ID Type</option>
                                 <option value="tinID">TIN ID</option>
@@ -181,7 +195,7 @@
                         </div>
 
                         <div class="mb-4">
-                            <label for="idType" class="block text-gray-700 font-bold mb-2 text-sm">Valid ID Type <span class="text-red-500">*</span></label>
+                            <label for="idType" class="block text-gray-700 font-bold mb-2 text-sm">ID Type <span class="text-red-500">*</span></label>
                             <select id="idType" name="idType" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="" disabled selected>Select ID Type</option>
                                 <option value="tinID">TIN ID</option>
@@ -203,6 +217,7 @@
                             <input type="file" accept="image/*" name="photo" id="photo"></input>
                         </div>
                     </div>
+                    <hr class="my-6">
                     <!-- end of ID -->
 
                     <!-- occupation -->
@@ -354,31 +369,6 @@
                         </div>
                     </div>
                     <!-- end of Educational Attainment -->
-
-                    <!-- contact information -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
-                        <!-- contact number -->
-                        <div class="mb-2">
-                            <label for="contactNumber" class="block text-gray-700 font-bold mb-2">Contact Number <span class="text-red-500">*</span></label>
-                            <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                        </div>
-                        <!-- end of contact number -->
-
-                        <!-- facebook Account -->
-                        <div class="mb-2">
-                            <label for="facebookAccount" class="block text-gray-700 font-bold mb-2">Facebook Account <span class="text-red-500">*</span></label>
-                            <input type="text" id="facebookAccount" name="facebook-account" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                        </div>
-                        <!-- end of facebook account -->
-
-                        <!-- email -->
-                        <div class="mb-2">
-                            <label for="email" class="block text-gray-700 font-bold mb-2">Email <span class="text-red-500">*</span></label>
-                            <input type="email" id="email" name="email" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
-                        </div>
-                        <!-- end of email -->
-                    </div>
-                    <!-- end of contact information -->
 
                     <!-- employer -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
