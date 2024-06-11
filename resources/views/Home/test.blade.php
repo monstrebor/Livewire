@@ -44,7 +44,7 @@
                 <h1 class="text-xl font-bold mb-1 m-10">Regular Membership</h1>
                 <h6 class="ml-10 text-sm">Membership</h6>
 
-                <form class="m-10" method="post" action="{{route('regular.store')}}">
+                <form class="m-10" method="post" action="{{route('regular.store')}}" enctype="multipart/form-data">
 
                     @csrf
                     @method('post')
@@ -72,7 +72,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                         <div class="mb-4">
                             <label for="religion" class="block text-gray-700 font-bold mb-2 text-sm">Religion<span class="text-red-500">*</span></label>
-                            <input id="address" name="address" rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <input id="address" name="religion" rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                         </div>
                         <div class="mb-4">
                             <label for="POB" class="block text-gray-700 font-bold mb-2">Place of Birth <span class="text-red-500">*</span></label>
@@ -128,17 +128,17 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                         <div class="mb-4">
                             <label for="region" class="block text-gray-700 font-bold mb-2 text-sm">Region <span class="text-red-500">*</span></label>
-
                             <select id="region" name="region" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                                <option value="region" disabled selected>Region III</option>
+                                <option value="3" selected>Region III</option>
+                                <!-- Other options here -->
                             </select>
                         </div>
 
                         <div class="mb-4">
-                            <label for="province" class="block text-gray-700 font-bold mb-2 text-sm">Province <span class="text-red-500">*</span></label>
+                            <label for="province" class="block text-gray-700 font-bold mb-2 text-sm">Province<span class="text-red-500">*</span></label>
 
                             <select name="province" id="province-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                                <option value="province" disabled selected>Province</option>
+                                <option value="Bulacan" selected>Bulacan</option>
                             </select>
                         </div>
                     </div>
@@ -147,7 +147,7 @@
                         <div class="mb-4">
                             <label for="municipality" class="block text-gray-700 font-bold mb-2 text-sm">Municipality <span class="text-red-500">*</span></label>
                             <select name="Municipality" id="municipality-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                                <option value="Municipality" disabled selected>Marilao</option>
+                                <option value="Marilao" selected>Marilao</option>
                             </select>
                         </div>
 
@@ -162,7 +162,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                         <div class="mb-4">
                             <label for="numSt" class="block text-gray-700 font-bold mb-2 text-sm">House Number and Street <span class="text-red-500">*</span></label>
-                            <input type="text" id="numSt" name="numSt" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="numSt" name="street" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
                     <hr class="my-5">
@@ -173,48 +173,49 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-6">
                         <div class="mb-4">
                             <label for="idType" class="block text-gray-700 font-bold mb-2 text-sm">ID Type <span class="text-red-500">*</span></label>
-                            <select id="idType" name="idType" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <select id="idType" name="idType[]" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="" disabled selected>Select ID Type</option>
-                                <option value="tinID">TIN ID</option>
-                                <option value="philhealth">Philhealth</option>
+                                <option value="TinID">TIN ID</option>
+                                <option value="PhilHealth">Philhealth</option>
                                 <option value="UMID">UMID/SSS/GSIS</option>
-                                <option value="pagibig">Pag-ibig</option>
-                                <option value="driverLicense">Dricer's Licence</option>
+                                <option value="Pag-ibig">Pag-ibig</option>
+                                <option value="DriverLicense">Driver's Licence</option>
                                 <option value="others">Others</option>
                             </select>
                         </div>
 
                         <div class="mb-4">
                             <label for="idNumber" class="block text-gray-700 font-bold mb-2 text-sm">ID Number <span class="text-red-500">*</span></label>
-                            <input type="text" id="idNumber" name="idNumber" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="idNumber" name="idNumber[]" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
 
                         <div>
                             <label for="idPic1" class="block text-gray-700 font-bold mb-2 text-sm">ID Picture <span class="text-red-500">*</span></label>
-                            <input type="file" accept="image/*" name="photo" id="photo"></input>
+                            <input type="file" accept="image/*" name="photo[]" id="photo"></input>
                         </div>
+
 
                         <div class="mb-4">
                             <label for="idType" class="block text-gray-700 font-bold mb-2 text-sm">ID Type <span class="text-red-500">*</span></label>
-                            <select id="idType" name="idType" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <select id="idType" name="idType[]" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="" disabled selected>Select ID Type</option>
-                                <option value="tinID">TIN ID</option>
-                                <option value="philhealth">Philhealth</option>
+                                <option value="TinID">TIN ID</option>
+                                <option value="PhilHealth">Philhealth</option>
                                 <option value="UMID">UMID/SSS/GSIS</option>
-                                <option value="pagibig">Pag-ibig</option>
-                                <option value="driverLicense">Dricer's Licence</option>
+                                <option value="Pag-ibig">Pag-ibig</option>
+                                <option value="DriverLicense">Driver's Licence</option>
                                 <option value="others">Others</option>
                             </select>
                         </div>
 
                         <div class="mb-4">
                             <label for="idNumber" class="block text-gray-700 font-bold mb-2 text-sm">ID Number <span class="text-red-500">*</span></label>
-                            <input type="text" id="idNumber" name="idNumber" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="idNumber" name="idNumber[]" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
 
                         <div>
                             <label for="idPic2" class="block text-gray-700 font-bold mb-2 text-sm">ID Picture <span class="text-red-500">*</span></label>
-                            <input type="file" accept="image/*" name="photo" id="photo"></input>
+                            <input type="file" accept="image/*" name="photo[]" id="photo"></input>
                         </div>
                     </div>
                     <hr class="my-6">
@@ -227,23 +228,23 @@
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="self-employed" name="occupation" value="self-employed" class="mr-2" required>
+                                        <input type="radio" id="Self-employed" name="occupation" value="self-employed" class="mr-2" required>
                                         <label for="self-employed" class="text-gray-700">Self-Employed</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="public-official" name="occupation" value="public-official" class="mr-2" required>
+                                        <input type="radio" id="public-official" name="occupation" value="Public-Official" class="mr-2" required>
                                         <label for="public-official" class="text-gray-700">Public-Official</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="driver/operator/conductor" name="occupation" value="driver/operator/conductor" class="mr-2" required>
+                                        <input type="radio" id="driver/operator/conductor" name="occupation" value="Driver/Operator/Conductor" class="mr-2" required>
                                         <label for="housewife/househusband" class="text-gray-700">Driver/Operator/Conductor</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="housewife/househusband" name="occupation" value="housewife/househusband" class="mr-2" required>
+                                        <input type="radio" id="housewife/househusband" name="occupation" value="Housewife/Househusband" class="mr-2" required>
                                         <label for="housewife/househusband" class="text-gray-700">Housewife/Househusband</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="private-employee" name="occupation" value="private-employee" class="mr-2" required>
+                                        <input type="radio" id="private-employee" name="occupation" value="Private-Employee" class="mr-2" required>
                                         <label for="private-employee" class="text-gray-700">Private Employee</label>
                                     </div>
                                 </div>
@@ -251,41 +252,41 @@
                                 <div>
                                     <div class="flex items-center mb-2">
                                         <input type="radio" id="government-employee" name="occupation" value="government-employee" class="mr-2" required>
-                                        <label for="government-employee" class="text-gray-700">Government Employee</label>
+                                        <label for="Government-Employee" class="text-gray-700">Government Employee</label>
                                     </div>
                                     <div class="flex items-center mb-2">
                                         <input type="radio" id="religious-leader" name="occupation" value="religious-leader" class="mr-2" required>
-                                        <label for="religious-leader" class="text-gray-700">Religious Leader</label>
+                                        <label for="Religious-Leader" class="text-gray-700">Religious Leader</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="entrepreneur-small" name="occupation" value="entrepreneur-small" class="mr-2" required>
+                                        <input type="radio" id="entrepreneur-small" name="occupation" value="Entrepreneur-Small" class="mr-2" required>
                                         <label for="entrepreneur-small" class="text-gray-700">Entrepreneur - Small</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="entrepreneur-large" name="occupation" value="entrepreneur-large" class="mr-2" required>
+                                        <input type="radio" id="entrepreneur-large" name="occupation" value="Entrepreneur-Large" class="mr-2" required>
                                         <label for="entrepreneur-large" class="text-gray-700">Entrepreneur - Large</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="senior-citizen/retiree" name="occupation" value="senior-citizen/retiree" class="mr-2" required>
+                                        <input type="radio" id="senior-citizen/retiree" name="occupation" value="Senior-Citizen/Retiree" class="mr-2" required>
                                         <label for="senior-citizen/retiree" class="text-gray-700">Eenior Citizen/Retiree</label>
                                     </div>
                                 </div>
 
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="allotee" name="occupation" value="allotee" class="mr-2" required>
+                                        <input type="radio" id="allotee" name="occupation" value="Allotee" class="mr-2" required>
                                         <label for="allotee" class="text-gray-700">Allotee</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="volunteer" name="occupation" value="volunteer" class="mr-2" required>
+                                        <input type="radio" id="volunteer" name="occupation" value="Volunteer" class="mr-2" required>
                                         <label for="volunteer" class="text-gray-700">Volunteer</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="none" name="occupation" value="none" class="mr-2" required>
+                                        <input type="radio" id="none" name="occupation" value="None" class="mr-2" required>
                                         <label for="none" class="text-gray-700">None</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="others" name="occupation" value="others" class="mr-2" required>
+                                        <input type="radio" id="others" name="occupation" value="Others" class="mr-2" required>
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
@@ -299,34 +300,34 @@
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="permanent" name="emplyment-status" value="permanent" class="mr-2" required>
+                                        <input type="radio" id="permanent" name="emplyment-status" value="Permanent" class="mr-2" required>
                                         <label for="permanent" class="text-gray-700">Permanent</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="project-based" name="emplyment-status" value="project-based" class="mr-2" required>
+                                        <input type="radio" id="project-based" name="emplyment-status" value="Project-based" class="mr-2" required>
                                         <label for="project-based" class="text-gray-700">Project-Based</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="seasonal" name="emplyment-status" value="seasonal" class="mr-2" required>
+                                        <input type="radio" id="seasonal" name="emplyment-status" value="Seasonal" class="mr-2" required>
                                         <label for="project-based" class="text-gray-700">Seasonal</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="casual" name="emplyment-status" value="casual" class="mr-2" required>
+                                        <input type="radio" id="casual" name="emplyment-status" value="Casual" class="mr-2" required>
                                         <label for="casual" class="text-gray-700">Casual</label>
                                     </div>
                                 </div>
 
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="probationary" name="emplyment-status" value="probationary" class="mr-2" required>
+                                        <input type="radio" id="probationary" name="emplyment-status" value="Probationary" class="mr-2" required>
                                         <label for="probationary" class="text-gray-700">Probationary</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="fixed-or-termed" name="emplyment-status" value="fixed-or-termed" class="mr-2" required>
+                                        <input type="radio" id="fixed-or-termed" name="emplyment-status" value="Fixed-or-Termed" class="mr-2" required>
                                         <label for="fixed-or-termed" class="text-gray-700">Fixed or Termed</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="others" name="emplyment-status" value="others" class="mr-2" required>
+                                        <input type="radio" id="others" name="emplyment-status" value="Others" class="mr-2" required>
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
@@ -342,27 +343,27 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="elem" name="educational-attaiment" value="elem" class="mr-2" required>
+                                    <input type="radio" id="elem" name="educational-attaiment" value="Elementary" class="mr-2" required>
                                     <label for="elem" class="text-gray-700">Elementary</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="highschool" name="educational-attaiment" value="highschool" class="mr-2" required>
+                                    <input type="radio" id="highschool" name="educational-attaiment" value="Highschool" class="mr-2" required>
                                     <label for="highschool" class="text-gray-700">Highschool</label>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="college" name="educational-attaiment" value="college" class="mr-2" required>
+                                    <input type="radio" id="college" name="educational-attaiment" value="College" class="mr-2" required>
                                     <label for="college" class="text-gray-700">College</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="vocational" name="educational-attaiment" value="vocational" class="mr-2" required>
+                                    <input type="radio" id="vocational" name="educational-attaiment" value="Vocational" class="mr-2" required>
                                     <label for="vocational" class="text-gray-700">Vocational</label>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="others" name="educational-attaiment" value="others" class="mr-2" required>
+                                    <input type="radio" id="others" name="educational-attaiment" value="Others" class="mr-2" required>
                                     <label for="others" class="text-gray-700">Others</label>
                                 </div>
                             </div>
@@ -402,27 +403,27 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="owned" name="house-ownership" value="owned" class="mr-2" required>
+                                    <input type="radio" id="owned" name="house-ownership" value="Owned" class="mr-2" required>
                                     <label for="owned" class="text-gray-700">Owned</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="rental" name="house-ownership" value="rental" class="mr-2" required>
+                                    <input type="radio" id="rental" name="house-ownership" value="Rental" class="mr-2" required>
                                     <label for="rental" class="text-gray-700">Rental</label>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="livingwithparents" name="house-ownership" value="livingwithparents" class="mr-2" required>
+                                    <input type="radio" id="livingwithparents" name="house-ownership" value="Living-with-parents" class="mr-2" required>
                                     <label for="owned" class="text-gray-700">Living with Parents</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="rental" name="house-ownership" value="rental" class="mr-2" required>
+                                    <input type="radio" id="rental" name="house-ownership" value="Rental" class="mr-2" required>
                                     <label for="rental" class="text-gray-700">Rental</label>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="housingLoan" name="house-ownership" value="housingLoan" class="mr-2" required>
+                                    <input type="radio" id="housingLoan" name="house-ownership" value="Housing-Loan" class="mr-2" required>
                                     <label for="housingLoan" class="text-gray-700">Housing Loan</label>
                                 </div>
                             </div>
@@ -448,10 +449,10 @@
                             <label for="civilStatus" class="block text-gray-700 font-bold mb-2">Civil Status <span class="text-red-500">*</span></label>
                             <select id="civilStatus" name="civilStatus" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="" disabled selected>Select Civil Status</option>
-                                <option value="single">Single</option>
-                                <option value="married">Married</option>
-                                <option value="divorced">Divorced</option>
-                                <option value="widowed">Widowed</option>
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Divorced">Divorced</option>
+                                <option value="Widowed">Widowed</option>
                             </select>
                         </div>
                     </div>
@@ -502,10 +503,10 @@
                             <label for="educational-attaiment" class="block text-gray-700 font-bold mb-2">Educational Attainment (spouse)</label>
                             <select id="educational-attaiment" name="educational-attaiment" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                                 <option value="" disabled selected>Select Educational Attainment</option>
-                                <option value="elem">Elementary</option>
-                                <option value="highschool">Highschool</option>
-                                <option value="college">College</option>
-                                <option value="others">Others</option>
+                                <option value="Elementary">Elementary</option>
+                                <option value="Highschool">Highschool</option>
+                                <option value="College">College</option>
+                                <option value="Others">Others</option>
                             </select>
                         </div>
                         <div class="mb-4">
