@@ -129,7 +129,7 @@
                         <div class="mb-4">
                             <label for="region" class="block text-gray-700 font-bold mb-2 text-sm">Region <span class="text-red-500">*</span></label>
                             <select id="region" name="region" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
-                                <option value="3" selected>Region III</option>
+                                <option value="Region 3" selected>Region III</option>
                                 <!-- Other options here -->
                             </select>
                         </div>
@@ -191,7 +191,7 @@
 
                         <div>
                             <label for="idPic1" class="block text-gray-700 font-bold mb-2 text-sm">ID Picture <span class="text-red-500">*</span></label>
-                            <input type="file" accept="image/*" name="photo[]" id="photo"></input>
+                            <input type="file"  name="image[]" id="photo"></input>
                         </div>
 
 
@@ -215,7 +215,7 @@
 
                         <div>
                             <label for="idPic2" class="block text-gray-700 font-bold mb-2 text-sm">ID Picture <span class="text-red-500">*</span></label>
-                            <input type="file" accept="image/*" name="photo[]" id="photo"></input>
+                            <input type="file" name="image[]" id="photo"></input>
                         </div>
                     </div>
                     <hr class="my-6">
