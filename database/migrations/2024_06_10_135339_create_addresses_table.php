@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Reg_Member');
+            $table->unsignedBigInteger('Reg_ID');
             $table->string('Region');
             $table->string('Province');
             $table->string('Municipality');

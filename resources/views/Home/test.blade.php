@@ -131,7 +131,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                         <div class="mb-4">
                             <label for="region" class="block text-gray-700 font-bold mb-2 text-sm">Region <span class="text-red-500">*</span></label>
-                            <select id="region" name="region" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <select id="region" name="Region" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="Region 3" selected>Region III</option>
                                 <!-- Other options here -->
                             </select>
@@ -140,7 +140,7 @@
                         <div class="mb-4">
                             <label for="province" class="block text-gray-700 font-bold mb-2 text-sm">Province<span class="text-red-500">*</span></label>
 
-                            <select name="province" id="province-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <select name="Province" id="province-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="Bulacan" selected>Bulacan</option>
                             </select>
                         </div>
@@ -156,7 +156,7 @@
 
                         <div class="mb-4">
                             <label for="brgy" class="block text-gray-700 font-bold mb-2 text-sm">Barangay<span class="text-red-500">*</span></label>
-                            <select id="brgyDropdown"  name="Baranggay"  class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <select id="brgyDropdown"  name="Barangay"  class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="select" disabled selected>-Select Barangay-</option>
                             </select>
                         </div>
@@ -165,7 +165,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                         <div class="mb-4">
                             <label for="numSt" class="block text-gray-700 font-bold mb-2 text-sm">House Number and Street <span class="text-red-500">*</span></label>
-                            <input type="text" id="numSt" name="street" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="numSt" name="Street" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
                     <hr class="my-5">

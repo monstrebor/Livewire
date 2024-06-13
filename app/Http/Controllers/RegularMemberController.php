@@ -3,100 +3,116 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+
+
 use App\Mail\InvitationEmails;
+
 use App\Models\RegularMember;
 use App\Models\Dependency;
+use App\Models\IdValidation;
+use App\Models\Address;
+
 
 class RegularMemberController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-            return view('Home.test');
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
 
         $data = $request->all();
 
-        // Create a new RegularMember instance
         $regular = RegularMember::create($data);
-
-        // Get the ID of the newly created RegularMember
         $regular_id = $regular->id;
 
-        // Create a new Dependency instance
-        $dependentNames = $request->Dependent_name;
-        $dependentDOBs = $request->Dependent_dob;
+        // method for creating in Address
+        $this->Address($request, $regular_id);
 
-    
-        foreach ($dependentNames as $index => $name) {
-            $dob = $dependentDOBs[$index];
+        // method for creating in Dependency
+        $this->Dependency($request, $regular_id);
 
-            // Create a new Dependency instance for each name and date of birth
+        // method for creating in IdValidation
+        $this->IdValidation($request, $regular_id);
+
+        Mail::to($request->email)->send(new InvitationEmails($request->firstName));
+        
+
+        return redirect()->route('id.index');
+
+        
+
+
+
+    }
+
+
+    private function Dependency(Request $request , $regular_id){
+
+        foreach ($request->Dependent_name as $index => $name) {
+
             Dependency::create([
+
                 'Dependent_name' => $name,
-                'Dependent_dob' => $dob,
+                'Dependent_dob' => $request->Dependent_dob[$index],
                 'Reg_ID' => $regular_id,
             ]);
         }
-    
 
-      
-
+    }
 
 
 
-        // Mail::to($request->email)->send(new InvitationEmails($request->firstName));
+    private function IdValidation(Request $request, $regular_id){
 
+
+
+
+
+        foreach($request->idType as  $index => $id_name){
+
+            $imageName = time().'.'.$request->image[$index]->extension();
+
+             iDValidation::create([
+
+                'Identification' =>  $id_name,
+                'Identification_Number' => $request->idNumber[$index],
+                'Identification_image'=> $imageName,
+                'Reg_ID' => $regular_id,
+
+             ]);
+
+             $request->image[$index]->move(storage_path('app/public/images/'), $imageName);
+
+
+        }
 
 
 
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
+    private function Address(Request $request, $regular_id){
+
+
+        Address::create([
+
+        'Barangay' => $request->Barangay,
+        'Municipality'=> $request->Municipality,
+        'Province'=> $request->Province,
+        'Region' => $request->Region,
+        'Street' => $request->Street,
+        'Reg_ID' => $regular_id,
+
+        ]);
+
+
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+   
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+
+
+
+
 }

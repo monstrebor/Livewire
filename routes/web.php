@@ -3,9 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\RegularMemberController;
+use App\Http\Controllers\RegularMemberController; 
+use App\Http\Controllers\IdValidationController;
 use Illuminate\Http\Request;
-use App\Http\Controllers\UserEmailController;
+use Illuminate\Support\Facades\Artisan;
+
 
 
 
@@ -23,74 +25,34 @@ use App\Http\Controllers\UserEmailController;
 
 //views
 
-Route::get('/',[HomeController::class,'Homepage'])->name('Home.index');
-Route::get('/login',[HomeController::class,'Login'])->name('Login.index');
+Route::view('/', 'Home.index')->name('Home.index');
+Route::view('/login','Home.login')->name('Login.index');
+Route::view('/login/register/','Home.test')->name('regular.index');
+Route::post('/regular',[RegularMemberController::class, 'store'])->name('regular.store');
 
-Route::get('/register',function(){
 
-    return view('home.registration_try');
+
+//error
+Route::fallback([ErrorController::class,'custom_404']);
+
+
+//cache
+Route::get('/clear', function () {
+
+    Artisan::call('cache:clear');
+    Artisan::call('route:cache');
+    Artisan::call('view:clear');
+
+    return 'Cache cleared and routes cached successfully!';
 
 });
 
 
 
-//error
 
-Route::fallback([ErrorController::class,'custom_404']);
+//image
 
-
-// email pre-membership controller
-
-Route::post('/success',[UserEmailController::class,'PreMemberEmail'])->name('pre-membership.email');
-
-// pre-membership (Regulars)
-
-
-Route::resource('/regular',RegularMemberController::class);
-
-
-
-
-
-
-
-
-
-// Route::get('/place',function(){
-
-
-// return view('Home.place');
-
-// })->name('place');
-
-
-
-
-// namespace App\Http\Controllers;
-
-// use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Http;
-
-// class AddressController extends Controller
-// {
-//     public function index()
-//     {
-//         // Make a GET request to the API endpoint to fetch address data
-//         $response = Http::get('https://api.example.com/addresses');
-
-//         // Check if the request was successful
-//         if ($response->successful()) {
-//             // Retrieve the address data from the API response
-//             $addresses = $response->json();
-
-//             // Pass the address data to the view
-//             return view('addresses.index', compact('addresses'));
-//         } else {
-//             // Handle the case where the API request fails
-//             return back()->withError('Failed to fetch address data from API');
-//         }
-//     }
-// }
+Route::get('/image',[idValidationController::class, 'index'])->name('id.index');
 
 
 
@@ -101,35 +63,3 @@ Route::resource('/regular',RegularMemberController::class);
 
 
 
-
-
-//picture
-
-
-    Route::get('/pic',function(){
-
-
-        return view('home.picture');
-
-    });
-
-
-
-    Route::post('/pic2',function(Request $request){
-
-
-        // $request->validate([
-        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        // ]);
-
-        // $imageName = time().'.'.$request->image->extension(); // time and extension
-        // $request->image->move(storage_path('app/public/images/'), $imageName); // moving to the other path and the file name
-
-
-        // return view('home.picture2',compact('imageName') );
-
-
-       return $request->image;
-
-
-    })->name('image');
