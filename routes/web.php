@@ -118,15 +118,18 @@ Route::resource('/regular',RegularMemberController::class);
     Route::post('/pic2',function(Request $request){
 
 
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
+        // $request->validate([
+        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        // ]);
 
-        $imageName = time().'.'.$request->image->extension(); // time and extension
-        $request->image->move(storage_path('app/public/images/'), $imageName); // moving to the other path and the file name
+        // $imageName = time().'.'.$request->image->extension(); // time and extension
+        // $request->image->move(storage_path('app/public/images/'), $imageName); // moving to the other path and the file name
 
 
-        return view('home.picture2',compact('imageName') );
+        // return view('home.picture2',compact('imageName') );
+
+
+       return $request->image;
 
 
     })->name('image');

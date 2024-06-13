@@ -11,11 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('dependencies', function (Blueprint $table) {
+        Schema::create('regular_members', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Reg_ID');
-            $table->string('Dependent_name');
-            $table->date('Dependent_dob');
+            $table->string("firstName");
+            $table->string("middleName");
+            $table->string("lastName");
+            $table->string("religion");
+            $table->string("POB");
+            $table->date("DOB");
+            $table->unsignedBigInteger('contactNumber');
             $table->timestamps();
         });
     }
@@ -25,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('dependencies');
+        Schema::dropIfExists('regular_members');
     }
 };

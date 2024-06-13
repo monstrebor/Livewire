@@ -8,28 +8,21 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Carbon\Carbon;
 
-use Illuminate\Mail\Mailables\Attachment;
-
-
-
-class SampleEmail extends Mailable
+class InvitationEmails extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $content;
-    public $subject;
-
-
+    public $name;
 
 
     /**
      * Create a new message instance.
      */
-    public function __construct($content, $subject)
+    public function __construct($name)
     {
-        $this->content=$content;
-        $this->subject=$subject;
+        $this->name=$name;
 
     }
 
@@ -39,7 +32,7 @@ class SampleEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: $this->subject['title'],
+            subject:'MNSMPC',
         );
     }
 
@@ -50,6 +43,12 @@ class SampleEmail extends Mailable
     {
         return new Content(
             view: 'Mail.membership',
+            with: [
+
+                'name' => $this->name,
+                'date' => $this->time(),
+
+            ],
         );
     }
 
@@ -62,8 +61,34 @@ class SampleEmail extends Mailable
     {
         return [
 
-            Attachment::fromPath(public_path('/upload/test.pdf')),
+            // Attachment::fromPath(public_path('/upload/MNSMPC-PRIMER.pdf'))
+            // ->as('MNSMPC-PRIMER.pdf')
+            // ->withMime('application/pdf'),   // optional
 
         ];
     }
+
+
+
+    public function time()
+    {
+
+        $now = Carbon::now();
+
+        $thisSaturday = $now->isSaturday();
+
+
+        if ($thisSaturday)    // if it is saturday today.
+        {
+            $Saturday = $now->copy()->next(Carbon::SATURDAY);  // next Saturday
+        }else{
+
+            $Saturday = $now->copy()->next(Carbon::SATURDAY);   // saturday
+        }
+
+        return $Saturday->format('F j Y');
+
+    }
+
+
 }

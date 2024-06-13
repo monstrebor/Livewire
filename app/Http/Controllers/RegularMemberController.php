@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\InvitationEmails;
+use App\Models\RegularMember;
+use App\Models\Dependency;
 
 class RegularMemberController extends Controller
 {
@@ -31,7 +33,35 @@ class RegularMemberController extends Controller
 
         $data = $request->all();
 
-        return $data;
+        // Create a new RegularMember instance
+        $regular = RegularMember::create($data);
+
+        // Get the ID of the newly created RegularMember
+        $regular_id = $regular->id;
+
+        // Create a new Dependency instance
+        $dependentNames = $request->Dependent_name;
+        $dependentDOBs = $request->Dependent_dob;
+
+    
+        foreach ($dependentNames as $index => $name) {
+            $dob = $dependentDOBs[$index];
+
+            // Create a new Dependency instance for each name and date of birth
+            Dependency::create([
+                'Dependent_name' => $name,
+                'Dependent_dob' => $dob,
+                'Reg_ID' => $regular_id,
+            ]);
+        }
+    
+
+      
+
+
+
+
+        // Mail::to($request->email)->send(new InvitationEmails($request->firstName));
 
 
 

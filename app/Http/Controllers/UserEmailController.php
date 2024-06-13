@@ -38,16 +38,6 @@ class UserEmailController extends Controller
         ];
 
         $date = $this->time()->format('F j Y');
-
-        $data = [
-
-
-            'title' => 'MNSMPC',
-            'name' => $request->input('firstName'),
-            'email'=> $request->input('email'),
-
-        ];
-
         $content= [
 
             'body'=>'PRE-MEMBER REGISTRATION',
