@@ -69,12 +69,13 @@
                         </div>
                         <div class="mb-4">
                             <label for="lastName" class="block text-gray-700 font-bold mb-2">Last Name <span class="text-red-500">*</span></label>
-                            <input type="text" id="lastName" name="lastName" value="{{ old('lastName') }}" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30">
+                            <input type="text" id="lastName" name="lastName" value="{{ old('lastName') }}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30"> 
                             @error('lastName')
                                 <span class="d-block fs-6 text-danger mt-1" style="color: red;">{{ $message }}</span>
                             @enderror
                         </div>
                     </div>
+
                     <!--End of full name -->
 
                     {{-- religion, POB, DOB --}}
