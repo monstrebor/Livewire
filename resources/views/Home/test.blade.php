@@ -553,14 +553,26 @@
                         <div class="mb-4">
                             <label for="spouse-name" class="block text-gray-700 font-bold mb-2">Spouse Name</label>
                             <input type="text" id="spouse-name" name="spouse-name" value="{{ old('spouse-name') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            @error('spouse-name')
+                            <span class="d-block fs-6 text-danger mt-1"
+                            style="color: red;">{{ $message }}</span>
+                        @enderror
                         </div>
                         <div class="mb-4">
                             <label for="place-of-birth" class="block text-gray-700 font-bold mb-2">Place of Birth (spouse)</label>
                             <input type="text" id="place-of-birth" name="place-of-birth" value="{{ old('place-of-birth') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            @error('place-of-birth')
+                            <span class="d-block fs-6 text-danger mt-1"
+                            style="color: red;">{{ $message }}</span>
+                        @enderror
                         </div>
                         <div class="mb-4">
                             <label for="date-of-birth" class="block text-gray-700 font-bold mb-2">Date of Birth (spouse)</label>
                             <input type="date" id="date-of-birth" name="date-of-birth" value="{{ old('date-of-birth') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            @error('date-of-birth')
+                            <span class="d-block fs-6 text-danger mt-1"
+                            style="color: red;">{{ $message }}</span>
+                        @enderror
                         </div>
                     </div>
 
@@ -578,11 +590,19 @@
                                 <option {{ old('educational-attainment') === 'College' ? 'selected' : '' }}>College</option>
                                 <option value="Others">Others</option>
                             </select>
+                            @error('educational-attainment')
+                            <span class="d-block fs-6 text-danger mt-1"
+                            style="color: red;">{{ $message }}</span>
+                        @enderror
                         </div>
                         <div class="mb-4">
                             <label for="occupation" class="block text-gray-700 font-bold mb-2">Occupation (spouse)</label>
                             <input type="text" id="occupation" name="occupation" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
+                        @error('occupation')
+                            <span class="d-block fs-6 text-danger mt-1"
+                            style="color: red;">{{ $message }}</span>
+                        @enderror
                     </div>
 
 
