@@ -530,8 +530,8 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
                         <div class="mb-4">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Place of Marriage</label>
-                            <input type="text" id="place-of-birth" name="place-of-birth" value="{{ old('place-of-birth') }}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
-                            @error('place-of-birth')
+                            <input type="text" id="place-of-marriage" name="place-of-marriage" value="{{ old('place-of-marriage') }}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            @error('place-of-marriage')
                             <span class="d-block fs-6 text-danger mt-1"
                             style="color: red;">{{ $message }}</span>
                             @enderror
@@ -559,7 +559,7 @@
                             <input type="text" id="place-of-birth" name="place-of-birth" value="{{ old('place-of-birth') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                         <div class="mb-4">
-                            <label for="place-of-birth" class="block text-gray-700 font-bold mb-2">Date of Birth (spouse)</label>
+                            <label for="date-of-birth" class="block text-gray-700 font-bold mb-2">Date of Birth (spouse)</label>
                             <input type="date" id="date-of-birth" name="date-of-birth" value="{{ old('date-of-birth') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
@@ -573,9 +573,9 @@
                             <label for="educational-attaiment" class="block text-gray-700 font-bold mb-2">Educational Attainment (spouse)</label>
                             <select id="educational-attaiment" name="educational-attaiment" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                                 <option value="" disabled selected>Select Educational Attainment</option>
-                                <option value="Elementary">Elementary</option>
-                                <option value="Highschool">Highschool</option>
-                                <option value="College">College</option>
+                                <option {{ old('educational-attainment') === 'Elementary' ? 'selected' : '' }}>Elementary</option>
+                                <option {{ old('educational-attainment') === 'Highschool' ? 'selected' : '' }}>Highschool</option>
+                                <option {{ old('educational-attainment') === 'College' ? 'selected' : '' }}>College</option>
                                 <option value="Others">Others</option>
                             </select>
                         </div>
