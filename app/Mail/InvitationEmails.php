@@ -70,7 +70,7 @@ class InvitationEmails extends Mailable
 
 
 
-    public function time()
+    private function time()
     {
 
         $now = Carbon::now();

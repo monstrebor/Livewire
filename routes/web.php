@@ -2,10 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ErrorController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\RegularMemberController; 
+use App\Http\Controllers\RegularMemberController;
 use App\Http\Controllers\IdValidationController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 
 
@@ -24,7 +22,6 @@ use Illuminate\Support\Facades\Artisan;
 */
 
 //views
-
 Route::view('/', 'Home.index')->name('Home.index');
 Route::view('/login','Home.login')->name('Login.index');
 Route::view('/login/register/','Home.test')->name('regular.index');
@@ -51,8 +48,11 @@ Route::get('/clear', function () {
 
 
 //image
-
 Route::get('/image',[idValidationController::class, 'index'])->name('id.index');
+
+
+
+
 
 
 
