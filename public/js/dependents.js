@@ -419,7 +419,7 @@ function validateForm() {
 
     if(numberOfChildrenValue === '') {
         setError(numberOfChildren, 'Number of children is required.');
-    } else if (!isNaN(numberOfChildrenValue)) {
+    } else if (isNaN(numberOfChildrenValue)) {
         setError(numberOfChildren, 'Please enter a valid number of children');
     } else {
         setSuccess(numberOfChildren);

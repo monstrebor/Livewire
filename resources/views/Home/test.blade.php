@@ -499,10 +499,10 @@
                             <label for="civilStatus" class="block text-gray-700 font-bold mb-2">Civil Status <span class="text-red-500">*</span></label>
                             <select id="civilStatus" name="civilStatus" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                                 <option value="" disabled selected>Select Civil Status</option>
-                                <option value="Single" {{ old('civilStatus') === 'single' ? 'selected' : '' }} >Single</option>
-                                <option value="Married"  {{ old('civilStatus') === 'married' ? 'selected' : '' }} >Married</option>
-                                <option  value="Divorced"    {{ old('civilStatus') === 'divorced' ? 'selected' : '' }} >Divorced</option>
-                                <option  value="Widowed"     {{ old('civilStatus') === 'widowed' ? 'selected' : '' }} >Widowed</option>
+                                <option value="Single" >Single</option>
+                                <option value="Married"   >Married</option>
+                                <option  value="Divorced"    >Divorced</option>
+                                <option  value="Widowed"    >Widowed</option>
                             </select>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
