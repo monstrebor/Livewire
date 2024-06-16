@@ -108,6 +108,19 @@ body {
     border-radius: 4px;
 }
 
+.input-group.success input, .input-group.success select {
+    border: 2px solid #09c372;
+}
+
+.input-group.error input, .input-group.error select {
+    border: 2px solid #ff3860;
+}
+
+.error-message {
+    font-size: 0.7rem;
+    color: #ff3860;
+}
+
 @-webkit-keyframes fade {
     from {opacity: .4}
     to{opacity: 1}    
