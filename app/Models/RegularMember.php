@@ -20,6 +20,18 @@ class RegularMember extends Model
         'POB',
         'DOB',
         'contactNumber',
+        'facebookAccount',
+        'email',
+        'gender',
+        'occupation',
+        'employmentStatus',
+        'educationalAttaiment',
+        'houseOwnership',
+        'citizenship',
+        'civilStatus',
+        'monthlyIncome',
+        'annualIncome',
+        'contactNumber',
 
 
     ];
