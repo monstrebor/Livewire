@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('dependencies', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Reg_Member');
-            $table->string('Dep_Name');
-            $table->string('DOB');
+            $table->unsignedBigInteger('Reg_ID');
+            $table->string('Dependent_name');
+            $table->date('Dependent_dob');
             $table->timestamps();
         });
     }

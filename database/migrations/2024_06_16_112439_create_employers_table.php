@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('id_validations', function (Blueprint $table) {
+        Schema::create('employers', function (Blueprint $table) {
             $table->id();
+            $table->string('EmployerName');
+            $table->string('EmployerAddress');
             $table->unsignedBigInteger('Reg_ID');
-            $table->string('Identification');
-            $table->unsignedBigInteger('Identification_Number');
-            $table->string('Identification_image');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('id_validations');
+        Schema::dropIfExists('employers');
     }
 };

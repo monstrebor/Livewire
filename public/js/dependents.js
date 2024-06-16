@@ -7,13 +7,13 @@ function createDependentComponent(index, onDeleteCallback) {
     const nameInput = document.createElement('input');
     nameInput.type = 'text';
     nameInput.placeholder = 'Dependent\'s Name';
-    nameInput.name = 'Dependent[]';
+    nameInput.name = 'Dependent_name[]';
     container.appendChild(nameInput);
 
     const birthdateInput = document.createElement('input');
     birthdateInput.type = 'date';
     birthdateInput.placeholder = 'Birthdate';
-    birthdateInput.name = 'birthdate[]';
+    birthdateInput.name = 'Dependent_dob[]';
     container.appendChild(birthdateInput);
 
     const deleteButton = document.createElement('button');
