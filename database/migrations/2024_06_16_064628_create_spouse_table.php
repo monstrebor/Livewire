@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('id_validations', function (Blueprint $table) {
+        Schema::create('spouse', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Reg_ID');
-            $table->string('Identification');
-            $table->unsignedBigInteger('Identification_Number');
-            $table->string('Identification_image');
+            $table->string('spouseName')->nullable();
+            $table->string('placeOfBirth')->nullable();
+            $table->date('dateOfBirth')->nullable();
+            $table->string('EducationalAttainment')->nullable();
+            $table->string('Occupation');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('id_validations');
+        Schema::dropIfExists('spouse');
     }
 };

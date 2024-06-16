@@ -1,18 +1,21 @@
+@extends('Layout.layout')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/img/final_logo-removebg-preview-removebg-preview.png">
-    <title>Mahal na Señor Multipurpose Cooperative</title>
+
+
+
+    @section('title','Membership Register')
+
+    @section('script')
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <style type="text/tailwindcss">
-    </style>
+    <style type="text/tailwindcss"></style>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</head>
+    @endsection
+
+
+    @section('content')
+
 <body>
         <div>
 
@@ -128,6 +131,10 @@
                                 <label for="female" class="text-gray-700">Female</label>
                             </div>
                         </div>
+                        @error('gender')
+                                <span class="d-block fs-6 text-danger mt-1"
+                                    style="color: red;">{{ $message }}</span>
+                            @enderror
                     </div>
                     <!-- end of contact information -->
 
@@ -178,6 +185,10 @@
                             <input type="text" id="street" name="street" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                             <div id="errorMessage" class="error-message"></div>
                         </div>
+                        @error('Street')
+                        <span class="d-block fs-6 text-danger mt-1"
+                        style="color: red;">{{ $message }}</span>
+                    @enderror
                     </div>
                     <hr class="my-5">
                     <!-- end of address -->
@@ -312,6 +323,10 @@
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
+                                @error('occupation')
+                                        <span class="d-block fs-6 text-danger mt-1"
+                                            style="color: red;">{{ $message }}</span>
+                                    @enderror
                             </div>
                         </div>
                         <!-- end of occupation -->
@@ -354,7 +369,10 @@
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
-
+                                @error('employment_status')
+                                        <span class="d-block fs-6 text-danger mt-1"
+                                            style="color: red;">{{ $message }}</span>
+                                    @enderror
                             </div>
                         </div>
                     </div>
@@ -392,6 +410,10 @@
                                 </div>
                             </div>
                         </div>
+                        @error('educational_attainment')
+                                <span class="d-block fs-6 text-danger mt-1"
+                                    style="color: red;">{{ $message }}</span>
+                            @enderror
                     </div>
                     <!-- end of Educational Attainment -->
 
@@ -477,13 +499,17 @@
                             <label for="civilStatus" class="block text-gray-700 font-bold mb-2">Civil Status <span class="text-red-500">*</span></label>
                             <select id="civilStatus" name="civilStatus" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                                 <option value="" disabled selected>Select Civil Status</option>
-                                <option value="Single">Single</option>
-                                <option value="Married">Married</option>
-                                <option value="Divorced">Divorced</option>
-                                <option value="Widowed">Widowed</option>
+                                <option {{ old('civilStatus') === 'single' ? 'selected' : '' }} >Single</option>
+                                <option {{ old('civilStatus') === 'married' ? 'selected' : '' }} >Married</option>
+                                <option {{ old('civilStatus') === 'divorced' ? 'selected' : '' }} >Divorced</option>
+                                <option {{ old('civilStatus') === 'widowed' ? 'selected' : '' }} >Widowed</option>
                             </select>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
+                        @error('civilStatus')
+                                    <span class="d-block fs-6 text-danger mt-1"
+                                        style="color: red;">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <!-- end of citezenship, no of children, civil status -->
@@ -503,6 +529,10 @@
                                 <div id="errorMessage" class="error-message"></div>
                             </div>
                         </div>
+                        @error('date-of-marriage')
+                            <span class="d-block fs-6 text-danger mt-1"
+                            style="color: red;">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <!-- end of date/place-of-marriage -->
@@ -535,9 +565,9 @@
                             <label for="educational-attaiment" class="block text-gray-700 font-bold mb-2">Educational Attainment (spouse)</label>
                             <select id="spouseEducationalAttainment" name="educational-attaiment" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                                 <option value="" disabled selected>Select Educational Attainment</option>
-                                <option value="Elementary">Elementary</option>
-                                <option value="Highschool">Highschool</option>
-                                <option value="College">College</option>
+                                <option value="Elementary" old('educational-attainment') === 'Elementary' ? 'selected' : '' }}>Elementary</option>
+                                <option value="Highschool" {{ old('educational-attainment') === 'Highschool' ? 'selected' : '' }}>Highschool</option>
+                                <option value="College" {{ old('educational-attainment') === 'College' ? 'selected' : '' }}>College</option>
                                 <option value="Others">Others</option>
                             </select>
                             <div id="errorMessage" class="error-message"></div>
@@ -547,6 +577,10 @@
                             <input type="text" id="spouseOccupation" name="occupation" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                             <div id="errorMessage" class="error-message"></div>
                         </div>
+                        @error('occupation')
+                            <span class="d-block fs-6 text-danger mt-1"
+                            style="color: red;">{{ $message }}</span>
+                        @enderror
                     </div>
 
 
@@ -584,6 +618,7 @@
 
     <script src="/js/dependents.js">    
     </script>
-</body>
 
-</html>
+@endsection
+
+
