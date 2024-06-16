@@ -119,7 +119,7 @@
                         <!-- facebook Account -->
                         <div class="mb-2">
                             <label for="facebookAccount" class="block text-gray-700 font-bold mb-2">Facebook Account <span class="text-red-500">*</span></label>
-                            <input type="text" id="facebookAccount" name="facebook-account"  value="{{ old('facebookAccount')}}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="facebook-account" name="facebookAccount"  value="{{ old('facebookAccount')}}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                             @error('facebookAccount')
                                 <span class="d-block fs-6 text-danger mt-1" style="color: red;">{{ $message }}</span>
                             @enderror
@@ -356,34 +356,34 @@
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="permanent" name="employment-status" value="Permanent" {{ old('employment_status') === 'Permanent' ? 'checked' : '' }}class="mr-2">
+                                        <input type="radio" id="permanent" name="employmentStatus" value="Permanent" {{ old('employment_status') === 'Permanent' ? 'checked' : '' }}class="mr-2">
                                         <label for="permanent" class="text-gray-700">Permanent</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="project-based" name="employment-status" value="Project-based" {{ old('employment_status') === 'Project-based' ? 'checked' : '' }} class="mr-2" required>
+                                        <input type="radio" id="project-based" name="employmentStatus" value="Project-based" {{ old('employment_status') === 'Project-based' ? 'checked' : '' }} class="mr-2" required>
                                         <label for="project-based" class="text-gray-700">Project-Based</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="seasonal" name="employment-status" value="Seasonal"   {{ old('employment_status') === 'Seasonal' ? 'checked' : '' }}class="mr-2" required>
+                                        <input type="radio" id="seasonal" name="employmentStatus" value="Seasonal"   {{ old('employment_status') === 'Seasonal' ? 'checked' : '' }}class="mr-2" required>
                                         <label for="project-based" class="text-gray-700">Seasonal</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="casual" name="employment-status" value="Casual" {{ old('employment_status') === 'Casual' ? 'checked' : '' }} class="mr-2" required>
+                                        <input type="radio" id="casual" name="employmentStatus" value="Casual" {{ old('employment_status') === 'Casual' ? 'checked' : '' }} class="mr-2" required>
                                         <label for="casual" class="text-gray-700">Casual</label>
                                     </div>
                                 </div>
 
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="probationary" name="employment-status" value="Probationary" {{ old('employment_status') === 'Probationary' ? 'checked' : '' }} class="mr-2" required>
+                                        <input type="radio" id="probationary" name="employmentStatus" value="Probationary" {{ old('employment_status') === 'Probationary' ? 'checked' : '' }} class="mr-2" required>
                                         <label for="probationary" class="text-gray-700">Probationary</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="fixed-or-termed" name="employment-status" value="Fixed-or-Termed" {{ old('employment_status') === 'Fixed-or-termed' ? 'checked' : '' }} class="mr-2" required>
+                                        <input type="radio" id="fixed-or-termed" name="employmentStatus" value="Fixed-or-Termed" {{ old('employment_status') === 'Fixed-or-termed' ? 'checked' : '' }} class="mr-2" required>
                                         <label for="fixed-or-termed" class="text-gray-700">Fixed or Termed</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="others" name="employment-status" value="Others"  class="mr-2" required>
+                                        <input type="radio" id="others" name="employmentStatus" value="Others"  class="mr-2" required>
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
@@ -402,27 +402,27 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="elem" name="educational-attaiment" value="Elementary" {{ old('educational_attainment') === 'Elementary' ? 'checked' : '' }} class="mr-2" required>
+                                    <input type="radio" id="elem" name="educationalAttaiment" value="Elementary" {{ old('educational_attainment') === 'Elementary' ? 'checked' : '' }} class="mr-2" required>
                                     <label for="elem" class="text-gray-700">Elementary</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="highschool" name="educational-attaiment" value="Highschool" {{ old('educational_attainment') === 'Highschool' ? 'checked' : '' }} class="mr-2" required>
+                                    <input type="radio" id="highschool" name="educationalAttaiment" value="Highschool" {{ old('educational_attainment') === 'Highschool' ? 'checked' : '' }} class="mr-2" required>
                                     <label for="highschool" class="text-gray-700">Highschool</label>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="college" name="educational-attaiment" value="College" {{ old('educational_attainment') === 'College' ? 'checked' : '' }} class="mr-2" required>
+                                    <input type="radio" id="college" name="educationalAttaiment" value="College" {{ old('educational_attainment') === 'College' ? 'checked' : '' }} class="mr-2" required>
                                     <label for="college" class="text-gray-700">College</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="vocational" name="educational-attaiment" value="Vocational" {{ old('educational_attainment') === 'Vocational' ? 'checked' : '' }} class="mr-2" required>
+                                    <input type="radio" id="vocational" name="educationalAttaiment" value="Vocational" {{ old('educational_attainment') === 'Vocational' ? 'checked' : '' }} class="mr-2" required>
                                     <label for="vocational" class="text-gray-700">Vocational</label>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="others" name="educational-attaiment" value="Others" class="mr-2" required>
+                                    <input type="radio" id="others" name="educationalAttaiment" value="Others" class="mr-2" required>
                                     <label for="others" class="text-gray-700">Others</label>
                                 </div>
                             </div>
@@ -438,11 +438,11 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
                         <div class="mb-2">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Name of Employer <span class="text-red-500">*</span></label>
-                            <input type="text" id="nameOfEmployer" name="nameOfEmployer" value="{{ old('nameOfEmployer') }}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="nameOfEmployer" name="EmployerName" value="{{ old('nameOfEmployer') }}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                         <div class="mb-2">
                             <label for="email" class="block text-gray-700 font-bold mb-2">Address of Employer <span class="text-red-500">*</span></label>
-                            <input type="text" id="addressOfEmployer" name="addressOfEmployer" value="{{ old('addressOfEmployer') }}"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="addressOfEmployer" name="EmployerAddress" value="{{ old('addressOfEmployer') }}"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
                     <!-- end of employer -->
@@ -466,33 +466,33 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="owned" name="house-ownership" value="{{ old('Owned') }}"  class="mr-2">
+                                    <input type="radio" id="owned" name="houseOwnership" value="{{ old('Owned') }}"  class="mr-2">
                                     <label for="owned" class="text-gray-700">Owned</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="rental" name="house-ownership" value="{{ old('Rental') }}" class="mr-2">
+                                    <input type="radio" id="rental" name="houseOwnership" value="{{ old('Rental') }}" class="mr-2">
                                     <label for="rental" class="text-gray-700">Rental</label>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="livingwithparents" name="house-ownership" value="{{ old('Living-with-parents') }}" class="mr-2">
+                                    <input type="radio" id="livingwithparents" name="houseOwnership" value="{{ old('Living-with-parents') }}" class="mr-2">
                                     <label for="owned" class="text-gray-700">Living with Parents</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="rental" name="house-ownership" value="{{ old('Rental') }}" class="mr-2">
+                                    <input type="radio" id="rental" name="houseOwnership" value="{{ old('Rental') }}" class="mr-2">
                                     <label for="rental" class="text-gray-700">Rental</label>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="housingLoan" name="house-ownership" value="{{ old('Housing-loan') }}"class="mr-2" >
+                                    <input type="radio" id="housingLoan" name="houseOwnership" value="{{ old('Housing-loan') }}"class="mr-2" >
                                     <label for="housingLoan" class="text-gray-700">Housing Loan</label>
                                 </div>
                             </div>
                             <div class="mb-4">
                                 <label for="text" class="block text-gray-700 mb-2">Length of Stay: (year)</label>
-                                <input type="number" id="LengthOfStay" name="house-ownership" value="{{ old('LengthOfStay') }}"class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                                <input type="number" id="LengthOfStay" name="houseOwnership" value="{{ old('LengthOfStay') }}"class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                             </div>
                         </div>
                     </div>
@@ -512,10 +512,10 @@
                             <label for="civilStatus" class="block text-gray-700 font-bold mb-2">Civil Status <span class="text-red-500">*</span></label>
                             <select id="civilStatus" name="civilStatus" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="" disabled selected>Select Civil Status</option>
-                                <option {{ old('civilStatus') === 'single' ? 'selected' : '' }} >Single</option>
-                                <option {{ old('civilStatus') === 'married' ? 'selected' : '' }} >Married</option>
-                                <option {{ old('civilStatus') === 'divorced' ? 'selected' : '' }} >Divorced</option>
-                                <option {{ old('civilStatus') === 'widowed' ? 'selected' : '' }} >Widowed</option>
+                                <option value="Single" {{ old('civilStatus') === 'single' ? 'selected' : '' }} >Single</option>
+                                <option value="Married"  {{ old('civilStatus') === 'married' ? 'selected' : '' }} >Married</option>
+                                <option  value="Divorced"    {{ old('civilStatus') === 'divorced' ? 'selected' : '' }} >Divorced</option>
+                                <option  value="Widowed"     {{ old('civilStatus') === 'widowed' ? 'selected' : '' }} >Widowed</option>
                             </select>
                         </div>
                         @error('civilStatus')

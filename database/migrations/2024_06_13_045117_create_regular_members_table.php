@@ -19,7 +19,18 @@ return new class extends Migration
             $table->string("religion");
             $table->string("POB");
             $table->date("DOB");
-            $table->unsignedBigInteger('contactNumber');
+            $table->string('facebookAccount');
+            $table->string('email');
+            $table->BigInteger('contactNumber');
+            $table->string('gender');
+            $table->string('occupation');
+            $table->string('employmentStatus');
+            $table->string('educationalAttaiment');
+            $table->string('houseOwnership');
+            $table->string('citizenship');
+            $table->string('civilStatus');
+            $table->unsignedBigInteger('monthlyIncome');
+            $table->unsignedBigInteger('annualIncome');
             $table->timestamps();
         });
     }

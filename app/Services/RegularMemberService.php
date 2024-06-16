@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Models\{Address,Dependency,idValidation,RegularMember,Spouse,Marriage};
+use App\Models\{Address,Dependency,idValidation,RegularMember,Spouse,Marriage,Employer};
 use App\Mail\InvitationEmails;
 
 use Illuminate\Http\Request;
@@ -32,8 +32,11 @@ class RegularMemberService{
         // method for creating in IdValidation
         $this->IdValidation($request, $regular_id);
 
-
+        //method for creating in Spouse and Marriage
         $this->Spouse($request, $regular_id);
+
+        //method for creating Employer
+        $this->Employer($request,$regular_id);
 
         // email
         Mail::to($request->email)->send(new InvitationEmails($request->firstName));
@@ -128,6 +131,23 @@ class RegularMemberService{
         ]);
 
         }
+
+    private function Employer(Request $request, $regular_id)
+    {
+
+        Employer::create([
+        
+        'EmployerName' => $request->EmployerName,
+        'EmployerAddress' => $request->EmployerAddress,
+        'Reg_ID'=> $regular_id,
+
+
+        ]);
+
+
+    }
+
+
 
 
 }
