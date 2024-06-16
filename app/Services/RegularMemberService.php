@@ -2,12 +2,12 @@
 
 namespace App\Services;
 
-use App\Models\{Address,Dependency,idValidation,RegularMember};
+use App\Models\{Address,Dependency,idValidation,RegularMember,Spouse,Marriage};
 use App\Mail\InvitationEmails;
-
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+
 
 
 
@@ -31,6 +31,9 @@ class RegularMemberService{
 
         // method for creating in IdValidation
         $this->IdValidation($request, $regular_id);
+
+
+        $this->Spouse($request, $regular_id);
 
         // email
         Mail::to($request->email)->send(new InvitationEmails($request->firstName));
@@ -93,14 +96,41 @@ class RegularMemberService{
 
     }
 
+    private function Spouse(Request $request, $regular_id)
+    {
+
+        $spouse = Spouse::create([
+
+            'spouseName' => $request->spouseName,
+            'placeOfBirth'=> $request->placeOfbirth,
+            'dateOfBirth'=> $request->dateOfBirth,
+            'EducationalAttainment' => $request->educationalAttaiment,
+            'Occupation'=> $request->occupation,
+
+        ]);
+
+        $spouse_id = $spouse->id;
+
+        $this->Marriage($request, $regular_id, $spouse_id);
+
+    }
+
+
+    private function Marriage(Request $request, $regular_id, $spouse_id){
+
+        Marriage::create([
+
+        'placeOfMarriage' => $request->placeOfMarriage,
+        'dateOfMarriage' => $request->dateOfMarriage,
+        'SpouseID'=> $spouse_id,
+        'Reg_ID'=> $regular_id,
+
+        ]);
+
+        }
+
+
 }
-
-
-?>
-
-
-
-
 
 
 

@@ -69,7 +69,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="lastName" class="block text-gray-700 font-bold mb-2">Last Name <span class="text-red-500">*</span></label>
-                            <input type="text" id="lastName" name="lastName" value="{{ old('lastName') }}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30"> 
+                            <input type="text" id="lastName" name="lastName" value="{{ old('lastName') }}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30">
                             @error('lastName')
                                 <span class="d-block fs-6 text-danger mt-1" style="color: red;">{{ $message }}</span>
                             @enderror
@@ -531,7 +531,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
                         <div class="mb-4">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Place of Marriage</label>
-                            <input type="text" id="place-of-marriage" name="place-of-marriage" value="{{ old('place-of-marriage') }}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="place-of-marriage" name="placeOfMarriage" value="{{ old('place-of-marriage') }}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                             @error('place-of-marriage')
                             <span class="d-block fs-6 text-danger mt-1"
                             style="color: red;">{{ $message }}</span>
@@ -539,7 +539,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="date-of-marriage" class="block text-gray-700 font-bold mb-2">Date of Marriage</label>
-                            <input type="date" id="date-of-marriage" name="date-of-marriage" value="{{ old('date-of-marriage') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="date" id="date-of-marriage" name="dateOfMarriage" value="{{ old('date-of-marriage') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                         @error('date-of-marriage')
                             <span class="d-block fs-6 text-danger mt-1"
@@ -553,7 +553,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-6">
                         <div class="mb-4">
                             <label for="spouse-name" class="block text-gray-700 font-bold mb-2">Spouse Name</label>
-                            <input type="text" id="spouse-name" name="spouse-name" value="{{ old('spouse-name') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="spouseName" name="spouseName" value="{{ old('spouse-name') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                             @error('spouse-name')
                             <span class="d-block fs-6 text-danger mt-1"
                             style="color: red;">{{ $message }}</span>
@@ -561,7 +561,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="place-of-birth" class="block text-gray-700 font-bold mb-2">Place of Birth (spouse)</label>
-                            <input type="text" id="place-of-birth" name="place-of-birth" value="{{ old('place-of-birth') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="placeOfbirth" name="placeOfbirth" value="{{ old('place-of-birth') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                             @error('place-of-birth')
                             <span class="d-block fs-6 text-danger mt-1"
                             style="color: red;">{{ $message }}</span>
@@ -569,7 +569,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="date-of-birth" class="block text-gray-700 font-bold mb-2">Date of Birth (spouse)</label>
-                            <input type="date" id="date-of-birth" name="date-of-birth" value="{{ old('date-of-birth') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="date" id="dateOfBirth" name="dateOfBirth" value="{{ old('date-of-birth') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                             @error('date-of-birth')
                             <span class="d-block fs-6 text-danger mt-1"
                             style="color: red;">{{ $message }}</span>
@@ -584,11 +584,11 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
                         <div class="mb-4">
                             <label for="educational-attaiment" class="block text-gray-700 font-bold mb-2">Educational Attainment (spouse)</label>
-                            <select id="educational-attaiment" name="educational-attaiment" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <select id="educational-attaiment" name="educationalAttaiment" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                                 <option value="" disabled selected>Select Educational Attainment</option>
-                                <option {{ old('educational-attainment') === 'Elementary' ? 'selected' : '' }}>Elementary</option>
-                                <option {{ old('educational-attainment') === 'Highschool' ? 'selected' : '' }}>Highschool</option>
-                                <option {{ old('educational-attainment') === 'College' ? 'selected' : '' }}>College</option>
+                                <option value="Elementary" old('educational-attainment') === 'Elementary' ? 'selected' : '' }}>Elementary</option>
+                                <option value="Highschool" {{ old('educational-attainment') === 'Highschool' ? 'selected' : '' }}>Highschool</option>
+                                <option value="College" {{ old('educational-attainment') === 'College' ? 'selected' : '' }}>College</option>
                                 <option value="Others">Others</option>
                             </select>
                             @error('educational-attainment')

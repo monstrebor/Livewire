@@ -14,7 +14,7 @@ class RegularMemberController extends Controller
         $regularMemberService->RegularMemberStore($request);
 
         // redirect route
-        return redirect()->route('id.index');
+        // return $request->all();
 
     }
 

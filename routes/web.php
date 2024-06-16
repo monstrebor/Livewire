@@ -38,13 +38,13 @@ Route::get('/clear', function () {
 
     Artisan::call('cache:clear');
     Artisan::call('route:cache');
+    Artisan::call('optimize');
     Artisan::call('view:clear');
 
-    return 'Cache cleared and routes cached successfully!';
+
+    return 'successfully!';
 
 });
-
-
 
 
 //image
