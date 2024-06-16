@@ -58,21 +58,18 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-3">
                         <div class="mb-4">
                             <label for="firstName" class="block text-gray-700 font-bold mb-2">First Name <span class="text-red-500">*</span></label>
-                            <input type="text" id="firstName" name="firstName" value="{{ old('firstName') }}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30">
-                            @error('firstName')
-                                <span class="d-block fs-6 text-danger mt-1" style="color: red;">{{ $message }}</span>
-                            @enderror
+                            <input type="text" id="firstName" name="firstName"  class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30">
+                            
                         </div>
                         <div class="mb-4">
                             <label for="middleName" class="block text-gray-700 font-bold mb-2">Middle Name (Optional)</label>
-                            <input type="text" id="middleName" name="middleName" value="{{ old('middleName') }}" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30">
+                            <input type="text" id="middleName" name="middleName"  class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30">
                         </div>
                         <div class="mb-4">
                             <label for="lastName" class="block text-gray-700 font-bold mb-2">Last Name <span class="text-red-500">*</span></label>
-                            <input type="text" id="lastName" name="lastName" value="{{ old('lastName') }}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30">
-                            @error('lastName')
-                                <span class="d-block fs-6 text-danger mt-1" style="color: red;">{{ $message }}</span>
-                            @enderror
+                            <input type="text" id="lastName" name="lastName"  class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30">
+                            
+
                         </div>
                     </div>
 
@@ -82,24 +79,18 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                         <div class="mb-4">
                             <label for="religion" class="block text-gray-700 font-bold mb-2 text-sm">Religion<span class="text-red-500">*</span></label>
-                            <input id="religion" name="religion" value="{{ old('religion')}}" rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
-                            @error('religion')
-                                <span class="d-block fs-6 text-danger mt-1" style="color: red;">{{ $message }}</span>
-                            @enderror
+                            <input id="religion" name="religion"  rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                           
                         </div>
                         <div class="mb-4">
                             <label for="POB" class="block text-gray-700 font-bold mb-2">Place of Birth <span class="text-red-500">*</span></label>
-                            <input type="text" id="POB" name="POB" value="{{ old('POB')}}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
-                            @error('POB')
-                                <span class="d-block fs-6 text-danger mt-1" style="color: red;">{{ $message }}</span>
-                            @enderror
+                            <input type="text" id="POB" name="POB"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            
                         </div>
                         <div class="mb-4">
                             <label for="DOB" class="block text-gray-700 font-bold mb-2">Date of Birth <span class="text-red-500">*</span></label>
-                            <input type="date" id="DOB" name="DOB" value="{{ old('DOB')}}" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
-                            @error('DOB')
-                                <span class="d-block fs-6 text-danger mt-1" style="color: red;">{{ $message }}</span>
-                            @enderror
+                            <input type="date" id="DOB" name="DOB"  class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                           
                         </div>
                     </div>
                     {{-- end of religion, POB, DOB --}}
@@ -109,47 +100,38 @@
                         <!-- contact number -->
                         <div class="mb-2">
                             <label for="contactNumber" class="block text-gray-700 font-bold mb-2">Contact Number <span class="text-red-500">*</span></label>
-                            <input type="tel" id="contactNumber" name="contactNumber" value="{{ old('contactNumber')}}" pattern="[0-9]{11}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
-                            @error('contactNumber')
-                                <span class="d-block fs-6 text-danger mt-1" style="color: red;">{{ $message }}</span>
-                            @enderror
+                            <input type="tel" id="contactNumber" name="contactNumber"  pattern="[0-9]{11}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            
                         </div>
                         <!-- end of contact number -->
 
                         <!-- facebook Account -->
                         <div class="mb-2">
                             <label for="facebookAccount" class="block text-gray-700 font-bold mb-2">Facebook Account <span class="text-red-500">*</span></label>
-                            <input type="text" id="facebook-account" name="facebookAccount"  value="{{ old('facebookAccount')}}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
-                            @error('facebookAccount')
-                                <span class="d-block fs-6 text-danger mt-1" style="color: red;">{{ $message }}</span>
-                            @enderror
+                            <input type="text" id="facebook-account" name="facebookAccount"   class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                           
                         </div>
                         <!-- end of facebook account -->
 
                         <!-- email -->
                         <div class="mb-2">
                             <label for="email" class="block text-gray-700 font-bold mb-2">Email <span class="text-red-500">*</span></label>
-                            <input type="email" id="email" name="email" value="{{ old('email')}}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
-                            @error('email')
-                                <span class="d-block fs-6 text-danger mt-1" style="color: red;">{{ $message }}</span>
-                            @enderror
+                            <input type="email" id="email" name="email"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            
                         </div>
                         <!-- end of email -->
 
                         <div class="mb-4 text-sm">
                             <label class="block text-gray-700 font-bold mb-2">Gender <span class="text-red-500">*</span></label>
                             <div class="flex items-center mb-2 gap-2">
-                                <input type="radio" id="male" name="gender" value="male" {{ old('gender') === 'male' ? 'checked' : '' }} class="mr-2">
+                                <input type="radio" id="male" name="gender" value="male"  class="mr-2">
                                 <label for="male" class="text-gray-700">Male</label>
 
-                                <input type="radio" id="female" name="gender" value="female" {{ old('gender') === 'female' ? 'checked' : '' }} class="mr-2" required>
+                                <input type="radio" id="female" name="gender" value="female" class="mr-2" required>
                                 <label for="female" class="text-gray-700">Female</label>
                             </div>
                         </div>
-                        @error('gender')
-                                <span class="d-block fs-6 text-danger mt-1"
-                                    style="color: red;">{{ $message }}</span>
-                            @enderror
+                        
                     </div>
                     <!-- end of contact information -->
 
@@ -164,21 +146,15 @@
                                 <option value="Region 3" selected>Region III</option>
                                 <!-- Other options here -->
                             </select>
-                            @error('Region')
-                                <span class="d-block fs-6 text-danger mt-1"
-                                    style="color: red;">{{ $message }}</span>
-                            @enderror
+                            
                         </div>
 
                         <div class="mb-4">
-                            <label for="province" class="block text-gray-700 font-bold mb-2 text-sm">Province<span class="text-red-500">*</span></label>
+                            <label for="province" class="block text-gray-700 font-bold mb-2 text-sm">Province <span class="text-red-500">*</span></label>
                             <select name="Province" id="province-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="Bulacan" selected>Bulacan</option>
                             </select>
-                            @error('Province')
-                                <span class="d-block fs-6 text-danger mt-1"
-                                    style="color: red;">{{ $message }}</span>
-                            @enderror
+                            
                         </div>
                     </div>
 
@@ -188,10 +164,7 @@
                             <select name="Municipality" id="municipality-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="Marilao" selected>Marilao</option>
                             </select>
-                            @error('Municipality')
-                                <span class="d-block fs-6 text-danger mt-1"
-                                    style="color: red;">{{ $message }}</span>
-                            @enderror
+                           
                         </div>
 
                         <div class="mb-4">
@@ -199,22 +172,16 @@
                             <select id="brgyDropdown"  name="Barangay"  class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="select" disabled selected>-Select Barangay-</option>
                             </select>
-                            @error('Barangay')
-                                <span class="d-block fs-6 text-danger mt-1"
-                                    style="color: red;">{{ $message }}</span>
-                            @enderror
+                            
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                         <div class="mb-4">
                             <label for="numSt" class="block text-gray-700 font-bold mb-2 text-sm">House Number and Street <span class="text-red-500">*</span></label>
-                            <input type="text" id="numSt" name="Street" value="{{ old('Street')}}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="numSt" name="Street"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
-                        @error('Street')
-                        <span class="d-block fs-6 text-danger mt-1"
-                        style="color: red;">{{ $message }}</span>
-                    @enderror
+                       
                     </div>
                     <hr class="my-5">
                     <!-- end of address -->
@@ -279,58 +246,57 @@
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="Self-employed" name="occupation" value="self-employed" {{ old('occupation') === 'self-employed' ? 'checked' : '' }} class="mr-2">
+                                        <input type="radio" id="Self-employed" name="occupation" value="self-employed"  class="mr-2">
                                         <label for="self-employed" class="text-gray-700">Self-Employed</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="public-official" name="occupation" value="Public-Official" {{ old('occupation') === 'public-official' ? 'checked' : '' }} class="mr-2" >
+                                        <input type="radio" id="public-official" name="occupation" value="Public-Official"  class="mr-2" >
                                         <label for="public-official" class="text-gray-700">Public-Official</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="driver/operator/conductor" name="occupation" value="Driver/Operator/Conductor"  {{ old('occupation') === 'driver/operator/conductor' ? 'checked' : '' }} class="mr-2">
+                                        <input type="radio" id="driver/operator/conductor" name="occupation" value="Driver/Operator/Conductor"   class="mr-2">
                                         <label for="housewife/househusband" class="text-gray-700">Driver/Operator/Conductor</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="housewife/househusband" name="occupation" value="Housewife/Househusband" {{ old('occupation') === 'housewife/househusband' ? 'checked' : '' }}  class="mr-2" >
+                                        <input type="radio" id="housewife/househusband" name="occupation" value="Housewife/Househusband"   class="mr-2" >
                                         <label for="housewife/househusband" class="text-gray-700">Housewife/Househusband</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="private-employee" name="occupation" value="Private-Employee"
-                                        {{ old('occupation') === 'private-employee' ? 'checked' : '' }} class="mr-2">
+                                        <input type="radio" id="private-employee" name="occupation" value="Private-Employee" class="mr-2">
                                         <label for="private-employee" class="text-gray-700">Private Employee</label>
                                     </div>
                                 </div>
 
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="government-employee" name="occupation" value="government-employee" {{ old('occupation') === 'government-employee' ? 'checked' : '' }} class="mr-2">
+                                        <input type="radio" id="government-employee" name="occupation" value="government-employee"  class="mr-2">
                                         <label for="Government-Employee" class="text-gray-700">Government Employee</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="religious-leader" name="occupation" value="religious-leader" {{ old('occupation') === 'religious-leader' ? 'checked' : '' }}class="mr-2">
+                                        <input type="radio" id="religious-leader" name="occupation" value="religious-leader" class="mr-2">
                                         <label for="Religious-Leader" class="text-gray-700">Religious Leader</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="entrepreneur-small" name="occupation" value="Entrepreneur-Small" {{ old('occupation') === 'Entrepreneur-Small' ? 'checked' : '' }} class="mr-2">
+                                        <input type="radio" id="entrepreneur-small" name="occupation" value="Entrepreneur-Small" class="mr-2">
                                         <label for="entrepreneur-small" class="text-gray-700">Entrepreneur - Small</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="entrepreneur-large" name="occupation" value="Entrepreneur-Large" {{ old('occupation') === 'Entrepreneur-Large' ? 'checked' : '' }} class="mr-2">
+                                        <input type="radio" id="entrepreneur-large" name="occupation" value="Entrepreneur-Large"   class="mr-2">
                                         <label for="entrepreneur-large" class="text-gray-700">Entrepreneur - Large</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="senior-citizen/retiree" name="occupation" value="Senior-Citizen/Retiree" {{ old('occupation') === 'Senior-Citizen/Retiree' ? 'checked' : '' }} class="mr-2">
+                                        <input type="radio" id="senior-citizen/retiree" name="occupation" value="Senior-Citizen/Retiree" class="mr-2">
                                         <label for="senior-citizen/retiree" class="text-gray-700">Eenior Citizen/Retiree</label>
                                     </div>
                                 </div>
 
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="allotee" name="occupation" value="allotee" {{ old('occupation') === 'allotee' ? 'checked' : '' }} class="mr-2">
+                                        <input type="radio" id="allotee" name="occupation" value="allotee"  class="mr-2">
                                         <label for="allotee" class="text-gray-700">Allotee</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="volunteer" name="occupation" value="Volunteer" {{ old('occupation') === 'volunteer' ? 'checked' : '' }} class="mr-2">
+                                        <input type="radio" id="volunteer" name="occupation" value="Volunteer" class="mr-2">
                                         <label for="volunteer" class="text-gray-700">Volunteer</label>
                                     </div>
                                     <div class="flex items-center mb-2">
@@ -342,10 +308,7 @@
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
-                                @error('occupation')
-                                        <span class="d-block fs-6 text-danger mt-1"
-                                            style="color: red;">{{ $message }}</span>
-                                    @enderror
+                                
                             </div>
                         </div>
                         <!-- end of occupation -->
@@ -356,30 +319,30 @@
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="permanent" name="employmentStatus" value="Permanent" {{ old('employment_status') === 'Permanent' ? 'checked' : '' }}class="mr-2">
+                                        <input type="radio" id="permanent" name="employmentStatus" value="Permanent" class="mr-2">
                                         <label for="permanent" class="text-gray-700">Permanent</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="project-based" name="employmentStatus" value="Project-based" {{ old('employment_status') === 'Project-based' ? 'checked' : '' }} class="mr-2" required>
+                                        <input type="radio" id="project-based" name="employmentStatus" value="Project-based"  class="mr-2" required>
                                         <label for="project-based" class="text-gray-700">Project-Based</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="seasonal" name="employmentStatus" value="Seasonal"   {{ old('employment_status') === 'Seasonal' ? 'checked' : '' }}class="mr-2" required>
+                                        <input type="radio" id="seasonal" name="employmentStatus" value="Seasonal"   class="mr-2" required>
                                         <label for="project-based" class="text-gray-700">Seasonal</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="casual" name="employmentStatus" value="Casual" {{ old('employment_status') === 'Casual' ? 'checked' : '' }} class="mr-2" required>
+                                        <input type="radio" id="casual" name="employmentStatus" value="Casual" class="mr-2" required>
                                         <label for="casual" class="text-gray-700">Casual</label>
                                     </div>
                                 </div>
 
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="probationary" name="employmentStatus" value="Probationary" {{ old('employment_status') === 'Probationary' ? 'checked' : '' }} class="mr-2" required>
+                                        <input type="radio" id="probationary" name="employmentStatus" value="Probationary"  class="mr-2" required>
                                         <label for="probationary" class="text-gray-700">Probationary</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="fixed-or-termed" name="employmentStatus" value="Fixed-or-Termed" {{ old('employment_status') === 'Fixed-or-termed' ? 'checked' : '' }} class="mr-2" required>
+                                        <input type="radio" id="fixed-or-termed" name="employmentStatus" value="Fixed-or-Termed" class="mr-2" required>
                                         <label for="fixed-or-termed" class="text-gray-700">Fixed or Termed</label>
                                     </div>
                                     <div class="flex items-center mb-2">
@@ -387,10 +350,8 @@
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
-                                @error('employment_status')
-                                        <span class="d-block fs-6 text-danger mt-1"
-                                            style="color: red;">{{ $message }}</span>
-                                    @enderror
+                               
+
                             </div>
                         </div>
                     </div>
@@ -402,21 +363,21 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="elem" name="educationalAttaiment" value="Elementary" {{ old('educational_attainment') === 'Elementary' ? 'checked' : '' }} class="mr-2" required>
+                                    <input type="radio" id="elem" name="educationalAttaiment" value="Elementary" class="mr-2" required>
                                     <label for="elem" class="text-gray-700">Elementary</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="highschool" name="educationalAttaiment" value="Highschool" {{ old('educational_attainment') === 'Highschool' ? 'checked' : '' }} class="mr-2" required>
+                                    <input type="radio" id="highschool" name="educationalAttaiment" value="Highschool"  class="mr-2" required>
                                     <label for="highschool" class="text-gray-700">Highschool</label>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="college" name="educationalAttaiment" value="College" {{ old('educational_attainment') === 'College' ? 'checked' : '' }} class="mr-2" required>
+                                    <input type="radio" id="college" name="educationalAttaiment" value="College"  class="mr-2" required>
                                     <label for="college" class="text-gray-700">College</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="vocational" name="educationalAttaiment" value="Vocational" {{ old('educational_attainment') === 'Vocational' ? 'checked' : '' }} class="mr-2" required>
+                                    <input type="radio" id="vocational" name="educationalAttaiment" value="Vocational"  class="mr-2" required>
                                     <label for="vocational" class="text-gray-700">Vocational</label>
                                 </div>
                             </div>
@@ -427,10 +388,7 @@
                                 </div>
                             </div>
                         </div>
-                        @error('educational_attainment')
-                                <span class="d-block fs-6 text-danger mt-1"
-                                    style="color: red;">{{ $message }}</span>
-                            @enderror
+                       
                     </div>
                     <!-- end of Educational Attainment -->
 
@@ -438,11 +396,11 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
                         <div class="mb-2">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Name of Employer <span class="text-red-500">*</span></label>
-                            <input type="text" id="nameOfEmployer" name="EmployerName" value="{{ old('nameOfEmployer') }}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="nameOfEmployer" name="EmployerName"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                         <div class="mb-2">
                             <label for="email" class="block text-gray-700 font-bold mb-2">Address of Employer <span class="text-red-500">*</span></label>
-                            <input type="text" id="addressOfEmployer" name="EmployerAddress" value="{{ old('addressOfEmployer') }}"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="addressOfEmployer" name="EmployerAddress"   class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
                     <!-- end of employer -->
@@ -451,11 +409,11 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
                         <div class="mb-2">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Monthly Income <span class="text-red-500">*</span></label>
-                            <input type="number" id="monthlyIncome" name="monthlyIncome" value="{{ old('monthlyIncome') }}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="number" id="monthlyIncome" name="monthlyIncome"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                         <div class="mb-2">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Annual Income <span class="text-red-500">*</span></label>
-                            <input type="number" id="annualIncome" name="annualIncome" value="{{ old('annualIncome') }}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="number" id="annualIncome" name="annualIncome"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
                     <!-- end-of-income -->
@@ -466,33 +424,33 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="owned" name="houseOwnership" value="{{ old('Owned') }}"  class="mr-2">
+                                    <input type="radio" id="owned" name="houseOwnership" value="Owned"  class="mr-2">
                                     <label for="owned" class="text-gray-700">Owned</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="rental" name="houseOwnership" value="{{ old('Rental') }}" class="mr-2">
+                                    <input type="radio" id="rental" name="houseOwnership" value="Rental" class="mr-2">
                                     <label for="rental" class="text-gray-700">Rental</label>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="livingwithparents" name="houseOwnership" value="{{ old('Living-with-parents') }}" class="mr-2">
+                                    <input type="radio" id="livingwithparents" name="houseOwnership" value="Living with Parents" class="mr-2">
                                     <label for="owned" class="text-gray-700">Living with Parents</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="rental" name="houseOwnership" value="{{ old('Rental') }}" class="mr-2">
+                                    <input type="radio" id="rental" name="houseOwnership" value="Rental" class="mr-2">
                                     <label for="rental" class="text-gray-700">Rental</label>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="housingLoan" name="houseOwnership" value="{{ old('Housing-loan') }}"class="mr-2" >
+                                    <input type="radio" id="housingLoan" name="houseOwnership" value="Housing Loan"class="mr-2" >
                                     <label for="housingLoan" class="text-gray-700">Housing Loan</label>
                                 </div>
                             </div>
                             <div class="mb-4">
                                 <label for="text" class="block text-gray-700 mb-2">Length of Stay: (year)</label>
-                                <input type="number" id="LengthOfStay" name="houseOwnership" value="{{ old('LengthOfStay') }}"class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                                <input type="number" id="LengthOfStay" name="lengthOfStay" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                             </div>
                         </div>
                     </div>
@@ -502,26 +460,23 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-6">
                         <div class="mb-2">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Citizenship <span class="text-red-500">*</span></label>
-                            <input type="text" id="citezenship" name="citizenship" value="{{ old('citizenship') }}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="citezenship" name="citizenship"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
                         <div class="mb-2">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Number of Children <span class="text-red-500">*</span></label>
-                            <input type="number" id="citizenship" name="citizenship" value="{{ old('citizenship') }}"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <input type="number" id="citizenship" name="NumberOfChildren"   class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                         </div>
                         <div class="mb-2">
                             <label for="civilStatus" class="block text-gray-700 font-bold mb-2">Civil Status <span class="text-red-500">*</span></label>
                             <select id="civilStatus" name="civilStatus" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="" disabled selected>Select Civil Status</option>
-                                <option value="Single" {{ old('civilStatus') === 'single' ? 'selected' : '' }} >Single</option>
-                                <option value="Married"  {{ old('civilStatus') === 'married' ? 'selected' : '' }} >Married</option>
-                                <option  value="Divorced"    {{ old('civilStatus') === 'divorced' ? 'selected' : '' }} >Divorced</option>
-                                <option  value="Widowed"     {{ old('civilStatus') === 'widowed' ? 'selected' : '' }} >Widowed</option>
+                                <option value="Single"  >Single</option>
+                                <option value="Married"   >Married</option>
+                                <option  value="Divorced"    >Divorced</option>
+                                <option  value="Widowed"      >Widowed</option>
                             </select>
                         </div>
-                        @error('civilStatus')
-                                    <span class="d-block fs-6 text-danger mt-1"
-                                        style="color: red;">{{ $message }}</span>
-                        @enderror
+                       
                     </div>
 
                     <!-- end of citezenship, no of children, civil status -->
@@ -531,20 +486,14 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
                         <div class="mb-4">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Place of Marriage</label>
-                            <input type="text" id="place-of-marriage" name="placeOfMarriage" value="{{ old('place-of-marriage') }}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
-                            @error('place-of-marriage')
-                            <span class="d-block fs-6 text-danger mt-1"
-                            style="color: red;">{{ $message }}</span>
-                            @enderror
+                            <input type="text" id="place-of-marriage" name="placeOfMarriage"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            
                         </div>
                         <div class="mb-4">
                             <label for="date-of-marriage" class="block text-gray-700 font-bold mb-2">Date of Marriage</label>
-                            <input type="date" id="date-of-marriage" name="dateOfMarriage" value="{{ old('date-of-marriage') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="date" id="date-of-marriage" name="dateOfMarriage"  class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
-                        @error('date-of-marriage')
-                            <span class="d-block fs-6 text-danger mt-1"
-                            style="color: red;">{{ $message }}</span>
-                        @enderror
+                       
                     </div>
 
                     <!-- end of date/place-of-marriage -->
@@ -553,27 +502,18 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-6">
                         <div class="mb-4">
                             <label for="spouse-name" class="block text-gray-700 font-bold mb-2">Spouse Name</label>
-                            <input type="text" id="spouseName" name="spouseName" value="{{ old('spouse-name') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
-                            @error('spouse-name')
-                            <span class="d-block fs-6 text-danger mt-1"
-                            style="color: red;">{{ $message }}</span>
-                        @enderror
+                            <input type="text" id="spouseName" name="spouseName"  class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            
                         </div>
                         <div class="mb-4">
                             <label for="place-of-birth" class="block text-gray-700 font-bold mb-2">Place of Birth (spouse)</label>
-                            <input type="text" id="placeOfbirth" name="placeOfbirth" value="{{ old('place-of-birth') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
-                            @error('place-of-birth')
-                            <span class="d-block fs-6 text-danger mt-1"
-                            style="color: red;">{{ $message }}</span>
-                        @enderror
+                            <input type="text" id="placeOfbirth" name="placeOfbirth"  class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                           
                         </div>
                         <div class="mb-4">
                             <label for="date-of-birth" class="block text-gray-700 font-bold mb-2">Date of Birth (spouse)</label>
-                            <input type="date" id="dateOfBirth" name="dateOfBirth" value="{{ old('date-of-birth') }}" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
-                            @error('date-of-birth')
-                            <span class="d-block fs-6 text-danger mt-1"
-                            style="color: red;">{{ $message }}</span>
-                        @enderror
+                            <input type="date" id="dateOfBirth" name="dateOfBirth"  class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            
                         </div>
                     </div>
 
@@ -586,24 +526,18 @@
                             <label for="educational-attaiment" class="block text-gray-700 font-bold mb-2">Educational Attainment (spouse)</label>
                             <select id="educational-attaiment" name="educationalAttaiment" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                                 <option value="" disabled selected>Select Educational Attainment</option>
-                                <option value="Elementary" old('educational-attainment') === 'Elementary' ? 'selected' : '' }}>Elementary</option>
-                                <option value="Highschool" {{ old('educational-attainment') === 'Highschool' ? 'selected' : '' }}>Highschool</option>
-                                <option value="College" {{ old('educational-attainment') === 'College' ? 'selected' : '' }}>College</option>
+                                <option value="Elementary" >Elementary</option>
+                                <option value="Highschool" >Highschool</option>
+                                <option value="College" >College</option>
                                 <option value="Others">Others</option>
                             </select>
-                            @error('educational-attainment')
-                            <span class="d-block fs-6 text-danger mt-1"
-                            style="color: red;">{{ $message }}</span>
-                        @enderror
+                           
                         </div>
                         <div class="mb-4">
                             <label for="occupation" class="block text-gray-700 font-bold mb-2">Occupation (spouse)</label>
                             <input type="text" id="occupation" name="occupation" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
-                        @error('occupation')
-                            <span class="d-block fs-6 text-danger mt-1"
-                            style="color: red;">{{ $message }}</span>
-                        @enderror
+                        
                     </div>
 
 
