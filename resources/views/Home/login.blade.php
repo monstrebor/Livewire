@@ -12,7 +12,6 @@
     @endsection
 
 
-
     @section('content')
 
     <div class="grid grid-cols-2">
