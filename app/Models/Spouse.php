@@ -20,8 +20,8 @@ class Spouse extends Model
        'placeOfBirth',
        'dateOfBirth',
        'EducationalAttainment',
-       'Occupation',
-       
+       'occupationSpouse',
+
     ];
 
 

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('placeOfBirth')->nullable();
             $table->date('dateOfBirth')->nullable();
             $table->string('EducationalAttainment')->nullable();
-            $table->string('Occupation');
+            $table->string('occupationSpouse');
             $table->timestamps();
         });
     }

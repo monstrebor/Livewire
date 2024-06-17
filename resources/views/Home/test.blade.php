@@ -71,7 +71,7 @@
                             <input type="text" id="lastName" name="lastName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30">
                             <div id="errorMessage" class="error-message"></div>
                         </div>
-                    </div>9
+                    </div>
                     <!--End of full name -->
 
                     {{-- religion, POB, DOB --}}
@@ -131,10 +131,7 @@
                                 <label for="female" class="text-gray-700">Female</label>
                             </div>
                         </div>
-                        @error('gender')
-                                <span class="d-block fs-6 text-danger mt-1"
-                                    style="color: red;">{{ $message }}</span>
-                            @enderror
+
                     </div>
                     <!-- end of contact information -->
 
@@ -185,10 +182,7 @@
                             <input type="text" id="street" name="street" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                             <div id="errorMessage" class="error-message"></div>
                         </div>
-                        @error('Street')
-                        <span class="d-block fs-6 text-danger mt-1"
-                        style="color: red;">{{ $message }}</span>
-                    @enderror
+
                     </div>
                     <hr class="my-5">
                     <!-- end of address -->
@@ -323,10 +317,7 @@
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
-                                @error('occupation')
-                                        <span class="d-block fs-6 text-danger mt-1"
-                                            style="color: red;">{{ $message }}</span>
-                                    @enderror
+
                             </div>
                         </div>
                         <!-- end of occupation -->
@@ -369,10 +360,8 @@
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
-                                @error('employment_status')
-                                        <span class="d-block fs-6 text-danger mt-1"
-                                            style="color: red;">{{ $message }}</span>
-                                    @enderror
+
+
                             </div>
                         </div>
                     </div>
@@ -410,10 +399,7 @@
                                 </div>
                             </div>
                         </div>
-                        @error('educational_attainment')
-                                <span class="d-block fs-6 text-danger mt-1"
-                                    style="color: red;">{{ $message }}</span>
-                            @enderror
+
                     </div>
                     <!-- end of Educational Attainment -->
 
@@ -506,10 +492,7 @@
                             </select>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
-                        @error('civilStatus')
-                                    <span class="d-block fs-6 text-danger mt-1"
-                                        style="color: red;">{{ $message }}</span>
-                        @enderror
+
                     </div>
 
                     <!-- end of citezenship, no of children, civil status -->
@@ -529,14 +512,9 @@
                                 <div id="errorMessage" class="error-message"></div>
                             </div>
                         </div>
-                        @error('date-of-marriage')
-                            <span class="d-block fs-6 text-danger mt-1"
-                            style="color: red;">{{ $message }}</span>
-                        @enderror
                     </div>
 
                     <!-- end of date/place-of-marriage -->
-
                     <!-- spouse name/ -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-6">
                         <div class="input-group mb-4">
@@ -565,9 +543,9 @@
                             <label for="educational-attaiment" class="block text-gray-700 font-bold mb-2">Educational Attainment (spouse)</label>
                             <select id="spouseEducationalAttainment" name="educational-attaiment" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                                 <option value="" disabled selected>Select Educational Attainment</option>
-                                <option value="Elementary" old('educational-attainment') === 'Elementary' ? 'selected' : '' }}>Elementary</option>
-                                <option value="Highschool" {{ old('educational-attainment') === 'Highschool' ? 'selected' : '' }}>Highschool</option>
-                                <option value="College" {{ old('educational-attainment') === 'College' ? 'selected' : '' }}>College</option>
+                                <option value="Elementary" >Elementary</option>
+                                <option value="Highschool" >Highschool</option>
+                                <option value="College" >College</option>
                                 <option value="Others">Others</option>
                             </select>
                             <div id="errorMessage" class="error-message"></div>
@@ -577,10 +555,7 @@
                             <input type="text" id="spouseOccupation" name="occupation" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                             <div id="errorMessage" class="error-message"></div>
                         </div>
-                        @error('occupation')
-                            <span class="d-block fs-6 text-danger mt-1"
-                            style="color: red;">{{ $message }}</span>
-                        @enderror
+
                     </div>
 
 
