@@ -255,65 +255,65 @@
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="Self-employed" name="occupation" value="self-employed" class="mr-2">
+                                        <input type="radio" id="Self-employed" name="occupation" value="self-employed" class="mr-2">
                                         <label for="self-employed" class="text-gray-700">Self-Employed</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="public-official" name="occupation" value="Public-Official" class="mr-2">
+                                        <input type="radio" id="public-official" name="occupation" value="Public-Official" class="mr-2">
                                         <label for="public-official" class="text-gray-700">Public-Official</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="driver/operator/conductor" name="occupation" value="Driver/Operator/Conductor" class="mr-2">
+                                        <input type="radio" id="driver/operator/conductor" name="occupation" value="Driver/Operator/Conductor" class="mr-2">
                                         <label for="housewife/househusband" class="text-gray-700">Driver/Operator/Conductor</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="housewife/househusband" name="occupation" value="Housewife/Househusband" class="mr-2">
+                                        <input type="radio" id="housewife/househusband" name="occupation" value="Housewife/Househusband" class="mr-2">
                                         <label for="housewife/househusband" class="text-gray-700">Housewife/Househusband</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="private-employee" name="occupation" value="Private-Employee" class="mr-2">
+                                        <input type="radio" id="private-employee" name="occupation" value="Private-Employee" class="mr-2">
                                         <label for="private-employee" class="text-gray-700">Private Employee</label>
                                     </div>
                                 </div>
 
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="government-employee" name="occupation" value="government-employee" class="mr-2">
+                                        <input type="radio" id="government-employee" name="occupation" value="government-employee" class="mr-2">
                                         <label for="Government-Employee" class="text-gray-700">Government Employee</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="religious-leader" name="occupation" value="religious-leader" class="mr-2">
+                                        <input type="radio" id="religious-leader" name="occupation" value="religious-leader" class="mr-2">
                                         <label for="Religious-Leader" class="text-gray-700">Religious Leader</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="entrepreneur-small" name="occupation" value="Entrepreneur-Small" class="mr-2">
+                                        <input type="radio" id="entrepreneur-small" name="occupation" value="Entrepreneur-Small" class="mr-2">
                                         <label for="entrepreneur-small" class="text-gray-700">Entrepreneur - Small</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="entrepreneur-large" name="occupation" value="Entrepreneur-Large" class="mr-2">
+                                        <input type="radio" id="entrepreneur-large" name="occupation" value="Entrepreneur-Large" class="mr-2">
                                         <label for="entrepreneur-large" class="text-gray-700">Entrepreneur - Large</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="senior-citizen/retiree" name="occupation" value="Senior-Citizen/Retiree" class="mr-2">
+                                        <input type="radio" id="senior-citizen/retiree" name="occupation" value="Senior-Citizen/Retiree" class="mr-2">
                                         <label for="senior-citizen/retiree" class="text-gray-700">Eenior Citizen/Retiree</label>
                                     </div>
                                 </div>
 
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="allotee" name="occupation" value="Allotee" class="mr-2">
+                                        <input type="radio" id="allotee" name="occupation" value="Allotee" class="mr-2">
                                         <label for="allotee" class="text-gray-700">Allotee</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="volunteer" name="occupation" value="Volunteer" class="mr-2">
+                                        <input type="radio" id="volunteer" name="occupation" value="Volunteer" class="mr-2">
                                         <label for="volunteer" class="text-gray-700">Volunteer</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="none" name="occupation" value="None" class="mr-2">
+                                        <input type="radio" id="none" name="occupation" value="None" class="mr-2">
                                         <label for="none" class="text-gray-700">None</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="others" name="occupation" value="Others" class="mr-2">
+                                        <input type="radio" id="others" name="occupation" value="Others" class="mr-2">
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
@@ -486,9 +486,9 @@
                             <select id="civilStatus" name="civilStatus" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                                 <option value="" disabled selected>Select Civil Status</option>
                                 <option value="Single" >Single</option>
-                                <option value="Married"   >Married</option>
-                                <option  value="Divorced"    >Divorced</option>
-                                <option  value="Widowed"    >Widowed</option>
+                                <option value="Married">Married</option>
+                                <option  value="Divorced">Divorced</option>
+                                <option  value="Widowed">Widowed</option>
                             </select>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
