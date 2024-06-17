@@ -8,6 +8,7 @@ use App\Models\Marriage;
 
 class RegularMember extends Model
 {
+
     use HasFactory;
 
 

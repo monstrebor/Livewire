@@ -11,6 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
+
+        
         Schema::create('regular_members', function (Blueprint $table) {
             $table->id();
             $table->string("firstName");
@@ -21,7 +23,7 @@ return new class extends Migration
             $table->date("DOB");
             $table->string('facebookAccount');
             $table->string('email');
-            $table->BigInteger('contactNumber');
+            $table->unsignedBigInteger('contactNumber');
             $table->string('gender');
             $table->string('occupation');
             $table->string('employmentStatus');
@@ -34,6 +36,9 @@ return new class extends Migration
             $table->unsignedBigInteger('annualIncome');
             $table->timestamps();
         });
+
+
+
     }
 
     /**

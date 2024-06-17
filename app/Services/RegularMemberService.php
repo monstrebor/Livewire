@@ -5,10 +5,10 @@ namespace App\Services;
 use App\Models\{Address,Dependency,idValidation,RegularMember,Spouse,Marriage,Employer};
 use App\Mail\InvitationEmails;
 
+
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-
-
 
 
 class RegularMemberService{
@@ -148,6 +148,7 @@ class RegularMemberService{
     }
 
 
+    
 
 
 }
