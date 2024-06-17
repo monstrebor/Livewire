@@ -75,7 +75,7 @@
                     <!--End of full name -->
 
                     {{-- religion, POB, DOB --}}
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm"> 
                         <div class="input-group mb-4">
                             <label for="religion" class="block text-gray-700 font-bold mb-2 text-sm">Religion<span class="text-red-500">*</span></label>
                             <input id="religion" name="religion" rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
@@ -251,7 +251,7 @@
                         <div id="occupationSection" class="input-group mb-6">
                             <label class="block text-gray-700 font-bold text-sm">Occupation <span class="text-red-500">*</span></label>
                             <div id="occupationErrorMessage" class="error-message"></div>
-
+                            
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                                 <div>
                                     <div class="flex items-center mb-2">
@@ -512,11 +512,9 @@
                                 <div id="errorMessage" class="error-message"></div>
                             </div>
                         </div>
-
                     </div>
 
                     <!-- end of date/place-of-marriage -->
-
                     <!-- spouse name/ -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-6">
                         <div class="input-group mb-4">
@@ -593,7 +591,7 @@
         <!-- end of all about -->
         <!-- footer -->
 
-    <script src="/js/dependents.js">
+    <script src="/js/dependents.js">    
     </script>
 
 @endsection
