@@ -71,7 +71,7 @@
                             <input type="text" id="lastName" name="lastName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30">
                             <div id="errorMessage" class="error-message"></div>
                         </div>
-                    </div>9
+                    </div>
                     <!--End of full name -->
 
                     {{-- religion, POB, DOB --}}
