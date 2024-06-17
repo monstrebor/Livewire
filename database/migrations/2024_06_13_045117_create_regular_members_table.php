@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('houseOwnership');
             $table->string('citizenship');
             $table->string('civilStatus');
+            $table->string('lengthOfStay');
             $table->unsignedBigInteger('monthlyIncome');
             $table->unsignedBigInteger('annualIncome');
             $table->timestamps();

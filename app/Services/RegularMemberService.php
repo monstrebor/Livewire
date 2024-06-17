@@ -108,7 +108,7 @@ class RegularMemberService{
             'placeOfBirth'=> $request->placeOfbirth,
             'dateOfBirth'=> $request->dateOfBirth,
             'EducationalAttainment' => $request->educationalAttaiment,
-            'Occupation'=> $request->occupation,
+            'occupationSpouse'=> $request->occupationSpouse,
 
         ]);
 
@@ -136,7 +136,7 @@ class RegularMemberService{
     {
 
         Employer::create([
-        
+
         'EmployerName' => $request->EmployerName,
         'EmployerAddress' => $request->EmployerAddress,
         'Reg_ID'=> $regular_id,

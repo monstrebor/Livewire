@@ -33,6 +33,7 @@ class RegularMember extends Model
         'monthlyIncome',
         'annualIncome',
         'contactNumber',
+        'lengthOfStay',
 
 
     ];

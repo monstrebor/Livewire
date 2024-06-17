@@ -59,7 +59,7 @@
                         <div class="mb-4">
                             <label for="firstName" class="block text-gray-700 font-bold mb-2">First Name <span class="text-red-500">*</span></label>
                             <input type="text" id="firstName" name="firstName"  class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30">
-                            
+
                         </div>
                         <div class="mb-4">
                             <label for="middleName" class="block text-gray-700 font-bold mb-2">Middle Name (Optional)</label>
@@ -68,7 +68,7 @@
                         <div class="mb-4">
                             <label for="lastName" class="block text-gray-700 font-bold mb-2">Last Name <span class="text-red-500">*</span></label>
                             <input type="text" id="lastName" name="lastName"  class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30">
-                            
+
 
                         </div>
                     </div>
@@ -80,17 +80,17 @@
                         <div class="mb-4">
                             <label for="religion" class="block text-gray-700 font-bold mb-2 text-sm">Religion<span class="text-red-500">*</span></label>
                             <input id="religion" name="religion"  rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
-                           
+
                         </div>
                         <div class="mb-4">
                             <label for="POB" class="block text-gray-700 font-bold mb-2">Place of Birth <span class="text-red-500">*</span></label>
                             <input type="text" id="POB" name="POB"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
-                            
+
                         </div>
                         <div class="mb-4">
                             <label for="DOB" class="block text-gray-700 font-bold mb-2">Date of Birth <span class="text-red-500">*</span></label>
                             <input type="date" id="DOB" name="DOB"  class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
-                           
+
                         </div>
                     </div>
                     {{-- end of religion, POB, DOB --}}
@@ -101,7 +101,7 @@
                         <div class="mb-2">
                             <label for="contactNumber" class="block text-gray-700 font-bold mb-2">Contact Number <span class="text-red-500">*</span></label>
                             <input type="tel" id="contactNumber" name="contactNumber"  pattern="[0-9]{11}" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
-                            
+
                         </div>
                         <!-- end of contact number -->
 
@@ -109,7 +109,7 @@
                         <div class="mb-2">
                             <label for="facebookAccount" class="block text-gray-700 font-bold mb-2">Facebook Account <span class="text-red-500">*</span></label>
                             <input type="text" id="facebook-account" name="facebookAccount"   class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
-                           
+
                         </div>
                         <!-- end of facebook account -->
 
@@ -117,7 +117,7 @@
                         <div class="mb-2">
                             <label for="email" class="block text-gray-700 font-bold mb-2">Email <span class="text-red-500">*</span></label>
                             <input type="email" id="email" name="email"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
-                            
+
                         </div>
                         <!-- end of email -->
 
@@ -131,7 +131,7 @@
                                 <label for="female" class="text-gray-700">Female</label>
                             </div>
                         </div>
-                        
+
                     </div>
                     <!-- end of contact information -->
 
@@ -146,7 +146,7 @@
                                 <option value="Region 3" selected>Region III</option>
                                 <!-- Other options here -->
                             </select>
-                            
+
                         </div>
 
                         <div class="mb-4">
@@ -154,7 +154,7 @@
                             <select name="Province" id="province-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="Bulacan" selected>Bulacan</option>
                             </select>
-                            
+
                         </div>
                     </div>
 
@@ -164,7 +164,7 @@
                             <select name="Municipality" id="municipality-dropdown" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="Marilao" selected>Marilao</option>
                             </select>
-                           
+
                         </div>
 
                         <div class="mb-4">
@@ -172,7 +172,7 @@
                             <select id="brgyDropdown"  name="Barangay"  class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="select" disabled selected>-Select Barangay-</option>
                             </select>
-                            
+
                         </div>
                     </div>
 
@@ -181,7 +181,7 @@
                             <label for="numSt" class="block text-gray-700 font-bold mb-2 text-sm">House Number and Street <span class="text-red-500">*</span></label>
                             <input type="text" id="numSt" name="Street"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
-                       
+
                     </div>
                     <hr class="my-5">
                     <!-- end of address -->
@@ -308,7 +308,7 @@
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <!-- end of occupation -->
@@ -350,7 +350,7 @@
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
-                               
+
 
                             </div>
                         </div>
@@ -388,7 +388,7 @@
                                 </div>
                             </div>
                         </div>
-                       
+
                     </div>
                     <!-- end of Educational Attainment -->
 
@@ -476,7 +476,7 @@
                                 <option  value="Widowed"      >Widowed</option>
                             </select>
                         </div>
-                       
+
                     </div>
 
                     <!-- end of citezenship, no of children, civil status -->
@@ -487,13 +487,13 @@
                         <div class="mb-4">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Place of Marriage</label>
                             <input type="text" id="place-of-marriage" name="placeOfMarriage"  class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
-                            
+
                         </div>
                         <div class="mb-4">
                             <label for="date-of-marriage" class="block text-gray-700 font-bold mb-2">Date of Marriage</label>
                             <input type="date" id="date-of-marriage" name="dateOfMarriage"  class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
-                       
+
                     </div>
 
                     <!-- end of date/place-of-marriage -->
@@ -503,17 +503,17 @@
                         <div class="mb-4">
                             <label for="spouse-name" class="block text-gray-700 font-bold mb-2">Spouse Name</label>
                             <input type="text" id="spouseName" name="spouseName"  class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
-                            
+
                         </div>
                         <div class="mb-4">
                             <label for="place-of-birth" class="block text-gray-700 font-bold mb-2">Place of Birth (spouse)</label>
                             <input type="text" id="placeOfbirth" name="placeOfbirth"  class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
-                           
+
                         </div>
                         <div class="mb-4">
                             <label for="date-of-birth" class="block text-gray-700 font-bold mb-2">Date of Birth (spouse)</label>
                             <input type="date" id="dateOfBirth" name="dateOfBirth"  class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
-                            
+
                         </div>
                     </div>
 
@@ -531,13 +531,13 @@
                                 <option value="College" >College</option>
                                 <option value="Others">Others</option>
                             </select>
-                           
+
                         </div>
                         <div class="mb-4">
                             <label for="occupation" class="block text-gray-700 font-bold mb-2">Occupation (spouse)</label>
-                            <input type="text" id="occupation" name="occupation" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="occupation" name="occupationSpouse" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
                         </div>
-                        
+
                     </div>
 
 

@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Models\{RegularMember, Marriage};
-
+use App\Models\{RegularMember};
 use App\Services\RegularMemberService;
 
 class RegularMemberController extends Controller
@@ -12,10 +11,10 @@ class RegularMemberController extends Controller
     public function store(Request $request, RegularMemberService $regularMemberService)
     {
 
-        // $regularMemberService->RegularMemberStore($request);
+        $regularMemberService->RegularMemberStore($request);
 
         // redirect route
-        return $request->all();
+
 
     }
 
