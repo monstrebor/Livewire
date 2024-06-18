@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Artisan;
 |
 */
 
-//views
+//Home
 Route::view('/', 'Home.index')->name('Home.index');
 Route::view('/login','Home.login')->name('Login.index');
 Route::view('/login/register/','Home.test')->name('regular.index');
@@ -29,7 +29,16 @@ Route::post('/regular',[RegularMemberController::class, 'store'])->name('regular
 
 
 
+
+//Admin
+
+Route::view('/admin','Admin.Index')->name('Admin.index');
+
+
+
+
 //error
+
 Route::fallback([ErrorController::class,'custom_404']);
 
 

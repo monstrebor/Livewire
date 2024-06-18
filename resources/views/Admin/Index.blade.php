@@ -1,14 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+@extends('Layout.layout')
+
+
+@section('title','Admin')
+
+@section('script')
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="adminSide.css">
-    <link rel="icon" href="img/final_logo-removebg-preview-removebg-preview.png">
+    <link rel="stylesheet" href="/css/adminSide.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Admin Side</title>
-</head>
+ @endsection
+
+@section('content')
+
+
 <body class="bg-white">
     <span class="absolute text-white text-4xl top-5 left-4 cursor-pointer" onclick="Open()">
         <i class="bi bi-filter-left px-2 bg-gray-900 rounded-md"></i>
@@ -100,5 +106,5 @@
             document.querySelector(".sidebar").classList.toggle('left-[-300px]');
         }
     </script>
-</body>
-</html>
+
+@endsection
