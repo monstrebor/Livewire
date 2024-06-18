@@ -1,10 +1,10 @@
 .container {
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(circle, #99cc00, transparent 20%, #009a00);
+    background-image: radial-gradient(circle, rgb(90, 89, 89), transparent 20%, rgb(73, 72, 72));
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #fff02f;
+    background-color: rgb(141, 138, 138);
 }
 
 .top-text {
@@ -15,7 +15,7 @@
 }
 
 .cbutton {
-    --color: #009A00;
+    --color: slategray;
     font-family: inherit;
     display: inline-block;
     width: 8em;
@@ -55,6 +55,6 @@
 }
 
 .cbutton:active:before {
-    background: #009A00;
+    background: slategray;
     transition: background 0s;
 }
