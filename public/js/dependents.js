@@ -125,13 +125,13 @@ const idImage2 = document.getElementById('idImage2');
 
 const occupationOptions = document.getElementsByName('occupation');
 const employmentOptions = document.getElementsByName('employmentStatus');
-const educationalAttainmentOptions = document.getElementsByName('educational-attaiment');
+const educationalAttainmentOptions = document.getElementsByName('educationalAttainment');
 const employerName = document.getElementById('employerName');
 const employerAddress = document.getElementById('employerAddress');
 const monthlyIncome = document.getElementById('monthlyIncome');
 const annualIncome = document.getElementById('annualIncome');
 
-const houseOwnershipOptions = document.getElementsByName('house-ownership');
+const houseOwnershipOptions = document.getElementsByName('houseOwnership');
 const lengthOfStay = document.getElementById('lengthOfStay');
 const citizenship = document.getElementById('citizenship');
 const numberOfChildren = document.getElementById('numberOfchildren');
@@ -251,6 +251,7 @@ function validateForm() {
     }
 
     // validate gender
+    const genderErrorMessage = document.getElementById('genderErrorMessage')
     let isSelectedGender = false;
     for(let i = 0; i < genderOptions.length; i++) {
         if(genderOptions[i].checked) {
@@ -260,7 +261,13 @@ function validateForm() {
     }
 
     if(!isSelectedGender) {
-        setError(genderOptions[0], 'Please select a gender.');
+        genderErrorMessage.innerText = 'Please select your gender.';
+        genderErrorMessage.classList.add('error');
+        genderErrorMessage.classList.remove('success');
+    } else {
+        genderErrorMessage.innerText = '';
+        genderErrorMessage.classList.add('success');
+        genderErrorMessage.classList.remove('error');
     }
 
     // validate address
@@ -282,8 +289,43 @@ function validateForm() {
         setSuccess(street);
     }
 
+    // validate id
+    if(idType1.value === '') {
+        setError(idType1, 'Please select a type of valid ID');
+    } else {
+        setSuccess(idType1);
+    }
 
-    // validate ID
+    if(idNumber1.value === '') {
+        setError(idNumber1, 'Please enter your id number');
+    } else {
+        setSuccess(idNumber1);
+    }
+
+    if(!idImage1.files.length) {
+        setError(idImage1, 'Please upload an id image.')
+    } else {
+        setSuccess(idImage1);
+    }
+
+
+    if(idType2.value === '') {
+        setError(idType2, 'Please select a type of valid ID');
+    } else {
+        setSuccess(idType2);
+    }
+
+    if(idNumber2.value === '') {
+        setError(idNumber2, 'Please enter your id number');
+    } else {
+        setSuccess(idNumber2);
+    }
+
+    if(!idImage2.files.length) {
+        setError(idImage2, 'Please upload an id image.')
+    } else {
+        setSuccess(idImage2)
+    }
 
 
     // validate occupation
@@ -302,6 +344,7 @@ function validateForm() {
         occupationErrorMessage.classList.add('error');
         occupationErrorMessage.classList.remove('success');
     } else {
+        occupationErrorMessage.innerText = '';
         occupationErrorMessage.classList.add('success');
         occupationErrorMessage.classList.remove('error');
     }
@@ -322,6 +365,7 @@ function validateForm() {
         employmentErrorMessage.classList.add('error');
         employmentErrorMessage.classList.remove('success');
     } else {
+        employmentErrorMessage.innerText = '';
         employmentErrorMessage.classList.add('success');
         employmentErrorMessage.classList.remove('error');
     }
@@ -342,6 +386,7 @@ function validateForm() {
         educationalAttainmentErrorMessage.classList.add('error');
         educationalAttainmentErrorMessage.classList.remove('success');
     } else {
+        educationalAttainmentErrorMessage.innerText = '';
         educationalAttainmentErrorMessage.classList.add('success');
         educationalAttainmentErrorMessage.classList.remove('error');
     }
@@ -388,6 +433,7 @@ function validateForm() {
         houseOwnershipErrorMessage.classList.add('error');
         houseOwnershipErrorMessage.classList.remove('success');
     } else {
+        houseOwnershipErrorMessage.innerText = '';
         houseOwnershipErrorMessage.classList.add('success');
         houseOwnershipErrorMessage.classList.remove('error');
     }
@@ -417,98 +463,6 @@ function validateForm() {
         setError(civilStatus, 'Please select your civil status');
     } else {
         setSuccess(civilStatus);
-    }
-
-    let married = false
-
-    function isMarried(civilStatusValue) {
-        civilStatusValue === 'Married' ? married = true : married = false;
-
-        return married;
-    }
-
-    if(isMarried(civilStatus.value) && marriagePlace.value.trim() === '') {
-        setError(marriagePlace, 'Place of Marriage is required.')
-    } else {
-        marriagePlace.value = '';
-        setSuccess(marriagePlace)
-    }
-
-    if(isMarried(civilStatus.value) && marriageDate.value === '') {
-        setError(marriageDate, 'Date of marriage is required.');
-    } else {
-        marriageDate.value = '';
-        setSuccess(marriageDate);
-    }
-
-    if(isMarried(civilStatus.value) && spouseName.value.trime() === '') {
-        setError(spouseName, 'Spouse\'s name is required.')
-    } else {
-        civilStatus.value = '';
-        setSuccess(spouseName);
-    }
-
-    if(isMarried(civilStatus.value) && spousePOB.value.trime() === '') {
-        setError(spousePOB, 'Spouse\'s place of birth is required.')
-    } else {
-        spousePOB.value = '';
-        setSuccess(spousePOB);
-    }
-    
-    if(isMarried(civilStatus.value) && spouseDOB.value.trime() === '') {
-        setError(spouseDOB, 'Spouse\'s date of birth is required.')
-    } else {
-        spouseDOB.value = '';
-        setSuccess(spouseDOB);
-    }
-
-    if(isMarried(civilStatus.value) && spouseEducationalAttainment.value.trime() === '') {
-        setError(spouseEducationalAttainment, 'Spouse\'s educxational attainment is required.')
-    } else {
-        spouseEducationalAttainment.value = '';
-        setSuccess(spouseEducationalAttainment);
-    }
-
-    if(isMarried(civilStatus.value) && spouseOccupation.value.trime() === '') {
-        setError(spouseOccupation, 'Spouse\'s occupation is required.')
-    } else {
-        spouseOccupation.value = '';
-        setSuccess(spouseOccupation);
-    }
-
-    // validate id
-    if(idType1.value === '') {
-        setError(idType1, 'Please select a type of valid ID');
-    } else {
-        setSuccess(idType1);
-    }
-
-    if(idNumber1.value === '') {
-        setError(idNumber1, 'Please enter your id number');
-    } else {
-        setSuccess(idNumber1);
-    }
-
-    if(!idImage1.files.length) {
-        setError(idImage1, 'Please upload an id image.')
-    }
-
-
-
-    if(idType2.value === '') {
-        setError(idType2, 'Please select a type of valid ID');
-    } else {
-        setSuccess(idType2);
-    }
-
-    if(idNumber2.value === '') {
-        setError(idNumber2, 'Please enter your id number');
-    } else {
-        setSuccess(idNumber2);
-    }
-
-    if(!idImage2.files.length) {
-        setError(idImage2, 'Please upload an id image.')
     }
 
 }
