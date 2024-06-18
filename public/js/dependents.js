@@ -212,7 +212,7 @@ function validateForm() {
     }
 
     // validate date of birth
-    const birthdate = new Date(dobValue);
+    const birthdate = new Date(dob.value);
     const today = new Date();
     const minBirthdate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
     if(dob.value === '') {
