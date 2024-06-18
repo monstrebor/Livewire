@@ -114,11 +114,20 @@ body {
 
 .input-group.error input, .input-group.error select {
     border: 2px solid #ff3860;
+    outline: none;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border: 1px solid #09c372;
 }
 
 .error-message {
-    font-size: 0.7rem;
+    font-size: 1rem;
     color: #ff3860;
+}
+
+.marriage-information-section {
+    display: none;
 }
 
 @-webkit-keyframes fade {

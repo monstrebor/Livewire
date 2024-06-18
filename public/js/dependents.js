@@ -99,6 +99,7 @@ populateDropdown(barangays);
 // form validation
 
 const form = document.getElementById('form');
+
 const firstName = document.getElementById('firstName');
 const middleName = document.getElementById('middleName');
 const lastName = document.getElementById('lastName');
@@ -123,7 +124,7 @@ const idNumber2 = document.getElementById('idNumber2');
 const idImage2 = document.getElementById('idImage2');
 
 const occupationOptions = document.getElementsByName('occupation');
-const employmentOptions = document.getElementsByName('employment-status');
+const employmentOptions = document.getElementsByName('employmentStatus');
 const educationalAttainmentOptions = document.getElementsByName('educational-attaiment');
 const employerName = document.getElementById('employerName');
 const employerAddress = document.getElementById('employerAddress');
@@ -131,6 +132,7 @@ const monthlyIncome = document.getElementById('monthlyIncome');
 const annualIncome = document.getElementById('annualIncome');
 
 const houseOwnershipOptions = document.getElementsByName('house-ownership');
+const lengthOfStay = document.getElementById('lengthOfStay');
 const citizenship = document.getElementById('citizenship');
 const numberOfChildren = document.getElementById('numberOfchildren');
 const civilStatus = document.getElementById('civilStatus');
@@ -169,61 +171,41 @@ function setSuccess(element) {
 }
 
 function validateForm() {
-    
-    const firstNameValue = firstName.value.trim();
-    const middleNameValue = middleName.value.trim();
-    const lastNameValue = lastName.value.trim();
-    const religionValue = religion.value.trim();
-    const pobValue = pob.value.trim();
-    const dobValue = dob.value.trim();
-    const contactNumberValue = contactNumber.value.trim();
-    const fbValue = fb.value.trim();
-    const emailValue = email.value.trim();
-    const selectedBrgy = brgyDropdown.value;
-    const streetValue = street.value.trim();
-    const employerNameValue = employerName.value.trim();
-    const employerAddressValue = employerAddress.value.trim();
-    const monthlyIncomeValue = monthlyIncome.value.trim();
-    const annualIncomeValue = annualIncome.value.trim();
-    const citizenshipValue = citizenship.value.trim();
-    const numberOfChildrenValue = numberOfChildren.value;
-    const civilStatusValue = civilStatus.value;
-    
 
     // validate first name
-    if(firstNameValue === '') {
+    if(firstName.value.trim() === '') {
         setError(firstName, 'First name is required.');
-    } else if(firstNameValue.length > 0 && firstNameValue.length > 50) {
+    } else if(firstName.value.trim().length > 0 && firstName.value.trim().length > 50) {
         setError(firstName, 'Input must be 50 characters or fewer.');
     } else {
         setSuccess(firstName);
     }
 
     // validate middle name
-    if(middleNameValue.length > 0 && middleNameValue.length > 50) {
+    if(middleName.value.trim().length > 0 && middleName.value.trim().length > 50) {
         setError(middleName, 'Input must be 50 characters or fewer.')
     } else {
         setSuccess(middleName)
     }
 
     // validate last name
-    if(lastNameValue === '') {
+    if(lastName.value.trim() === '') {
         setError(lastName, 'Last name is required.');
-    } else if(lastNameValue.length > 0 && lastNameValue.length > 50) {
+    } else if(lastName.value.trim().length > 0 && lastName.value.trim().length > 50) {
         setError(lastName, 'Input must be 50 characters or fewer.');
     } else {
         setSuccess(lastName);
     }
 
     // validate religion
-    if(religionValue === '') {
+    if(religion.value.trim() === '') {
         setError(religion, 'Religion is required.');
     } else {
         setSuccess(religion);
     }
 
     // validate place of birth
-    if(pobValue === '') {
+    if(pob.value.trim() === '') {
         setError(pob, 'Place of birth is required.');
     } else {
         setSuccess(pob);
@@ -233,7 +215,7 @@ function validateForm() {
     const birthdate = new Date(dobValue);
     const today = new Date();
     const minBirthdate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
-    if(dobValue === '') {
+    if(dob.value === '') {
         setError(dob, 'Date of birth is required.');
     } else if(birthdate > minBirthdate) {
         setError(dob, 'You must be at least 18 years old to sign up.');
@@ -243,16 +225,16 @@ function validateForm() {
 
     // validate contact number
     const phonePattern = /^09\d{9}$/;
-    if(contactNumberValue === '') {
+    if(contactNumber.value.trim() === '') {
         setError(contactNumber, 'Contact number is required.');
-    } else if(!phonePattern.test(contactNumberValue)) {
+    } else if(!phonePattern.test(contactNumber.value.trim())) {
         setError(contactNumber, 'Please enter a valid contact number.')
     } else {
         setSuccess(contactNumber);
     }
 
     // validate facebook
-    if(fbValue === '') {
+    if(fb.value.trim() === '') {
         setError(fb, 'Facebook account is required.');
     } else {
         setSuccess(fb);
@@ -260,9 +242,9 @@ function validateForm() {
 
     // validate email
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(emailValue === '') {
+    if(email.value.trim() === '') {
         setError(email, 'Email is required.');
-    } else if(!emailPattern.test(emailValue)) {
+    } else if(!emailPattern.test(email.value.trim())) {
         setError(email, 'Invalid email. Please enter a valid email address.');
     } else {
         setSuccess(email);
@@ -288,13 +270,13 @@ function validateForm() {
         }
     })
 
-    if(selectedBrgy === '') {
+    if(brgyDropdown.value === '') {
         setError(brgyDropdown, 'Please select your barangay.')
     } else {
         setSuccess(brgyDropdown);
     }
 
-    if(streetValue === '') {
+    if(street.value.trim() === '') {
         setError(street, 'Please enter your house number and street.')
     } else {
         setSuccess(street);
@@ -365,26 +347,26 @@ function validateForm() {
     }
 
     // validate employer
-    if(employerNameValue === '') {
+    if(employerName.value.trim() === '') {
         setError(employerName, "Employer's name is required.");
     } else {
         setSuccess(employerName);
     }
 
-    if(employerAddressValue === '') {
+    if(employerAddress.value.trim() === '') {
         setError(employerAddress, 'Please enter your employer\'s address');
     } else {
         setSuccess(employerAddress);
     }
 
     // validate income
-    if(monthlyIncomeValue === '') {
+    if(monthlyIncome.value.trim() === '') {
         setError(monthlyIncome, 'Monthly income is required.');
     } else {
         setSuccess(monthlyIncome);
     }
 
-    if(annualIncomeValue === '') {
+    if(annualIncome.value.trim() === '') {
         setError(annualIncome, 'Annual income is required.');
     } else {
         setSuccess(annualIncome);
@@ -410,22 +392,28 @@ function validateForm() {
         houseOwnershipErrorMessage.classList.remove('error');
     }
 
+    if(lengthOfStay.value.length <= 0) {
+        setError(lengthOfStay, 'Please enter a length stay');
+    } else {
+        setSuccess(lengthOfStay);
+    }
+
     // validate citizenship | marriage
-    if(citizenshipValue === '') {
+    if(citizenship.value.trim() === '') {
         setError(citizenship, 'Citizenship is required.');
     } else {
         setSuccess(citizenship);
     };
 
-    if(numberOfChildrenValue === '') {
+    if(numberOfChildren.value === '') {
         setError(numberOfChildren, 'Number of children is required.');
-    } else if (isNaN(numberOfChildrenValue)) {
+    } else if (isNaN(numberOfChildren.value)) {
         setError(numberOfChildren, 'Please enter a valid number of children');
     } else {
         setSuccess(numberOfChildren);
     }
 
-    if(civilStatusValue === '') {
+    if(civilStatus.value === '') {
         setError(civilStatus, 'Please select your civil status');
     } else {
         setSuccess(civilStatus);
@@ -439,45 +427,52 @@ function validateForm() {
         return married;
     }
 
-    if(isMarried(civilStatusValue) && marriagePlace.value.trim() === '') {
+    if(isMarried(civilStatus.value) && marriagePlace.value.trim() === '') {
         setError(marriagePlace, 'Place of Marriage is required.')
     } else {
+        marriagePlace.value = '';
         setSuccess(marriagePlace)
     }
 
-    if(isMarried(civilStatusValue) && marriageDate.value === '') {
+    if(isMarried(civilStatus.value) && marriageDate.value === '') {
         setError(marriageDate, 'Date of marriage is required.');
     } else {
+        marriageDate.value = '';
         setSuccess(marriageDate);
     }
 
-    if(isMarried(civilStatusValue) && spouseName.value.trime() === '') {
+    if(isMarried(civilStatus.value) && spouseName.value.trime() === '') {
         setError(spouseName, 'Spouse\'s name is required.')
     } else {
+        civilStatus.value = '';
         setSuccess(spouseName);
     }
 
-    if(isMarried(civilStatusValue) && spousePOB.value.trime() === '') {
+    if(isMarried(civilStatus.value) && spousePOB.value.trime() === '') {
         setError(spousePOB, 'Spouse\'s place of birth is required.')
     } else {
+        spousePOB.value = '';
         setSuccess(spousePOB);
     }
     
-    if(isMarried(civilStatusValue) && spouseDOB.value.trime() === '') {
+    if(isMarried(civilStatus.value) && spouseDOB.value.trime() === '') {
         setError(spouseDOB, 'Spouse\'s date of birth is required.')
     } else {
+        spouseDOB.value = '';
         setSuccess(spouseDOB);
     }
 
-    if(isMarried(civilStatusValue) && spouseEducationalAttainment.value.trime() === '') {
+    if(isMarried(civilStatus.value) && spouseEducationalAttainment.value.trime() === '') {
         setError(spouseEducationalAttainment, 'Spouse\'s educxational attainment is required.')
     } else {
+        spouseEducationalAttainment.value = '';
         setSuccess(spouseEducationalAttainment);
     }
 
-    if(isMarried(civilStatusValue) && spouseOccupation.value.trime() === '') {
+    if(isMarried(civilStatus.value) && spouseOccupation.value.trime() === '') {
         setError(spouseOccupation, 'Spouse\'s occupation is required.')
     } else {
+        spouseOccupation.value = '';
         setSuccess(spouseOccupation);
     }
 
@@ -516,7 +511,15 @@ function validateForm() {
         setError(idImage2, 'Please upload an id image.')
     }
 
-
-    
-
 }
+
+civilStatus.addEventListener('change', (e) => {
+    e.preventDefault();
+    const civilStatus = document.getElementById('civilStatus').value;
+    const marriageInfoSection = document.getElementById('marriageInfoSection');
+    if(civilStatus === 'Married') {
+        marriageInfoSection.style.display = 'block';
+    } else {
+        marriageInfoSection.style.display = 'none';
+    }
+});

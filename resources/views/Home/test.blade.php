@@ -251,9 +251,8 @@
                     </div>
                     <hr class="my-6">
                     <!-- end of ID -->
-
-                    <!-- occupation -->
                     <div class="text-sm">
+                        <!-- occupation -->
                         <div id="occupationSection" class="input-group mb-6">
                             <label class="block text-gray-700 font-bold text-sm">Occupation <span class="text-red-500">*</span></label>
                             <div id="occupationErrorMessage" class="error-message"></div>
@@ -261,47 +260,47 @@
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="Self-employed" name="occupation" value="self-employed" class="mr-2">
-                                        <label for="self-employed" class="text-gray-700">Self-Employed</label>
+                                        <input type="checkbox" id="selfEmployed" name="occupation" value="selfEmployed" class="mr-2">
+                                        <label for="selfEmployed" class="text-gray-700">Self-Employed</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="public-official" name="occupation" value="Public-Official" class="mr-2">
-                                        <label for="public-official" class="text-gray-700">Public-Official</label>
+                                        <input type="checkbox" id="publiOfficial" name="occupation" value="publiOfficial" class="mr-2">
+                                        <label for="publiOfficial" class="text-gray-700">Public Official</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="driver/operator/conductor" name="occupation" value="Driver/Operator/Conductor" class="mr-2">
-                                        <label for="housewife/househusband" class="text-gray-700">Driver/Operator/Conductor</label>
+                                        <input type="checkbox" id="driveOperatorConductor" name="occupation" value="Driver/Operator/Conductor" class="mr-2">
+                                        <label for="driveOperatorConductor" class="text-gray-700">Driver/Operator/Conductor</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="housewife/househusband" name="occupation" value="Housewife/Househusband" class="mr-2">
-                                        <label for="housewife/househusband" class="text-gray-700">Housewife/Househusband</label>
+                                        <input type="checkbox" id="housewifeHusband" name="occupation" value="Housewife/Househusband" class="mr-2">
+                                        <label for="housewifeHusband" class="text-gray-700">Housewife/Househusband</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="private-employee" name="occupation" value="Private-Employee" class="mr-2">
-                                        <label for="private-employee" class="text-gray-700">Private Employee</label>
+                                        <input type="checkbox" id="privateEmployee" name="occupation" value="Private-Employee" class="mr-2">
+                                        <label for="privateEmployee" class="text-gray-700">Private Employee</label>
                                     </div>
                                 </div>
 
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="government-employee" name="occupation" value="government-employee" class="mr-2">
-                                        <label for="Government-Employee" class="text-gray-700">Government Employee</label>
+                                        <input type="checkbox" id="governmentEmployee" name="occupation" value="government-employee" class="mr-2">
+                                        <label for="governmentEmployee" class="text-gray-700">Government Employee</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="religious-leader" name="occupation" value="religious-leader" class="mr-2">
-                                        <label for="Religious-Leader" class="text-gray-700">Religious Leader</label>
+                                        <input type="checkbox" id="religiousLeader" name="occupation" value="religious-leader" class="mr-2">
+                                        <label for="religiousLeader" class="text-gray-700">Religious Leader</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="entrepreneur-small" name="occupation" value="Entrepreneur-Small" class="mr-2">
-                                        <label for="entrepreneur-small" class="text-gray-700">Entrepreneur - Small</label>
+                                        <input type="checkbox" id="entrepreneurSmall" name="occupation" value="Entrepreneur-Small" class="mr-2">
+                                        <label for="entrepreneurSmall" class="text-gray-700">Entrepreneur - Small</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="entrepreneur-large" name="occupation" value="Entrepreneur-Large" class="mr-2">
-                                        <label for="entrepreneur-large" class="text-gray-700">Entrepreneur - Large</label>
+                                        <input type="checkbox" id="entrepreneurLarge" name="occupation" value="Entrepreneur-Large" class="mr-2">
+                                        <label for="entrepreneurLarge" class="text-gray-700">Entrepreneur - Large</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="checkbox" id="senior-citizen/retiree" name="occupation" value="Senior-Citizen/Retiree" class="mr-2">
-                                        <label for="senior-citizen/retiree" class="text-gray-700">Eenior Citizen/Retiree</label>
+                                        <input type="checkbox" id="seniorCitizenRetiree" name="occupation" value="Senior-Citizen/Retiree" class="mr-2">
+                                        <label for="seniorCitizenRetiree" class="text-gray-700">Senior Citizen/Retiree</label>
                                     </div>
                                 </div>
 
@@ -323,10 +322,6 @@
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
-                                @error('occupation')
-                                        <span class="d-block fs-6 text-danger mt-1"
-                                            style="color: red;">{{ $message }}</span>
-                                    @enderror
                             </div>
                         </div>
                         <!-- end of occupation -->
@@ -338,45 +333,41 @@
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="permanent" name="emplyment-status" value="Permanent" class="mr-2">
+                                        <input type="radio" id="permanent" name="employmentStatus" value="Permanent" class="mr-2">
                                         <label for="permanent" class="text-gray-700">Permanent</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="project-based" name="emplyment-status" value="Project-based" class="mr-2">
-                                        <label for="project-based" class="text-gray-700">Project-Based</label>
+                                        <input type="radio" id="projectBased" name="employmentStatus" value="Project-based" class="mr-2">
+                                        <label for="projectBased" class="text-gray-700">Project-Based</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="seasonal" name="emplyment-status" value="Seasonal" class="mr-2">
-                                        <label for="project-based" class="text-gray-700">Seasonal</label>
+                                        <input type="radio" id="seasonal" name="employmentStatus" value="Seasonal" class="mr-2">
+                                        <label for="seasonal" class="text-gray-700">Seasonal</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="casual" name="emplyment-status" value="Casual" class="mr-2">
+                                        <input type="radio" id="casual" name="employmentStatus" value="Casual" class="mr-2">
                                         <label for="casual" class="text-gray-700">Casual</label>
                                     </div>
                                 </div>
 
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="probationary" name="emplyment-status" value="Probationary" class="mr-2">
+                                        <input type="radio" id="probationary" name="employmentStatus" value="Probationary" class="mr-2">
                                         <label for="probationary" class="text-gray-700">Probationary</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="fixed-or-termed" name="emplyment-status" value="Fixed-or-Termed" class="mr-2">
+                                        <input type="radio" id="fixed-or-termed" name="employmentStatus" value="Fixed-or-Termed" class="mr-2">
                                         <label for="fixed-or-termed" class="text-gray-700">Fixed or Termed</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="others" name="emplyment-status" value="Others" class="mr-2">
+                                        <input type="radio" id="others" name="employmentStatus" value="Others" class="mr-2">
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
-                                @error('employment_status')
-                                        <span class="d-block fs-6 text-danger mt-1"
-                                            style="color: red;">{{ $message }}</span>
-                                    @enderror
                             </div>
                         </div>
+                        <!-- end of employment status -->
                     </div>
-                    <!-- end of employment status -->
 
                     <!-- Educational Attainment -->
                     <div class="input-group mb-5">
@@ -385,8 +376,8 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="elem" name="educational-attaiment" value="Elementary" class="mr-2">
-                                    <label for="elem" class="text-gray-700">Elementary</label>
+                                    <input type="radio" id="elementary" name="educational-attaiment" value="Elementary" class="mr-2">
+                                    <label for="elementary" class="text-gray-700">Elementary</label>
                                 </div>
                                 <div class="flex items-center mb-2">
                                     <input type="radio" id="highschool" name="educational-attaiment" value="Highschool" class="mr-2">
@@ -410,10 +401,6 @@
                                 </div>
                             </div>
                         </div>
-                        @error('educational_attainment')
-                                <span class="d-block fs-6 text-danger mt-1"
-                                    style="color: red;">{{ $message }}</span>
-                            @enderror
                     </div>
                     <!-- end of Educational Attainment -->
 
@@ -474,10 +461,10 @@
                                 </div>
                             </div>
 
-                            <div class="mb-4">
-                                <label for="text" class="block text-gray-700 mb-2">Length of Stay: (year)</label>
-                                <input type="text" id="lengthOfStay" name="house-ownership" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
-
+                            <div class="input-group mb-4">
+                                <label for="lengthOfStay" class="block text-gray-700 mb-2">Length of Stay: (year)</label>
+                                <input type="number" id="lengthOfStay" name="house-ownership" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                                <div id="errorMessage" class="error-message"></div>
                             </div>
                         </div>
                     </div>
@@ -514,9 +501,12 @@
 
                     <!-- end of citezenship, no of children, civil status -->
                     <hr class="m-7">
+                    <div id="marriageInfoSection" class="marriage-information-section">
+
+                    
                     <!-- date/place-of-marriage -->
-                    <div>
-                        <p class="block text-gray-700 font-bold mb-5 text-sm">If Married</p>
+                    <div >
+                        <p class="block text-gray-700 font-bold mb-5 text-sm">Marriage Information</p>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
                             <div class="input-group mb-4">
                                 <label for="text" class="block text-gray-700 font-bold mb-2">Place of Marriage</label>
@@ -585,6 +575,7 @@
 
 
                     <!-- end of educational-attaiment, occupation (spouse) -->
+                    </div>
                     <hr class="m-7">
                     <!-- Dependents Information -->
                     <p class="block text-gray-700 font-bold mb-4 text-sm">Dependents</p>
