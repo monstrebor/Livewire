@@ -17,6 +17,7 @@ return new class extends Migration
             $table->date('dateOfMarriage')->nullable();
             $table->unsignedBigInteger('SpouseID')->nullable();
             $table->unsignedBigInteger('Reg_ID');
+            $table->foreign('Reg_ID')->references('id')->on('regular_members')->onDelete('cascade');
 
             $table->timestamps();
         });

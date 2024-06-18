@@ -4,9 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Marriage;
 
 class RegularMember extends Model
 {
+
     use HasFactory;
 
 
@@ -32,17 +34,19 @@ class RegularMember extends Model
         'monthlyIncome',
         'annualIncome',
         'contactNumber',
+        'lengthOfStay',
 
 
     ];
 
 
 
-    protected $guarded = [
+    public function marriage(){
 
 
-    ];
+       return $this->hasOne(Marriage::class,'Reg_ID');
 
+    }
 
 
 

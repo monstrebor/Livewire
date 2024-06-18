@@ -9,12 +9,9 @@
 <body>
 
 
-        <form action="{{route('image')}}" method="post" enctype="multipart/form-data">
-            @csrf
-            @method('post')
-            <input type="file" name="image" id="id">
-            <input type="submit" name="submit" value="upload">
-        </form>
+
+    {{-- {{$test->arriage->placeOfMarriage}} --}}
+
 
 
 

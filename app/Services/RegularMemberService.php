@@ -5,10 +5,10 @@ namespace App\Services;
 use App\Models\{Address,Dependency,idValidation,RegularMember,Spouse,Marriage,Employer};
 use App\Mail\InvitationEmails;
 
+
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-
-
 
 
 class RegularMemberService{
@@ -108,7 +108,7 @@ class RegularMemberService{
             'placeOfBirth'=> $request->placeOfbirth,
             'dateOfBirth'=> $request->dateOfBirth,
             'EducationalAttainment' => $request->educationalAttaiment,
-            'Occupation'=> $request->occupation,
+            'occupationSpouse'=> $request->occupationSpouse,
 
         ]);
 
@@ -136,7 +136,7 @@ class RegularMemberService{
     {
 
         Employer::create([
-        
+
         'EmployerName' => $request->EmployerName,
         'EmployerAddress' => $request->EmployerAddress,
         'Reg_ID'=> $regular_id,
@@ -148,6 +148,7 @@ class RegularMemberService{
     }
 
 
+    
 
 
 }
