@@ -16,6 +16,10 @@ function createDependentComponent(index, onDeleteCallback) {
     birthdateInput.name = 'Dependent_dob[]';
     container.appendChild(birthdateInput);
 
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'error-message';
+    container.appendChild(errorDiv);
+
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
     deleteButton.addEventListener('click', () => onDeleteCallback(index));
@@ -42,6 +46,38 @@ function removeDependent(index) {
     }
 }
 
+function validateDependent() {
+    let isValid = true;
+
+    dependentsList.forEach((dependent) => {
+        if (dependent) {
+            const nameInput = dependent.querySelector('input[name="Dependent_name[]"]');
+            const birthdateInput = dependent.querySelector('input[name="Dependent_dob[]"]');
+            const errorDiv = dependent.querySelector('.error-message');
+
+            errorDiv.innerHtml = '';
+
+            if (!nameInput.value.trim()) {
+                isValid = false;
+                const nameError = document.createElement('p');
+                nameError.textContent = 'Dependent\'s Name is required.';
+                nameError.style.color = 'red';
+                errorDiv.appendChild(nameError);
+            }
+
+            if (!birthdateInput.value) {
+                isValid = false;
+                const birthdateError = document.createElement('p');
+                birthdateError.textContent = 'Birthdate is required.';
+                birthdateError.style.color = 'red';
+                errorDiv.appendChild(birthdateError);
+            }
+        }
+    });
+
+    return isValid;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const dependentsContainer = document.createElement('div');
     dependentsContainer.id = 'dependents-container';
@@ -59,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addDependentButton.style.marginTop = '16px';
     addDependentButton.addEventListener('click', (e) => {
         e.preventDefault();
-        addDependent(dependentsContainer, dependentsList)
+        addDependent(dependentsContainer, dependentsList);
     });
     dependentsSection.appendChild(addDependentButton);
 });
@@ -465,10 +501,11 @@ function validateForm() {
         setSuccess(civilStatus);
     }
 
+    // validate dependent
+    validateDependent();
 }
 
 civilStatus.addEventListener('change', (e) => {
-    e.preventDefault();
     const civilStatus = document.getElementById('civilStatus').value;
     const marriageInfoSection = document.getElementById('marriageInfoSection');
     if(civilStatus === 'Married') {
