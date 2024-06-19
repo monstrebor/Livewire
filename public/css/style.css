@@ -91,14 +91,27 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
     margin-bottom: 16px;
     padding: 8px;
     border-radius: 8px;
     position: relative;
 }
+
+.dependent-component .input-group {
+    width: 100%;
+}
+
+.dependent-component .input-group input {
+    width: 100%;
+}
+
 .dependent-component input {
-    margin-right: 8px;
-    width: calc(50% - 16px);
+    padding: 0.5rem 0.75rem;
+    width: auto;
+    border-radius: 6px;
+    border-width: 2px;
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 .dependent-component button {
     padding: 8px 12px;

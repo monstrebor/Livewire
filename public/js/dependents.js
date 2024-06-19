@@ -4,21 +4,30 @@ function createDependentComponent(index, onDeleteCallback) {
     const container = document.createElement('div');
     container.className = 'dependent-component';
 
+    const nameContainer = document.createElement('div');
+    nameContainer.className = 'input-group';
     const nameInput = document.createElement('input');
+    const nameError = document.createElement('p');
+    nameError.className = 'name-error';
     nameInput.type = 'text';
     nameInput.placeholder = 'Dependent\'s Name';
     nameInput.name = 'Dependent_name[]';
-    container.appendChild(nameInput);
+    nameContainer.appendChild(nameInput);
+    nameContainer.appendChild(nameError);
+    container.appendChild(nameContainer);
 
+    const birthdateContainer = document.createElement('div');
+    birthdateContainer.className = 'input-group';
     const birthdateInput = document.createElement('input');
+    const birthdateError = document.createElement('p');
+    birthdateError.className = 'birthdate-error';
     birthdateInput.type = 'date';
     birthdateInput.placeholder = 'Birthdate';
     birthdateInput.name = 'Dependent_dob[]';
-    container.appendChild(birthdateInput);
-
-    const errorDiv = document.createElement('div');
-    errorDiv.className = 'error-message';
-    container.appendChild(errorDiv);
+    birthdateContainer.appendChild(birthdateInput);
+    birthdateContainer.appendChild(birthdateError);
+    container.appendChild(birthdateContainer);
+  
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
@@ -46,35 +55,55 @@ function removeDependent(index) {
     }
 }
 
-function validateDependent() {
+function validateDependentName() {
     let isValid = true;
 
-    dependentsList.forEach((dependent) => {
+    dependentsList.filter((dependent) => {
         if (dependent) {
             const nameInput = dependent.querySelector('input[name="Dependent_name[]"]');
-            const birthdateInput = dependent.querySelector('input[name="Dependent_dob[]"]');
-            const errorDiv = dependent.querySelector('.error-message');
+            const nameError = dependent.querySelector('.name-error');
 
-            errorDiv.innerHtml = '';
+            nameError.textContent = '';
 
             if (!nameInput.value.trim()) {
                 isValid = false;
-                const nameError = document.createElement('p');
-                nameError.textContent = 'Dependent\'s Name is required.';
-                nameError.style.color = 'red';
-                errorDiv.appendChild(nameError);
-            }
 
-            if (!birthdateInput.value) {
-                isValid = false;
-                const birthdateError = document.createElement('p');
-                birthdateError.textContent = 'Birthdate is required.';
-                birthdateError.style.color = 'red';
-                errorDiv.appendChild(birthdateError);
+                nameInput.style.borderColor = 'red';
+                nameError.textContent = 'Name of dependent is required.';
+                nameError.style.color = 'red';
+            } else if (nameInput.value.trim()) {
+                isValid = true;
+                nameInput.style.borderColor = 'green';
+                nameError.textContent = '';
             }
         }
     });
+    return isValid;
+}
 
+function validateDependentDOB() {
+    let isValid = true;
+
+    dependentsList.filter((dependent) => {
+        if (dependent) {
+            const birthdateInput = dependent.querySelector('input[name="Dependent_dob[]"]');
+            const birthdateError = dependent.querySelector('.birthdate-error');
+
+            birthdateError.textContent = '';
+
+            if (!birthdateInput.value.trim()) {
+                isValid = false;
+
+                birthdateInput.style.borderColor = 'red';
+                birthdateError.textContent = 'Name of dependent is required.';
+                birthdateError.style.color = 'red';
+            } else if (birthdateInput.value.trim()) {
+                isValid = true;
+                birthdateInput.style.borderColor = 'green';
+                birthdateError.textContent = '';
+            }
+        }
+    });
     return isValid;
 }
 
@@ -502,7 +531,8 @@ function validateForm() {
     }
 
     // validate dependent
-    validateDependent();
+    validateDependentName();
+    validateDependentDOB();
 }
 
 civilStatus.addEventListener('change', (e) => {
