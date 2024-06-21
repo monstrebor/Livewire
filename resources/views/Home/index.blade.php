@@ -85,18 +85,16 @@
                         <div class="box">
                             <img src="img/coop1.jpg" alt="">
                             <div class="overlay">
-                                <h3>Online</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cumque, quia eligendi porro fugit nobis.</p>
-                                <a href="#" class="hover:bg-slate-600 transtion duration-200">Learn More</a>
+                                <h3>Misyon</h3>
+                                <p>Mapagkakatiwalaang samahanng tutulong sa mga pangangailangan ng mga kasapi sa mababa at abot kayang patubo.</p>
                             </div>
                         </div>
 
                         <div class="box">
                             <img src="img/coop1.jpg" alt="">
                             <div class="overlay">
-                                <h3>Membership</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cumque, quia eligendi porro fugit nobis.</p>
-                                <a href="#" class="hover:bg-slate-600 transtion duration-200">Learn More</a>
+                                <h3>Bisyon</h3>
+                                <p>Isang kooperatibang may pagkakaisa, malasakit at tumutulong sa mga kasapi tungo sa matatag na pamayanan sa patnubay ng Poong Maykapal.</p>
                             </div>
                         </div>
 
@@ -104,7 +102,7 @@
                             <img src="img/coop1.jpg" alt="">
                             <div class="overlay">
                                 <h3>Frequently Asked Questions</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cumque, quia eligendi porro fugit nobis.</p>
+                                <p>Do you have any Questions?</p>
                                 <a href="#" class="hover:bg-slate-600 transtion duration-200">Learn More</a>
                             </div>
                         </div>
