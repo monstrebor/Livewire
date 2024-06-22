@@ -11,15 +11,11 @@
 <body>
 
 
-
-
-
     @foreach ($id as $identification)
+
     <img src="{{ asset('storage/images/' . $identification->Identification_image) }}" width="100" height="100">
+
     @endforeach
-
-
-
 
 
 
