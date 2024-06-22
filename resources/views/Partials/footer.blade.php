@@ -24,7 +24,7 @@
             <p class="font-extrabold text-slate-700 text-md">Membership</p>
             <a href="#" class="font-light text-slate-700 text-sm hover:underline">Regular</a><br>
             <a href="#" class="font-light text-slate-700 text-sm hover:underline">Associate</a><br>
-            <a href="onlineMembership.html" class="font-light text-slate-700 text-sm hover:underline">Online Membership</a><br><br>
+            <a href="{{route('Home.Membership')}}" class="font-light text-slate-700 text-sm hover:underline">Online Membership</a><br><br>
 
 
             <p class="font-extrabold text-slate-700 text-md">What's New</p>

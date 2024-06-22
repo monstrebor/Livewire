@@ -9,7 +9,7 @@ class Address extends Model
 {
     use HasFactory;
 
-
+    
     protected $fillable = [
 
 
@@ -27,7 +27,7 @@ class Address extends Model
 
 
 
-    
+
 
 
 

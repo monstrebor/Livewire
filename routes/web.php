@@ -22,9 +22,13 @@ use Illuminate\Support\Facades\Artisan;
 */
 
 //Home
+
 Route::view('/', 'Home.index')->name('Home.index');
 Route::view('/login','Home.login')->name('Login.index');
-Route::view('/login/register/','Home.test')->name('regular.index');
+Route::view('/login/register/','Home.test')->name('regular.register');
+Route::view('/Membership','Home.onlineMembership')->name('Home.Membership');
+
+
 Route::post('/regular',[RegularMemberController::class, 'store'])->name('regular.store');
 
 
@@ -58,7 +62,6 @@ Route::get('/clear', function () {
 
 //image
 Route::get('/image',[idValidationController::class, 'index'])->name('id.index');
-
 
 
 Route::get('/test',[RegularMemberController::class, 'show']);

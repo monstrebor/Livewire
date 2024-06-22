@@ -5,7 +5,7 @@
     @section('title','Login')
 
     @section('script')
-    <link rel="stylesheet" href="css/login2.css">
+    <link rel="stylesheet" href="/css/login2.css">
     <link rel="icon" href="img/final_logo-removebg-preview-removebg-preview.png">
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -42,7 +42,7 @@
                 </div>
                 <button type="submit" class="cbutton ml-32 sm:ml-32 mt-4 rounded-2xl flex justify-center">Login</button>
             </form>
-            <p class="mt-4 text-gray-700 text-center">Don't have an account? <a href="{{route('regular.index')}}" class="text-slate-600 hover:underline">Register here</a>.</p>
+            <p class="mt-4 text-gray-700 text-center">Don't have an account? <a href="{{route('regular.register')}}" class="text-slate-600 hover:underline">Register here</a>.</p>
         </div>
     </div>
 

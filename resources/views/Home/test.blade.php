@@ -47,7 +47,7 @@
                 <h1 class="text-xl font-bold mb-1 m-10">Regular Membership</h1>
                 <h6 class="ml-10 text-sm">Membership</h6>
 
-                <form id="form" class="m-10" method="post" action="{{route('regular.store')}}" enctype="multipart/form-data">
+       <form id="form" class="m-10" method="post" action="{{route('regular.store')}}" enctype="multipart/form-data">
 
                     @csrf
                     @method('post')
@@ -61,21 +61,27 @@
                             <input type="text" id="firstName" name="firstName" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
+
+
                         <div class="input-group mb-4">
                             <label for="middleName" class="block text-gray-700 font-bold mb-2">Middle Name (Optional)</label>
                             <input type="text" id="middleName" name="middleName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30">
                             <div id="errorMessage" class="error-message"></div>
                         </div>
+
+
                         <div class="input-group mb-4">
                             <label for="lastName" class="block text-gray-700 font-bold mb-2">Last Name <span class="text-red-500">*</span></label>
                             <input type="text" id="lastName" name="lastName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
+
+
                     </div>
                     <!--End of full name -->
 
                     {{-- religion, POB, DOB --}}
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm"> 
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                         <div class="input-group mb-4">
                             <label for="religion" class="block text-gray-700 font-bold mb-2 text-sm">Religion<span class="text-red-500">*</span></label>
                             <input id="religion" name="religion" rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
@@ -245,12 +251,13 @@
                     </div>
                     <hr class="my-6">
                     <!-- end of ID -->
+                    
                     <div class="text-sm">
                         <!-- occupation -->
                         <div id="occupationSection" class="input-group mb-6">
                             <label class="block text-gray-700 font-bold text-sm">Occupation <span class="text-red-500">*</span></label>
                             <div id="occupationErrorMessage" class="error-message"></div>
-                            
+
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                                 <div>
                                     <div class="flex items-center mb-2">
@@ -494,7 +501,7 @@
                     <hr class="m-7">
                     <div id="marriageInfoSection" class="marriage-information-section">
 
-                    
+
                     <!-- date/place-of-marriage -->
                     <div >
                         <p class="block text-gray-700 font-bold mb-5 text-sm">Marriage Information</p>
@@ -590,7 +597,7 @@
         <!-- end of all about -->
         <!-- footer -->
 
-    <script src="/js/dependents.js">    
+    <script src="/js/dependents.js">
     </script>
 
 @endsection

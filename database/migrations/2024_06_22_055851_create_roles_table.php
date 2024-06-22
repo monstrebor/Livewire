@@ -11,14 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('marriages', function (Blueprint $table) {
+        Schema::create('roles', function (Blueprint $table) {
             $table->id();
-            $table->string('placeOfMarriage')->nullable();
-            $table->date('dateOfMarriage')->nullable();
-            $table->unsignedBigInteger('SpouseID')->nullable();
-            $table->unsignedBigInteger('Reg_ID');
-            $table->foreign('Reg_ID')->references('id')->on('regular_members');
-
+            $table->string('roles');
             $table->timestamps();
         });
     }
@@ -28,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('marriages');
+        Schema::dropIfExists('roles');
     }
 };
