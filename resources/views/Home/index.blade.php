@@ -39,7 +39,7 @@
                 <div class="numbertext">1/3</div>
                 <img src="img/saog1.jpg" class="w-full h-80 sm:h-96 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="text-white bg-slate-500 bg-opacity-70 p-2 rounded text text-xl font-bold">"EARN AND SAVE COOPERATIVE WAY"<p class="indent-2 text-md">Tagline</p></span>
+                    <span class="text-white bg-slate-500 bg-opacity-70 p-2 rounded text text-xl font-bold">"EARN AND SAVE COOPERATIVE WAY"</span>
                 </div>
             </div>
             <div class="mySlides fade">

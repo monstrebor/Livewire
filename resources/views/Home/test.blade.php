@@ -245,13 +245,13 @@
 
                         <div class="input-group">
                             <label for="idImage2" class="block text-gray-700 font-bold mb-2 text-sm">ID Picture <span class="text-red-500">*</span></label>
-                            <input type="file" name="image2" id="idImage2" required></input>
+                            <input type="file" name="image[]" id="idImage2" required></input>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                     </div>
                     <hr class="my-6">
                     <!-- end of ID -->
-                    
+
                     <div class="text-sm">
                         <!-- occupation -->
                         <div id="occupationSection" class="input-group mb-6">

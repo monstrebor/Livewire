@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/final_logo-removebg-preview-removebg-preview.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="onlineMenbership.css">
+    <link rel="stylesheet" href="/css/onlineMembership.css">
     <title>Loan Products</title>
 </head>
 <body>
@@ -20,6 +22,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 sm:px-24 mt-10 gap-10">
         <div class="col-span-2 p-4">
+
             <h1 class="font-bold text-4xl text-slate-700 tracking-wide mb-14">LOAN PRODUCTS</h1>
 
             <section>

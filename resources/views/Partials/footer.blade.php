@@ -8,16 +8,16 @@
             <a href="#" class="font-light text-slate-700 text-sm hover:underline">Time Deposit</a><br><br>
 
             <p class="font-extrabold text-slate-700 text-md">Loan Products</p>
-            <a href="#" class="font-light text-slate-700 text-sm hover:underline">Character Loan</a><br>
-            <a href="#" class="font-light text-slate-700 text-sm hover:underline">Back To Back Loan</a><br>
-            <a href="#" class="font-light text-slate-700 text-sm hover:underline">Emergency Loan</a><br>
-            <a href="#" class="font-light text-slate-700 text-sm hover:underline">Educational Loan</a><br>
-            <a href="#" class="font-light text-slate-700 text-sm hover:underline">Micro-finance Loan</a><br>
-            <a href="#" class="font-light text-slate-700 text-sm hover:underline">Salary Loan</a><br>
-            <a href="#" class="font-light text-slate-700 text-sm hover:underline">Consumer Loan</a><br>
-            <a href="#" class="font-light text-slate-700 text-sm hover:underline">Regular Collateral Loan</a><br>
-            <a href="#" class="font-light text-slate-700 text-sm hover:underline">Jewelry Collateral Loan</a><br>
-            <a href="#" class="font-light text-slate-700 text-sm hover:underline">Overnight Loan</a><br><br>
+            <a href="{{route('Home.LoanProducts')}}" class="font-light text-slate-700 text-sm hover:underline">Character Loan</a><br>
+            <a href="{{route('Home.LoanProducts')}}" class="font-light text-slate-700 text-sm hover:underline">Back To Back Loan</a><br>
+            <a href="{{route('Home.LoanProducts')}}" class="font-light text-slate-700 text-sm hover:underline">Emergency Loan</a><br>
+            <a href="{{route('Home.LoanProducts')}}" class="font-light text-slate-700 text-sm hover:underline">Educational Loan</a><br>
+            <a href="{{route('Home.LoanProducts')}}" class="font-light text-slate-700 text-sm hover:underline">Micro-finance Loan</a><br>
+            <a href="{{route('Home.LoanProducts')}}" class="font-light text-slate-700 text-sm hover:underline">Salary Loan</a><br>
+            <a href="{{route('Home.LoanProducts')}}" class="font-light text-slate-700 text-sm hover:underline">Consumer Loan</a><br>
+            <a href="{{route('Home.LoanProducts')}}" class="font-light text-slate-700 text-sm hover:underline">Regular Collateral Loan</a><br>
+            <a href="{{route('Home.LoanProducts')}}" class="font-light text-slate-700 text-sm hover:underline">Jewelry Collateral Loan</a><br>
+            <a href="{{route('Home.LoanProducts')}}" class="font-light text-slate-700 text-sm hover:underline">Overnight Loan</a><br><br>
         </div>
 
         <div class="">

@@ -21,17 +21,17 @@ use Illuminate\Support\Facades\Artisan;
 |
 */
 
+
+
+
 //Home
 
 Route::view('/', 'Home.index')->name('Home.index');
+Route::view('/Membership','Home.onlineMembership')->name('Home.Membership');
+Route::view('/Loan-Products','Home.loanProducts')->name('Home.LoanProducts');
 Route::view('/login','Home.login')->name('Login.index');
 Route::view('/login/register/','Home.test')->name('regular.register');
-Route::view('/Membership','Home.onlineMembership')->name('Home.Membership');
-
-
 Route::post('/regular',[RegularMemberController::class, 'store'])->name('regular.store');
-
-
 
 
 //Admin
@@ -41,12 +41,13 @@ Route::view('/admin','Admin.Index')->name('Admin.index');
 
 
 
-//error
+//Error
 
 Route::fallback([ErrorController::class,'custom_404']);
 
 
 //cache
+
 Route::get('/clear', function () {
 
     Artisan::call('cache:clear');

@@ -3,7 +3,7 @@ body {
 }
 
 .image1 {
-    background-image: url(img/bg1.png);
+    background-image: url('/img/bg1.png');
 }
 
 .button {
