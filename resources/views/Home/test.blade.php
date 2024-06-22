@@ -58,7 +58,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-3">
                         <div class="input-group mb-4">
                             <label for="firstName" class="block text-gray-700 font-bold mb-2">First Name <span class="text-red-500">*</span></label>
-                            <input type="text" id="firstName" name="firstName" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30">
+                            <input type="text" id="firstName" name="firstName" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                         <div class="input-group mb-4">
@@ -68,7 +68,7 @@
                         </div>
                         <div class="input-group mb-4">
                             <label for="lastName" class="block text-gray-700 font-bold mb-2">Last Name <span class="text-red-500">*</span></label>
-                            <input type="text" id="lastName" name="lastName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30">
+                            <input type="text" id="lastName" name="lastName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                     </div>
@@ -78,17 +78,17 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm"> 
                         <div class="input-group mb-4">
                             <label for="religion" class="block text-gray-700 font-bold mb-2 text-sm">Religion<span class="text-red-500">*</span></label>
-                            <input id="religion" name="religion" rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input id="religion" name="religion" rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                         <div class="input-group mb-4">
                             <label for="POB" class="block text-gray-700 font-bold mb-2">Place of Birth <span class="text-red-500">*</span></label>
-                            <input type="text" id="POB" name="POB" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="POB" name="POB" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                         <div class="input-group mb-4">
                             <label for="DOB" class="block text-gray-700 font-bold mb-2">Date of Birth <span class="text-red-500">*</span></label>
-                            <input type="date" id="DOB" name="DOB" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="date" id="DOB" name="DOB" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                         <!-- contact number -->
                         <div class="input-group mb-2">
                             <label for="contactNumber" class="block text-gray-700 font-bold mb-2">Contact Number <span class="text-red-500">*</span></label>
-                            <input type="tel" id="contactNumber" name="contactNumber" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="tel" id="contactNumber" name="contactNumber" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                         <!-- end of contact number -->
@@ -107,7 +107,7 @@
                         <!-- facebook Account -->
                         <div class="input-group mb-2">
                             <label for="facebookAccount" class="block text-gray-700 font-bold mb-2">Facebook Account <span class="text-red-500">*</span></label>
-                            <input type="text" id="facebookAccount" name="facebookAccount" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="facebookAccount" name="facebookAccount" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                         <!-- end of facebook account -->
@@ -115,7 +115,7 @@
                         <!-- email -->
                         <div class="input-group mb-2">
                             <label for="email" class="block text-gray-700 font-bold mb-2">Email <span class="text-red-500">*</span></label>
-                            <input type="text" id="email" name="email" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="email" name="email" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                         <!-- end of email -->
@@ -124,10 +124,10 @@
                             <p class="block text-gray-700 font-bold mb-2">Gender<span class="text-red-500">*</span></p>
                             <div class="input-group mb-2 gap-2">
                                 <div id="genderErrorMessage" class="error-message"></div>
-                                <input type="radio" id="male" name="gender" value="male" class="mr-2">
+                                <input type="radio" id="male" name="gender" value="male" class="mr-2" required>
                                 <label for="male" class="text-gray-700">Male</label>
 
-                                <input type="radio" id="female" name="gender" value="female" class="mr-2">
+                                <input type="radio" id="female" name="gender" value="female" class="mr-2" required>
                                 <label for="female" class="text-gray-700">Female</label>
                             </div>
                         </div>
@@ -169,7 +169,7 @@
 
                         <div class="input-group mb-4">
                             <label for="brgy" class="block text-gray-700 font-bold mb-2 text-sm">Barangay<span class="text-red-500">*</span></label>
-                            <select id="brgyDropdown"  name="baranggay"  class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <select id="brgyDropdown"  name="baranggay"  class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="">-Select Barangay-</option>
                             </select>
                             <div id="errorMessage" class="error-message"></div>
@@ -179,7 +179,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                         <div class="input-group mb-4">
                             <label for="numSt" class="block text-gray-700 font-bold mb-2 text-sm">House Number and Street <span class="text-red-500">*</span></label>
-                            <input type="text" id="street" name="street" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="street" name="street" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
 
@@ -192,7 +192,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-6">
                         <div class="input-group mb-4">
                             <label for="idType1" class="block text-gray-700 font-bold mb-2 text-sm">ID Type <span class="text-red-500">*</span></label>
-                            <select id="idType1" name="idType1" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <select id="idType1" name="idType1" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="" disabled selected>Select ID Type</option>
                                 <option value="TinID">TIN ID</option>
                                 <option value="PhilHealth">Philhealth</option>
@@ -206,20 +206,20 @@
 
                         <div class="input-group mb-4">
                             <label for="idNumber1" class="block text-gray-700 font-bold mb-2 text-sm">ID Number <span class="text-red-500">*</span></label>
-                            <input type="text" id="idNumber1" name="idNumber1" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="idNumber1" name="idNumber1" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
 
                         <div class="input-group">
                             <label for="idImage1" class="block text-gray-700 font-bold mb-2 text-sm">ID Picture <span class="text-red-500">*</span></label>
-                            <input type="file"  name="image[]" id="idImage1"></input>
+                            <input type="file"  name="image[]" id="idImage1" required></input>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
 
 
                         <div class="input-group mb-4">
                             <label for="idType2" class="block text-gray-700 font-bold mb-2 text-sm">ID Type <span class="text-red-500">*</span></label>
-                            <select id="idType2" name="idType2" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <select id="idType2" name="idType2" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="" disabled selected>Select ID Type</option>
                                 <option value="TinID">TIN ID</option>
                                 <option value="PhilHealth">Philhealth</option>
@@ -233,13 +233,13 @@
 
                         <div class="input-group mb-4">
                             <label for="idNumber2" class="block text-gray-700 font-bold mb-2 text-sm">ID Number <span class="text-red-500">*</span></label>
-                            <input type="text" id="idNumber2" name="idNumber2" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="idNumber2" name="idNumber2" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
 
                         <div class="input-group">
                             <label for="idImage2" class="block text-gray-700 font-bold mb-2 text-sm">ID Picture <span class="text-red-500">*</span></label>
-                            <input type="file" name="image2" id="idImage2"></input>
+                            <input type="file" name="image2" id="idImage2" required></input>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                     </div>
@@ -254,65 +254,65 @@
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="selfEmployed" name="occupation" value="selfEmployed" class="mr-2">
+                                        <input type="radio" id="selfEmployed" name="occupation" value="selfEmployed" class="mr-2" required>
                                         <label for="selfEmployed" class="text-gray-700">Self-Employed</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="publiOfficial" name="occupation" value="publiOfficial" class="mr-2">
+                                        <input type="radio" id="publiOfficial" name="occupation" value="publiOfficial" class="mr-2" required>
                                         <label for="publiOfficial" class="text-gray-700">Public Official</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="driveOperatorConductor" name="occupation" value="driverOperatorConductor" class="mr-2">
+                                        <input type="radio" id="driveOperatorConductor" name="occupation" value="driverOperatorConductor" class="mr-2" required>
                                         <label for="driveOperatorConductor" class="text-gray-700">Driver/Operator/Conductor</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="housewifeHusband" name="occupation" value="housewifeHusband" class="mr-2">
+                                        <input type="radio" id="housewifeHusband" name="occupation" value="housewifeHusband" class="mr-2" required>
                                         <label for="housewifeHusband" class="text-gray-700">Housewife/Househusband</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="privateEmployee" name="occupation" value="Private-Employee" class="mr-2">
+                                        <input type="radio" id="privateEmployee" name="occupation" value="Private-Employee" class="mr-2" required>
                                         <label for="privateEmployee" class="text-gray-700">Private Employee</label>
                                     </div>
                                 </div>
 
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="governmentEmployee" name="occupation" value="government-employee" class="mr-2">
+                                        <input type="radio" id="governmentEmployee" name="occupation" value="government-employee" class="mr-2" required>
                                         <label for="governmentEmployee" class="text-gray-700">Government Employee</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="religiousLeader" name="occupation" value="religious-leader" class="mr-2">
+                                        <input type="radio" id="religiousLeader" name="occupation" value="religious-leader" class="mr-2" required>
                                         <label for="religiousLeader" class="text-gray-700">Religious Leader</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="entrepreneurSmall" name="occupation" value="Entrepreneur-Small" class="mr-2">
+                                        <input type="radio" id="entrepreneurSmall" name="occupation" value="Entrepreneur-Small" class="mr-2" required>
                                         <label for="entrepreneurSmall" class="text-gray-700">Entrepreneur - Small</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="entrepreneurLarge" name="occupation" value="Entrepreneur-Large" class="mr-2">
+                                        <input type="radio" id="entrepreneurLarge" name="occupation" value="Entrepreneur-Large" class="mr-2" required>
                                         <label for="entrepreneurLarge" class="text-gray-700">Entrepreneur - Large</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="seniorCitizenRetiree" name="occupation" value="Senior-Citizen/Retiree" class="mr-2">
+                                        <input type="radio" id="seniorCitizenRetiree" name="occupation" value="Senior-Citizen/Retiree" class="mr-2" required>
                                         <label for="seniorCitizenRetiree" class="text-gray-700">Senior Citizen/Retiree</label>
                                     </div>
                                 </div>
 
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="allotee" name="occupation" value="Allotee" class="mr-2">
+                                        <input type="radio" id="allotee" name="occupation" value="Allotee" class="mr-2" required>
                                         <label for="allotee" class="text-gray-700">Allotee</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="volunteer" name="occupation" value="Volunteer" class="mr-2">
+                                        <input type="radio" id="volunteer" name="occupation" value="Volunteer" class="mr-2" required>
                                         <label for="volunteer" class="text-gray-700">Volunteer</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="none" name="occupation" value="None" class="mr-2">
+                                        <input type="radio" id="none" name="occupation" value="None" class="mr-2" required>
                                         <label for="none" class="text-gray-700">None</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="others" name="occupation" value="Others" class="mr-2">
+                                        <input type="radio" id="others" name="occupation" value="Others" class="mr-2" required>
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
@@ -327,34 +327,34 @@
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="permanent" name="employmentStatus" value="Permanent" class="mr-2">
+                                        <input type="radio" id="permanent" name="employmentStatus" value="Permanent" class="mr-2" required>
                                         <label for="permanent" class="text-gray-700">Permanent</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="projectBased" name="employmentStatus" value="Project-based" class="mr-2">
+                                        <input type="radio" id="projectBased" name="employmentStatus" value="Project-based" class="mr-2" required>
                                         <label for="projectBased" class="text-gray-700">Project-Based</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="seasonal" name="employmentStatus" value="Seasonal" class="mr-2">
+                                        <input type="radio" id="seasonal" name="employmentStatus" value="Seasonal" class="mr-2" required>
                                         <label for="seasonal" class="text-gray-700">Seasonal</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="casual" name="employmentStatus" value="Casual" class="mr-2">
+                                        <input type="radio" id="casual" name="employmentStatus" value="Casual" class="mr-2" required>
                                         <label for="casual" class="text-gray-700">Casual</label>
                                     </div>
                                 </div>
 
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="probationary" name="employmentStatus" value="Probationary" class="mr-2">
+                                        <input type="radio" id="probationary" name="employmentStatus" value="Probationary" class="mr-2" required>
                                         <label for="probationary" class="text-gray-700">Probationary</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="fixed-or-termed" name="employmentStatus" value="Fixed-or-Termed" class="mr-2">
+                                        <input type="radio" id="fixed-or-termed" name="employmentStatus" value="Fixed-or-Termed" class="mr-2" required>
                                         <label for="fixed-or-termed" class="text-gray-700">Fixed or Termed</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="others" name="employmentStatus" value="Others" class="mr-2">
+                                        <input type="radio" id="others" name="employmentStatus" value="Others" class="mr-2" required>
                                         <label for="others" class="text-gray-700">Others</label>
                                     </div>
                                 </div>
@@ -370,27 +370,27 @@
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="elementary" name="educationalAttainment" value="elementary" class="mr-2">
+                                    <input type="radio" id="elementary" name="educationalAttainment" value="elementary" class="mr-2" required>
                                     <label for="elementary" class="text-gray-700">Elementary</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="highschool" name="educationalAttainment" value="highschool" class="mr-2">
+                                    <input type="radio" id="highschool" name="educationalAttainment" value="highschool" class="mr-2" required>
                                     <label for="highschool" class="text-gray-700">Highschool</label>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="college" name="educationalAttainment" value="College" class="mr-2">
+                                    <input type="radio" id="college" name="educationalAttainment" value="College" class="mr-2" required>
                                     <label for="college" class="text-gray-700">College</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="vocational" name="educationalAttainment" value="Vocational" class="mr-2">
+                                    <input type="radio" id="vocational" name="educationalAttainment" value="Vocational" class="mr-2" required>
                                     <label for="vocational" class="text-gray-700">Vocational</label>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="othersEducAttainment" name="educationalAttainment" value="Others" class="mr-2">
+                                    <input type="radio" id="othersEducAttainment" name="educationalAttainment" value="Others" class="mr-2" required>
                                     <label for="othersEducAttainment" class="text-gray-700">Others</label>
                                 </div>
                             </div>
@@ -402,12 +402,12 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
                         <div class="input-group mb-2">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Name of Employer <span class="text-red-500">*</span></label>
-                            <input type="text" id="employerName" name="nameOfEmployer" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="employerName" name="nameOfEmployer" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                         <div class="input-group mb-2">
                             <label for="email" class="block text-gray-700 font-bold mb-2">Address of Employer <span class="text-red-500">*</span></label>
-                            <input type="text" id="employerAddress" name="addressOfEmployer" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="employerAddress" name="addressOfEmployer" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                     </div>
@@ -417,12 +417,12 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-6">
                         <div class="input-group mb-2">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Monthly Income <span class="text-red-500">*</span></label>
-                            <input type="number" id="monthlyIncome" name="monthlyIncome" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="number" id="monthlyIncome" name="monthlyIncome" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                         <div class="input-group mb-2">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Annual Income <span class="text-red-500">*</span></label>
-                            <input type="number" id="annualIncome" name="annualIncome" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="number" id="annualIncome" name="annualIncome" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                     </div>
@@ -436,28 +436,28 @@
 
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="owned" name="houseOwnership" value="Owned" class="mr-2">
+                                    <input type="radio" id="owned" name="houseOwnership" value="Owned" class="mr-2" required>
                                     <label for="owned" class="text-gray-700">Owned</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="rental" name="houseOwnership" value="Rental" class="mr-2">
+                                    <input type="radio" id="rental" name="houseOwnership" value="Rental" class="mr-2" required>
                                     <label for="rental" class="text-gray-700">Rental</label>
                                 </div>
                             </div>
                             <div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="livingwithparents" name="houseOwnership" value="Living-with-parents" class="mr-2">
+                                    <input type="radio" id="livingwithparents" name="houseOwnership" value="Living-with-parents" class="mr-2" required>
                                     <label for="livingwithparents" class="text-gray-700">Living with Parents</label>
                                 </div>
                                 <div class="flex items-center mb-2">
-                                    <input type="radio" id="housingLoan" name="houseOwnership" value="Housing-Loan" class="mr-2">
+                                    <input type="radio" id="housingLoan" name="houseOwnership" value="Housing-Loan" class="mr-2" required>
                                     <label for="housingLoan" class="text-gray-700">Housing Loan</label>
                                 </div>
                             </div>
 
                             <div class="input-group mb-4">
                                 <label for="lengthOfStay" class="block text-gray-700 mb-2">Length of Stay: (year)</label>
-                                <input type="number" id="lengthOfStay" name="house-ownership" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                                <input type="number" id="lengthOfStay" name="house-ownership" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <div id="errorMessage" class="error-message"></div>
                             </div>
                         </div>
@@ -468,17 +468,17 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-6">
                         <div class="input-group mb-2">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Citizenship <span class="text-red-500">*</span></label>
-                            <input type="text" id="citizenship" name="citizenship" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="citizenship" name="citizenship" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                         <div class="input-group mb-2">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Number of Children <span class="text-red-500">*</span></label>
-                            <input type="text" id="numberOfchildren" name="numberOfChildren" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
+                            <input type="text" id="numberOfchildren" name="numberOfChildren" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                         <div class="input-group mb-2">
                             <label for="civilStatus" class="block text-gray-700 font-bold mb-2">Civil Status <span class="text-red-500">*</span></label>
-                            <select id="civilStatus" name="civilStatus" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500">
+                            <select id="civilStatus" name="civilStatus" class="w-full px-3 bg-gray-200 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="" disabled selected>Select Civil Status</option>
                                 <option value="Single" >Single</option>
                                 <option value="Married">Married</option>
