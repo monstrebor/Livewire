@@ -14,9 +14,12 @@ return new class extends Migration
         Schema::create('id_validations', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('Reg_ID');
-            $table->string('Identification');
-            $table->unsignedBigInteger('Identification_Number');
-            $table->string('Identification_image');
+            $table->string('Id_Type_1');
+            $table->string('Id_Type_2');
+            $table->unsignedBigInteger('Id_Num_1');
+            $table->unsignedBigInteger('Id_Num_2');
+            $table->string('Id_image_1');
+            $table->string('Id_image_2');
             $table->timestamps();
         });
     }

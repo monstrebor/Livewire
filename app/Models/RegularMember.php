@@ -11,8 +11,6 @@ class RegularMember extends Model
 
     use HasFactory;
 
-
-
     protected $fillable = [
 
         'firstName',
@@ -27,7 +25,7 @@ class RegularMember extends Model
         'gender',
         'occupation',
         'employmentStatus',
-        'educationalAttaiment',
+        'educationalAttainment',
         'houseOwnership',
         'citizenship',
         'civilStatus',
@@ -35,6 +33,7 @@ class RegularMember extends Model
         'annualIncome',
         'contactNumber',
         'lengthOfStay',
+        'numberOfChildren',
 
 
     ];

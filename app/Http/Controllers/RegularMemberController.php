@@ -11,10 +11,10 @@ class RegularMemberController extends Controller
     public function store(Request $request, RegularMemberService $regularMemberService)
     {
 
-        // $regularMemberService->RegularMemberStore($request);
+        $regularMemberService->RegularMemberStore($request);
 
-        // redirect route
-        return $request->all();
+        // // redirect route
+        // return $request->all();
 
     }
 

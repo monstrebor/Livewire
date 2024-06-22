@@ -218,7 +218,7 @@
 
                         <div class="input-group">
                             <label for="idImage1" class="block text-gray-700 font-bold mb-2 text-sm">ID Picture <span class="text-red-500">*</span></label>
-                            <input type="file"  name="image[]" id="idImage1" required></input>
+                            <input type="file"  name="image1" id="idImage1" required></input>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
 
@@ -245,7 +245,7 @@
 
                         <div class="input-group">
                             <label for="idImage2" class="block text-gray-700 font-bold mb-2 text-sm">ID Picture <span class="text-red-500">*</span></label>
-                            <input type="file" name="image[]" id="idImage2" required></input>
+                            <input type="file" name="image2" id="idImage2" required></input>
                             <div id="errorMessage" class="error-message"></div>
                         </div>
                     </div>
@@ -372,7 +372,7 @@
 
                     <!-- Educational Attainment -->
                     <div class="input-group mb-5">
-                        <label class="block text-gray-700 font-bold text-sm">Educational Attaiment <span class="text-red-500">*</span></label>
+                        <label class="block text-gray-700 font-bold text-sm">Educational Attainment <span class="text-red-500">*</span></label>
                         <div id="educationalAttainmentErrorMessage" class="error-message"></div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                             <div>
@@ -464,7 +464,7 @@
 
                             <div class="input-group mb-4">
                                 <label for="lengthOfStay" class="block text-gray-700 mb-2">Length of Stay: (year)</label>
-                                <input type="number" id="lengthOfStay" name="house-ownership" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
+                                <input type="number" id="lengthOfStay" name="lengthOfStay" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <div id="errorMessage" class="error-message"></div>
                             </div>
                         </div>

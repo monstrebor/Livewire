@@ -7,6 +7,7 @@ use App\Mail\InvitationEmails;
 
 
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -62,22 +63,29 @@ class RegularMemberService{
 
     private function IdValidation(Request $request, $regular_id){
 
-        foreach($request->idType as  $index => $id_name){
 
-            $imageName = time().'.'.$request->image[$index]->extension();
+
+
+
+            $imageName= time().'a.'.$request->image1->extension();
+            $imageName2= time().'b.'.$request->image2->extension();
+
 
              iDValidation::create([
 
-                'Identification' =>  $id_name,
-                'Identification_Number' => $request->idNumber[$index],
-                'Identification_image'=> $imageName,
+                'Id_Type_1' => $request->idType1,
+                'Id_Type_2' => $request->idType2,
+                'Id_Num_1' => $request->idNumber1,
+                'Id_Num_2'=> $request->idNumber2,
+                'Id_image_1'=> $imageName,
+                'Id_image_2' =>$imageName2,
                 'Reg_ID' => $regular_id,
 
              ]);
 
-             $request->image[$index]->move(storage_path('app/public/images/'), $imageName);
 
-        }
+             $request->image1->move(storage_path('app/public/images/'), $imageName);
+             $request->image2->move(storage_path('app/public/images/'), $imageName2);
 
 
 
@@ -88,11 +96,11 @@ class RegularMemberService{
 
         Address::create([
 
-        'Barangay' => $request->Barangay,
-        'Municipality'=> $request->Municipality,
-        'Province'=> $request->Province,
-        'Region' => $request->Region,
-        'Street' => $request->Street,
+        'Barangay' => $request->baranggay,
+        'Municipality'=> $request->municipality,
+        'Province'=> $request->province,
+        'Region' => $request->region,
+        'Street' => $request->street,
         'Reg_ID' => $regular_id,
 
         ]);
@@ -105,10 +113,10 @@ class RegularMemberService{
         $spouse = Spouse::create([
 
             'spouseName' => $request->spouseName,
-            'placeOfBirth'=> $request->placeOfbirth,
-            'dateOfBirth'=> $request->dateOfBirth,
-            'EducationalAttainment' => $request->educationalAttaiment,
-            'occupationSpouse'=> $request->occupationSpouse,
+            'placeOfBirth'=> $request->spousePOB,
+            'dateOfBirth'=> $request->spouseDOB,
+            'EducationalAttainment' => $request->spouseEducationalAttaiment,
+            'occupationSpouse'=> $request->spouseOccupation,
 
         ]);
 
@@ -124,7 +132,7 @@ class RegularMemberService{
         Marriage::create([
 
         'placeOfMarriage' => $request->placeOfMarriage,
-        'dateOfMarriage' => $request->dateOfMarriage,
+        'dateOfMarriage' => $request->marriageDate,
         'SpouseID'=> $spouse_id,
         'Reg_ID'=> $regular_id,
 
@@ -137,8 +145,8 @@ class RegularMemberService{
 
         Employer::create([
 
-        'EmployerName' => $request->EmployerName,
-        'EmployerAddress' => $request->EmployerAddress,
+        'EmployerName' => $request->nameOfEmployer,
+        'EmployerAddress' => $request->addressOfEmployer,
         'Reg_ID'=> $regular_id,
 
 
@@ -148,7 +156,7 @@ class RegularMemberService{
     }
 
 
-    
+
 
 
 }

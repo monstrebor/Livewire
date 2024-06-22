@@ -15,9 +15,12 @@ class IdValidation extends Model
 
     protected $fillable = [
 
-        'Identification',
-        'Identification_Number',
-        'Identification_image',
+        'Id_Type_1',
+        'Id_Type_2',
+        'Id_Num_1',
+        'Id_Num_2',
+        'Id_image_1',
+        'Id_image_2',
         'Reg_ID',
 
     ];

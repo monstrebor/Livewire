@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
 
-        
+
         Schema::create('regular_members', function (Blueprint $table) {
             $table->id();
             $table->string("firstName");
@@ -27,13 +27,15 @@ return new class extends Migration
             $table->string('gender');
             $table->string('occupation');
             $table->string('employmentStatus');
-            $table->string('educationalAttaiment');
+            $table->string('educationalAttainment');
             $table->string('houseOwnership');
             $table->string('citizenship');
             $table->string('civilStatus');
             $table->string('lengthOfStay');
             $table->unsignedBigInteger('monthlyIncome');
             $table->unsignedBigInteger('annualIncome');
+            $table->unsignedBigInteger('numberOfChildren');
+            $table->string('Status')->default('Ongoing');
             $table->timestamps();
         });
 
