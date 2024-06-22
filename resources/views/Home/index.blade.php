@@ -37,21 +37,21 @@
         <div class="slideshow-container md:w-auto shadow-lg rounded-b-xl">
             <div class="mySlides fade">
                 <div class="numbertext">1/3</div>
-                <img src="img/saog1.jpg" class="w-full h-80 sm:h-96 object-cover">
+                <img src="/img/saog1.jpg" class="w-full h-80 sm:h-96 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-white bg-slate-500 bg-opacity-70 p-2 rounded text text-xl font-bold">"EARN AND SAVE COOPERATIVE WAY"</span>
                 </div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">2/3</div>
-                <img src="img/coop4.jpg" class="w-full h-80 sm:h-96 object-cover">
+                <img src="/img/coop4.jpg" class="w-full h-80 sm:h-96 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-white bg-slate-500 bg-opacity-70 p-2 rounded text text-xl font-bold">Office Hours: 9AM-5PM <br> Monday-Friday <br> Saturday-8:00 AM-12:00NN</span>
                 </div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">3/3</div>
-                <img src="img/saog2.jpg" class="w-full h-80 sm:h-96 object-cover">
+                <img src="/img/saog2.jpg" class="w-full h-80 sm:h-96 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-white bg-slate-500 bg-opacity-70 p-2 rounded text text-xl font-bold">Kooperatibang May Prinsipyo
                 </div>
@@ -69,7 +69,7 @@
         <!-- img slider end -->
 
         <!-- break -->
-        <div class="imagebg w-full h-80 bg-slate-600 py-4 shadow-2xl bg-cover">
+        <div class="imgbreak w-full h-80 bg-slate-600 py-4 shadow-2xl bg-cover">
             <div class="lg:w-2/5 w-96 h-64 pt-1 bg-white ml-12 lg:ml-20 my-5 shadow-lg rounded-xl">
                 <p class="ml-10 m-5 font-bold text-slate-700">May edad na 17 pababa hanggang 60 taung gulang <br> Maaring mag-impok o mamuhunan sa ating Kooperatiba.</p>
                 <button class="discover m-10 px-4 mt-10">BILANG ASSOCIATE MEMBER</button>
@@ -83,7 +83,7 @@
                 <div class="wrapper">
                     <div class="box-area">
                         <div class="box">
-                            <img src="img/coop1.jpg" alt="">
+                            <img src="/img/coop1.jpg" alt="">
                             <div class="overlay">
                                 <h3>Misyon</h3>
                                 <p>Mapagkakatiwalaang samahanng tutulong sa mga pangangailangan ng mga kasapi sa mababa at abot kayang patubo.</p>
@@ -91,7 +91,7 @@
                         </div>
 
                         <div class="box">
-                            <img src="img/coop1.jpg" alt="">
+                            <img src="/img/coop1.jpg" alt="">
                             <div class="overlay">
                                 <h3>Bisyon</h3>
                                 <p>Isang kooperatibang may pagkakaisa, malasakit at tumutulong sa mga kasapi tungo sa matatag na pamayanan sa patnubay ng Poong Maykapal.</p>
@@ -99,7 +99,7 @@
                         </div>
 
                         <div class="box">
-                            <img src="img/coop1.jpg" alt="">
+                            <img src="/img/coop1.jpg" alt="">
                             <div class="overlay">
                                 <h3>Frequently Asked Questions</h3>
                                 <p>Do you have any Questions?</p>

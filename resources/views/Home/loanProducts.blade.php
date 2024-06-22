@@ -1,17 +1,16 @@
 
+@extends('layout.layout')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/final_logo-removebg-preview-removebg-preview.png">
+
+    @section('title','Product-Loan')
+
+ @section('script')
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/onlineMembership.css">
-    <title>Loan Products</title>
-</head>
-<body>
+@endsection
 
+
+@section('content')
     @include('Partials.navbar')
 
     <div class="image1 w-full h-80 py-4 bg-slate-500 shadow-2xl bg-cover">
@@ -78,5 +77,4 @@
 
     @include('Partials.footer')
 
-</body>
-</html>
+@endsection
