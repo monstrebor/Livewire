@@ -13,7 +13,7 @@
 
     <div class="image1 w-full h-80 py-4 bg-slate-500 shadow-2xl bg-cover">
         <div class="lg:w-2/5 w-96 h-64 pt-1 bg-slate-300 bg-opacity-70 ml-12 lg:ml-20 my-5 shadow-lg rounded-xl flex justify-center">
-            <p class="ml-10 m-5 font-bold text-slate-700 text-3xl tracking-wide text-center lg:my-10">We help you experience well-financed and unforgettable memories!</p>
+            <p class="ml-10 m-5 font-bold text-slate-700 text-3xl tracking-wide text-center lg:my-10">Let us give you the loan that you deserve.</p>
         </div>
     </div>
 
@@ -40,6 +40,6 @@
     </div>
 
     @include('Partials.footer')
-    
+
 </body>
 </html>
