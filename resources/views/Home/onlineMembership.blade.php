@@ -15,13 +15,11 @@
 
         @include('Partials.navbar')
 
-            <!-- partial-image slider, gagawa -->
             <div class="image1 w-full h-80 py-4 bg-slate-500 shadow-2xl bg-cover">
                 <div class="lg:w-2/5 w-96 h-64 pt-1 bg-slate-300 bg-opacity-70 ml-12 lg:ml-20 my-5 shadow-lg rounded-xl flex justify-center">
                     <p class="ml-10 m-5 font-bold text-slate-700 text-4xl tracking-wide text-center lg:my-10">Become a MNSMPC member through our online Membership</p>
                 </div>
             </div>
-            <!-- end-of partial/image slider -->
 
             <div class="grid grid-cols-1 md:grid-cols-3 sm:px-24 mt-10 gap-10">
                 <div class="col-span-2 p-4">
