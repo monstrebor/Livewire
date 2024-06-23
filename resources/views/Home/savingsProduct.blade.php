@@ -1,13 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/final_logo-removebg-preview-removebg-preview.png">
+@extends('layout.layout')
+
+    @section('title','Product Savings')
+
+
+   @section('script')
+   
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Saving Product</title>
-</head>
-<body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/onlineMembership.css">
+    
+    @endsection
+
+
+
+    @section('content')
 
     @include('Partials.navbar')
 
@@ -41,5 +47,4 @@
 
     @include('Partials.footer')
 
-</body>
-</html>
+@endsection

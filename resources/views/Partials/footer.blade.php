@@ -3,9 +3,9 @@
     <div class="w-full h-auto bg-slate-400 md:grid md:grid-cols-4 p-7 px-28 text-justify">
         <div class="">
             <p class="font-extrabold text-slate-700 text-md">Savings Products</p>
-            <a href="#" class="font-light text-slate-700 text-sm hover:underline">Share Capital</a><br>
-            <a href="#" class="font-light text-slate-700 text-sm hover:underline">Savings Deposit</a><br>
-            <a href="#" class="font-light text-slate-700 text-sm hover:underline">Time Deposit</a><br><br>
+            <a href="{{route('Home.SavingsProduct')}}" class="font-light text-slate-700 text-sm hover:underline">Share Capital</a><br>
+            <a href="{{route('Home.SavingsProduct')}}" class="font-light text-slate-700 text-sm hover:underline">Savings Deposit</a><br>
+            <a href="{{route('Home.SavingsProduct')}}" class="font-light text-slate-700 text-sm hover:underline">Time Deposit</a><br><br>
 
             <p class="font-extrabold text-slate-700 text-md">Loan Products</p>
             <a href="{{route('Home.LoanProducts')}}" class="font-light text-slate-700 text-sm hover:underline">Character Loan</a><br>

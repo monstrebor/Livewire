@@ -29,6 +29,7 @@ use Illuminate\Support\Facades\Artisan;
 Route::view('/', 'Home.index')->name('Home.index');
 Route::view('/Membership','Home.onlineMembership')->name('Home.Membership');
 Route::view('/Loan-Products','Home.loanProducts')->name('Home.LoanProducts');
+Route::view('/Product-Savings','Home.savingsProduct')->name('Home.SavingsProduct');
 Route::view('/login','Home.login')->name('Login.index');
 Route::view('/login/register/','Home.test')->name('regular.register');
 Route::post('/regular',[RegularMemberController::class, 'store'])->name('regular.store');
