@@ -35,7 +35,7 @@
 
         <div class="">
             <p class="font-extrabold text-slate-700 text-md">About Us</p>
-            <a href="#" class="font-light text-slate-700 text-sm hover:underline">FAQs</a><br>
+            <a href="{{route('Home.FAQ')}}" class="font-light text-slate-700 text-sm hover:underline">FAQs</a><br>
             <a href="#" class="font-light text-slate-700 text-sm hover:underline">Testimonials</a><br>
         </div>
 

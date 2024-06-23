@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/final_logo-removebg-preview-removebg-preview.png">
+@extends('layout.layout')
+
+    @section('title','FAQ')
+
+    @section('script')
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="FAQs.css">
-    <script src="FAQs.js"></script>
-    <title>FAQs</title>
-</head>
-<body>
+    <link rel="stylesheet" href="/css/FAQs.css">
+    <script src="/js/FAQs.js"></script>
+    @endsection
+
+    
+
+@section('content')
 
     @include('Partials.navbar')
 
@@ -28,7 +29,7 @@
     <div class="mt-11">
         <div class="flex items-center justify-center mb-7">
             <div class="boxShadow w-11/12 bg-white p-4 px-7 rounded-lg" onclick="toggleVisibility('questionText1')">
-                <h1 class="text-xl font-semibold mb-4 text-slate-600">Sino and nagmamay-ari at may kapangyarihan sa pagpapatakbo ng kooperatiba?</h1>
+                <h1 class="text-xl font-semibold mb-4 text-slate-600">Sino ang nagmamay-ari at may kapangyarihan sa pagpapatakbo ng kooperatiba?</h1>
                 <p id="questionText1" class="text-slate-600 indent-4 pb-4 text-md">Ang Kooperatiba ay pag-aari ng lahat ng mga kasapi. Ang General Assembly ang may huling pagpapasya sa mga mahahalagang bagay na may kinalaman sa pagpapatakbo ng Kooperatiba</p>
             </div>
         </div>
@@ -226,5 +227,4 @@
 
     @include('Partials.footer')
     
-</body>
-</html>
+@endsection
