@@ -650,19 +650,12 @@
                     <!-- End of  Dependents Information -->
 
                     <div class="flex justify-center gap-4">
-                    <button type="submit"
-                        class="mt-9 bg-lime-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-                        Register
-                    </button>
+                    <button type="submit" class="mt-9 bg-lime-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Register</button>
+
+                    <a href="{{route('Home.index')}}"><button class="mt-9 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Cancel</button></a>
 
                     </div>
                 </form>
-
-
-                <a href="{{route('Home.index')}}"><button
-                    class="mt-9 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-                    Cancel
-                </button></a>
             </div>
         </div>
         <!-- end of membership form -->
