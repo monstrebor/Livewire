@@ -65,7 +65,6 @@ Route::get('/clear', function () {
 //image
 Route::get('/image',[idValidationController::class, 'index'])->name('id.index');
 
-
 Route::get('/test',[RegularMemberController::class, 'show']);
 
 

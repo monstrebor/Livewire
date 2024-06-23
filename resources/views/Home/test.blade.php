@@ -55,11 +55,14 @@
                     <!-- full name -->
                     <hr class="my-4">
                     <p class="text-l font-bold my-5 mb-7">Personal Information</p>
+
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-3">
                         <div class="input-group mb-4">
                             <label for="firstName" class="block text-gray-700 font-bold mb-2">First Name <span class="text-red-500">*</span></label>
                             <input type="text" id="firstName" name="firstName" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30" required>
-                            <div id="errorMessage" class="error-message"></div>
+                            @error('firstName')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
 
 
@@ -67,6 +70,9 @@
                             <label for="middleName" class="block text-gray-700 font-bold mb-2">Middle Name (Optional)</label>
                             <input type="text" id="middleName" name="middleName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30">
                             <div id="errorMessage" class="error-message"></div>
+                            @error('middleName')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
 
 
@@ -74,6 +80,9 @@
                             <label for="lastName" class="block text-gray-700 font-bold mb-2">Last Name <span class="text-red-500">*</span></label>
                             <input type="text" id="lastName" name="lastName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('lastName')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
 
 
@@ -86,16 +95,25 @@
                             <label for="religion" class="block text-gray-700 font-bold mb-2 text-sm">Religion<span class="text-red-500">*</span></label>
                             <input id="religion" name="religion" rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('religion')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
                         <div class="input-group mb-4">
                             <label for="POB" class="block text-gray-700 font-bold mb-2">Place of Birth <span class="text-red-500">*</span></label>
                             <input type="text" id="POB" name="POB" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('POB')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
                         <div class="input-group mb-4">
                             <label for="DOB" class="block text-gray-700 font-bold mb-2">Date of Birth <span class="text-red-500">*</span></label>
                             <input type="date" id="DOB" name="DOB" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('DOB')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
                     </div>
                     {{-- end of religion, POB, DOB --}}
@@ -107,6 +125,9 @@
                             <label for="contactNumber" class="block text-gray-700 font-bold mb-2">Contact Number <span class="text-red-500">*</span></label>
                             <input type="tel" id="contactNumber" name="contactNumber" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('contactNumber')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
                         <!-- end of contact number -->
 
@@ -115,6 +136,9 @@
                             <label for="facebookAccount" class="block text-gray-700 font-bold mb-2">Facebook Account <span class="text-red-500">*</span></label>
                             <input type="text" id="facebookAccount" name="facebookAccount" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('facebookAccount')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
                         <!-- end of facebook account -->
 
@@ -123,6 +147,9 @@
                             <label for="email" class="block text-gray-700 font-bold mb-2">Email <span class="text-red-500">*</span></label>
                             <input type="text" id="email" name="email" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('email')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
                         <!-- end of email -->
 
@@ -171,6 +198,7 @@
                                 <option value="Marilao" selected>Marilao</option>
                             </select>
                             <div id="errorMessage" class="error-message"></div>
+
                         </div>
 
                         <div class="input-group mb-4">
@@ -178,7 +206,9 @@
                             <select id="brgyDropdown"  name="baranggay"  class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <option value="">-Select Barangay-</option>
                             </select>
-                            <div id="errorMessage" class="error-message"></div>
+                            @error('baranggay')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
                     </div>
 
@@ -187,6 +217,9 @@
                             <label for="numSt" class="block text-gray-700 font-bold mb-2 text-sm">House Number and Street <span class="text-red-500">*</span></label>
                             <input type="text" id="street" name="street" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('street')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
 
                     </div>
@@ -208,18 +241,28 @@
                                 <option value="others">Others</option>
                             </select>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('idType1')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
+
                         </div>
 
                         <div class="input-group mb-4">
                             <label for="idNumber1" class="block text-gray-700 font-bold mb-2 text-sm">ID Number <span class="text-red-500">*</span></label>
                             <input type="text" id="idNumber1" name="idNumber1" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('idNumber1')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
 
                         <div class="input-group">
                             <label for="idImage1" class="block text-gray-700 font-bold mb-2 text-sm">ID Picture <span class="text-red-500">*</span></label>
                             <input type="file"  name="image1" id="idImage1" required></input>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('image1')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
 
 
@@ -235,18 +278,27 @@
                                 <option value="others">Others</option>
                             </select>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('idType2')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
 
                         <div class="input-group mb-4">
                             <label for="idNumber2" class="block text-gray-700 font-bold mb-2 text-sm">ID Number <span class="text-red-500">*</span></label>
                             <input type="text" id="idNumber2" name="idNumber2" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('idNumber2')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
 
                         <div class="input-group">
                             <label for="idImage2" class="block text-gray-700 font-bold mb-2 text-sm">ID Picture <span class="text-red-500">*</span></label>
                             <input type="file" name="image2" id="idImage2" required></input>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('image2')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
                     </div>
                     <hr class="my-6">
@@ -411,11 +463,17 @@
                             <label for="text" class="block text-gray-700 font-bold mb-2">Name of Employer <span class="text-red-500">*</span></label>
                             <input type="text" id="employerName" name="nameOfEmployer" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('nameOfEmployer')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
                         <div class="input-group mb-2">
                             <label for="email" class="block text-gray-700 font-bold mb-2">Address of Employer <span class="text-red-500">*</span></label>
                             <input type="text" id="employerAddress" name="addressOfEmployer" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('nameOfEmployer')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
                     </div>
                     <!-- end of employer -->
@@ -426,11 +484,17 @@
                             <label for="text" class="block text-gray-700 font-bold mb-2">Monthly Income <span class="text-red-500">*</span></label>
                             <input type="number" id="monthlyIncome" name="monthlyIncome" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('monthlyIncome')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
                         <div class="input-group mb-2">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Annual Income <span class="text-red-500">*</span></label>
                             <input type="number" id="annualIncome" name="annualIncome" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('annualIncome')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
                     </div>
                     <!-- end-of-income -->
@@ -466,6 +530,9 @@
                                 <label for="lengthOfStay" class="block text-gray-700 mb-2">Length of Stay: (year)</label>
                                 <input type="number" id="lengthOfStay" name="lengthOfStay" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                                 <div id="errorMessage" class="error-message"></div>
+                                @error('lengthOfStay')
+                                <div class="text-red-500 mt-2">{{$message}}</div>
+                                @enderror
                             </div>
                         </div>
                     </div>
@@ -477,11 +544,17 @@
                             <label for="text" class="block text-gray-700 font-bold mb-2">Citizenship <span class="text-red-500">*</span></label>
                             <input type="text" id="citizenship" name="citizenship" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('citizenship')
+                                <div class="text-red-500 mt-2">{{$message}}</div>
+                                @enderror
                         </div>
                         <div class="input-group mb-2">
                             <label for="text" class="block text-gray-700 font-bold mb-2">Number of Children <span class="text-red-500">*</span></label>
                             <input type="text" id="numberOfchildren" name="numberOfChildren" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
+                            @error('numberOfChildren')
+                            <div class="text-red-500 mt-2">{{$message}}</div>
+                            @enderror
                         </div>
                         <div class="input-group mb-2">
                             <label for="civilStatus" class="block text-gray-700 font-bold mb-2">Civil Status <span class="text-red-500">*</span></label>
@@ -510,6 +583,7 @@
                                 <label for="text" class="block text-gray-700 font-bold mb-2">Place of Marriage</label>
                                 <input type="text" id="marriagePlace" name="placeOfMarriage" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500">
                                 <div id="errorMessage" class="error-message"></div>
+
                             </div>
                             <div class="input-group mb-4">
                                 <label for="marriageDate" class="block text-gray-700 font-bold mb-2">Date of Marriage</label>
@@ -581,13 +655,14 @@
                         Register
                     </button>
 
-                    <button type="submit"
-                        class="mt-9 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-                        Cancel
-                    </button>
                     </div>
                 </form>
 
+
+                <a href="{{route('Home.index')}}"><button
+                    class="mt-9 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                    Cancel
+                </button></a>
             </div>
         </div>
         <!-- end of membership form -->

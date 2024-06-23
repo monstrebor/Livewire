@@ -8,14 +8,16 @@ use App\Mail\InvitationEmails;
 
 
 
-use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Mail;
+
+use App\Http\Requests\StoreRegularForm;
 
 
 class RegularMemberService{
 
 
-    public function RegularMemberStore(Request $request){
+    public function RegularMemberStore(StoreRegularForm $request){
 
 
         $data = $request->all();
@@ -46,7 +48,7 @@ class RegularMemberService{
     }
 
 
-    private function Dependency(Request $request , $regular_id){
+    private function Dependency( StoreRegularForm $request , $regular_id){
 
         foreach ($request->Dependent_name as $index => $name) {
 
@@ -61,37 +63,33 @@ class RegularMemberService{
     }
 
 
-    private function IdValidation(Request $request, $regular_id){
+    private function IdValidation( StoreRegularForm $request, $regular_id){
 
 
 
 
 
-            $imageName= time().'a.'.$request->image1->extension();
-            $imageName2= time().'b.'.$request->image2->extension();
+        $imageName = time().'a.'.$request->image1->extension();
+        $imageName2 = time().'b.'.$request->image2->extension();
 
+        // Move uploaded images to storage
+        $request->image1->move(storage_path('app/public/images/'), $imageName);
+        $request->image2->move(storage_path('app/public/images/'), $imageName2);
 
-             iDValidation::create([
-
-                'Id_Type_1' => $request->idType1,
-                'Id_Type_2' => $request->idType2,
-                'Id_Num_1' => $request->idNumber1,
-                'Id_Num_2'=> $request->idNumber2,
-                'Id_image_1'=> $imageName,
-                'Id_image_2' =>$imageName2,
-                'Reg_ID' => $regular_id,
-
-             ]);
-
-
-             $request->image1->move(storage_path('app/public/images/'), $imageName);
-             $request->image2->move(storage_path('app/public/images/'), $imageName2);
-
-
+        // Create database record with file names
+        iDValidation::create([
+            'Id_Type_1' => $request->idType1,
+            'Id_Type_2' => $request->idType2,
+            'Id_Num_1' => $request->idNumber1,
+            'Id_Num_2' => $request->idNumber2,
+            'Id_image_1' => $imageName,
+            'Id_image_2' => $imageName2,
+            'Reg_ID' => $regular_id,
+        ]);
 
     }
 
-    private function Address(Request $request, $regular_id){
+    private function Address( StoreRegularForm $request, $regular_id){
 
 
         Address::create([
@@ -107,7 +105,7 @@ class RegularMemberService{
 
     }
 
-    private function Spouse(Request $request, $regular_id)
+    private function Spouse( StoreRegularForm $request, $regular_id)
     {
 
         $spouse = Spouse::create([
@@ -127,7 +125,7 @@ class RegularMemberService{
     }
 
 
-    private function Marriage(Request $request, $regular_id, $spouse_id){
+    private function Marriage( StoreRegularForm $request, $regular_id, $spouse_id){
 
         Marriage::create([
 
@@ -140,7 +138,7 @@ class RegularMemberService{
 
         }
 
-    private function Employer(Request $request, $regular_id)
+    private function Employer( StoreRegularForm $request, $regular_id)
     {
 
         Employer::create([

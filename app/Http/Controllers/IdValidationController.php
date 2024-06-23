@@ -12,7 +12,6 @@ class IdValidationController extends Controller
 {
 
 
-
     public function index(){
 
 

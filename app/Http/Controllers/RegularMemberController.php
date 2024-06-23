@@ -1,14 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreRegularForm;
 use App\Models\{RegularMember};
 use App\Services\RegularMemberService;
 
 class RegularMemberController extends Controller
 {
 
-    public function store(Request $request, RegularMemberService $regularMemberService)
+
+    public function store(StoreRegularForm $request, RegularMemberService $regularMemberService)
     {
 
         $regularMemberService->RegularMemberStore($request);
