@@ -1,0 +1,9 @@
+.boxShadow {
+    box-shadow: 0px 0px 16px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 16px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 16px -5px rgba(0,0,0,0.75);
+}
+
+#questionText1, #questionText2,  #questionText3, #questionText4, #questionText5, #questionText6, #questionText7, #questionText8, #questionText9, #questionText10, #questionText11, #questionText12, #questionText13, #questionText14 {
+    display: none;
+}
