@@ -313,19 +313,19 @@
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="selfEmployed" name="occupation" value="selfEmployed" class="mr-2" required>
+                                        <input type="radio" id="selfEmployed" name="occupation" value="Self-Employed" class="mr-2" required>
                                         <label for="selfEmployed" class="text-gray-700">Self-Employed</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="publiOfficial" name="occupation" value="publiOfficial" class="mr-2" required>
+                                        <input type="radio" id="publiOfficial" name="occupation" value="Public-Official" class="mr-2" required>
                                         <label for="publiOfficial" class="text-gray-700">Public Official</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="driveOperatorConductor" name="occupation" value="driverOperatorConductor" class="mr-2" required>
+                                        <input type="radio" id="driveOperatorConductor" name="occupation" value="Driver-Operator/Conductor" class="mr-2" required>
                                         <label for="driveOperatorConductor" class="text-gray-700">Driver/Operator/Conductor</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="housewifeHusband" name="occupation" value="housewifeHusband" class="mr-2" required>
+                                        <input type="radio" id="housewifeHusband" name="occupation" value="Housewife/Husband" class="mr-2" required>
                                         <label for="housewifeHusband" class="text-gray-700">Housewife/Househusband</label>
                                     </div>
                                     <div class="flex items-center mb-2">
@@ -336,11 +336,11 @@
 
                                 <div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="governmentEmployee" name="occupation" value="government-employee" class="mr-2" required>
+                                        <input type="radio" id="governmentEmployee" name="occupation" value="Government-Employee" class="mr-2" required>
                                         <label for="governmentEmployee" class="text-gray-700">Government Employee</label>
                                     </div>
                                     <div class="flex items-center mb-2">
-                                        <input type="radio" id="religiousLeader" name="occupation" value="religious-leader" class="mr-2" required>
+                                        <input type="radio" id="religiousLeader" name="occupation" value="rReligious-Leader" class="mr-2" required>
                                         <label for="religiousLeader" class="text-gray-700">Religious Leader</label>
                                     </div>
                                     <div class="flex items-center mb-2">
