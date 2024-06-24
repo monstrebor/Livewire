@@ -101,7 +101,7 @@
                         </div>
                         <div class="input-group mb-4">
                             <label for="POB" class="block text-gray-700 font-bold mb-2">Place of Birth <span class="text-red-500">*</span></label>
-                            <input type="text" id="POB" name="POB" value="{{old('POB',date('Y-m-d'))}}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <input type="text" id="POB" name="POB" value="{{old('POB')}}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                             @error('POB')
                             <div class="text-red-500 mt-2">{{$message}}</div>
@@ -109,7 +109,7 @@
                         </div>
                         <div class="input-group mb-4">
                             <label for="DOB" class="block text-gray-700 font-bold mb-2">Date of Birth <span class="text-red-500">*</span></label>
-                            <input type="date" id="DOB" name="DOB" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <input type="date" id="DOB" name="DOB" value="{{old('DOB')}}" class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                             @error('DOB')
                             <div class="text-red-500 mt-2">{{$message}}</div>
