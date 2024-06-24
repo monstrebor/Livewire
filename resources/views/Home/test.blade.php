@@ -303,7 +303,7 @@
                             <div class="input-group mb-4">
                                 <label for="idNumber1" class="block text-gray-700 font-bold mb-2 text-sm">ID Number <span
                                         class="text-red-500">*</span></label>
-                                <input type="text" id="idNumber1" name="idNumber1" value="{{ old('idnumber1') }}"
+                                <input type="text" id="idNumber1" name="idNumber1" value="{{ old('idNumber1') }}"
                                     class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                                     required>
                                 <div id="errorMessage" class="error-message"></div>
@@ -347,7 +347,7 @@
                             <div class="input-group mb-4">
                                 <label for="idNumber2" class="block text-gray-700 font-bold mb-2 text-sm">ID Number <span
                                         class="text-red-500">*</span></label>
-                                <input type="text" id="idNumber2" name="idNumber2"
+                                <input type="text" id="idNumber2" name="idNumber2" value="{{old('idNumber2')}}"
                                     class="w-full bg-gray-200 px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                                     required>
                                 <div id="errorMessage" class="error-message"></div>
