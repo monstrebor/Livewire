@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('regular_members', function (Blueprint $table) {
             $table->id();
             $table->string("firstName");
-            $table->string("middleName");
+            $table->string("middleName")->nullable();
             $table->string("lastName");
             $table->string("religion");
             $table->string("POB");

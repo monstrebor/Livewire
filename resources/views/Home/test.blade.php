@@ -59,7 +59,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-3">
                         <div class="input-group mb-4">
                             <label for="firstName" class="block text-gray-700 font-bold mb-2">First Name <span class="text-red-500">*</span></label>
-                            <input type="text" id="firstName" name="firstName" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30" required>
+                            <input type="text" id="firstName" value="{{old('firstName')}}" name="firstName" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" maxlength="30" required>
                             @error('firstName')
                             <div class="text-red-500 mt-2">{{$message}}</div>
                             @enderror
@@ -68,7 +68,7 @@
 
                         <div class="input-group mb-4">
                             <label for="middleName" class="block text-gray-700 font-bold mb-2">Middle Name (Optional)</label>
-                            <input type="text" id="middleName" name="middleName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30">
+                            <input type="text" id="middleName" name="middleName" value="{{old('middleName')}}" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30">
                             <div id="errorMessage" class="error-message"></div>
                             @error('middleName')
                             <div class="text-red-500 mt-2">{{$message}}</div>
@@ -78,7 +78,7 @@
 
                         <div class="input-group mb-4">
                             <label for="lastName" class="block text-gray-700 font-bold mb-2">Last Name <span class="text-red-500">*</span></label>
-                            <input type="text" id="lastName" name="lastName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30" required>
+                            <input type="text" id="lastName" value="{{old('lastName')}}" name="lastName" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500 bg-gray-200" maxlength="30" required>
                             <div id="errorMessage" class="error-message"></div>
                             @error('lastName')
                             <div class="text-red-500 mt-2">{{$message}}</div>
@@ -93,7 +93,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                         <div class="input-group mb-4">
                             <label for="religion" class="block text-gray-700 font-bold mb-2 text-sm">Religion<span class="text-red-500">*</span></label>
-                            <input id="religion" name="religion" rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <input id="religion" name="religion" value="{{old('religion')}}" rows="4" class="bg-gray-200 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                             @error('religion')
                             <div class="text-red-500 mt-2">{{$message}}</div>
@@ -101,7 +101,7 @@
                         </div>
                         <div class="input-group mb-4">
                             <label for="POB" class="block text-gray-700 font-bold mb-2">Place of Birth <span class="text-red-500">*</span></label>
-                            <input type="text" id="POB" name="POB" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            <input type="text" id="POB" name="POB" value="{{old('POB',date('Y-m-d'))}}" class="w-full px-3 py-2 bg-gray-200 border rounded-md focus:outline-none focus:border-blue-500" required>
                             <div id="errorMessage" class="error-message"></div>
                             @error('POB')
                             <div class="text-red-500 mt-2">{{$message}}</div>
@@ -646,6 +646,19 @@
 
                     <div id="dependentsSection">
 
+
+                        @error('Dependent_name[]')
+
+                        {{$message}}
+
+                        @enderror
+
+                        @error('Dependent_dob[]')
+
+                        {{$message}}
+
+                        @enderror
+
                     </div>
                     <!-- End of  Dependents Information -->
 
@@ -657,7 +670,7 @@
 
                     </div>
                 </form>
-                
+
                 <div class="flex justify-center mb-10">
                     <a href="{{route('Home.index')}}"><button class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Cancel</button></a>
                 </div>
