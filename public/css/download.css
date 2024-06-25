@@ -1,3 +1,7 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.image1 {
+    background-image: url('/img/coop7.jpg');
+}

@@ -103,7 +103,7 @@
                             <div class="overlay">
                                 <h3>Frequently Asked Questions</h3>
                                 <p>Do you have any Questions?</p>
-                                <a href="#" class="hover:bg-slate-600 transtion duration-200">Learn More</a>
+                                <a href="{{route('Home.FAQ')}}" class="hover:bg-slate-600 transtion duration-200">Learn More</a>
                             </div>
                         </div>
                     </div>

@@ -12,11 +12,11 @@
     
     @include('Partials.navbar')
 
-    <div class="image1 w-full h-80 py-4 bg-slate-500 shadow-2xl bg-cover">
-        <p class="ml-10 m-5 pt-20 font-bold text-white text-4xl tracking-wide text-center lg:my-10 flex items-center justify-center">Download Page</p>
+    <div class="image1 opacity-50 w-full h-80 py-4 bg-slate-500 shadow-2xl bg-cover">
+        <p class="ml-10 m-5 pt-20 font-bold text-black text-4xl tracking-wide text-center lg:my-10 flex items-center justify-center">Download Page</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 text-sm mb-2 mt-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 text-sm mb-36 mt-20">
         <div class="flex flex-col justify-center items-center w-96 h-64 bg-slate-300 ml-12 lg:ml-56 my-5 shadow-lg rounded-xl">
             <h1 class="m-5 font-bold text-slate-700 text-xl tracking-wide text-center lg:my-10">Regular Membership Form</h1>
             <a href="file-14.pdf" class="mt-2" download>
@@ -33,6 +33,6 @@
     </div>
 
     @include('Partials.footer')
-    
+
 </body>
 </html>
