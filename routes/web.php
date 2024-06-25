@@ -36,10 +36,30 @@ Route::view('/login/register/','Home.test')->name('regular.register');
 Route::post('/regular',[RegularMemberController::class, 'store'])->name('regular.store');
 
 
-//Admin
+//Admin (Manager)
 
 Route::view('/admin','Admin.Index')->name('Admin.index');
 
+
+
+
+//User (Associate)
+
+Route::view('/associate','Associate.Index')->name('Associate.index');
+
+
+
+
+//User (Regular)
+
+Route::view('/regular','Regular.Index')->name('Regular.index');
+
+
+
+
+// User (Cashier)
+
+Route::view('/cashier','Cashier.Index')->name('Cashier.index');
 
 
 
@@ -62,11 +82,6 @@ Route::get('/clear', function () {
 
 });
 
-
-//image
-Route::get('/image',[idValidationController::class, 'index'])->name('id.index');
-
-Route::get('/test',[RegularMemberController::class, 'show']);
 
 
 

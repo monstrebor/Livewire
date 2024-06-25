@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="associateMember.css">
-    <link rel="icon" href="img/final_logo-removebg-preview-removebg-preview.png">
+@extends('layout.layout')
+
+
+@section('title','Home')
+
+
+@section('script')
+    <link rel="stylesheet" href="/css/associateMember.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Associate Member</title>
-</head>
+@endsection
+
+@section('content')
+
 <body class="bg-white">
     <span class="absolute text-white text-4xl top-5 left-4 cursor-pointer" onclick="Open()">
         <i class="bi bi-filter-left px-2 bg-gray-900 rounded-md"></i>
@@ -61,8 +64,8 @@
     <div class="imagebg w-full h-40 bg-slate-600 py-4 shadow-2xl bg-cover">
     </div>
 
-    <script src="associateMember.js">
+    <script src="/js/associateMember.js">
     </script>
 
 </body>
-</html>
+@endsection

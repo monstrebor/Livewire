@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cashier.css">
+@extends('layout.layout')
+
+
+    @section('title','Home')
+
+    @section('script')
+    <link rel="stylesheet" href="/css/cashier.css">
     <link rel="icon" href="img/final_logo-removebg-preview-removebg-preview.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="cashier.js"></script>
-    <title>Cahier</title>
+    <script src="/js/cashier.js"></script>
+    @endsection
 </head>
 <body class="bg-white">
     <span class="absolute text-white text-4xl top-5 left-4 cursor-pointer" onclick="Open()">
