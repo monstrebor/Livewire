@@ -6,18 +6,19 @@
 
     @section('script')
     <link rel="stylesheet" href="/css/login2.css">
-    <link rel="icon" href="img/final_logo-removebg-preview-removebg-preview.png">
     <script src="https://cdn.tailwindcss.com"></script>
-
     @endsection
 
+
+
+    
 
     @section('content')
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-3">
         <div class="container h-screen content-center hidden md:block">
-            <p class="top-text ml-5 mt-2 font-bold text-white text-lg tracking-widest">WAIS</p>
-            <img src="img/final_logo-removebg-preview-removebg-preview.png" alt="" class="h-72 w-80 lg:ml-52 md:ml-20 ">
+          <a href="{{route('Home.index')}}"><p class="top-text ml-5 mt-2 font-bold text-white text-lg tracking-widest">WAIS</p></a>
+          <a href="{{route('Home.index')}}"><img src="img/final_logo-removebg-preview-removebg-preview.png" alt="" class="h-72 w-80 lg:ml-52 md:ml-20 "></a>
             <p class="text-center text-white font-bold text-xl mt-3">Mahal na Señor Multipurpose Cooperative</p>
             <p class="text-center text-white text-sm">"Earn and Save Cooperative Way"</p>
         </div>
