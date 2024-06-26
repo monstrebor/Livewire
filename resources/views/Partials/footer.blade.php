@@ -30,7 +30,7 @@
             <p class="font-extrabold text-slate-700 text-md">What's New</p>
             <a href="#" class="font-light text-slate-700 text-sm hover:underline">News and Events</a><br>
             <a href="#" class="font-light text-slate-700 text-sm hover:underline">Membership form Online</a><br>
-            <a href="#" class="font-light text-slate-700 text-sm hover:underline">Downloads</a><br>
+            <a href="{{route('Home.Download')}}" class="font-light text-slate-700 text-sm hover:underline">Downloads</a><br>
         </div>
 
         <div class="">

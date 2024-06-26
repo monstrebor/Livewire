@@ -8,7 +8,7 @@ class ErrorController extends Controller
 {
 
 
-    public function custom_404(){
+    public function pageNotFound(){
 
         return view('Error.404');
 
