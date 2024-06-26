@@ -87,8 +87,7 @@ Route::get('/clear', function () {
 //downloads
 
 Route::get('/download/primer',[DownloadController::class,'primerDownload'])->name('download.primer');
-
-
+Route::get('/download/regularForm',[DownloadController::class,'regularFormDownload'])->name('download.regularForm');
 
 
 
