@@ -11,7 +11,7 @@
 
 
 
-    
+
 
     @section('content')
 
@@ -23,16 +23,21 @@
             <p class="text-center text-white text-sm">"Earn and Save Cooperative Way"</p>
         </div>
 
+
+
         <div class="bg-white bg-transparent p-8 w-full max-w-md sm:m-40">
             <h2 class="text-2xl font-bold mb-10 text-slate-500 text-center">Login to your account</h2>
-            <form>
+
+            <form action="{{route('login.store')}}" method="POST">
+                @csrf
+
                 <div class="mb-4">
-                    <label for="username" class="block text-slate-500 font-bold mb-2">Username</label>
-                    <input type="text" placeholder="Input your username" autocomplete="text" aria-label="text" class="block w-full rounded-2xl border border-slate-600 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-slate-700 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"/>
+                    <label for="username" class="block text-slate-500 font-bold mb-2">Email</label>
+                    <input type="email" placeholder="Input your email" name="email"  aria-label="text" class="block w-full rounded-2xl border border-slate-600 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-slate-700 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"/>
                 </div>
                 <div class="mb-4">
                     <label for="password" class="block text-slate-500 font-bold mb-2">Password</label>
-                    <input type="password" placeholder="Input your password" autocomplete="password" aria-label="Password" class="block w-full rounded-2xl border border-slate-600 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-slate-700 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"/>
+                    <input type="password" placeholder="Input your password" name="password" autocomplete="password" aria-label="Password" class="block w-full rounded-2xl border border-slate-600 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-slate-700 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"/>
                 </div>
                 <div class="flex items-center justify-between mb-4">
                     <label for="remember" class="flex items-center">
@@ -41,7 +46,9 @@
                     </label>
                     <a href="#" class="text-slate-600 hover:underline">Forgot Password?</a>
                 </div>
-                <button type="submit" class="cbutton ml-32 sm:ml-32 mt-4 rounded-2xl flex justify-center">Login</button>
+
+                <input type="submit" name="submit" class="cbutton ml-32 sm:ml-32 mt-4 rounded-2xl flex justify-center">
+
             </form>
             <p class="mt-4 text-gray-700 text-center">Don't have an account? <a href="{{route('regular.register')}}" class="text-slate-600 hover:underline">Register here</a>.</p>
         </div>

@@ -66,9 +66,6 @@ class RegularMemberService{
     private function IdValidation( StoreRegularForm $request, $regular_id){
 
 
-
-
-
         $imageName = time().'a.'.$request->image1->extension();
         $imageName2 = time().'b.'.$request->image2->extension();
 

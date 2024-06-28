@@ -1,8 +1,10 @@
 <?php
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ErrorController;
-use App\Http\Controllers\RegularMemberController;
+use App\Http\Controllers\StoreController;
 use App\Http\Controllers\DownloadController;
 use Illuminate\Support\Facades\Artisan;
 
@@ -25,6 +27,7 @@ use Illuminate\Support\Facades\Artisan;
 
 
 //Home
+Route::group(['middleware' => 'guests'], function () {
 
 Route::view('/', 'Home.index')->name('Home.index');
 Route::view('/Membership','Home.onlineMembership')->name('Home.Membership');
@@ -34,38 +37,56 @@ Route::view('/FAQ','Home.FAQs')->name('Home.FAQ');
 Route::view('/Downloads','Home.download')->name('Home.Download');
 Route::view('/login','Home.login')->name('Login.index');
 Route::view('/login/register/','Home.regForm')->name('regular.register');
+});
 
 
-// form (Regular)
-Route::post('/Regform',[RegularMemberController::class, 'store'])->name('regular.store');
+Route::post('/register',[StoreController::class, 'storeForm'])->name('regular.store');
+Route::post('/login',[StoreController::class,'storeLogin'])->name('login.store');
 
 
 
 //Admin (Manager)
+Route::group(['middleware' => 'admin'], function () {
 
-Route::view('/admin','Admin.Index')->name('Admin.index');
+Route::view('/admin/home','Admin.Index')->name('Admin.index');
 
+
+});
 
 //User (Associate)
+Route::group(['middleware' => 'associate'], function () {
+
 
 Route::view('/associate/home','Associate.Index')->name('Associate.index');
 
 
+});
+
+
+
+
 //User (Regular)
+Route::group(['middleware' => 'regular'], function () {
+
 
 Route::view('/regular/home','Regular.Index')->name('Regular.index');
 
 
+});
+
+
 // User (Cashier)
+Route::group(['middleware' => 'cashier'], function () {
 
 Route::view('/cashier/home','Cashier.Index')->name('Cashier.index');
+
+});
 
 
 
 //Error
 
 Route::fallback([ErrorController::class,'pageNotFound'])->name('Error.PageNotFound');
-Route::get('/download/primer',[ErrorController::class,'primerDownload'])->name('download.primer');
 
 
 //cache
@@ -81,6 +102,20 @@ Route::get('/clear', function () {
     return back();
 
 });
+
+//logout
+
+Route::get('/logout', function (Request $request) {
+
+    Auth::logout();
+
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+
+    return redirect('/login');
+
+})->name('logout');
+
 
 
 

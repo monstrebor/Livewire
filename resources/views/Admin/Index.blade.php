@@ -20,7 +20,7 @@
     <div class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-y-auto text-center bg-gray-900">
         <div class="text-gray-100 text-xl">
             <div class="p-2.5 mt-1 flex items-center">
-                <img src="img/final_logo-removebg-preview-removebg-preview.png" alt="logo" class="h-10">
+                <img src="/img/final_logo-removebg-preview-removebg-preview.png" alt="logo" class="h-10">
                 <h1 class="font-bold text-gray-200 text-lg ml-3 tracking-widest">WAIS</h1>
                 <i class="bi bi-x ml-20 cursor-pointer lg:hidden" onclick="Open()"></i>
             </div>
@@ -50,7 +50,7 @@
                 <h1 class="cursor-pointer p-4 hover:bg-slate-600 rounded-md mt-1">Payment method</h1>
             </div>
 
-            
+
 
             <hr class="my-11 text-gray-600">
             <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-slate-600 text-white">
@@ -58,10 +58,10 @@
                 <span class="text-[15px] ml-4 text-gray-200">Settings</span>
             </div>
 
-            <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-slate-600 text-white">
+            <a href="{{route('logout')}}"> <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-slate-600 text-white">
                 <i class="bi bi-box-arrow-left"></i>
                 <span class="text-[15px] ml-4 text-gray-200">Logout</span>
-            </div>
+            </div> </a>
         </div>
     </div>
 
@@ -69,8 +69,8 @@
 
     </div>
 
-    <script src="adminSide.js">
-        
+    <script src="/js/adminSide.js">
+
     </script>
 </body>
 @endsection
