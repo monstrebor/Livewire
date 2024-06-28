@@ -1,0 +1,40 @@
+body {
+    width: 8.27in; /* A4 width in inches */
+    height: 11.69in; /* A4 height in inches */
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid black;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.accInfo {
+    border: 1px solid black;
+}
+
+.info {
+    border: 1px solid black;
+    border-top: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    border-top: none;
+    padding: 8px;
+    text-align: left;
+}
+
+input[type="text"], input[type="number"], input[type="date"], input[type="email"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensuring the last table fits */
+table:last-of-type {
+    table-layout: fixed;
+}

@@ -20,7 +20,7 @@
         <p class="ml-10 m-5 pt-20 font-bold text-black text-4xl tracking-wide text-center lg:my-10 flex items-center justify-center">Download Page</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 text-sm mb-36 mt-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 text-sm mb-16 mt-16">
         <div class="flex flex-col justify-center items-center w-96 h-64 bg-slate-300 ml-12 lg:ml-56 my-5 shadow-lg rounded-xl">
             <h1 class="m-5 font-bold text-slate-700 text-xl tracking-wide text-center lg:my-10">Regular Membership Form</h1>
             <a href="{{route('download.regularForm')}}" class="mt-2" download>
@@ -31,6 +31,15 @@
         <div class="flex flex-col justify-center items-center w-96 h-64 bg-slate-300 ml-12 lg:ml-24 my-5 shadow-lg rounded-xl">
             <h1 class="m-5 font-bold text-slate-700 text-xl tracking-wide text-center lg:my-10">MNSMPC Primer</h1>
             <a href="{{route('download.primer')}}" class="mt-2" download>
+                <button class="bg-blue-500 hover:bg-slate-500 transition duration-300 text-white px-4 py-2 rounded">Download File</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 text-sm mb-20 mt-16">
+        <div class="flex flex-col justify-center items-center w-96 h-64 bg-slate-300 ml-12 lg:ml-56 my-5 shadow-lg rounded-xl">
+            <h1 class="m-5 font-bold text-slate-700 text-xl tracking-wide text-center lg:my-10">Associate Membership Form</h1>
+            <a href="#" class="mt-2" download>
                 <button class="bg-blue-500 hover:bg-slate-500 transition duration-300 text-white px-4 py-2 rounded">Download File</button>
             </a>
         </div>
