@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/final_logo-removebg-preview-removebg-preview.png">
+@extends('layout.layout')
+
+
+    @section('title','Associate Membership')
+
+    @section('script')
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="associateForm.css">
-    <title>Associate Form</title>
+    <link rel="stylesheet" href="{{asset('/associateForm.css')}}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
-</head>
+    @endsection
+
+ @section('content')
+
 <body class="m-10 p-5">
     <button id="downloadPDF">.</button>
     <div class="flex items-center text-[13px] font-bold cursor-pointer p-0">
-        <img src="img/final_logo-removebg-preview-removebg-preview.png" class="h-20 m-0">
+        <img src="{{asset('img/final_logo-removebg-preview-removebg-preview.png')}}" class="h-20 m-0">
         <p>Mahal na Señor Multipurpose Cooperative <span class="uppercase text-[10px] font-semibold"><br>saog marilao bulacan</span><br><span class="text-[10px] font-semibold">Reg No: 9520-03002873/CIN-016030516</span></p>
     </div>
 
@@ -333,4 +336,4 @@
 
 
 </body>
-</html>
+@endsection

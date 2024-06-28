@@ -5,11 +5,11 @@
     @section('script')
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/css/FAQs.css">
-    <script src="/js/FAQs.js"></script>
+    <link rel="stylesheet" href="{{asset('/css/FAQs.css')}}">
+    <script src="{{asset('/js/FAQs.js')}}"></script>
     @endsection
 
-    
+
 
 @section('content')
 
@@ -44,7 +44,7 @@
         <div class="flex items-center justify-center mb-7">
             <div class="boxShadow w-11/12 bg-white p-4 px-7 rounded-lg" onclick="toggleVisibility('questionText3')">
                 <h1 class="text-xl font-semibold mb-4 text-slate-600">S<span class="lowercase">INU-SINO ANG NAMAMAHALA SA KOOPERATIBA?</span></h1>
-                
+
                 <div id="questionText3">
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">1. LUPONG PATNUGUTAN (Board of Directors) - ang lupong nangangasiwa sa pangkalahatang kaayusan at bumabalangkas ng mga alituntunin para sa ikauunlad ng Kooperatiba.</h2>
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">2. LUPON SA PAGPAPAUTANG (Credit Committee) - ang lupong itinalaga ng Lupong Patnugutan para maipatupad ang mga alituntunin sa pagpapautang na kanilang pinagtibay. Sila rin ang sumusuri sa kakayahan sa pagbabayad ng mga kasapi. Ito ay may tatlong ( 3 ) kasapi na hinihirang ng Lupong Patnugutan</h2>
@@ -55,7 +55,7 @@
         <div class="flex items-center justify-center mb-7">
             <div class="boxShadow w-11/12 bg-white p-4 px-7 rounded-lg" onclick="toggleVisibility('questionText4')">
                 <h1 class="text-xl font-semibold mb-4 text-slate-600">Sino ang maaaring sumapi sa MNSMPC?</h1>
-                
+
                 <div id="questionText4">
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">Ang mga uri ang Kasapian sa MNSMPC:</h2>
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">A. Bilang Regular Member</h2>
@@ -73,7 +73,7 @@
         <div class="flex items-center justify-center mb-7">
             <div class="boxShadow w-11/12 bg-white p-4 px-7 rounded-lg" onclick="toggleVisibility('questionText5')">
                 <h1 class="text-xl font-semibold mb-4 text-slate-600">Paano ang pagsapi sa MNSMPC?</h1>
-                
+
                 <div id="questionText5">
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">1. Dumalo sa Pre-Membership Seminar (PMES) na ginaganap tuwing ikalawang ( 2 ) Sabado ng buwan ika 9:00 ng umaga sa tanggapan ng Mahal na Señor Multipurpose Cooperative.</h2>
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">2. Lumagda sa application for Membership Form at mag-submit ng mga sumusunod:</h2>
@@ -89,7 +89,7 @@
         <div class="flex items-center justify-center mb-7">
             <div class="boxShadow w-11/12 bg-white p-4 px-7 rounded-lg" onclick="toggleVisibility('questionText6')">
                 <h1 class="text-xl font-semibold mb-4 text-slate-600">A<span class="lowercase">NU-ANO ANG MGA TUNGKULIN NG MGA KASAPI?</span></h1>
-                
+
                 <div id="questionText6">
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">1. Dumalo sa General Assembly na ginaganap minsan sa isang taon;</h2>
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">2. Magbayad ng utang sa takdang panahon at patuloy na mag-impok;</h2>
@@ -105,7 +105,7 @@
         <div class="flex items-center justify-center mb-7">
             <div class="boxShadow w-11/12 bg-white p-4 px-7 rounded-lg" onclick="toggleVisibility('questionText7')">
                 <h1 class="text-xl font-semibold mb-4 text-slate-600">A<span class="lowercase">NU-ANO ANG URI NG LAGAK SA KOOPERATIBA?</span></h1>
-                
+
                 <div id="questionText7">
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">1. SHARE CAPITAL - ito ang tinatawag na Saping Puhunan na hindi maaring mawithdraw maliban kung magbibitiw na sa pagiging kasapi. Ang patubo sa lagak na ito ay batay sa kinikita ng Kooperatiba sa loob ng isang taon. Dito din ibinabatay ang halaga ng maaring mautang ng isang kasapi.</h2>
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">2. SAVINGS DEPOSIT ( o sariling pag-iimpok ) - Ito ang lagak na maaaring ma-withdraw anumang oras na bukas ang tanggapan. Ito ay kumikita ng tubong higit na mataas kaysa bigay ng bangko at walang withholding tax.</h2>
@@ -117,7 +117,7 @@
         <div class="flex items-center justify-center mb-7">
             <div class="boxShadow w-11/12 bg-white p-4 px-7 rounded-lg" onclick="toggleVisibility('questionText8')">
                 <h1 class="text-xl font-semibold mb-4 text-slate-600">A<span class="lowercase">NU-ANO ANG MGA URI NG PAUTANG?</span></h1>
-                
+
                 <div id="questionText8">
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">1. CHARACTER LOAN – utang na ang panagot lamang ay ang pagkatao ng kasapi:</h2>
                     <p class="text-slate-600 indent-10 pb-4 text-md">❖ Nakabatay sa Share Capital.</p>
@@ -144,7 +144,7 @@
         <div class="flex items-center justify-center mb-7">
             <div class="boxShadow w-11/12 bg-white p-4 px-7 rounded-lg" onclick="toggleVisibility('questionText9')">
                 <h1 class="text-xl font-semibold mb-4 text-slate-600">P<span class="lowercase">AANO AT KAILAN MAKAKAUTANG ANG MGA KASAPI?</span></h1>
-                
+
                 <div id="questionText9">
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">1. Ang Kasapi lamang ang maaring mangutang sa Kooperatiba.</h2>
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">2. Basahing mabuti at sagutin ang lahat ng mga katanungan sa Loan Application Form na makukuha sa tanggapan ng Mahal na Señor Multipurpose Cooperative.</h2>
@@ -158,7 +158,7 @@
         <div class="flex items-center justify-center mb-7">
             <div class="boxShadow w-11/12 bg-white p-4 px-7 rounded-lg" onclick="toggleVisibility('questionText10')">
                 <h1 class="text-xl font-semibold mb-4 text-slate-600">A<span class="lowercase">NU-ANO ANG IBINABAWAS SA INUUTANG NG ISANG KASAPI?</span></h1>
-                
+
                 <div id="questionText10">
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">❖ INTEREST – 2% kada buwan o 24% isang taon base sa halaga ng inuutang.</h2>
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">❖ SERVICE FEE – 3% ng halagang inuutang.</h2>
@@ -172,7 +172,7 @@
         <div class="flex items-center justify-center mb-7">
             <div class="boxShadow w-11/12 bg-white p-4 px-7 rounded-lg" onclick="toggleVisibility('questionText11')">
                 <h1 class="text-xl font-semibold mb-4 text-slate-600">B<span class="lowercase">ATAYAN SA PAGPAPASIYA NG CREDIT COMMITTEE</span></h1>
-                
+
                 <div id="questionText11">
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">1. Character o katauhan ng Kasapi</h2>
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">2. Capacity to pay o kakayahang magbayad ng kasapi</h2>
@@ -193,7 +193,7 @@
         <div class="flex items-center justify-center mb-7">
             <div class="boxShadow w-11/12 bg-white p-4 px-7 rounded-lg" onclick="toggleVisibility('questionText13')">
                 <h1 class="text-xl font-semibold mb-4 text-slate-600">M<span class="lowercase">GA PRINSIPYO NG KOOPERATIBA</span></h1>
-                
+
                 <div id="questionText13">
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">1. Bukas at malayang kaisipan – hindi pinipilit ngunit sinusuri ang nais sumapi upang maging matagumpay ang samahan.</h2>
                     <h2 class="text-slate-600 indent-4 pb-4 text-md">2. Demokratikong pamamahala – ang mga namamahala ay inihahalal ng mga kasaping may karapatang bumoto.</h2>
@@ -226,5 +226,5 @@
     </div>
 
     @include('Partials.footer')
-    
+
 @endsection

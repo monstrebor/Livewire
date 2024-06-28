@@ -5,7 +5,7 @@
 
 
 @section('script')
-    <link rel="stylesheet" href="/css/associateMember.css">
+    <link rel="stylesheet" href="{{asset('/css/associateMember.css')}}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 @endsection
@@ -64,7 +64,7 @@
     <div class="imagebg w-full h-40 bg-slate-600 py-4 shadow-2xl bg-cover">
     </div>
 
-    <script src="/js/associateMember.js">
+    <script src="{{asset('/js/associateMember.js')}}">
     </script>
 
 </body>

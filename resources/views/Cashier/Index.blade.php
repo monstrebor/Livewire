@@ -4,10 +4,10 @@
 @section('title','Home')
 
     @section('script')
-    <link rel="stylesheet" href="/css/cashier.css">
+    <link rel="stylesheet" href="{{asset('/css/cashier.css')}}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="/js/cashier.js"></script>
+    <script src="{{asset('/js/cashier.js')}}"></script>
     @endsection
 
 

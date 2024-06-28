@@ -21,15 +21,8 @@ class StoreController extends Controller
     public function storeLogin(Request $request){
 
 
-
-
-
-
         $credentials = $request->only('email','password');
-
-
-
-
+        
         if(auth()->attempt($credentials)  == true){
 
 

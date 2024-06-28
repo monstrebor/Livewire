@@ -6,7 +6,7 @@
 
  @section('script')
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/css/onlineMembership.css">
+    <link rel="stylesheet" href="{{asset('/css/onlineMembership.css')}}">
 @endsection
 
 

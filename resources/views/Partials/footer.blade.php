@@ -43,7 +43,7 @@
             <p class="font-extrabold text-slate-700 text-md">STAY IN TOUCH</p>
             <p class="font-light text-slate-700 text-xs">Subscribe to get the latest news and updates. Get updates on our products, promos, events and more!</p>
             <div class="relative mt-2">
-                <input type="email" placeholder="Email addres" autocomplete="email" aria-label="Email address" class="block w-full rounded-2xl border border-slate-600 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-slate-700 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"/>
+                <input type="email" placeholder="Email address" autocomplete="email" aria-label="Email address" class="block w-full rounded-2xl border border-slate-600 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-slate-700 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"/>
             </div>
             <div class="flex justify-center">
                 <button class="cbutton mt-3 w-full">Subscribe</button>
@@ -51,9 +51,9 @@
             <p class="mt-5 italic font-light text-sm text-slate-700">Contact Channels:</p>
 
             <div class="gap-8 flex justify-center mt-3 md:gap-5">
-                <a href=""><img src="/img/facebook-app-symbol.png" alt="FB" class="lg:w-10 lg:h-10 md:h-7 md:w-7"></a>
-                <a href=""><img src="/img/instagram (1).png" alt="IG" class="lg:w-10 lg:h-10 md:h-7 md:w-7"></a>
-                <a href=""> <img src="/img/youtube.png" alt="YT" class="lg:w-10 lg:h-10 md:h-7 md:w-7"></a>
+                <a href=""><img src="{{asset('/img/facebook-app-symbol.png')}}" alt="FB" class="lg:w-10 lg:h-10 md:h-7 md:w-7"></a>
+                <a href=""><img src="{{asset('/img/instagram (1).png')}}" alt="IG" class="lg:w-10 lg:h-10 md:h-7 md:w-7"></a>
+                <a href=""> <img src="{{asset('/img/youtube.png')}}" alt="YT" class="lg:w-10 lg:h-10 md:h-7 md:w-7"></a>
             </div>
             <p class="font-light text-slate-700 text-xs mt-3">For comments/suggestions, please contact us in our official member support channels: saogcooperative@gmail.com, FB messenger</p>
             <div class="relative mt-4">

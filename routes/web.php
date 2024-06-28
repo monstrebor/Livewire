@@ -37,6 +37,7 @@ Route::view('/FAQ','Home.FAQs')->name('Home.FAQ');
 Route::view('/Downloads','Home.download')->name('Home.Download');
 Route::view('/login','Home.login')->name('Login.index');
 Route::view('/login/register/','Home.regForm')->name('regular.register');
+Route::view('/login/associate/','Home.assocForm')->name('regular.associate');
 });
 
 
@@ -123,7 +124,7 @@ Route::get('/logout', function (Request $request) {
 
 Route::get('/download/primer',[DownloadController::class,'primerDownload'])->name('download.primer');
 Route::get('/download/regularForm',[DownloadController::class,'regularFormDownload'])->name('download.regularForm');
-
+Route::get('/download/associateForm',[DownloadController::class,'associateFormDownload'])->name('download.associate');
 
 
 

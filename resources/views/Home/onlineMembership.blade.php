@@ -6,7 +6,7 @@
    @section('script')
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/css/onlineMembership.css">
+    <link rel="stylesheet" href="{{asset('/css/onlineMembership.css')}}">
     @endsection
 
     @section('content')

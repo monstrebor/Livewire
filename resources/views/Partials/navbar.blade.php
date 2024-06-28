@@ -14,7 +14,7 @@
                 <nav class="p-5 bg-slate-700 shadow md:flex md:items-center md:justify-between text-white">
                     <div class="flex justify-between items-center uppercase font-bold">
                         <div class="flex items-center text-2 xl font-sans cursor-pointer">
-                            <img src="/img/final_logo-removebg-preview-removebg-preview.png" class="h-10 mr-2">
+                            <img src="{{asset('/img/final_logo-removebg-preview-removebg-preview.png')}}" class="h-10 mr-2">
                             <p class="uppercase font-bold">Mahal na Señor<br>Multipurpose Cooperative</p>
                         </div>
 

@@ -4,7 +4,7 @@
     @section('title','Home')
 
     @section('script')
-    <link rel="stylesheet" href="/css/regularMember.css">
+    <link rel="stylesheet" href="{{asset('/css/regularMember.css')}}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     @endsection
@@ -19,7 +19,7 @@
     <div class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] p-2 w-[300px] overflow-y-auto text-center bg-gray-900">
         <div class="text-gray-100 text-xl">
             <div class="p-2.5 mt-1 flex items-center">
-                <img src="/img/final_logo-removebg-preview-removebg-preview.png" alt="logo" class="h-10">
+                <img src="{{asset('/img/final_logo-removebg-preview-removebg-preview.png')}}" alt="logo" class="h-10">
                 <h1 class="font-bold text-gray-200 text-lg ml-3 tracking-widest">WAIS</h1>
                 <i class="bi bi-x ml-20 cursor-pointer lg:hidden" onclick="Open()"></i>
             </div>
@@ -64,7 +64,7 @@
     <div class="imagebg w-full h-40 bg-slate-600 py-4 shadow-2xl bg-cover">
     </div>
 
-    <script src="/js/regularMember.js">
+    <script src="{{asset('/js/regularMember.js')}}">
     </script>
 
 </body>

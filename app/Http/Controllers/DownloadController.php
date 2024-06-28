@@ -54,6 +54,28 @@ class DownloadController extends Controller
         }
     }
 
+    public function associateFormDownload(){
+
+        $filename = 'AssociateForm.pdf';
+
+        $filetype = [
+
+            'Content-Type'=> 'application/pdf',
+        ];
+        $filePath = public_path($this->path.$filename);
+
+        if(file_exists($filePath)){
+
+        return Response()->download($filePath, $filename,$filetype);
+
+        }else{
+
+            return abort(404,'file not found');
+
+        }
+    }
+
+
 
 
 }

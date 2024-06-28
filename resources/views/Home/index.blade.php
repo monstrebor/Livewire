@@ -8,8 +8,8 @@
 
     @section('script')
 
-    <link rel="stylesheet" href="/css/input.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="{{asset('/css/input.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/style.css')}}">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <style type="text/tailwindcss"></style>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -37,21 +37,21 @@
         <div class="slideshow-container md:w-auto shadow-lg rounded-b-xl">
             <div class="mySlides fade">
                 <div class="numbertext">1/3</div>
-                <img src="/img/saog1.jpg" class="w-full h-80 sm:h-96 object-cover">
+                <img src="{{asset('/img/saog1.jpg')}}" class="w-full h-80 sm:h-96 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-white bg-slate-500 bg-opacity-70 p-2 rounded text text-xl font-bold">"EARN AND SAVE COOPERATIVE WAY"</span>
                 </div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">2/3</div>
-                <img src="/img/coop4.jpg" class="w-full h-80 sm:h-96 object-cover">
+                <img src="{{asset('/img/coop4.jpg')}}" class="w-full h-80 sm:h-96 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-white bg-slate-500 bg-opacity-70 p-2 rounded text text-xl font-bold">Office Hours: 9AM-5PM <br> Monday-Friday <br> Saturday-8:00 AM-12:00NN</span>
                 </div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">3/3</div>
-                <img src="/img/saog2.jpg" class="w-full h-80 sm:h-96 object-cover">
+                <img src="{{asset('/img/saog2.jpg')}}" class="w-full h-80 sm:h-96 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-white bg-slate-500 bg-opacity-70 p-2 rounded text text-xl font-bold">Kooperatibang May Prinsipyo
                 </div>
@@ -83,7 +83,7 @@
                 <div class="wrapper">
                     <div class="box-area">
                         <div class="box">
-                            <img src="/img/coop1.jpg" alt="">
+                            <img src="{{asset('/img/coop1.jpg')}}" alt="">
                             <div class="overlay">
                                 <h3>Misyon</h3>
                                 <p>Mapagkakatiwalaang samahanng tutulong sa mga pangangailangan ng mga kasapi sa mababa at abot kayang patubo.</p>
@@ -91,7 +91,7 @@
                         </div>
 
                         <div class="box">
-                            <img src="/img/coop1.jpg" alt="">
+                            <img src="{{asset('/img/coop1.jpg')}}" alt="">
                             <div class="overlay">
                                 <h3>Bisyon</h3>
                                 <p>Isang kooperatibang may pagkakaisa, malasakit at tumutulong sa mga kasapi tungo sa matatag na pamayanan sa patnubay ng Poong Maykapal.</p>
@@ -99,7 +99,7 @@
                         </div>
 
                         <div class="box">
-                            <img src="/img/coop1.jpg" alt="">
+                            <img src="{{asset('/img/coop1.jpg')}}" alt="">
                             <div class="overlay">
                                 <h3>Frequently Asked Questions</h3>
                                 <p>Do you have any Questions?</p>
@@ -118,7 +118,7 @@
                 <p class="ml-10 m-5 font-bold text-slate-700">Naninirahan sa Marilao, Bulacan.<br>
                     May gulang na 18-60 taong gulang  may kakayahang makapagkontrata nang naaayon sa batas at may pinagkakakitaan. <br>
                     May pirmihang hanapbuhay o pinagkakakitaan </p>
-                <a href=""><button class="discover m-10 px-4 mt-0">BILANG REGULAR MEMBER</button></a>
+                <a href="{{route('regular.register')}}"><button class="discover m-10 px-4 mt-0">BILANG REGULAR MEMBER</button></a>
             </div>
         </div>
         <!-- end picture -->
@@ -142,6 +142,6 @@
         <!-- end of footer, all about -->
 
 
-    <script src="js/script.js">
+    <script src="{{asset('/js/script.js')}}">
     </script>
 @endsection

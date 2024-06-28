@@ -6,7 +6,7 @@
 @section('title', 'Membership Register')
 
 @section('script')
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="{{asset('/css/style.css')}}">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <style type="text/tailwindcss"></style>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -26,7 +26,7 @@
             <!-- picture-membership -->
             <div class="flex bg-white mb-10">
                 <div class="relative w-11/12  h-80 sm:h-96 mx-auto">
-                    <img src="/img/coop1.jpg" alt="Description of the image" class="w-full h-full object-cover">
+                    <img src="{{asset('/img/coop1.jpg')}}" alt="Description of the image" class="w-full h-full object-cover">
                     <div class="absolute inset-0 flex items-center justify-center">
                         <span class="text-white bg-lime-500 bg-opacity-70 p-2 rounded">Mahal na Señor Multipurpose
                             Cooperative <p class="indent-2">Membership Application. Sign-up today</p></span>
@@ -848,7 +848,7 @@
                             <button type="submit"
                                 class="mt-9 bg-lime-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
                                 Register
-                            </button>
+                        </button>
 
                         </div>
                     </form>
@@ -867,6 +867,6 @@
             <!-- end of all about -->
             <!-- footer -->
 
-            <script src="/js/dependents.js"></script>
+            <script src="{{asset('/js/dependents.js')}}"></script>
 
         @endsection
