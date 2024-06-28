@@ -47,7 +47,7 @@ class StoreController extends Controller
 
         }
 
-        return redirect('/login')->withError('error','Username and password incorrect');
+        return redirect('/login')->with('error','Username and password incorrect');
 
 
     }

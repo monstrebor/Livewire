@@ -23,13 +23,19 @@
             <p class="text-center text-white text-sm">"Earn and Save Cooperative Way"</p>
         </div>
 
-
-
         <div class="bg-white bg-transparent p-8 w-full max-w-md sm:m-40">
+
             <h2 class="text-2xl font-bold mb-10 text-slate-500 text-center">Login to your account</h2>
 
             <form action="{{route('login.store')}}" method="POST">
                 @csrf
+
+                @if (session('error'))
+                <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+                    <span class="font-medium">{{{session('error')}}}</span> .Change a few things up and try submitting again.
+                  </div>
+
+                @endif
 
                 <div class="mb-4">
                     <label for="username" class="block text-slate-500 font-bold mb-2">Email</label>
