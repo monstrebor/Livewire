@@ -38,21 +38,30 @@ Route::view('/Downloads','Home.download')->name('Home.Download');
 Route::view('/login','Home.login')->name('Login.index');
 Route::view('/login/register/','Home.regForm')->name('regular.register');
 Route::view('/login/associate/','Home.assocForm')->name('regular.associate');
-});
 
 
 Route::post('/register',[StoreController::class, 'storeForm'])->name('regular.store');
 Route::post('/login',[StoreController::class,'storeLogin'])->name('login.store');
 
 
+});
+
+
+
+
 
 //Admin (Manager)
 Route::group(['middleware' => 'admin'], function () {
 
+    //view
+
 Route::view('/admin/home','Admin.Index')->name('Admin.index');
+Route::view('/admin/Members','Admin.Member')->name('Admin.members');
 
 
 });
+
+
 
 //User (Associate)
 Route::group(['middleware' => 'associate'], function () {
@@ -79,7 +88,9 @@ Route::view('/regular/home','Regular.Index')->name('Regular.index');
 // User (Cashier)
 Route::group(['middleware' => 'cashier'], function () {
 
+
 Route::view('/cashier/home','Cashier.Index')->name('Cashier.index');
+
 
 });
 

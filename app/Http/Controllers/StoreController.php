@@ -5,6 +5,7 @@ use App\Services\RegularMemberService;
 use \App\Http\Requests\StoreRegularForm;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 
 class StoreController extends Controller
 {
@@ -22,29 +23,30 @@ class StoreController extends Controller
 
 
         $credentials = $request->only('email','password');
-        
-        if(auth()->attempt($credentials)  == true){
 
+        if(auth()->attempt($credentials)){
 
             $user = Auth::user();
 
-            if ($user->role == 'admin') {
-                return redirect()->intended('/admin/home');
-            } elseif ($user->role == 'associate') {
-                return redirect()->intended('/associate/home');
-            } elseif ($user->role == 'regular') {
-                return redirect()->intended('/regular/home');
-            } elseif ($user->role == 'cashier') {
-                return redirect()->intended('/cashier/home');
-            }
+            // session([$request->all()]); // login information
 
+            switch ($user->role) {
+                case 'admin':
+                    return redirect()->intended('/admin/home');
+                case 'associate':
+                    return redirect()->intended('/associate/home');
+                case 'regular':
+                    return redirect()->intended('/regular/home');
+                case 'cashier':
+                    return redirect()->intended('/cashier/home');
+                default:
+                    return redirect('/login')->with('error', 'Role not recognized');
+            }
         }
 
         return redirect('/login')->with('error','Username and password incorrect');
 
 
-    }
-
-
+        }
 
 }

@@ -6,7 +6,7 @@
     @section('script')
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="{{asset('/associateForm.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/associateForm.css')}}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     @endsection
 
@@ -15,7 +15,7 @@
 <body class="m-10 p-5">
     <button id="downloadPDF">.</button>
     <div class="flex items-center text-[13px] font-bold cursor-pointer p-0">
-        <img src="{{asset('img/final_logo-removebg-preview-removebg-preview.png')}}" class="h-20 m-0">
+        <img src="{{asset('/img/final_logo-removebg-preview-removebg-preview.png')}}" class="h-20 m-0">
         <p>Mahal na Señor Multipurpose Cooperative <span class="uppercase text-[10px] font-semibold"><br>saog marilao bulacan</span><br><span class="text-[10px] font-semibold">Reg No: 9520-03002873/CIN-016030516</span></p>
     </div>
 
@@ -59,7 +59,7 @@
                 </th>
             </tr>
         </table>
-        
+
         <section>
             <h1 class="info uppercase flex justify-center text-[10px] font-bold p-1 bg-lime-300">PERSONAL/BUSINNESS/EMPLOYMENT INFORMATION</h1>
         </section>
@@ -319,7 +319,7 @@
         </table>
     </div>
 
-    
+
 
     <script>
         document.getElementById('downloadPDF').addEventListener('click', () => {

@@ -81,6 +81,7 @@ class InvitationEmails extends Mailable
         if ($thisSaturday)    // if it is saturday today.
         {
             $Saturday = $now->copy()->next(Carbon::SATURDAY);  // next Saturday
+            
         }else{
 
             $Saturday = $now->copy()->next(Carbon::SATURDAY);   // saturday

@@ -35,7 +35,6 @@ class RegularMember extends Model
         'lengthOfStay',
         'numberOfChildren',
 
-
     ];
 
 
@@ -46,6 +45,7 @@ class RegularMember extends Model
        return $this->hasOne(Marriage::class,'Reg_ID');
 
     }
+
 
 
 

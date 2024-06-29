@@ -43,7 +43,7 @@
 
             <div class="text-left text-sm font-thin mt-2 w-4/5 mx-auto" id="submenu">
                 <h1 class="cursor-pointer p-4 hover:bg-slate-600 rounded-md mt-1">Charts of accounts</h1>
-    <a href="{{route('Admin.members')}}"><h1 class="cursor-pointer p-4 hover:bg-slate-600 rounded-md mt-1">Member Application</h1></a>
+                <h1 class="cursor-pointer p-4 hover:bg-slate-600 rounded-md mt-1">Member Application</h1>
                 <h1 class="cursor-pointer p-4 hover:bg-slate-600 rounded-md mt-1">Types of members</h1>
                 <h1 class="cursor-pointer p-4 hover:bg-slate-600 rounded-md mt-1">Membership Application requirements</h1>
                 <h1 class="cursor-pointer p-4 hover:bg-slate-600 rounded-md mt-1">Types of loans <br> (Terms and condition)</h1>
@@ -68,8 +68,31 @@
 
     <div class="imagebg w-full h-40 bg-slate-600 py-4 shadow-2xl bg-cover">
 
-
     </div>
+
+<div style="display:flex justify-content:center;">
+    <table style="margin-left: 500px; margin-top: 50px">
+        <thead style="border: 2px solid black; padding: 5px;">
+            <tr>
+                <th style="border-right: 2px solid black">Member's Name</th>
+                <th style="border-right: 2px solid black">Member's Details</th>
+                <th>Member's Approval</th>
+            </tr>
+        </thead>
+        <tbody style="padding: 5px;">
+        <tr style="border: 1px solid black; text-align: center;">
+            <td style="border-right: 2px solid black">Robert Janssen T Campos</td>
+            <td style="border-right: 2px solid black">
+                <a src="#">Details</a>
+            </td>
+            <td>
+                <button class="border border-solid border-black">Approve</button>
+                <button class="border border-solid border-black">No</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
     <script src="{{asset('/js/adminSide.js')}}}">
 
