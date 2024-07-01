@@ -65,37 +65,22 @@
             </div> </a>
         </div>
     </div>
-
     <div class="imagebg w-full h-40 bg-slate-600 py-4 shadow-2xl bg-cover">
-
     </div>
 
-<div style="display:flex justify-content:center;">
-    <table style="margin-left: 500px; margin-top: 50px">
-        <thead style="border: 2px solid black; padding: 5px;">
-            <tr>
-                <th style="border-right: 2px solid black">Member's Name</th>
-                <th style="border-right: 2px solid black">Member's Details</th>
-                <th>Member's Approval</th>
-            </tr>
-        </thead>
-        <tbody style="padding: 5px;">
-        <tr style="border: 1px solid black; text-align: center;">
-            <td style="border-right: 2px solid black">Robert Janssen T Campos</td>
-            <td style="border-right: 2px solid black">
-                <a src="#">Details</a>
-            </td>
-            <td>
-                <button class="border border-solid border-black">Approve</button>
-                <button class="border border-solid border-black">No</button>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+    @livewire('regular-member')
 
-    <script src="{{asset('/js/adminSide.js')}}}">
+    <script src="{{asset('/js/adminSide.js')}}}"></script>
+    <script>
+    document.getElementById('details-link').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+        // Show the hidden form
+        document.getElementById('details-modal').classList.remove('hidden');
+    });
 
+    document.getElementById('close-modal').addEventListener('click', function () {
+        document.getElementById('details-modal').classList.add('hidden');
+    });
     </script>
 </body>
 @endsection
